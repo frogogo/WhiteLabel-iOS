@@ -56,9 +56,8 @@
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="tryAgainButton">
-                                <rect key="frame" x="202" y="416.5" width="81" height="31"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="tryAgainButton">
+                                <rect key="frame" x="202" y="415" width="89" height="34"/>
                                 <state key="normal" title="Повторить">
                                     <color key="titleColor" name="PrimaryMain"/>
                                 </state>
@@ -67,7 +66,7 @@
                                 <rect key="frame" x="282.5" y="366" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ags-ze-7j9">
-                                <rect key="frame" x="137" y="512.5" width="140" height="32"/>
+                                <rect key="frame" x="137" y="514" width="140" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Следующий экран">
                                     <color key="titleColor" name="Dark900"/>
@@ -245,7 +244,7 @@
                                 <rect key="frame" x="40" y="357.5" width="334" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBU-bb-pPh" userLabel="continueButton">
                                 <rect key="frame" x="40" y="774" width="334" height="48"/>
@@ -313,11 +312,11 @@ username</string>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czF-Dd-MHt" userLabel="nameField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czF-Dd-MHt" userLabel="nameField">
                                 <rect key="frame" x="40" y="357.5" width="125.5" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-w3-7qG" userLabel="errorIcon">
                                 <rect key="frame" x="169.5" y="366" width="16" height="16"/>
