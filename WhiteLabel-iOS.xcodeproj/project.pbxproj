@@ -18,13 +18,13 @@
 		6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109378262883CF00A8B554 /* Rubik-Regular.ttf */; };
 		67E9D7722629B3EA005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7712629B3EA005A3C66 /* Assets.xcassets */; };
 		67E9D7762629B3F9005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7752629B3F9005A3C66 /* Assets.xcassets */; };
+		67E9D77F2629B7CC005A3C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */; };
 		67FE38292625594900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE382B2625594900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
 		67FE38352625594A00750368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38332625594A00750368 /* LaunchScreen.storyboard */; };
 		67FE38402625596900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE38412625596900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
-		67FE38442625596900750368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38332625594A00750368 /* LaunchScreen.storyboard */; };
 		67FE38452625596900750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,7 @@
 		679541A626255D3E00C04495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E9D7712629B3EA005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E9D7752629B3F9005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67E9D77E2629B7CC005A3C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67FE38252625594900750368 /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 			children = (
 				67FE38362625594A00750368 /* Info.plist */,
 				67E9D7712629B3EA005A3C66 /* Assets.xcassets */,
+				67FE38332625594A00750368 /* LaunchScreen.storyboard */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 			children = (
 				679541A626255D3E00C04495 /* Info.plist */,
 				67E9D7752629B3F9005A3C66 /* Assets.xcassets */,
+				67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */,
 			);
 			path = ZBoom;
 			sourceTree = "<group>";
@@ -155,7 +158,6 @@
 		679541B1262584D400C04495 /* Screens and navigation */ = {
 			isa = PBXGroup;
 			children = (
-				67FE38332625594A00750368 /* LaunchScreen.storyboard */,
 				6710935026280A1500A8B554 /* Auth */,
 			);
 			path = "Screens and navigation";
@@ -290,8 +292,8 @@
 				6710936026280E2000A8B554 /* Colors.xcassets in Resources */,
 				6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */,
 				6710937A262883CF00A8B554 /* Rubik-Bold.ttf in Resources */,
-				67FE38442625596900750368 /* LaunchScreen.storyboard in Resources */,
 				67E9D7762629B3F9005A3C66 /* Assets.xcassets in Resources */,
+				67E9D77F2629B7CC005A3C66 /* LaunchScreen.storyboard in Resources */,
 				67FE38452625596900750368 /* CommonAssets.xcassets in Resources */,
 				6710937C262883CF00A8B554 /* Rubik-Medium.ttf in Resources */,
 			);
@@ -321,6 +323,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E9D77E2629B7CC005A3C66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		67FE38332625594A00750368 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
