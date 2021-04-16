@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8df-z3-OFl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ylr-8A-z4g">
+            <objects>
+                <viewController id="8df-z3-OFl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QXl-AE-H4M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-f4-0qw" userLabel="titleLabel">
+                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                <color key="textColor" name="Dark900"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-aS-0m9" userLabel="infoLabel">
+                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="+7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-wi-AgF" userLabel="phoneCodeLabel">
+                                <rect key="frame" x="40" y="360.5" width="29.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
+                                <rect key="frame" x="75.5" y="360" width="221" height="33.5"/>
+                                <color key="textColor" name="Dark900"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
+                                <rect key="frame" x="40" y="423.5" width="159" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="tryAgainButton">
+                                <rect key="frame" x="207" y="417.5" width="83" height="31"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <state key="normal" title="Повторить">
+                                    <color key="titleColor" name="PrimaryMain"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
+                                <rect key="frame" x="308.5" y="366.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M8n-XL-cHt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D3Q-PI-mMg" firstAttribute="leading" secondItem="Kkd-06-sxS" secondAttribute="trailing" constant="8" id="007-YR-feN"/>
+                            <constraint firstItem="I9v-5C-NII" firstAttribute="centerY" secondItem="ET5-wi-AgF" secondAttribute="centerY" id="2AJ-cb-jnv"/>
+                            <constraint firstItem="Kkd-06-sxS" firstAttribute="top" secondItem="I9v-5C-NII" secondAttribute="bottom" constant="30" id="5OM-N2-hfM"/>
+                            <constraint firstItem="ET5-wi-AgF" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="7bu-sz-Dyc"/>
+                            <constraint firstItem="loA-aS-0m9" firstAttribute="top" secondItem="Ojw-f4-0qw" secondAttribute="bottom" constant="24" id="8wS-Sk-UO0"/>
+                            <constraint firstItem="I9v-5C-NII" firstAttribute="leading" secondItem="ET5-wi-AgF" secondAttribute="trailing" constant="6" id="GZ2-Sf-aCD"/>
+                            <constraint firstItem="M8n-XL-cHt" firstAttribute="trailing" secondItem="Ojw-f4-0qw" secondAttribute="trailing" constant="40" id="MZs-Fg-0VW"/>
+                            <constraint firstItem="Ojw-f4-0qw" firstAttribute="leading" secondItem="M8n-XL-cHt" secondAttribute="leading" constant="40" id="OUk-KT-1Wj"/>
+                            <constraint firstItem="D3Q-PI-mMg" firstAttribute="centerY" secondItem="Kkd-06-sxS" secondAttribute="centerY" id="UG4-md-Ou9"/>
+                            <constraint firstItem="JNm-Ag-i2X" firstAttribute="leading" secondItem="I9v-5C-NII" secondAttribute="trailing" constant="12" id="Vsx-1x-I4s"/>
+                            <constraint firstItem="loA-aS-0m9" firstAttribute="trailing" secondItem="M8n-XL-cHt" secondAttribute="trailing" constant="-40" id="ZXi-aY-LDp"/>
+                            <constraint firstItem="Ojw-f4-0qw" firstAttribute="top" secondItem="M8n-XL-cHt" secondAttribute="top" constant="161" id="eVB-3B-rQr"/>
+                            <constraint firstItem="loA-aS-0m9" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="qiG-GS-1iI"/>
+                            <constraint firstItem="Kkd-06-sxS" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="qmT-EQ-0Xd"/>
+                            <constraint firstItem="ET5-wi-AgF" firstAttribute="top" secondItem="loA-aS-0m9" secondAttribute="bottom" constant="72" id="t2o-YN-tGf"/>
+                            <constraint firstItem="JNm-Ag-i2X" firstAttribute="centerY" secondItem="I9v-5C-NII" secondAttribute="centerY" id="wyP-BN-Km3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="aJL-HF-tvr" kind="show" id="hB1-HY-UTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmj-v1-IWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="-10"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bkx-tg-6c5">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="aJL-HF-tvr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2AQ-ho-WQC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-pN-beE" userLabel="titleLabel">
+                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="infoLabel">
+                                <rect key="frame" x="40" y="269.5" width="189.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 (000) 000-00-00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-XE-qZS" userLabel="phoneLabel">
+                                <rect key="frame" x="40" y="290.5" width="156.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark900"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-lY-Qwu" userLabel="changeNumberButton">
+                                <rect key="frame" x="205.5" y="284.5" width="76" height="31"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <state key="normal" title="Изменить">
+                                    <color key="titleColor" name="PrimaryMain"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qN-DnQ" userLabel="codeEnterField">
+                                <rect key="frame" x="40" y="355.5" width="4" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-3P-WwB">
+                                <rect key="frame" x="145" y="355" width="91" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-8k-OX1" userLabel="errorIcon">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-rt-ArP" userLabel="activityIndicator">
+                                        <rect key="frame" x="71" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gh-NaM" userLabel="errorLabel">
+                                <rect key="frame" x="40" y="442" width="275" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="StatusRed"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Повторно запросить код можно через 28 секунд" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Kl-NWT" userLabel="retryCountdownLabel">
+                                <rect key="frame" x="40" y="510" width="334" height="49"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-AK-bwI" userLabel="resendCodeButton">
+                                <rect key="frame" x="39" y="559" width="149" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <state key="normal" title="Выслать новый код">
+                                    <color key="titleColor" name="PrimaryMain"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bLm-lW-ZjO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="trailing" secondItem="g0m-Kl-NWT" secondAttribute="trailing" constant="40" id="26I-gW-LdY"/>
+                            <constraint firstItem="GhU-XE-qZS" firstAttribute="top" secondItem="vS5-PH-BJE" secondAttribute="bottom" constant="2" id="DrC-lK-ZH4"/>
+                            <constraint firstItem="Clv-lY-Qwu" firstAttribute="centerY" secondItem="GhU-XE-qZS" secondAttribute="centerY" id="ESX-hp-Ioz"/>
+                            <constraint firstItem="Clv-lY-Qwu" firstAttribute="leading" secondItem="GhU-XE-qZS" secondAttribute="trailing" constant="9" id="GZN-AA-01L"/>
+                            <constraint firstItem="vS5-PH-BJE" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="IRL-z5-bw7"/>
+                            <constraint firstItem="5cN-pN-beE" firstAttribute="top" secondItem="bLm-lW-ZjO" secondAttribute="top" constant="161" id="PCk-3j-eRn"/>
+                            <constraint firstItem="vS5-PH-BJE" firstAttribute="top" secondItem="5cN-pN-beE" secondAttribute="bottom" constant="24" id="Xgf-li-DQp"/>
+                            <constraint firstItem="Tss-qN-DnQ" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="fEl-WU-Vf8"/>
+                            <constraint firstItem="GhU-XE-qZS" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="igE-Ry-ULa"/>
+                            <constraint firstItem="5cN-pN-beE" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="mMn-Wr-qeD"/>
+                            <constraint firstItem="gWC-3P-WwB" firstAttribute="centerY" secondItem="Tss-qN-DnQ" secondAttribute="centerY" id="sD8-bh-C1L"/>
+                            <constraint firstItem="gWC-3P-WwB" firstAttribute="leading" secondItem="Tss-qN-DnQ" secondAttribute="trailing" constant="10" id="uDD-fZ-1tq"/>
+                            <constraint firstItem="g0m-Kl-NWT" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="vxt-83-1OX"/>
+                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" constant="40" id="y79-OB-wlI"/>
+                            <constraint firstItem="Tss-qN-DnQ" firstAttribute="top" secondItem="GhU-XE-qZS" secondAttribute="bottom" constant="46" id="yjQ-W0-fj1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pyL-w7-e1Z"/>
+                    <connections>
+                        <segue destination="iPc-yN-ptf" kind="show" identifier="CodeConfirmationToMainUISegue" id="5Ex-pY-eX7"/>
+                        <segue destination="unq-VB-8We" kind="show" id="lf6-ne-VuE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1C-Hz-1Gt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598.55072463768124" y="-10.044642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nfF-Bf-QsY">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="unq-VB-8We" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yY4-c2-lAY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JcP-VZ-bVH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uh4-Cs-myu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Q6-jB-Cno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="-10"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x40-lo-vhb">
+            <objects>
+                <viewController id="ygF-hb-jzt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OnS-it-48P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gz6-Vc-fLb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebs-Cc-fDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="-10"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Lwq-hu-82p">
+            <objects>
+                <viewControllerPlaceholder id="iPc-yN-ptf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Mut-pZ-alF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vse-eF-Zzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="415"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryMain">
+            <color red="1" green="0.66274509803921566" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusRed">
+            <color red="1" green="0.41568627450980394" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
