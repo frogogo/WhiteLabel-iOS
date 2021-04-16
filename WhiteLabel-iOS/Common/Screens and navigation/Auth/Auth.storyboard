@@ -27,44 +27,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-f4-0qw" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
+                                <rect key="frame" x="40" y="205" width="334" height="40"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <color key="textColor" name="Dark900"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-aS-0m9" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="269" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="+7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-wi-AgF" userLabel="phoneCodeLabel">
-                                <rect key="frame" x="40" y="360.5" width="29.5" height="32"/>
+                                <rect key="frame" x="40" y="360" width="29.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
-                                <rect key="frame" x="75.5" y="360" width="221" height="33.5"/>
+                                <rect key="frame" x="75.5" y="359.5" width="221" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="423.5" width="159" height="19"/>
+                                <rect key="frame" x="40" y="422.5" width="159" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="tryAgainButton">
-                                <rect key="frame" x="207" y="417.5" width="83" height="31"/>
+                                <rect key="frame" x="207" y="416.5" width="83" height="31"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <state key="normal" title="Повторить">
                                     <color key="titleColor" name="PrimaryMain"/>
                                 </state>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
-                                <rect key="frame" x="308.5" y="366.5" width="20" height="20"/>
+                                <rect key="frame" x="308.5" y="366" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M8n-XL-cHt"/>
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="269.5" width="189.5" height="19"/>
+                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
@@ -130,60 +130,69 @@
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qN-DnQ" userLabel="codeEnterField">
-                                <rect key="frame" x="40" y="355.5" width="4" height="18.5"/>
+                                <rect key="frame" x="40" y="355.5" width="288" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-3P-WwB">
-                                <rect key="frame" x="145" y="355" width="91" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-3P-WwB" userLabel="indicatorStack">
+                                <rect key="frame" x="338" y="355" width="36" height="20"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-8k-OX1" userLabel="errorIcon">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-8k-OX1" userLabel="errorIcon">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-rt-ArP" userLabel="activityIndicator">
-                                        <rect key="frame" x="71" y="0.0" width="20" height="20"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-rt-ArP" userLabel="activityIndicator">
+                                        <rect key="frame" x="16" y="0.0" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gh-NaM" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="442" width="275" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gh-NaM" userLabel="errorLabel">
+                                <rect key="frame" x="40" y="405" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Повторно запросить код можно через 28 секунд" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Kl-NWT" userLabel="retryCountdownLabel">
-                                <rect key="frame" x="40" y="510" width="334" height="49"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                                <color key="textColor" name="Dark700"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-AK-bwI" userLabel="resendCodeButton">
-                                <rect key="frame" x="39" y="559" width="149" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                                <state key="normal" title="Выслать новый код">
-                                    <color key="titleColor" name="PrimaryMain"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-fG-gDi" userLabel="retryComponentStack">
+                                <rect key="frame" x="40" y="769" width="334" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Повторно запросить код можно через 28 секунд" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Kl-NWT" userLabel="retryCountdownLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="38"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-AK-bwI" userLabel="resendCodeButton">
+                                        <rect key="frame" x="0.0" y="38" width="149" height="31"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <state key="normal" title="Выслать новый код">
+                                            <color key="titleColor" name="PrimaryMain"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bLm-lW-ZjO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="trailing" secondItem="g0m-Kl-NWT" secondAttribute="trailing" constant="40" id="26I-gW-LdY"/>
+                            <constraint firstItem="c8f-Gh-NaM" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="6FS-Ta-VEv"/>
+                            <constraint firstItem="c8f-Gh-NaM" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="Byp-qM-ZGc"/>
                             <constraint firstItem="GhU-XE-qZS" firstAttribute="top" secondItem="vS5-PH-BJE" secondAttribute="bottom" constant="2" id="DrC-lK-ZH4"/>
                             <constraint firstItem="Clv-lY-Qwu" firstAttribute="centerY" secondItem="GhU-XE-qZS" secondAttribute="centerY" id="ESX-hp-Ioz"/>
                             <constraint firstItem="Clv-lY-Qwu" firstAttribute="leading" secondItem="GhU-XE-qZS" secondAttribute="trailing" constant="9" id="GZN-AA-01L"/>
                             <constraint firstItem="vS5-PH-BJE" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="IRL-z5-bw7"/>
+                            <constraint firstItem="OPh-fG-gDi" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="KK4-gP-Cp3"/>
+                            <constraint firstItem="c8f-Gh-NaM" firstAttribute="top" secondItem="gWC-3P-WwB" secondAttribute="bottom" constant="30" id="Oih-zc-GgV"/>
                             <constraint firstItem="5cN-pN-beE" firstAttribute="top" secondItem="bLm-lW-ZjO" secondAttribute="top" constant="161" id="PCk-3j-eRn"/>
+                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="bottom" secondItem="OPh-fG-gDi" secondAttribute="bottom" constant="24" id="S6p-iX-Vhc"/>
+                            <constraint firstItem="OPh-fG-gDi" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="WRb-BL-lc3"/>
                             <constraint firstItem="vS5-PH-BJE" firstAttribute="top" secondItem="5cN-pN-beE" secondAttribute="bottom" constant="24" id="Xgf-li-DQp"/>
+                            <constraint firstItem="vS5-PH-BJE" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="Yl9-nd-Y4L"/>
                             <constraint firstItem="Tss-qN-DnQ" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="fEl-WU-Vf8"/>
                             <constraint firstItem="GhU-XE-qZS" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="igE-Ry-ULa"/>
                             <constraint firstItem="5cN-pN-beE" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="mMn-Wr-qeD"/>
                             <constraint firstItem="gWC-3P-WwB" firstAttribute="centerY" secondItem="Tss-qN-DnQ" secondAttribute="centerY" id="sD8-bh-C1L"/>
                             <constraint firstItem="gWC-3P-WwB" firstAttribute="leading" secondItem="Tss-qN-DnQ" secondAttribute="trailing" constant="10" id="uDD-fZ-1tq"/>
-                            <constraint firstItem="g0m-Kl-NWT" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="vxt-83-1OX"/>
-                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" constant="40" id="y79-OB-wlI"/>
+                            <constraint firstItem="gWC-3P-WwB" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="vOj-aH-61s"/>
+                            <constraint firstItem="5cN-pN-beE" firstAttribute="trailing" secondItem="bLm-lW-ZjO" secondAttribute="trailing" constant="-40" id="y79-OB-wlI"/>
                             <constraint firstItem="Tss-qN-DnQ" firstAttribute="top" secondItem="GhU-XE-qZS" secondAttribute="bottom" constant="46" id="yjQ-W0-fj1"/>
                         </constraints>
                     </view>
@@ -204,10 +213,58 @@
                     <view key="view" contentMode="scaleToFill" id="yY4-c2-lAY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вас зовут?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-5U-tLw" userLabel="infoLabel">
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37E-2Y-3H7" userLabel="nameField">
+                                <rect key="frame" x="40" y="359" width="334" height="33"/>
+                                <color key="textColor" name="Dark900"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBU-bb-pPh" userLabel="continueButton">
+                                <rect key="frame" x="40" y="774" width="334" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pmF-iW-Wux"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                <state key="normal" title="Продолжить" backgroundImage="buttonBackPrimaryColor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давайте познакомимся!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-lo-WE6" userLabel="titleLabel">
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JcP-VZ-bVH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KfC-5U-tLw" firstAttribute="top" secondItem="RdJ-lo-WE6" secondAttribute="bottom" constant="24" id="53Z-FP-HMp"/>
+                            <constraint firstItem="37E-2Y-3H7" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="85n-tO-4GF"/>
+                            <constraint firstItem="37E-2Y-3H7" firstAttribute="top" secondItem="KfC-5U-tLw" secondAttribute="bottom" constant="30" id="Bda-Sa-5ay"/>
+                            <constraint firstItem="vBU-bb-pPh" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="BgT-Eh-0Mb"/>
+                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="KfC-5U-tLw" secondAttribute="trailing" constant="40" id="C0g-Md-tK2"/>
+                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="RdJ-lo-WE6" secondAttribute="trailing" constant="40" id="Dg7-aX-RiQ"/>
+                            <constraint firstItem="37E-2Y-3H7" firstAttribute="leading" secondItem="RdJ-lo-WE6" secondAttribute="leading" id="Gs1-uD-F66"/>
+                            <constraint firstItem="RdJ-lo-WE6" firstAttribute="top" secondItem="JcP-VZ-bVH" secondAttribute="top" constant="161" id="O7C-9N-fEg"/>
+                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="37E-2Y-3H7" secondAttribute="trailing" constant="40" id="UYM-4E-fsQ"/>
+                            <constraint firstItem="RdJ-lo-WE6" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="d3j-ce-7Mo"/>
+                            <constraint firstItem="KfC-5U-tLw" firstAttribute="leading" secondItem="RdJ-lo-WE6" secondAttribute="leading" id="ikK-6e-SQP"/>
+                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="vBU-bb-pPh" secondAttribute="trailing" constant="40" id="nEk-tS-Fs3"/>
+                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="bottom" secondItem="vBU-bb-pPh" secondAttribute="bottom" constant="40" id="oE5-qg-7Wi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uh4-Cs-myu"/>
+                    <connections>
+                        <segue destination="ygF-hb-jzt" kind="show" id="3Eh-Pj-YO4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q6-jB-Cno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,17 +273,82 @@
         <!--View Controller-->
         <scene sceneID="x40-lo-vhb">
             <objects>
-                <viewController id="ygF-hb-jzt" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ygF-hb-jzt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OnS-it-48P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-fK-0hr" userLabel="titleLabel">
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
+                                <string key="text">Отлично,
+username</string>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осталось ввести email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exd-97-f71" userLabel="infoLabel">
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czF-Dd-MHt" userLabel="nameField">
+                                <rect key="frame" x="40" y="359" width="128" height="33"/>
+                                <color key="textColor" name="Dark900"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-w3-7qG" userLabel="errorIcon">
+                                <rect key="frame" x="172" y="367.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="VLG-Ly-gzA"/>
+                                    <constraint firstAttribute="width" secondItem="wPB-w3-7qG" secondAttribute="height" multiplier="1:1" id="wa6-cC-MPn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-f3-QMh" userLabel="errorLabel">
+                                <rect key="frame" x="40" y="422" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="StatusRed"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYr-aT-0BU" userLabel="continueButton">
+                                <rect key="frame" x="40" y="774" width="334" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="IZi-b2-Eki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                <state key="normal" title="Продолжить" backgroundImage="buttonBackPrimaryColor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gz6-Vc-fLb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mRQ-f3-QMh" firstAttribute="trailing" secondItem="m2i-fK-0hr" secondAttribute="trailing" id="7hB-R1-vrg"/>
+                            <constraint firstItem="czF-Dd-MHt" firstAttribute="leading" secondItem="m2i-fK-0hr" secondAttribute="leading" id="8bb-1D-0b2"/>
+                            <constraint firstItem="m2i-fK-0hr" firstAttribute="leading" secondItem="gz6-Vc-fLb" secondAttribute="leading" constant="40" id="EQ6-4y-Tej"/>
+                            <constraint firstItem="wPB-w3-7qG" firstAttribute="centerY" secondItem="czF-Dd-MHt" secondAttribute="centerY" id="ETe-23-zt3"/>
+                            <constraint firstItem="exd-97-f71" firstAttribute="leading" secondItem="m2i-fK-0hr" secondAttribute="leading" id="EXB-hx-4mr"/>
+                            <constraint firstItem="czF-Dd-MHt" firstAttribute="top" secondItem="exd-97-f71" secondAttribute="bottom" constant="30" id="HPf-6d-lym"/>
+                            <constraint firstItem="m2i-fK-0hr" firstAttribute="trailing" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="MOO-E3-acY"/>
+                            <constraint firstItem="wPB-w3-7qG" firstAttribute="leading" secondItem="czF-Dd-MHt" secondAttribute="trailing" constant="4" id="SIH-8u-rSJ"/>
+                            <constraint firstItem="mRQ-f3-QMh" firstAttribute="top" secondItem="czF-Dd-MHt" secondAttribute="bottom" constant="30" id="SVk-XM-5AE"/>
+                            <constraint firstItem="exd-97-f71" firstAttribute="trailing" secondItem="m2i-fK-0hr" secondAttribute="trailing" id="Yu9-yZ-vdK"/>
+                            <constraint firstItem="gz6-Vc-fLb" firstAttribute="bottom" secondItem="IYr-aT-0BU" secondAttribute="bottom" constant="40" id="gCC-Cg-NWb"/>
+                            <constraint firstItem="wPB-w3-7qG" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="jM5-4x-p21"/>
+                            <constraint firstItem="exd-97-f71" firstAttribute="top" secondItem="m2i-fK-0hr" secondAttribute="bottom" constant="24" id="k8J-dB-knD"/>
+                            <constraint firstItem="mRQ-f3-QMh" firstAttribute="leading" secondItem="m2i-fK-0hr" secondAttribute="leading" id="qVc-GF-QcM"/>
+                            <constraint firstItem="gz6-Vc-fLb" firstAttribute="trailing" secondItem="IYr-aT-0BU" secondAttribute="trailing" constant="40" id="rP2-l7-OLB"/>
+                            <constraint firstItem="IYr-aT-0BU" firstAttribute="leading" secondItem="gz6-Vc-fLb" secondAttribute="leading" constant="40" id="sSB-4f-Xg0"/>
+                            <constraint firstItem="m2i-fK-0hr" firstAttribute="top" secondItem="gz6-Vc-fLb" secondAttribute="top" constant="161" id="zaV-RN-xLf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sfm-PM-28a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebs-Cc-fDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2329" y="-10"/>
+            <point key="canvasLocation" x="2328.985507246377" y="-10.044642857142856"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="Lwq-hu-82p">
@@ -240,6 +362,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buttonBackPrimaryColor" width="19.5" height="19.5"/>
+        <image name="iconError" width="16" height="16"/>
         <namedColor name="Dark700">
             <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

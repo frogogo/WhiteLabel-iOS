@@ -18,12 +18,12 @@
 		6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109378262883CF00A8B554 /* Rubik-Regular.ttf */; };
 		67FE38292625594900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE382B2625594900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
-		67FE38322625594A00750368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* Assets.xcassets */; };
+		67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
 		67FE38352625594A00750368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38332625594A00750368 /* LaunchScreen.storyboard */; };
 		67FE38402625596900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE38412625596900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38442625596900750368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38332625594A00750368 /* LaunchScreen.storyboard */; };
-		67FE38452625596900750368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* Assets.xcassets */; };
+		67FE38452625596900750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		67FE38252625594900750368 /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67FE38312625594A00750368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67FE38312625594A00750368 /* CommonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonAssets.xcassets; sourceTree = "<group>"; };
 		67FE38342625594A00750368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67FE38362625594A00750368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FE384A2625596900750368 /* ZBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +73,7 @@
 			children = (
 				6710936626287E2300A8B554 /* Rubik font */,
 				6710935E26280E2000A8B554 /* Colors.xcassets */,
-				67FE38312625594A00750368 /* Assets.xcassets */,
+				67FE38312625594A00750368 /* CommonAssets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				6710935F26280E2000A8B554 /* Colors.xcassets in Resources */,
 				67FE38352625594A00750368 /* LaunchScreen.storyboard in Resources */,
 				6710937B262883CF00A8B554 /* Rubik-Medium.ttf in Resources */,
-				67FE38322625594A00750368 /* Assets.xcassets in Resources */,
+				67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */,
 				67109379262883CF00A8B554 /* Rubik-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +284,7 @@
 				6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */,
 				6710937A262883CF00A8B554 /* Rubik-Bold.ttf in Resources */,
 				67FE38442625596900750368 /* LaunchScreen.storyboard in Resources */,
-				67FE38452625596900750368 /* Assets.xcassets in Resources */,
+				67FE38452625596900750368 /* CommonAssets.xcassets in Resources */,
 				6710937C262883CF00A8B554 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
