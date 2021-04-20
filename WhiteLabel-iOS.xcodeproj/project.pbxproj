@@ -41,9 +41,14 @@
 		67FE38402625596900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE38412625596900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38452625596900750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
+		6BB3814539FF36A4D6AA0917 /* libPods-ZBoom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */; };
+		D69E24278CB6B140CB735B7D /* libPods-Generic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F66A24379860CA50F1C05B8 /* libPods-Generic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.debug.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.debug.xcconfig"; sourceTree = "<group>"; };
+		08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.release.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.release.xcconfig"; sourceTree = "<group>"; };
+		1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.debug.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.debug.xcconfig"; sourceTree = "<group>"; };
 		6710935126280B3D00A8B554 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		6710935E26280E2000A8B554 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		67109376262883CF00A8B554 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 		67FE38342625594A00750368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67FE38362625594A00750368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FE384A2625596900750368 /* ZBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F66A24379860CA50F1C05B8 /* libPods-Generic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Generic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.release.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.release.xcconfig"; sourceTree = "<group>"; };
+		FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZBoom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69E24278CB6B140CB735B7D /* libPods-Generic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +90,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB3814539FF36A4D6AA0917 /* libPods-ZBoom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D8064AC1F0769C8D693DB00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */,
+				928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */,
+				06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */,
+				08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		333D1BE2F1F6707044C2E881 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F66A24379860CA50F1C05B8 /* libPods-Generic.a */,
+				FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6710935026280A1500A8B554 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +266,8 @@
 			children = (
 				67FE38272625594900750368 /* WhiteLabel-iOS */,
 				67FE38262625594900750368 /* Products */,
+				0D8064AC1F0769C8D693DB00 /* Pods */,
+				333D1BE2F1F6707044C2E881 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE38392625594A00750368 /* Build configuration list for PBXNativeTarget "Generic" */;
 			buildPhases = (
+				DB872031F27A67585D01F23D /* [CP] Check Pods Manifest.lock */,
 				67FE38212625594900750368 /* Sources */,
 				67FE38222625594900750368 /* Frameworks */,
 				67FE38232625594900750368 /* Resources */,
@@ -284,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE38472625596900750368 /* Build configuration list for PBXNativeTarget "ZBoom" */;
 			buildPhases = (
+				DDA7A582B0E0AE85A502EA1A /* [CP] Check Pods Manifest.lock */,
 				67FE383E2625596900750368 /* Sources */,
 				67FE38422625596900750368 /* Frameworks */,
 				67FE38432625596900750368 /* Resources */,
@@ -364,6 +398,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB872031F27A67585D01F23D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Generic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDA7A582B0E0AE85A502EA1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZBoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67FE38212625594900750368 /* Sources */ = {
@@ -469,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -524,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -536,6 +617,7 @@
 		};
 		67FE383A2625594A00750368 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +638,7 @@
 		};
 		67FE383B2625594A00750368 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,6 +659,7 @@
 		};
 		67FE38482625596900750368 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -596,6 +680,7 @@
 		};
 		67FE38492625596900750368 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
