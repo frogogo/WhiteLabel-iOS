@@ -155,10 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				679541AC262582FF00C04495 /* Data */,
-				679541B22625851200C04495 /* Utilities */,
 				679541AB262582F300C04495 /* Services */,
 				679541AE2625830F00C04495 /* UI components */,
 				679541B1262584D400C04495 /* Screens and navigation */,
+				679541B22625851200C04495 /* Utilities */,
 			);
 			path = Common;
 			sourceTree = "<group>";
