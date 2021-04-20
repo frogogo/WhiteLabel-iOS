@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Phone Enter Screen Controller-->
         <scene sceneID="Ylr-8A-z4g">
             <objects>
-                <viewController id="8df-z3-OFl" sceneMemberID="viewController">
+                <viewController id="8df-z3-OFl" customClass="PhoneEnterScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QXl-AE-H4M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

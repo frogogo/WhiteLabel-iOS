@@ -16,6 +16,16 @@
 		6710937C262883CF00A8B554 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109377262883CF00A8B554 /* Rubik-Medium.ttf */; };
 		6710937D262883CF00A8B554 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109378262883CF00A8B554 /* Rubik-Regular.ttf */; };
 		6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109378262883CF00A8B554 /* Rubik-Regular.ttf */; };
+		675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */; };
+		675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */; };
+		675634EA262E3B4B009C4CAE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E9262E3B4B009C4CAE /* Box.swift */; };
+		675634EB262E3B4B009C4CAE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E9262E3B4B009C4CAE /* Box.swift */; };
+		675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634EE262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift */; };
+		675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634EE262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift */; };
+		675634F6262E3BFE009C4CAE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F4262E3BFE009C4CAE /* BaseViewModel.swift */; };
+		675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F4262E3BFE009C4CAE /* BaseViewModel.swift */; };
+		675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F5262E3BFE009C4CAE /* BaseViewController.swift */; };
+		675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F5262E3BFE009C4CAE /* BaseViewController.swift */; };
 		67E9D7722629B3EA005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7712629B3EA005A3C66 /* Assets.xcassets */; };
 		67E9D7762629B3F9005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7752629B3F9005A3C66 /* Assets.xcassets */; };
 		67E9D77F2629B7CC005A3C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */; };
@@ -39,6 +49,11 @@
 		67109376262883CF00A8B554 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		67109377262883CF00A8B554 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		67109378262883CF00A8B554 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterScreenController.swift; sourceTree = "<group>"; };
+		675634E9262E3B4B009C4CAE /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		675634EE262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterScreenViewModel.swift; sourceTree = "<group>"; };
+		675634F4262E3BFE009C4CAE /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		675634F5262E3BFE009C4CAE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		679541A626255D3E00C04495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E9D7712629B3EA005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E9D7752629B3F9005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +90,8 @@
 		6710935026280A1500A8B554 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				675634E2262E39A5009C4CAE /* Phone enter screen */,
+				675634E3262E39AF009C4CAE /* Auth code enter screen */,
 				6710935126280B3D00A8B554 /* Auth.storyboard */,
 			);
 			path = Auth;
@@ -100,6 +117,31 @@
 			path = "Rubik font";
 			sourceTree = "<group>";
 		};
+		675634E2262E39A5009C4CAE /* Phone enter screen */ = {
+			isa = PBXGroup;
+			children = (
+				675634EE262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift */,
+				675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */,
+			);
+			path = "Phone enter screen";
+			sourceTree = "<group>";
+		};
+		675634E3262E39AF009C4CAE /* Auth code enter screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Auth code enter screen";
+			sourceTree = "<group>";
+		};
+		675634F3262E3BDA009C4CAE /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				675634F5262E3BFE009C4CAE /* BaseViewController.swift */,
+				675634F4262E3BFE009C4CAE /* BaseViewModel.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		679541A9262581EC00C04495 /* Partner specific */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +156,8 @@
 			children = (
 				679541AC262582FF00C04495 /* Data */,
 				679541B22625851200C04495 /* Utilities */,
-				679541AE2625830F00C04495 /* UI components */,
 				679541AB262582F300C04495 /* Services */,
+				679541AE2625830F00C04495 /* UI components */,
 				679541B1262584D400C04495 /* Screens and navigation */,
 			);
 			path = Common;
@@ -165,6 +207,7 @@
 		679541B1262584D400C04495 /* Screens and navigation */ = {
 			isa = PBXGroup;
 			children = (
+				675634F3262E3BDA009C4CAE /* Abstract */,
 				67E9D7842629B8B2005A3C66 /* Root */,
 				6710935026280A1500A8B554 /* Auth */,
 			);
@@ -174,6 +217,7 @@
 		679541B22625851200C04495 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				675634E9262E3B4B009C4CAE /* Box.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,7 +372,12 @@
 			files = (
 				67FE38292625594900750368 /* AppDelegate.swift in Sources */,
 				67FE382B2625594900750368 /* SceneDelegate.swift in Sources */,
+				675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
+				675634F6262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
 				67E9D78B2629B8E1005A3C66 /* RootController.swift in Sources */,
+				675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
+				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
+				675634EA262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +387,12 @@
 			files = (
 				67FE38402625596900750368 /* AppDelegate.swift in Sources */,
 				67FE38412625596900750368 /* SceneDelegate.swift in Sources */,
+				675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
+				675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
 				67E9D78C2629B8E1005A3C66 /* RootController.swift in Sources */,
+				675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
+				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
+				675634EB262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
