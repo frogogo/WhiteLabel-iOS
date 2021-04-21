@@ -44,11 +44,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
                                 <rect key="frame" x="77.5" y="359.5" width="193" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f1q-Ns-yP5" id="axZ-Wa-w35"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
                                 <rect key="frame" x="40" y="422.5" width="154" height="19"/>
@@ -62,8 +65,9 @@
                                     <color key="titleColor" name="PrimaryMain"/>
                                 </state>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
                                 <rect key="frame" x="282.5" y="366" width="20" height="20"/>
+                                <color key="color" name="PrimaryMain"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ags-ze-7j9">
                                 <rect key="frame" x="137" y="514" width="140" height="32"/>
@@ -100,8 +104,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eCL-ff-d0n"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="JNm-Ag-i2X" id="nyW-iu-1tj"/>
+                        <outlet property="phoneCodeLabel" destination="ET5-wi-AgF" id="Mdo-8S-9eH"/>
+                        <outlet property="phoneField" destination="I9v-5C-NII" id="Apv-LD-u7I"/>
+                        <outlet property="phoneFieldListener" destination="f1q-Ns-yP5" id="7Sh-dE-ARV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmj-v1-IWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="f1q-Ns-yP5" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="([000]) [000]-[00]-[00]"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="8df-z3-OFl" id="Txx-ME-Jin"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-255" y="-10"/>
         </scene>
