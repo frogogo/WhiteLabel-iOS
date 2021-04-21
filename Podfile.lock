@@ -3,8 +3,8 @@ PODS:
   - InputMask (6.0.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - InputMask
+  - Alamofire (~> 5.4)
+  - InputMask (~> 6.0)
 
 SPEC REPOS:
   trunk:
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   InputMask: f340bdc905a4c4f377e44d865f129f752ac2383d
 
-PODFILE CHECKSUM: 6c5ca3e94ed2c5e12a24936dba72a291cb2366ff
+PODFILE CHECKSUM: 599a2e34e827c646e9da99a4c19ab8c85b728e18
 
 COCOAPODS: 1.10.1
