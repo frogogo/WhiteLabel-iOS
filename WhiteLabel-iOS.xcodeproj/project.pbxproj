@@ -34,6 +34,16 @@
 		67E9D78B2629B8E1005A3C66 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9D78A2629B8E1005A3C66 /* RootController.swift */; };
 		67E9D78C2629B8E1005A3C66 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9D78A2629B8E1005A3C66 /* RootController.swift */; };
 		67E9D7932629BA05005A3C66 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6710935126280B3D00A8B554 /* Auth.storyboard */; };
+		67F14B342631939000FF36E3 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B332631939000FF36E3 /* APIConnector.swift */; };
+		67F14B3A2631941C00FF36E3 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B392631941C00FF36E3 /* BaseDataManager.swift */; };
+		67F14B3B2631941C00FF36E3 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B392631941C00FF36E3 /* BaseDataManager.swift */; };
+		67F14B412631943900FF36E3 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B402631943900FF36E3 /* AccountManager.swift */; };
+		67F14B422631943900FF36E3 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B402631943900FF36E3 /* AccountManager.swift */; };
+		67F14B45263195F500FF36E3 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B332631939000FF36E3 /* APIConnector.swift */; };
+		67F14B572632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */; };
+		67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */; };
+		67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
+		67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
 		67FE38292625594900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE382B2625594900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
@@ -65,6 +75,11 @@
 		67E9D77E2629B7CC005A3C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E9D7852629B8BE005A3C66 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		67E9D78A2629B8E1005A3C66 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		67F14B332631939000FF36E3 /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
+		67F14B392631941C00FF36E3 /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
+		67F14B402631943900FF36E3 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenController.swift; sourceTree = "<group>"; };
+		67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenViewModel.swift; sourceTree = "<group>"; };
 		67FE38252625594900750368 /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +174,8 @@
 		675634E3262E39AF009C4CAE /* Auth code enter screen */ = {
 			isa = PBXGroup;
 			children = (
+				67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */,
+				67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */,
 			);
 			path = "Auth code enter screen";
 			sourceTree = "<group>";
@@ -196,6 +213,7 @@
 		679541AB262582F300C04495 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				67F14B332631939000FF36E3 /* APIConnector.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +221,8 @@
 		679541AC262582FF00C04495 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				67F14B37263193DB00FF36E3 /* Managers */,
+				67F14B38263193EB00FF36E3 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -259,6 +279,22 @@
 				67E9D78A2629B8E1005A3C66 /* RootController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		67F14B37263193DB00FF36E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				67F14B392631941C00FF36E3 /* BaseDataManager.swift */,
+				67F14B402631943900FF36E3 /* AccountManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		67F14B38263193EB00FF36E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		67FE381C2625594900750368 = {
@@ -451,13 +487,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F14B342631939000FF36E3 /* APIConnector.swift in Sources */,
+				67F14B412631943900FF36E3 /* AccountManager.swift in Sources */,
 				67FE38292625594900750368 /* AppDelegate.swift in Sources */,
 				67FE382B2625594900750368 /* SceneDelegate.swift in Sources */,
 				675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
+				67F14B572632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
 				675634F6262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
 				67E9D78B2629B8E1005A3C66 /* RootController.swift in Sources */,
 				675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
+				67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
+				67F14B3A2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
 				675634EA262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,14 +507,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F14B3B2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
 				67FE38402625596900750368 /* AppDelegate.swift in Sources */,
 				67FE38412625596900750368 /* SceneDelegate.swift in Sources */,
 				675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
 				675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
+				67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
+				67F14B422631943900FF36E3 /* AccountManager.swift in Sources */,
 				67E9D78C2629B8E1005A3C66 /* RootController.swift in Sources */,
 				675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
+				67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
 				675634EB262E3B4B009C4CAE /* Box.swift in Sources */,
+				67F14B45263195F500FF36E3 /* APIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@ def common_pods
   pod 'Alamofire', '~> 5.4'
   # Utilities
   pod 'InputMask', '~> 6.0'
+  pod 'SwiftyJSON', '~> 5.0'
 end
 
 # Partner specific targets
