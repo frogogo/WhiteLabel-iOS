@@ -46,12 +46,11 @@ class PhoneEnterScreenViewModel: BaseViewModel {
   private func sendPhoneNumberForCheck(_ phoneNumberString: String) {
     showActivity.value = true
 
-    AccountManager.shared.auth(withPhoneNumber: phoneNumberString) { [weak self] in
-      print("Auth request succeeded")
+    AccountManager.shared.requestAuthCode(forPhoneNumber: phoneNumberString) { [weak self] in
       self?.showActivity.value = false
       self?.delegate?.didCheckEnteredPhone()
-    } onFailure: { [weak self] in
-      print("Auth request failed")
+    } onFailure: { [weak self] (error) in
+      print("Auth request failed: \(error)")
       self?.showActivity.value = false
       self?.errorToShow.value = "Что-то пошло не так!"
     }
