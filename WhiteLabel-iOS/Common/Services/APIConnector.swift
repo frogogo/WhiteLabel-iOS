@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-typealias CompleteHandler = (_ isSuccess: Bool, _ response: Data?, _ errors: [APIError]) -> Void
+typealias CompleteHandler = (_ isSuccess: Bool, _ response: JSON, _ errors: [JSON]) -> Void
 
 enum APIErrorType {
   case unknown
@@ -10,12 +10,6 @@ enum APIErrorType {
   case authorization
   case notFound
   case validation
-}
-
-struct APIError {
-  var type: APIErrorType
-  var context: String = ""
-  var messages: [String]
 }
 
 private struct Host {
@@ -71,11 +65,12 @@ class APIConnector {
 
     let requestURL = APIConnector.baseURL + "/" + endpoint
     var headersToSend: HTTPHeaders = ["Accept": "application/json",
+                                      "Content-Type": "application/json",
                                       "API-Version": defaultAPIVersion]
 
     if addAuthToken {
       if authToken == "" {
-        completeHandler(false, nil, [standardError(withType: .authorization)])
+        completeHandler(false, JSON(""), [standardError(withType: .authorization)])
         return
       } else {
         headersToSend["Authorization"] = "Bearer " + authToken
@@ -91,67 +86,54 @@ class APIConnector {
             parameters: params,
             encoding: encoding,
             headers: headersToSend)
-      .responseData { [unowned self] (rawResponse) in
-        guard let response = rawResponse.response else {
-          completeHandler(false, nil, [self.standardError(withType: .connection)])
+      .responseJSON { [unowned self] (jsonResponse) in
+
+        print("\(type(of: self)): full response \(jsonResponse)")
+
+        guard let response = jsonResponse.response else {
+          completeHandler(false, JSON(""), [self.standardError(withType: .connection)])
           return
         }
 
         var isSuccess = false
-        var responseData: Data?
-        var occuredErrors: [APIError] = []
+        var occuredErrors: [JSON] = []
 
         switch response.statusCode {
         case 200..<300:
           isSuccess = true
-          responseData = rawResponse.data
         case 401:
           occuredErrors = [self.standardError(withType: .authorization)]
         case 404:
           occuredErrors = [self.standardError(withType: .notFound)]
         case 422:
-          occuredErrors = self.validationErrors(with: rawResponse.data!)
+          occuredErrors = [JSON(jsonResponse)]
         default:
           print("\(type(of: self)): Unknown error occured. HTTP code \(response.statusCode). Failed \(method.rawValue.uppercased())-request with URL = \(requestURL) ")
           occuredErrors = [self.standardError(withType: .unknown)]
         }
-        completeHandler(isSuccess, responseData, occuredErrors)
+        completeHandler(isSuccess, JSON(jsonResponse), occuredErrors)
     }
   }
 
-  private func standardError(withType errorType: APIErrorType) -> APIError {
+  private func standardError(withType errorType: APIErrorType) -> JSON {
+    var errorName = ""
     var errorMessage = ""
     switch errorType {
     case .unknown:
+      errorName = "Неизвестная ошибка"
       errorMessage = "Неизвестная ошибка"
     case .connection:
+      errorName = "Ошибка соединения с сервером"
       errorMessage = "Ошибка соединения с сервером"
     case .authorization:
+      errorName = "Ошибка авторизации"
       errorMessage = "Ошибка авторизации"
     case .notFound:
+      errorName = "Данные отсутствуют"
       errorMessage = "Данные отсутствуют"
     default:
       break
     }
-    return APIError(type: errorType, messages: [errorMessage])
-  }
-
-  private func validationErrors(with dataToParse: Data) -> [APIError] {
-    do {
-      let jsonErrors = try JSON(data: dataToParse)
-      var parsedErrors: [APIError] = []
-
-      for (errorName, errorMessages) in jsonErrors {
-        var parsedError = APIError(type: .validation, context: errorName, messages: [])
-        for errorMessage in errorMessages.arrayValue {
-          parsedError.messages.append(errorMessage.stringValue)
-        }
-        parsedErrors.append(parsedError)
-      }
-      return parsedErrors
-
-    } catch {
-      return [standardError(withType: .unknown)]
-    }
+    return JSON(["error": errorName, "error_text": errorMessage])
   }
 }
