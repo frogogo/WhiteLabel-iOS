@@ -11,6 +11,8 @@ import NotificationCenter
 
 class PhoneEnterScreenController: BaseViewController {
   // MARK: - Properties
+  let viewModel = PhoneEnterScreenViewModel()
+
   @IBOutlet private var phoneCodeLabel: UILabel!
   @IBOutlet private var phoneField: UITextField!
   @IBOutlet private var phoneFieldListener: MaskedTextFieldDelegate!
@@ -19,7 +21,7 @@ class PhoneEnterScreenController: BaseViewController {
   @IBOutlet private var errorContainerBottomConstraint: NSLayoutConstraint!
   @IBOutlet private var errorLabel: UILabel!
 
-  private let viewModel = PhoneEnterScreenViewModel()
+  private let errorContainerBottomGap: CGFloat = 24
 
   // MARK: - Lifecycle methods
   override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +36,11 @@ class PhoneEnterScreenController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // TODO: need to set checked phone number to destination VC's viewmodel
+    if segue.identifier == "PhoneEnterToAuthCodeCheckSegue" {
+      let destinationVC = segue.destination as? AuthCodeEnterScreenController
+      destinationVC?.viewModel.enteredPhoneNumber = viewModel.enteredPhoneNumber
+      destinationVC?.viewModel.newAuthCodeRetryDelayInSeconds = viewModel.retryDelayInSeconds
+    }
   }
   
   // MARK: - Overridden methods
@@ -88,11 +94,11 @@ class PhoneEnterScreenController: BaseViewController {
     let keyboardSizeKey = UIResponder.keyboardFrameEndUserInfoKey
     guard let keyboardSize = (userInfo[keyboardSizeKey] as? NSValue)?.cgRectValue else { return }
 
-    errorContainerBottomConstraint.constant = -(keyboardSize.height + 36)
+    errorContainerBottomConstraint.constant = -(keyboardSize.height + errorContainerBottomGap)
   }
 
   @objc func handleNotifKeyboardHide() {
-    errorContainerBottomConstraint.constant = -36
+    errorContainerBottomConstraint.constant = -errorContainerBottomGap
   }
 }
 
@@ -107,7 +113,7 @@ extension PhoneEnterScreenController: MaskedTextFieldDelegateListener {
 
 // MARK: - View model delegate methods
 extension PhoneEnterScreenController: PhoneEnterScreenViewModelDelegate {
-  func didCheckEnteredPhone() {
+  func didSendEnteredPhone() {
     performSegue(withIdentifier: "PhoneEnterToAuthCodeCheckSegue", sender: nil)
   }
 }

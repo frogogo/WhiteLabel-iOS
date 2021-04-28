@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6706BBE02638A85100CE4328 /* NameEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */; };
+		6706BBE12638A85100CE4328 /* NameEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */; };
+		6706BBE42638A87D00CE4328 /* NameEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */; };
+		6706BBE52638A87D00CE4328 /* NameEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */; };
+		6706BBE72639339700CE4328 /* EmailEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */; };
+		6706BBE82639339700CE4328 /* EmailEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */; };
+		6706BBEA263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */; };
+		6706BBEB263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */; };
+		6706BBEE26393DFB00CE4328 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6706BBED26393DFB00CE4328 /* Home.storyboard */; };
+		6706BBEF26393DFB00CE4328 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6706BBED26393DFB00CE4328 /* Home.storyboard */; };
+		6706BBF12639425500CE4328 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
+		6706BBF22639425500CE4328 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
 		6710935226280B3D00A8B554 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6710935126280B3D00A8B554 /* Auth.storyboard */; };
 		6710935F26280E2000A8B554 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6710935E26280E2000A8B554 /* Colors.xcassets */; };
 		6710936026280E2000A8B554 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6710935E26280E2000A8B554 /* Colors.xcassets */; };
@@ -59,6 +71,12 @@
 		06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.debug.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.debug.xcconfig"; sourceTree = "<group>"; };
 		08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.release.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.release.xcconfig"; sourceTree = "<group>"; };
 		1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.debug.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.debug.xcconfig"; sourceTree = "<group>"; };
+		6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterScreenController.swift; sourceTree = "<group>"; };
+		6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterScreenViewModel.swift; sourceTree = "<group>"; };
+		6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEnterScreenController.swift; sourceTree = "<group>"; };
+		6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEnterScreenViewModel.swift; sourceTree = "<group>"; };
+		6706BBED26393DFB00CE4328 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6706BBF02639425500CE4328 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		6710935126280B3D00A8B554 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		6710935E26280E2000A8B554 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		67109376262883CF00A8B554 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -132,12 +150,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6706BBDD2638A81E00CE4328 /* Name enter screen */ = {
+			isa = PBXGroup;
+			children = (
+				6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */,
+				6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */,
+			);
+			path = "Name enter screen";
+			sourceTree = "<group>";
+		};
+		6706BBDE2638A82600CE4328 /* Email enter screen */ = {
+			isa = PBXGroup;
+			children = (
+				6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */,
+				6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */,
+			);
+			path = "Email enter screen";
+			sourceTree = "<group>";
+		};
+		6706BBEC26393DE400CE4328 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6706BBED26393DFB00CE4328 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		6710935026280A1500A8B554 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				6710935126280B3D00A8B554 /* Auth.storyboard */,
 				675634E2262E39A5009C4CAE /* Phone enter screen */,
 				675634E3262E39AF009C4CAE /* Auth code enter screen */,
-				6710935126280B3D00A8B554 /* Auth.storyboard */,
+				6706BBDD2638A81E00CE4328 /* Name enter screen */,
+				6706BBDE2638A82600CE4328 /* Email enter screen */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -260,6 +306,7 @@
 				675634F3262E3BDA009C4CAE /* Abstract */,
 				67E9D7842629B8B2005A3C66 /* Root */,
 				6710935026280A1500A8B554 /* Auth */,
+				6706BBEC26393DE400CE4328 /* Home */,
 			);
 			path = "Screens and navigation";
 			sourceTree = "<group>";
@@ -286,6 +333,7 @@
 			children = (
 				67F14B392631941C00FF36E3 /* BaseDataManager.swift */,
 				67F14B402631943900FF36E3 /* AccountManager.swift */,
+				6706BBF02639425500CE4328 /* ProfileManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -406,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E9D7862629B8BE005A3C66 /* Root.storyboard in Resources */,
+				6706BBEE26393DFB00CE4328 /* Home.storyboard in Resources */,
 				6710935226280B3D00A8B554 /* Auth.storyboard in Resources */,
 				6710937D262883CF00A8B554 /* Rubik-Regular.ttf in Resources */,
 				6710935F26280E2000A8B554 /* Colors.xcassets in Resources */,
@@ -422,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E9D7932629BA05005A3C66 /* Auth.storyboard in Resources */,
+				6706BBEF26393DFB00CE4328 /* Home.storyboard in Resources */,
 				6710936026280E2000A8B554 /* Colors.xcassets in Resources */,
 				6710937E262883CF00A8B554 /* Rubik-Regular.ttf in Resources */,
 				67E9D7872629B8BE005A3C66 /* Root.storyboard in Resources */,
@@ -490,11 +540,16 @@
 				67F14B342631939000FF36E3 /* APIConnector.swift in Sources */,
 				67F14B412631943900FF36E3 /* AccountManager.swift in Sources */,
 				67FE38292625594900750368 /* AppDelegate.swift in Sources */,
+				6706BBEA263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */,
+				6706BBE02638A85100CE4328 /* NameEnterScreenController.swift in Sources */,
 				67FE382B2625594900750368 /* SceneDelegate.swift in Sources */,
 				675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
+				6706BBF12639425500CE4328 /* ProfileManager.swift in Sources */,
 				67F14B572632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
 				675634F6262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
+				6706BBE42638A87D00CE4328 /* NameEnterScreenViewModel.swift in Sources */,
 				67E9D78B2629B8E1005A3C66 /* RootController.swift in Sources */,
+				6706BBE72639339700CE4328 /* EmailEnterScreenController.swift in Sources */,
 				675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
@@ -510,11 +565,16 @@
 				67F14B3B2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
 				67FE38402625596900750368 /* AppDelegate.swift in Sources */,
 				67FE38412625596900750368 /* SceneDelegate.swift in Sources */,
+				6706BBEB263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */,
+				6706BBE12638A85100CE4328 /* NameEnterScreenController.swift in Sources */,
 				675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
 				675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
+				6706BBF22639425500CE4328 /* ProfileManager.swift in Sources */,
 				67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
 				67F14B422631943900FF36E3 /* AccountManager.swift in Sources */,
+				6706BBE52638A87D00CE4328 /* NameEnterScreenViewModel.swift in Sources */,
 				67E9D78C2629B8E1005A3C66 /* RootController.swift in Sources */,
+				6706BBE82639339700CE4328 /* EmailEnterScreenController.swift in Sources */,
 				675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,

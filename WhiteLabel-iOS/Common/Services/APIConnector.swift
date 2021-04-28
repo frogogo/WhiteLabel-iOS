@@ -32,6 +32,7 @@ class APIConnector {
   var authToken = ""
 
   private let defaultAPIVersion = "1"
+  private let verboseLogging = true
 
   // MARK: - Custom open/public/internal methods
   func requestGET(_ endpoint: String, params: [String: Any]? = nil, useAuth: Bool = true, apiVersion: String? = nil, completeHandler: @escaping CompleteHandler) {
@@ -81,38 +82,35 @@ class APIConnector {
       headersToSend["API-Version"] = overriddenAPIVersion
     }
 
-    AF.request(requestURL,
-            method: method,
-            parameters: params,
-            encoding: encoding,
-            headers: headersToSend)
-      .responseJSON { [unowned self] (jsonResponse) in
-
-        print("\(type(of: self)): full response \(jsonResponse)")
-
-        guard let response = jsonResponse.response else {
-          completeHandler(false, JSON(""), [self.standardError(withType: .connection)])
-          return
-        }
-
-        var isSuccess = false
-        var occuredErrors: [JSON] = []
-
-        switch response.statusCode {
-        case 200..<300:
-          isSuccess = true
-        case 401:
-          occuredErrors = [self.standardError(withType: .authorization)]
-        case 404:
-          occuredErrors = [self.standardError(withType: .notFound)]
-        case 422:
-          occuredErrors = [JSON(jsonResponse)]
-        default:
-          print("\(type(of: self)): Unknown error occured. HTTP code \(response.statusCode). Failed \(method.rawValue.uppercased())-request with URL = \(requestURL) ")
-          occuredErrors = [self.standardError(withType: .unknown)]
-        }
-        completeHandler(isSuccess, JSON(jsonResponse), occuredErrors)
+    if verboseLogging {
+      print("\n----- REQUEST DETAILS -----")
+      print("\(method.rawValue.uppercased())-request to \"\(endpoint)\"")
+      print("Full URL = \(requestURL)")
+      print("\t\tHEADERS:\n\(headersToSend)")
+      print("\t\tPARAMETERS:\n\(params ?? [:])")
+      print("----- REQUEST DETAILS END -----\n")
     }
+
+    AF.request(requestURL,
+               method: method,
+               parameters: params,
+               encoding: encoding,
+               headers: headersToSend)
+      .responseJSON { (response) in
+
+        if self.verboseLogging {
+          print("\n----- FULL RESPONSE -----")
+          print("\(response)")
+          print("----- FULL RESPONSE END -----\n")
+        }
+
+        switch response.result {
+        case .success(let value):
+          completeHandler(true, JSON(value), [])
+        case .failure(let error):
+          completeHandler(false, JSON(), [JSON(error)])
+        }
+      }
   }
 
   private func standardError(withType errorType: APIErrorType) -> JSON {

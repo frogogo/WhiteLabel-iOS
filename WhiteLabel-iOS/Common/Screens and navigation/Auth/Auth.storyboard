@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l5D-AD-FQf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l5D-AD-FQf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
@@ -39,13 +42,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="+7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-wi-AgF" userLabel="phoneCodeLabel">
-                                <rect key="frame" x="40" y="360" width="31.5" height="32"/>
+                                <rect key="frame" x="40" y="360" width="29.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
-                                <rect key="frame" x="77.5" y="359.5" width="193" height="33"/>
+                                <rect key="frame" x="75.5" y="359.5" width="221" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
@@ -57,13 +60,13 @@
                                 <rect key="frame" x="40" y="807" width="334" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="154" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="19"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <color key="textColor" name="Dark700"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="retryButton">
-                                        <rect key="frame" x="162" y="-7.5" width="89" height="34"/>
+                                        <rect key="frame" x="167" y="-7.5" width="89" height="34"/>
                                         <state key="normal" title="Повторить">
                                             <color key="titleColor" name="PrimaryMain"/>
                                         </state>
@@ -83,7 +86,7 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
-                                <rect key="frame" x="282.5" y="366" width="20" height="20"/>
+                                <rect key="frame" x="308.5" y="366" width="20" height="20"/>
                                 <color key="color" name="PrimaryMain"/>
                             </activityIndicatorView>
                         </subviews>
@@ -133,89 +136,90 @@
             </objects>
             <point key="canvasLocation" x="-255" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth Code Enter Screen Controller-->
         <scene sceneID="Bkx-tg-6c5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="aJL-HF-tvr" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="aJL-HF-tvr" customClass="AuthCodeEnterScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2AQ-ho-WQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-pN-beE" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="40"/>
+                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="269" width="334" height="19"/>
+                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 (000) 000-00-00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-XE-qZS" userLabel="phoneLabel">
-                                <rect key="frame" x="40" y="290" width="137.5" height="19"/>
+                                <rect key="frame" x="40" y="290.5" width="156.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark900"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-lY-Qwu" userLabel="changeNumberButton">
-                                <rect key="frame" x="186.5" y="284" width="74" height="31"/>
+                                <rect key="frame" x="205.5" y="284.5" width="76" height="31"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <state key="normal" title="Изменить">
                                     <color key="titleColor" name="PrimaryMain"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleChangePhoneButtonTap" destination="aJL-HF-tvr" eventType="touchUpInside" id="6Ae-kf-FL3"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qN-DnQ" userLabel="codeEnterField">
-                                <rect key="frame" x="40" y="355" width="288" height="18.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="•   •   •   •" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qN-DnQ" userLabel="codeEnterField">
+                                <rect key="frame" x="40" y="355.5" width="93.5" height="33.5"/>
+                                <color key="textColor" name="Dark900"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartDashesType="no" textContentType="one-time-code"/>
+                                <connections>
+                                    <outlet property="delegate" destination="znh-pc-aXX" id="wFi-gT-hor"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-3P-WwB" userLabel="indicatorStack">
-                                <rect key="frame" x="338" y="354.5" width="36" height="20"/>
+                                <rect key="frame" x="143.5" y="362.5" width="36" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-8k-OX1" userLabel="errorIcon">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-rt-ArP" userLabel="activityIndicator">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-rt-ArP" userLabel="activityIndicator">
                                         <rect key="frame" x="16" y="0.0" width="20" height="20"/>
+                                        <color key="color" name="PrimaryMain"/>
                                     </activityIndicatorView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gh-NaM" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="404.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="412.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-fG-gDi" userLabel="retryComponentStack">
-                                <rect key="frame" x="40" y="769.5" width="334" height="68.5"/>
+                                <rect key="frame" x="40" y="769" width="334" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Повторно запросить код можно через 28 секунд" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Kl-NWT" userLabel="retryCountdownLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="38"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <color key="textColor" name="Dark700"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-AK-bwI" userLabel="resendCodeButton">
-                                        <rect key="frame" x="0.0" y="37.5" width="148" height="31"/>
+                                        <rect key="frame" x="0.0" y="38" width="149" height="31"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <state key="normal" title="Выслать новый код">
                                             <color key="titleColor" name="PrimaryMain"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleRequestNewAuthCodeButtonTap" destination="aJL-HF-tvr" eventType="touchUpInside" id="D1q-mc-5fX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-pp-WIl">
-                                <rect key="frame" x="137" y="483.5" width="140" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Следующий экран">
-                                    <color key="titleColor" name="Dark900"/>
-                                </state>
-                                <connections>
-                                    <segue destination="unq-VB-8We" kind="show" id="KLm-uq-5Ij"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bLm-lW-ZjO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -227,10 +231,9 @@
                             <constraint firstItem="Clv-lY-Qwu" firstAttribute="leading" secondItem="GhU-XE-qZS" secondAttribute="trailing" constant="9" id="GZN-AA-01L"/>
                             <constraint firstItem="vS5-PH-BJE" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="IRL-z5-bw7"/>
                             <constraint firstItem="OPh-fG-gDi" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="KK4-gP-Cp3"/>
-                            <constraint firstItem="DBu-pp-WIl" firstAttribute="top" secondItem="c8f-Gh-NaM" secondAttribute="bottom" constant="60" id="NKs-SF-Qux"/>
                             <constraint firstItem="c8f-Gh-NaM" firstAttribute="top" secondItem="gWC-3P-WwB" secondAttribute="bottom" constant="30" id="Oih-zc-GgV"/>
                             <constraint firstItem="5cN-pN-beE" firstAttribute="top" secondItem="bLm-lW-ZjO" secondAttribute="top" constant="161" id="PCk-3j-eRn"/>
-                            <constraint firstItem="bLm-lW-ZjO" firstAttribute="bottom" secondItem="OPh-fG-gDi" secondAttribute="bottom" constant="24" id="S6p-iX-Vhc"/>
+                            <constraint firstItem="OPh-fG-gDi" firstAttribute="bottom" secondItem="bLm-lW-ZjO" secondAttribute="bottom" constant="-24" id="S6p-iX-Vhc"/>
                             <constraint firstItem="OPh-fG-gDi" firstAttribute="leading" secondItem="5cN-pN-beE" secondAttribute="leading" id="WRb-BL-lc3"/>
                             <constraint firstItem="vS5-PH-BJE" firstAttribute="top" secondItem="5cN-pN-beE" secondAttribute="bottom" constant="24" id="Xgf-li-DQp"/>
                             <constraint firstItem="vS5-PH-BJE" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="Yl9-nd-Y4L"/>
@@ -239,37 +242,54 @@
                             <constraint firstItem="5cN-pN-beE" firstAttribute="leading" secondItem="bLm-lW-ZjO" secondAttribute="leading" constant="40" id="mMn-Wr-qeD"/>
                             <constraint firstItem="gWC-3P-WwB" firstAttribute="centerY" secondItem="Tss-qN-DnQ" secondAttribute="centerY" id="sD8-bh-C1L"/>
                             <constraint firstItem="gWC-3P-WwB" firstAttribute="leading" secondItem="Tss-qN-DnQ" secondAttribute="trailing" constant="10" id="uDD-fZ-1tq"/>
-                            <constraint firstItem="DBu-pp-WIl" firstAttribute="centerX" secondItem="2AQ-ho-WQC" secondAttribute="centerX" id="v9R-tq-jef"/>
-                            <constraint firstItem="gWC-3P-WwB" firstAttribute="trailing" secondItem="5cN-pN-beE" secondAttribute="trailing" id="vOj-aH-61s"/>
                             <constraint firstItem="5cN-pN-beE" firstAttribute="trailing" secondItem="bLm-lW-ZjO" secondAttribute="trailing" constant="-40" id="y79-OB-wlI"/>
                             <constraint firstItem="Tss-qN-DnQ" firstAttribute="top" secondItem="GhU-XE-qZS" secondAttribute="bottom" constant="46" id="yjQ-W0-fj1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pyL-w7-e1Z"/>
                     <connections>
-                        <segue destination="iPc-yN-ptf" kind="show" identifier="CodeConfirmationToMainUISegue" id="5Ex-pY-eX7"/>
+                        <outlet property="activityIndicator" destination="8vL-rt-ArP" id="Gsc-O5-i0k"/>
+                        <outlet property="authCodeField" destination="Tss-qN-DnQ" id="pWe-Ec-40D"/>
+                        <outlet property="enteredPhoneNumberLabel" destination="GhU-XE-qZS" id="LRf-Om-BDT"/>
+                        <outlet property="errorIndicator" destination="UX9-8k-OX1" id="bYK-XC-pyq"/>
+                        <outlet property="errorLabel" destination="c8f-Gh-NaM" id="eV2-5J-WfH"/>
+                        <outlet property="requestNewAuthCodeButton" destination="Z8o-AK-bwI" id="tcE-xB-klG"/>
+                        <outlet property="retryComponentStackBottomConstraint" destination="S6p-iX-Vhc" id="BuI-q4-Qd3"/>
+                        <outlet property="retryTimerLabel" destination="g0m-Kl-NWT" id="rL7-Um-TRi"/>
+                        <segue destination="iPc-yN-ptf" kind="presentation" identifier="AuthCodeToMainUISegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="5Ex-pY-eX7"/>
+                        <segue destination="unq-VB-8We" kind="show" identifier="AuthCodeToEnterNameScreenSegue" id="dJ0-sN-Y0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1C-Hz-1Gt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="znh-pc-aXX" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="[0]  [0]  [0]  [0]"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocompleteOnFocus" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="aJL-HF-tvr" id="SJn-hp-93S"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="598.55072463768124" y="-10.044642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Name Enter Screen Controller-->
         <scene sceneID="nfF-Bf-QsY">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="unq-VB-8We" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="unq-VB-8We" customClass="NameEnterScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yY4-c2-lAY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вас зовут?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-5U-tLw" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="308.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37E-2Y-3H7" userLabel="nameField">
-                                <rect key="frame" x="40" y="357.5" width="334" height="33"/>
+                                <rect key="frame" x="40" y="359" width="334" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
@@ -284,11 +304,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ygF-hb-jzt" kind="show" id="R3Y-YW-Bgq"/>
+                                    <action selector="handleContinueButtonTap" destination="unq-VB-8We" eventType="touchUpInside" id="mwa-Qf-gSN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давайте познакомимся!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-lo-WE6" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="79.5"/>
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -301,33 +321,38 @@
                             <constraint firstItem="37E-2Y-3H7" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="85n-tO-4GF"/>
                             <constraint firstItem="37E-2Y-3H7" firstAttribute="top" secondItem="KfC-5U-tLw" secondAttribute="bottom" constant="30" id="Bda-Sa-5ay"/>
                             <constraint firstItem="vBU-bb-pPh" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="BgT-Eh-0Mb"/>
-                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="KfC-5U-tLw" secondAttribute="trailing" constant="40" id="C0g-Md-tK2"/>
-                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="RdJ-lo-WE6" secondAttribute="trailing" constant="40" id="Dg7-aX-RiQ"/>
+                            <constraint firstItem="KfC-5U-tLw" firstAttribute="trailing" secondItem="JcP-VZ-bVH" secondAttribute="trailing" constant="-40" id="C0g-Md-tK2"/>
+                            <constraint firstItem="RdJ-lo-WE6" firstAttribute="trailing" secondItem="JcP-VZ-bVH" secondAttribute="trailing" constant="-40" id="Dg7-aX-RiQ"/>
                             <constraint firstItem="37E-2Y-3H7" firstAttribute="leading" secondItem="RdJ-lo-WE6" secondAttribute="leading" id="Gs1-uD-F66"/>
                             <constraint firstItem="RdJ-lo-WE6" firstAttribute="top" secondItem="JcP-VZ-bVH" secondAttribute="top" constant="161" id="O7C-9N-fEg"/>
-                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="37E-2Y-3H7" secondAttribute="trailing" constant="40" id="UYM-4E-fsQ"/>
+                            <constraint firstItem="37E-2Y-3H7" firstAttribute="trailing" secondItem="JcP-VZ-bVH" secondAttribute="trailing" constant="-40" id="UYM-4E-fsQ"/>
                             <constraint firstItem="RdJ-lo-WE6" firstAttribute="leading" secondItem="JcP-VZ-bVH" secondAttribute="leading" constant="40" id="d3j-ce-7Mo"/>
                             <constraint firstItem="KfC-5U-tLw" firstAttribute="leading" secondItem="RdJ-lo-WE6" secondAttribute="leading" id="ikK-6e-SQP"/>
-                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="trailing" secondItem="vBU-bb-pPh" secondAttribute="trailing" constant="40" id="nEk-tS-Fs3"/>
-                            <constraint firstItem="JcP-VZ-bVH" firstAttribute="bottom" secondItem="vBU-bb-pPh" secondAttribute="bottom" constant="40" id="oE5-qg-7Wi"/>
+                            <constraint firstItem="vBU-bb-pPh" firstAttribute="trailing" secondItem="JcP-VZ-bVH" secondAttribute="trailing" constant="-40" id="nEk-tS-Fs3"/>
+                            <constraint firstItem="vBU-bb-pPh" firstAttribute="bottom" secondItem="JcP-VZ-bVH" secondAttribute="bottom" constant="-40" id="oE5-qg-7Wi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uh4-Cs-myu"/>
+                    <connections>
+                        <outlet property="continueButtonBottomConstraint" destination="oE5-qg-7Wi" id="uTO-Wd-dIt"/>
+                        <outlet property="nameField" destination="37E-2Y-3H7" id="nMY-H4-1hl"/>
+                        <segue destination="ygF-hb-jzt" kind="show" identifier="EnterNameToEnterEmailScreenSegue" id="3f3-yF-uCS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q6-jB-Cno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1454" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Email Enter Screen Controller-->
         <scene sceneID="x40-lo-vhb">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ygF-hb-jzt" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ygF-hb-jzt" customClass="EmailEnterScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OnS-it-48P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-fK-0hr" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="79.5"/>
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
                                 <string key="text">Отлично,
 username</string>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
@@ -335,26 +360,26 @@ username</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осталось ввести email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exd-97-f71" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="308.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czF-Dd-MHt" userLabel="nameField">
-                                <rect key="frame" x="40" y="357.5" width="125.5" height="33"/>
+                                <rect key="frame" x="40" y="359" width="128" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-w3-7qG" userLabel="errorIcon">
-                                <rect key="frame" x="169.5" y="366" width="16" height="16"/>
+                                <rect key="frame" x="172" y="367.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="VLG-Ly-gzA"/>
                                     <constraint firstAttribute="width" secondItem="wPB-w3-7qG" secondAttribute="height" multiplier="1:1" id="wa6-cC-MPn"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Такой email не подойдет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-f3-QMh" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="420.5" width="334" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Такой email не подойдет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-f3-QMh" userLabel="errorLabel">
+                                <rect key="frame" x="40" y="422" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
@@ -368,6 +393,9 @@ username</string>
                                 <state key="normal" title="Продолжить" backgroundImage="buttonBackPrimaryColor">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleContinueButtonTap" destination="ygF-hb-jzt" eventType="touchUpInside" id="yO4-eX-gKN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gz6-Vc-fLb"/>
@@ -383,30 +411,38 @@ username</string>
                             <constraint firstItem="wPB-w3-7qG" firstAttribute="leading" secondItem="czF-Dd-MHt" secondAttribute="trailing" constant="4" id="SIH-8u-rSJ"/>
                             <constraint firstItem="mRQ-f3-QMh" firstAttribute="top" secondItem="czF-Dd-MHt" secondAttribute="bottom" constant="30" id="SVk-XM-5AE"/>
                             <constraint firstItem="exd-97-f71" firstAttribute="trailing" secondItem="m2i-fK-0hr" secondAttribute="trailing" id="Yu9-yZ-vdK"/>
-                            <constraint firstItem="gz6-Vc-fLb" firstAttribute="bottom" secondItem="IYr-aT-0BU" secondAttribute="bottom" constant="40" id="gCC-Cg-NWb"/>
+                            <constraint firstItem="IYr-aT-0BU" firstAttribute="bottom" secondItem="gz6-Vc-fLb" secondAttribute="bottom" constant="-40" id="gCC-Cg-NWb"/>
                             <constraint firstItem="wPB-w3-7qG" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="jM5-4x-p21"/>
                             <constraint firstItem="exd-97-f71" firstAttribute="top" secondItem="m2i-fK-0hr" secondAttribute="bottom" constant="24" id="k8J-dB-knD"/>
                             <constraint firstItem="mRQ-f3-QMh" firstAttribute="leading" secondItem="m2i-fK-0hr" secondAttribute="leading" id="qVc-GF-QcM"/>
-                            <constraint firstItem="gz6-Vc-fLb" firstAttribute="trailing" secondItem="IYr-aT-0BU" secondAttribute="trailing" constant="40" id="rP2-l7-OLB"/>
+                            <constraint firstItem="IYr-aT-0BU" firstAttribute="trailing" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="rP2-l7-OLB"/>
                             <constraint firstItem="IYr-aT-0BU" firstAttribute="leading" secondItem="gz6-Vc-fLb" secondAttribute="leading" constant="40" id="sSB-4f-Xg0"/>
                             <constraint firstItem="m2i-fK-0hr" firstAttribute="top" secondItem="gz6-Vc-fLb" secondAttribute="top" constant="161" id="zaV-RN-xLf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sfm-PM-28a"/>
+                    <connections>
+                        <outlet property="continueButtonBottomConstraint" destination="gCC-Cg-NWb" id="eI7-3y-cT6"/>
+                        <outlet property="emailField" destination="czF-Dd-MHt" id="S2u-GL-Vpj"/>
+                        <outlet property="errorIndicator" destination="wPB-w3-7qG" id="DL0-aJ-QMN"/>
+                        <outlet property="errorLabel" destination="mRQ-f3-QMh" id="GMZ-qz-Ki2"/>
+                        <outlet property="greetingsLabel" destination="m2i-fK-0hr" id="d72-fB-qj8"/>
+                        <segue destination="iPc-yN-ptf" kind="presentation" identifier="EnterEmailToMainUISegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Ijp-kO-Tdl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebs-Cc-fDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2328.985507246377" y="-10.044642857142856"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Home-->
         <scene sceneID="Lwq-hu-82p">
             <objects>
-                <viewControllerPlaceholder id="iPc-yN-ptf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" id="iPc-yN-ptf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Mut-pZ-alF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vse-eF-Zzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599" y="415"/>
+            <point key="canvasLocation" x="1049" y="627"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jwn-y5-YOv">
@@ -424,6 +460,9 @@ username</string>
             <point key="canvasLocation" x="-1161" y="-10"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ijp-kO-Tdl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackPrimaryColor" width="19.5" height="19.5"/>
         <image name="iconError" width="16" height="16"/>

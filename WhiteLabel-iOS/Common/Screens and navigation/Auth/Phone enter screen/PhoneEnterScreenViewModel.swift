@@ -7,14 +7,15 @@
 
 import Foundation
 
-protocol PhoneEnterScreenViewModelDelegate: class {
-  func didCheckEnteredPhone()
+protocol PhoneEnterScreenViewModelDelegate: AnyObject {
+  func didSendEnteredPhone()
 }
 
 class PhoneEnterScreenViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: PhoneEnterScreenViewModelDelegate?
-  var enteredPhoneNumber: String? = nil
+  var enteredPhoneNumber = ""
+  var retryDelayInSeconds = 0
 
   let phoneCode = Box(value: "")
   let showActivity = Box(value: false)
@@ -30,27 +31,28 @@ class PhoneEnterScreenViewModel: BaseViewModel {
 
   // MARK: - Internal/public custom methods
   func sendEnteredPhone(_ enteredPhoneString: String) {
-    enteredPhoneNumber = enteredPhoneString
-    sendPhoneNumberForCheck(enteredPhoneString)
+    enteredPhoneNumber = phoneCodeString + enteredPhoneString
+    sendPhoneNumberForCheck(enteredPhoneNumber)
   }
 
   func retryEnteredPhoneSending() {
-    if enteredPhoneNumber != nil {
-      sendPhoneNumberForCheck(enteredPhoneNumber!)
+    if enteredPhoneNumber != "" {
+      sendPhoneNumberForCheck(enteredPhoneNumber)
     } else {
-      errorToShow.value = "Проверьте номер телефона. "
+      errorToShow.value = "Проверьте номер телефона."
     }
   }
 
   // MARK: - Private custom methods
   private func sendPhoneNumberForCheck(_ phoneNumberString: String) {
+    errorToShow.value = nil
     showActivity.value = true
-
-    AccountManager.shared.requestAuthCode(forPhoneNumber: phoneNumberString) { [weak self] in
+    
+    AccountManager.shared.requestAuthCode(forPhoneNumber: phoneNumberString) { [weak self] (retryDelayInSeconds) in
       self?.showActivity.value = false
-      self?.delegate?.didCheckEnteredPhone()
+      self?.retryDelayInSeconds = retryDelayInSeconds
+      self?.delegate?.didSendEnteredPhone()
     } onFailure: { [weak self] (error) in
-      print("Auth request failed: \(error)")
       self?.showActivity.value = false
       self?.errorToShow.value = "Что-то пошло не так!"
     }

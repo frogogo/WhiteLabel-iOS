@@ -16,18 +16,16 @@ class AccountManager: BaseDataManager {
 
   // MARK: - Internal/public custom methods
   func requestAuthCode(forPhoneNumber phoneNumberString: String,
-                       onSuccess: @escaping () -> Void,
+                       onSuccess: @escaping (Int) -> Void,
                        onFailure: @escaping (String) -> Void) {
 
     let params = ["phone_number": phoneNumberString]
     APIConnector.shared.requestPOST("user", params: params, useAuth: false) {
       (isOK, response, errors) in
 
-      print("Full response is \(response)")
       if isOK {
         let refreshDelay = response["password_refresh_rate"].intValue
-        print("Refresh delay = \(refreshDelay)")
-        onSuccess()
+        onSuccess(refreshDelay)
       } else {
         print("Occured errors = \(errors)")
         let errorText = errors[0]["error_text"].stringValue
@@ -43,7 +41,7 @@ class AccountManager: BaseDataManager {
     let params = ["phone_number": phoneNumber,
                   "password": authCode,]
     APIConnector.shared.requestPOST("user_token", params: params, useAuth: false) {
-      (isOK, response, errors) in
+      [weak self] (isOK, response, errors) in
 
       if isOK {
         let authToken = response["jwt"].stringValue
@@ -51,12 +49,11 @@ class AccountManager: BaseDataManager {
         let isNewUser = response["is_new"].boolValue
 
         APIConnector.shared.authToken = authToken
-        self.save(authToken: authToken, andRefreshToken: refreshToken)
-
+        self?.save(authToken: authToken, andRefreshToken: refreshToken)
         onSuccess(isNewUser)
-
       } else {
-        let errorText = ""
+        print("Occured errors = \(errors)")
+        let errorText = errors[0]["error_text"].stringValue
         onFailure(errorText)
       }
     }
@@ -66,6 +63,8 @@ class AccountManager: BaseDataManager {
   private func save(authToken authTokenString: String, andRefreshToken refreshTokenString: String) {
     // TODO: need to save tokens in database properly.
     // temporary solution – saving in UserDefaults
+    print("Written auth token \(authTokenString)")
+    print("Written refresh token \(refreshTokenString)")
     UserDefaults.standard.set(authTokenString, forKey: userDefaultsAuthTokenKey)
     UserDefaults.standard.set(refreshTokenString, forKey: userDefaultsRefreshTokenKey)
   }
