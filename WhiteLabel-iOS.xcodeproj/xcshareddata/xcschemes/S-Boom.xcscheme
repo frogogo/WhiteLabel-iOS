@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67FE383D2625596900750368"
-               BuildableName = "ZBoom.app"
-               BlueprintName = "ZBoom"
+               BuildableName = "S-Boom.app"
+               BlueprintName = "S-Boom"
                ReferencedContainer = "container:WhiteLabel-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67FE383D2625596900750368"
-            BuildableName = "ZBoom.app"
-            BlueprintName = "ZBoom"
+            BuildableName = "S-Boom.app"
+            BlueprintName = "S-Boom"
             ReferencedContainer = "container:WhiteLabel-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67FE383D2625596900750368"
-            BuildableName = "ZBoom.app"
-            BlueprintName = "ZBoom"
+            BuildableName = "S-Boom.app"
+            BlueprintName = "S-Boom"
             ReferencedContainer = "container:WhiteLabel-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

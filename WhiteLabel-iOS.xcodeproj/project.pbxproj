@@ -104,7 +104,7 @@
 		67FE38312625594A00750368 /* CommonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonAssets.xcassets; sourceTree = "<group>"; };
 		67FE38342625594A00750368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67FE38362625594A00750368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67FE384A2625596900750368 /* ZBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FE384A2625596900750368 /* S-Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Boom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F66A24379860CA50F1C05B8 /* libPods-Generic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Generic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.release.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.release.xcconfig"; sourceTree = "<group>"; };
 		FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZBoom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				67FE38252625594900750368 /* Generic.app */,
-				67FE384A2625596900750368 /* ZBoom.app */,
+				67FE384A2625596900750368 /* S-Boom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,9 +397,9 @@
 			productReference = 67FE38252625594900750368 /* Generic.app */;
 			productType = "com.apple.product-type.application";
 		};
-		67FE383D2625596900750368 /* ZBoom */ = {
+		67FE383D2625596900750368 /* S-Boom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67FE38472625596900750368 /* Build configuration list for PBXNativeTarget "ZBoom" */;
+			buildConfigurationList = 67FE38472625596900750368 /* Build configuration list for PBXNativeTarget "S-Boom" */;
 			buildPhases = (
 				DDA7A582B0E0AE85A502EA1A /* [CP] Check Pods Manifest.lock */,
 				67FE383E2625596900750368 /* Sources */,
@@ -410,9 +410,9 @@
 			);
 			dependencies = (
 			);
-			name = ZBoom;
+			name = "S-Boom";
 			productName = "WhiteLabel-iOS";
-			productReference = 67FE384A2625596900750368 /* ZBoom.app */;
+			productReference = 67FE384A2625596900750368 /* S-Boom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -443,7 +443,7 @@
 			projectRoot = "";
 			targets = (
 				67FE38242625594900750368 /* Generic */,
-				67FE383D2625596900750368 /* ZBoom */,
+				67FE383D2625596900750368 /* S-Boom */,
 			);
 		};
 /* End PBXProject section */
@@ -777,7 +777,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.zboom";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.sboom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -798,7 +798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.zboom";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.sboom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -826,7 +826,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67FE38472625596900750368 /* Build configuration list for PBXNativeTarget "ZBoom" */ = {
+		67FE38472625596900750368 /* Build configuration list for PBXNativeTarget "S-Boom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67FE38482625596900750368 /* Debug */,
