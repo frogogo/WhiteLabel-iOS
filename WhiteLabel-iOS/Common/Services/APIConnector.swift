@@ -106,7 +106,13 @@ class APIConnector {
 
         switch response.result {
         case .success(let value):
-          completeHandler(true, JSON(value), [])
+          let jsonResponse = JSON(value)
+          let error = jsonResponse["error"]
+          if error.isEmpty  {
+            completeHandler(true, JSON(value), [])
+          } else {
+            completeHandler(false, JSON(), [jsonResponse])
+          }
         case .failure(let error):
           completeHandler(false, JSON(), [JSON(error)])
         }

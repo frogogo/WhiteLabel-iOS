@@ -15,6 +15,12 @@ class AccountManager: BaseDataManager {
   private let userDefaultsRefreshTokenKey = "userRefreshToken"
 
   // MARK: - Internal/public custom methods
+  func tryAutoLogin(onSuccess: @escaping () -> Void,
+                    onFailure: @escaping () -> Void) {
+    // TODO: тут надо взять токен из БД
+    onSuccess()
+  }
+
   func requestAuthCode(forPhoneNumber phoneNumberString: String,
                        onSuccess: @escaping (Int) -> Void,
                        onFailure: @escaping (String) -> Void) {
