@@ -14,7 +14,7 @@ class HomeEmptyScreenController: BaseViewController {
   @IBOutlet private var mainTable: UITableView!
 
   private let tableBottomScrollInset: CGFloat = 120
-  private let reuseIDForSections = [HomeEmptyScreenPromotionItemCell.reuseID,
+  private let cellReuseIDForSections = [HomeEmptyScreenPromotionItemCell.reuseID,
                                     HomeEmptyScreenInstructionHeaderCell.reuseID,
                                     HomeEmptyScreenInstructionStepCell.reuseID]
 
@@ -27,11 +27,13 @@ class HomeEmptyScreenController: BaseViewController {
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
+    viewModel.delegate = self
   }
 
   // MARK: - Private custom methods
   private func updateInstructionStepCell(cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
     cell.stepNumberLabel.text = "\(rowIndex + 1)"
+
   }
 
   // MARK: - Handlers
@@ -43,21 +45,20 @@ class HomeEmptyScreenController: BaseViewController {
 // MARK: - Table data source methods
 extension HomeEmptyScreenController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return reuseIDForSections.count
+    return cellReuseIDForSections.count
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    let reuseID = reuseIDForSections[section]
+    let reuseID = cellReuseIDForSections[section]
     if reuseID == HomeEmptyScreenInstructionStepCell.reuseID {
-      // TODO: вернуть правильное количество шагов в инструкции
-      return 5
+      return viewModel.promotionStepsCount
     } else {
       return 1
     }
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let reuseID = reuseIDForSections[indexPath.section]
+    let reuseID = cellReuseIDForSections[indexPath.section]
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
 
     switch reuseID {
@@ -68,5 +69,12 @@ extension HomeEmptyScreenController: UITableViewDataSource {
       return cell
     }
     return cell
+  }
+}
+
+// MARK: - View model delegate methods
+extension HomeEmptyScreenController: HomeEmptyScreenViewModelDelegate {
+  func viewModelUpdated() {
+    mainTable.reloadData()
   }
 }

@@ -20,11 +20,14 @@ class HomeInitialScreenViewModel: BaseViewModel {
   override func loadInitialData() {
     super.loadInitialData()
 
-    // TODO: тут надо отправить запрос, проверить, есть ли данные и вызвать правильный метод делегата
-    let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) {[weak self] (timer) in
-      timer.invalidate()
-      //self?.delegate?.showHomeScreen()
-      self?.delegate?.showHomeEmptyStateScreen()
+    HomeManager.shared.checkHomeData { [weak self] (isHomeDataNotEmpty) in
+      if isHomeDataNotEmpty {
+        self?.delegate?.showHomeScreen()
+      } else {
+        self?.delegate?.showHomeEmptyStateScreen()
+      }
+    } onFailure: { (error) in
+      print("Не удалось проверить данные для главной страницы")
     }
   }
 }
