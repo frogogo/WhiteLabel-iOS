@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeEmptyScreenController: BaseViewController {
   // MARK: - Properties
@@ -38,7 +39,7 @@ class HomeEmptyScreenController: BaseViewController {
 
   private func updatePromotionItemCell(cell: HomeEmptyScreenPromotionItemCell) {
     cell.nameLabel.text = viewModel.promotionName
-    // TODO: надо загрузить картинку товара
+    cell.picture.kf.setImage(with: URL(string: viewModel.promotionPictureURL))
   }
 
   // MARK: - Handlers

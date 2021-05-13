@@ -1,24 +1,28 @@
 PODS:
-  - Alamofire (5.4.1)
-  - InputMask (6.0.0)
-  - SwiftyJSON (5.0.0)
+  - Alamofire (5.4.3)
+  - InputMask (6.1.0)
+  - Kingfisher (6.3.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - InputMask (~> 6.0)
+  - Kingfisher (~> 6.3)
   - SwiftyJSON (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - InputMask
+    - Kingfisher
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  InputMask: f340bdc905a4c4f377e44d865f129f752ac2383d
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  InputMask: 71d291dc54d2deaeac6512afb6ec2304228c0bb7
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: d76cafecab3f2c1ab3e96665b55262b8392c48b8
+PODFILE CHECKSUM: 3d97568203596dc525aa463b9b9bc84b1730d868
 
 COCOAPODS: 1.10.1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251509BB704997A949493AE8 /* libPods-S-Boom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB203EFDAE85A431B4D8A8E9 /* libPods-S-Boom.a */; };
 		6706BBE02638A85100CE4328 /* NameEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */; };
 		6706BBE12638A85100CE4328 /* NameEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */; };
 		6706BBE42638A87D00CE4328 /* NameEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */; };
@@ -97,7 +98,6 @@
 		67FE38402625596900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE38412625596900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38452625596900750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
-		6BB3814539FF36A4D6AA0917 /* libPods-ZBoom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */; };
 		D69E24278CB6B140CB735B7D /* libPods-Generic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F66A24379860CA50F1C05B8 /* libPods-Generic.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +105,7 @@
 		06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.debug.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.debug.xcconfig"; sourceTree = "<group>"; };
 		08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBoom.release.xcconfig"; path = "Target Support Files/Pods-ZBoom/Pods-ZBoom.release.xcconfig"; sourceTree = "<group>"; };
 		1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.debug.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.debug.xcconfig"; sourceTree = "<group>"; };
+		57680E1C2385A4C3DD9D205D /* Pods-S-Boom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Boom.debug.xcconfig"; path = "Target Support Files/Pods-S-Boom/Pods-S-Boom.debug.xcconfig"; sourceTree = "<group>"; };
 		6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterScreenController.swift; sourceTree = "<group>"; };
 		6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterScreenViewModel.swift; sourceTree = "<group>"; };
 		6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEnterScreenController.swift; sourceTree = "<group>"; };
@@ -159,7 +160,8 @@
 		67FE384A2625596900750368 /* S-Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Boom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F66A24379860CA50F1C05B8 /* libPods-Generic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Generic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Generic.release.xcconfig"; path = "Target Support Files/Pods-Generic/Pods-Generic.release.xcconfig"; sourceTree = "<group>"; };
-		FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZBoom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB203EFDAE85A431B4D8A8E9 /* libPods-S-Boom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-S-Boom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92FD94D2CA3A34E0DA4017F /* Pods-S-Boom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S-Boom.release.xcconfig"; path = "Target Support Files/Pods-S-Boom/Pods-S-Boom.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB3814539FF36A4D6AA0917 /* libPods-ZBoom.a in Frameworks */,
+				251509BB704997A949493AE8 /* libPods-S-Boom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,8 @@
 				928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */,
 				06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */,
 				08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */,
+				57680E1C2385A4C3DD9D205D /* Pods-S-Boom.debug.xcconfig */,
+				E92FD94D2CA3A34E0DA4017F /* Pods-S-Boom.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				7F66A24379860CA50F1C05B8 /* libPods-Generic.a */,
-				FE3E54E6607A84E5E05B4090 /* libPods-ZBoom.a */,
+				CB203EFDAE85A431B4D8A8E9 /* libPods-S-Boom.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -627,7 +631,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZBoom-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-S-Boom-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -901,7 +905,7 @@
 		};
 		67FE38482625596900750368 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06F224D9856B0B07FC2B1FB6 /* Pods-ZBoom.debug.xcconfig */;
+			baseConfigurationReference = 57680E1C2385A4C3DD9D205D /* Pods-S-Boom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -922,7 +926,7 @@
 		};
 		67FE38492625596900750368 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08124B61EC61FF6D4CF9ED8D /* Pods-ZBoom.release.xcconfig */;
+			baseConfigurationReference = E92FD94D2CA3A34E0DA4017F /* Pods-S-Boom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
