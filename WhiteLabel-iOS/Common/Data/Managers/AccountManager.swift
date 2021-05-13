@@ -17,7 +17,12 @@ class AccountManager: BaseDataManager {
   // MARK: - Internal/public custom methods
   func tryAutoLogin(onSuccess: @escaping () -> Void,
                     onFailure: @escaping () -> Void) {
-    // TODO: тут надо взять токен из БД
+    guard let savedToken = savedAuthToken(), savedToken != "" else {
+      onFailure()
+      return
+    }
+    print("\(type(of: self)): autologin OK (using token = \(savedToken)")
+    APIConnector.shared.authToken = savedToken
     onSuccess()
   }
 
@@ -45,7 +50,7 @@ class AccountManager: BaseDataManager {
             onSuccess: @escaping (_ isNewUser: Bool) -> Void,
             onFailure: @escaping (String) -> Void) {
     let params = ["phone_number": phoneNumber,
-                  "password": authCode,]
+                  "password": authCode]
     APIConnector.shared.requestPOST("user_token", params: params, useAuth: false) {
       [weak self] (isOK, response, errors) in
 

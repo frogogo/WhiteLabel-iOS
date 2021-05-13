@@ -13,9 +13,8 @@ enum APIErrorType {
 }
 
 private struct Host {
-  static let staging    = "https://zboom-staging.herokuapp.com"
-  // TODO: need to provide real production api URL
-  static let production = "PRODUCTION API URL HERE"
+  static let staging    = "https://sboom-staging.herokuapp.com"
+  static let production = "https://sboom.herokuapp.com"
 }
 
 /**
@@ -104,6 +103,8 @@ class APIConnector {
           print("----- FULL RESPONSE END -----\n")
         }
 
+        // TODO: тут надо проверить HTTP код ответа и выдать стандартную ошибку, если код не из серии 200
+
         switch response.result {
         case .success(let value):
           let jsonResponse = JSON(value)
@@ -114,7 +115,9 @@ class APIConnector {
             completeHandler(false, JSON(), [jsonResponse])
           }
         case .failure(let error):
-          completeHandler(false, JSON(), [JSON(error)])
+          let parsingError = JSON(["error": "Некорректные данные",
+                                   "error_text": error.errorDescription])
+          completeHandler(false, JSON(), [JSON(parsingError)])
         }
       }
   }

@@ -20,11 +20,6 @@ class NameEnterScreenViewModel: BaseViewModel {
   // MARK: - Internal/public custom methods
   func setEnteredName(_ enteredNameString: String) {
     enteredName = enteredNameString
-
-    ProfileManager.shared.update(name: enteredName) { [weak self] in
-      self?.delegate?.didSendEnteredName()
-    } onFailure: { (error) in
-      print("\(error)")
-    }
+    delegate?.didSendEnteredName()
   }
 }
