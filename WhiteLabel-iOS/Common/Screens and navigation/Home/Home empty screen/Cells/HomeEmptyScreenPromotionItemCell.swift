@@ -8,5 +8,7 @@
 import UIKit
 
 class HomeEmptyScreenPromotionItemCell: UITableViewCell {
-
+  // MARK: - Properties
+  @IBOutlet var nameLabel: UILabel!
+  @IBOutlet var picture: UIImageView!
 }

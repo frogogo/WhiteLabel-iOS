@@ -15,27 +15,29 @@ class HomeEmptyScreenViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: HomeEmptyScreenViewModelDelegate?
 
-  let promotionPictureURL = Box(value: "")
-  let promotionName = Box(value: "")
-  var promotionStepsCount = 0
+  var promotionStepsCount: Int {
+    return promotion.steps.count
+  }
+  var promotionName: String {
+    return promotion.name
+  }
+  var promotionPictureURL: String {
+    return promotion.photo.largePhotoURL
+  }
 
-  private var promotionSteps: [String] = []
+  private var promotion = PromotionModel()
 
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
 
-    let promotion = HomeManager.shared.promotion
-    promotionPictureURL.value = promotion.photo.largePhotoURL
-    promotionName.value = promotion.name
-    promotionSteps = promotion.steps
-
+    promotion = HomeManager.shared.promotion
     delegate?.viewModelUpdated()
   }
 
   // MARK: - Internal/public custom methods
   func stepInstructionText(forIndex stepIndex: Int) -> String {
-    guard stepIndex <= promotionSteps.endIndex else { return "" }
-    return promotionSteps[stepIndex]
+    guard stepIndex <= promotion.steps.endIndex else { return "" }
+    return promotion.steps[stepIndex]
   }
 }

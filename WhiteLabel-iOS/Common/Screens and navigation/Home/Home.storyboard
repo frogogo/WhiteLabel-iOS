@@ -106,10 +106,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-zW-EpE" userLabel="couponTag">
-                                                    <rect key="frame" x="40" y="215" width="46.5" height="18.5"/>
+                                                    <rect key="frame" x="40" y="215" width="48.5" height="18.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Купон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csu-2W-gZ4" userLabel="couponTagLabel">
-                                                            <rect key="frame" x="6" y="2" width="34.5" height="14.5"/>
+                                                            <rect key="frame" x="6" y="2" width="36.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -157,6 +157,10 @@
                                                 <constraint firstItem="fNi-nG-z9g" firstAttribute="leading" secondItem="dGv-Kp-cpE" secondAttribute="leading" constant="40" id="lHl-Ot-96i"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="fNi-nG-z9g" id="FIl-ZB-JIZ"/>
+                                            <outlet property="picture" destination="57Y-pN-prx" id="9ih-nl-1Tu"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeEmptyScreenInstructionHeaderCell" rowHeight="98" id="Uvw-Qi-Yix" customClass="HomeEmptyScreenInstructionHeaderCell" customModule="Generic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="340.5" width="414" height="98"/>
@@ -165,7 +169,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помните 2 простых правила:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-qO-9sA" userLabel="titleLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила акции:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-qO-9sA" userLabel="titleLabel">
                                                     <rect key="frame" x="40" y="32" width="334" height="50"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                     <color key="textColor" name="Dark900"/>
@@ -213,7 +217,8 @@
                                                 <constraint firstItem="bLo-MB-KuQ" firstAttribute="centerX" secondItem="kLC-1g-UJg" secondAttribute="centerX" id="Dqb-Ed-WhH"/>
                                                 <constraint firstItem="kLC-1g-UJg" firstAttribute="leading" secondItem="raW-cn-Yo2" secondAttribute="leading" constant="40" id="GZa-P6-7vi"/>
                                                 <constraint firstItem="MZO-PO-7ET" firstAttribute="trailing" secondItem="raW-cn-Yo2" secondAttribute="trailing" constant="-40" id="H25-11-Yn2"/>
-                                                <constraint firstItem="MZO-PO-7ET" firstAttribute="top" secondItem="kLC-1g-UJg" secondAttribute="top" id="KF0-jn-tDt"/>
+                                                <constraint firstItem="kLC-1g-UJg" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="raW-cn-Yo2" secondAttribute="bottom" id="Jgg-WG-hcZ"/>
+                                                <constraint firstItem="kLC-1g-UJg" firstAttribute="top" secondItem="MZO-PO-7ET" secondAttribute="top" id="KF0-jn-tDt"/>
                                                 <constraint firstItem="MZO-PO-7ET" firstAttribute="top" secondItem="raW-cn-Yo2" secondAttribute="top" constant="16" id="PuR-41-5mY"/>
                                                 <constraint firstItem="MZO-PO-7ET" firstAttribute="leading" secondItem="kLC-1g-UJg" secondAttribute="trailing" constant="12" id="ZJW-5F-L00"/>
                                                 <constraint firstItem="MZO-PO-7ET" firstAttribute="bottom" secondItem="raW-cn-Yo2" secondAttribute="bottom" id="xtq-01-SX7"/>
@@ -221,6 +226,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="stepNumberLabel" destination="bLo-MB-KuQ" id="cbJ-Pt-ysS"/>
+                                            <outlet property="stepTextLabel" destination="MZO-PO-7ET" id="4Me-zw-b9q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -275,7 +281,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonBackPrimaryColor" width="19.5" height="19.5"/>
+        <image name="buttonBackPrimaryColor" width="343" height="48"/>
         <image name="iconScanQRCode" width="24" height="24"/>
         <image name="instructionStepNumberCircle" width="22" height="22"/>
         <namedColor name="Dark700">
@@ -288,7 +294,7 @@
             <color red="0.8901960784313725" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="1" green="0.66274509803921566" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.66299998760223389" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

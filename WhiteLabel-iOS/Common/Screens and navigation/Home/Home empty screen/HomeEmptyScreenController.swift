@@ -15,8 +15,8 @@ class HomeEmptyScreenController: BaseViewController {
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeEmptyScreenPromotionItemCell.reuseID,
-                                    HomeEmptyScreenInstructionHeaderCell.reuseID,
-                                    HomeEmptyScreenInstructionStepCell.reuseID]
+                                        HomeEmptyScreenInstructionHeaderCell.reuseID,
+                                        HomeEmptyScreenInstructionStepCell.reuseID]
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -33,7 +33,12 @@ class HomeEmptyScreenController: BaseViewController {
   // MARK: - Private custom methods
   private func updateInstructionStepCell(cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
     cell.stepNumberLabel.text = "\(rowIndex + 1)"
+    cell.stepTextLabel.text = viewModel.stepInstructionText(forIndex: rowIndex)
+  }
 
+  private func updatePromotionItemCell(cell: HomeEmptyScreenPromotionItemCell) {
+    cell.nameLabel.text = viewModel.promotionName
+    // TODO: надо загрузить картинку товара
   }
 
   // MARK: - Handlers
@@ -62,6 +67,9 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
 
     switch reuseID {
+    case HomeEmptyScreenPromotionItemCell.reuseID:
+      guard let itemCell = cell as? HomeEmptyScreenPromotionItemCell else { return cell }
+      updatePromotionItemCell(cell: itemCell)
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
       updateInstructionStepCell(cell: stepCell, forRow: indexPath.row)

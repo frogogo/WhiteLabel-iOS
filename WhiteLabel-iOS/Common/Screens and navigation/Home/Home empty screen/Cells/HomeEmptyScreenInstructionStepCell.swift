@@ -10,4 +10,5 @@ import UIKit
 class HomeEmptyScreenInstructionStepCell: UITableViewCell {
   // MARK: - Properties
   @IBOutlet var stepNumberLabel: UILabel!
+  @IBOutlet var stepTextLabel: UILabel!
 }
