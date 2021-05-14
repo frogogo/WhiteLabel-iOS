@@ -26,8 +26,6 @@ class HomeScreenReceiptViewModel: BaseViewModel {
 
     if let receiptScanDate = receiptModel.timestamp {
       timeText.value = receiptScanDate.readableDateWithTime()
-    } else {
-      timeText.value = "время неизвестно"
     }
   }
 

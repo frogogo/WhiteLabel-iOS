@@ -10,15 +10,16 @@ import Foundation
 extension Date {
   // MARK: - Static methods
   static func date(fromISOString isoString: String) -> Date? {
-    let formatter = ISO8601DateFormatter()
-    formatter.formatOptions.insert(.withFractionalSeconds)
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     return formatter.date(from: isoString)
   }
 
   // MARK: - Internal/public custom methods
-  func readableDateWithTime() -> String {
+  func readableDateWithTime(forLocale locale: Locale = Locale(identifier: "ru_RU")) -> String {
     let formatter = DateFormatter()
-    formatter.dateFormat = "dd MMMM yyyy - H:mm"
+    formatter.dateFormat = "dd MMM yyyy - H:mm"
+    formatter.locale = locale
 
     return formatter.string(from: self)
   }
