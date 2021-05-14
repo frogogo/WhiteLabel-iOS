@@ -31,6 +31,7 @@ class HomeScreenViewModel: BaseViewModel {
   var receiptCount: Int {
     return receiptViewModels.count
   }
+  var receiptInProcess = Box(value: false)
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
@@ -59,7 +60,12 @@ class HomeScreenViewModel: BaseViewModel {
   // MARK: - Private custom methods
   private func createReceiptViewModels(forModels receiptModels: [ReceiptModel]) {
     receiptViewModels.removeAll()
+    receiptInProcess.value = false
+
     for receiptModel in receiptModels {
+      if receiptModel.state == .processing {
+        receiptInProcess.value = true
+      }
       receiptViewModels.append(HomeScreenReceiptViewModel(withModel: receiptModel))
     }
   }

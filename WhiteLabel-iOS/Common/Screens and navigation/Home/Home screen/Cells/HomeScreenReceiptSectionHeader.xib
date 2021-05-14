@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeScreenReceiptSectionHeader" customModule="Generic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чеки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6J-WL-Q0g" userLabel="titleLabel">
+                    <rect key="frame" x="16" y="24" width="382" height="24"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-QO-1QZ">
+                    <rect key="frame" x="16" y="48" width="382" height="107"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="923-xL-uir" userLabel="noticeTopOffset">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="16"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="eVP-tH-GLE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6A-nn-CF8" userLabel="noticeContainer">
+                            <rect key="frame" x="0.0" y="16" width="382" height="91"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="iconScanQRCodeGray" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-fn-s9K" userLabel="icon">
+                                    <rect key="frame" x="16" y="16" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="2U9-fn-s9K" secondAttribute="height" multiplier="1:1" id="hpm-hg-cj9"/>
+                                        <constraint firstAttribute="width" constant="32" id="mgl-rt-sun"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Когда ваш чек пройдет проверку, вы сможете отсканировать новый чек" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2b-4O-lvq" userLabel="textLabel">
+                                    <rect key="frame" x="64" y="16" width="302" height="59"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                    <color key="textColor" name="Dark900"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="Light100"/>
+                            <constraints>
+                                <constraint firstItem="U2b-4O-lvq" firstAttribute="bottom" secondItem="A6A-nn-CF8" secondAttribute="bottom" constant="-16" id="Obk-Rx-5vM"/>
+                                <constraint firstItem="2U9-fn-s9K" firstAttribute="leading" secondItem="A6A-nn-CF8" secondAttribute="leading" constant="16" id="Z5g-bJ-obw"/>
+                                <constraint firstItem="U2b-4O-lvq" firstAttribute="leading" secondItem="2U9-fn-s9K" secondAttribute="trailing" constant="16" id="bAO-Rb-R1g"/>
+                                <constraint firstItem="2U9-fn-s9K" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="A6A-nn-CF8" secondAttribute="bottom" constant="-16" id="e7X-go-Mbe"/>
+                                <constraint firstItem="2U9-fn-s9K" firstAttribute="top" secondItem="A6A-nn-CF8" secondAttribute="top" constant="16" id="gyw-R1-HTd"/>
+                                <constraint firstItem="U2b-4O-lvq" firstAttribute="top" secondItem="A6A-nn-CF8" secondAttribute="top" constant="16" id="omH-mD-vZl"/>
+                                <constraint firstItem="U2b-4O-lvq" firstAttribute="trailing" secondItem="A6A-nn-CF8" secondAttribute="trailing" constant="-16" id="teO-FP-58v"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y6J-WL-Q0g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="6kT-v2-LPu"/>
+                <constraint firstItem="5l5-QO-1QZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="Dgk-oD-FpF"/>
+                <constraint firstItem="5l5-QO-1QZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EqR-2w-iVQ"/>
+                <constraint firstItem="5l5-QO-1QZ" firstAttribute="top" secondItem="Y6J-WL-Q0g" secondAttribute="bottom" id="NCF-fx-OdT"/>
+                <constraint firstItem="5l5-QO-1QZ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-16" id="jIO-9H-Gv0"/>
+                <constraint firstItem="Y6J-WL-Q0g" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="ljg-J2-qO3"/>
+                <constraint firstItem="Y6J-WL-Q0g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="w7D-e1-mdw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="noticeContainer" destination="A6A-nn-CF8" id="aEX-kQ-Dg7"/>
+                <outlet property="noticeContainerTopOffset" destination="923-xL-uir" id="foK-wP-GB3"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="-165.06696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconScanQRCodeGray" width="32" height="32"/>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light100">
+            <color red="0.95686274509803926" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
