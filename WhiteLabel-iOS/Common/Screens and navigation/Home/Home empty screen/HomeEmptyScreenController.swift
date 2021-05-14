@@ -32,12 +32,12 @@ class HomeEmptyScreenController: BaseViewController {
   }
 
   // MARK: - Private custom methods
-  private func updateInstructionStepCell(cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
+  private func updateInstructionStepCell(_ cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
     cell.stepNumberLabel.text = "\(rowIndex + 1)"
     cell.stepTextLabel.text = viewModel.stepInstructionText(forIndex: rowIndex)
   }
 
-  private func updatePromotionItemCell(cell: HomeEmptyScreenPromotionItemCell) {
+  private func updatePromotionItemCell(_ cell: HomeEmptyScreenPromotionItemCell) {
     cell.nameLabel.text = viewModel.promotionName
     cell.picture.kf.setImage(with: URL(string: viewModel.promotionPictureURL))
   }
@@ -70,10 +70,10 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     switch reuseID {
     case HomeEmptyScreenPromotionItemCell.reuseID:
       guard let itemCell = cell as? HomeEmptyScreenPromotionItemCell else { return cell }
-      updatePromotionItemCell(cell: itemCell)
+      updatePromotionItemCell(itemCell)
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
-      updateInstructionStepCell(cell: stepCell, forRow: indexPath.row)
+      updateInstructionStepCell(stepCell, forRow: indexPath.row)
     default:
       return cell
     }
