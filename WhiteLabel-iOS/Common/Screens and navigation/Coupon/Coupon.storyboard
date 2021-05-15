@@ -60,7 +60,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="7ec-tV-6mR" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="DS0-Yo-yAB"/>
+                                                        <segue destination="7ec-tV-6mR" kind="presentation" modalPresentationStyle="pageSheet" id="DS0-Yo-yAB"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Инструкция по получению" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xv-eu-fdd" userLabel="instructionTitle">
@@ -210,6 +210,11 @@
                                     <constraint firstItem="ceX-xW-j8E" firstAttribute="leading" secondItem="yCz-V9-Yq9" secondAttribute="leading" constant="24" id="juM-0v-rDB"/>
                                     <constraint firstItem="h18-J8-nRA" firstAttribute="trailing" secondItem="yCz-V9-Yq9" secondAttribute="trailing" constant="-32" id="xta-JH-ap6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXV-Te-5tk" userLabel="closeButton">
                                 <rect key="frame" x="185" y="663" width="44" height="45.5"/>

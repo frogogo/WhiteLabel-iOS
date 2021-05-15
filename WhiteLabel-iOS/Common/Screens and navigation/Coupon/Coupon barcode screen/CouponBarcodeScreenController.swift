@@ -26,7 +26,11 @@ class CouponBarcodeScreenController: UIViewController {
       return
     }
     filter.setValue(data, forKey: "inputMessage")
-    generatedBarcodeCIImage = filter.outputImage
+
+    guard let generatedImage = filter.outputImage else { return }
+    let transform = CGAffineTransform(scaleX: 5, y: 5)
+    generatedBarcodeCIImage = generatedImage.transformed(by: transform)
+
     tryToSetBarcodeImage()
   }
 

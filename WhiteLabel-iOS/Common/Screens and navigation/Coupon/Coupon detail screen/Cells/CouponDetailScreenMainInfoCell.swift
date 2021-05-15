@@ -17,9 +17,4 @@ class CouponDetailScreenMainInfoCell: UITableViewCell {
   @IBOutlet var picture: UIImageView!
   @IBOutlet var numberLabel: UILabel!
   @IBOutlet var nameLabel: UILabel!
-
-  // MARK: - Handlers
-  @IBAction func handleShowCodeButtonTap() {
-    delegate?.didTapShowCodeButton()
-  }
 }

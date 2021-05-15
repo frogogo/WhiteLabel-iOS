@@ -24,7 +24,7 @@ class CouponDetailScreenViewModel: BaseViewModel {
     return promotion.name
   }
   var number: String {
-    return promotion.name
+    return "Купон №\(coupon.identifier)"
   }
   var pictureURL: String {
     return promotion.photo.largePhotoURL
