@@ -279,7 +279,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Сканировать чек" image="iconScanQRCodeWhite" backgroundImage="buttonBackPrimaryColor">
+                                <state key="normal" title="Сканировать чек" image="iconScanQRCodeWhite" backgroundImage="buttonBackPrimaryColorFilled">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="disabled" image="iconScanQRCodeWhite" backgroundImage="buttonBackDisabled"/>
@@ -305,6 +305,8 @@
                         <outlet property="mainTable" destination="GhT-bi-4Wx" id="Apn-DI-qda"/>
                         <outlet property="scanCodeButton" destination="BRM-YC-Wzq" id="aYJ-CO-CYb"/>
                         <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
+                        <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
+                        <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -319,7 +321,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfB-V8-LjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="434"/>
+            <point key="canvasLocation" x="243" y="951"/>
         </scene>
         <!--Home Empty Screen Controller-->
         <scene sceneID="ska-DU-wGw">
@@ -482,7 +484,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Сканировать чек" image="iconScanQRCodeWhite" backgroundImage="buttonBackPrimaryColor">
+                                <state key="normal" title="Сканировать чек" image="iconScanQRCodeWhite" backgroundImage="buttonBackPrimaryColorFilled">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -504,27 +506,40 @@
                     </view>
                     <connections>
                         <outlet property="mainTable" destination="Fp0-4c-UmM" id="LuQ-q0-viy"/>
-                        <segue destination="crR-tv-VOA" kind="show" id="D8K-nu-gbR"/>
+                        <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeEmptyScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="D8K-nu-gbR"/>
+                        <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeEmptyScreenToCameraAccessSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UKG-2k-hxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrM-O0-qSx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242.0289855072464" y="-491.51785714285711"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--QRCodeScanner-->
         <scene sceneID="2Al-Q4-Dsg">
             <objects>
-                <viewControllerPlaceholder id="crR-tv-VOA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="QRCodeScanner" id="crR-tv-VOA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="skf-EG-qpn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuG-Iw-Deb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="-492"/>
+            <point key="canvasLocation" x="1453" y="-23"/>
+        </scene>
+        <!--CameraAccessAlert-->
+        <scene sceneID="z1g-Qh-NK1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraAccessAlert" id="VSz-jx-sbQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDV-oL-hGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="-23"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MRb-6F-9He"/>
+        <segue reference="uwz-wV-5O7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackDisabled" width="19.5" height="19.5"/>
-        <image name="buttonBackPrimaryColor" width="343" height="48"/>
+        <image name="buttonBackPrimaryColorFilled" width="19.5" height="19.5"/>
         <image name="iconDisclosureMark" width="24" height="24"/>
         <image name="iconScanQRCodeWhite" width="24" height="24"/>
         <image name="instructionStepNumberCircle" width="22" height="22"/>

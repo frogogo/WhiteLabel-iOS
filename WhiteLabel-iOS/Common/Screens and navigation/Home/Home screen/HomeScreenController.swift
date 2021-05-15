@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class HomeScreenController: BaseViewController {
   // MARK: - Properties
@@ -73,6 +74,16 @@ class HomeScreenController: BaseViewController {
       receiptSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? HomeScreenReceiptSectionHeader
     }
     return receiptSectionHeader!
+  }
+
+  // MARK: - Handlers
+  @IBAction func handleScanButtonTap() {
+    if AVCaptureDevice.authorizationStatus(for: .video) ==  .denied {
+      performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)
+    } else {
+      print("Доступ к камере есть, нужно открыть экран со сканером")
+      performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)
+    }
   }
 }
 

@@ -68,6 +68,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Доступ к камере нужен, чтобы сканировать чеки</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 </dict>

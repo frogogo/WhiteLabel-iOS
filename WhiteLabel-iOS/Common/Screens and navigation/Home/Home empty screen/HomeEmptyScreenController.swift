@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import AVKit
 
 class HomeEmptyScreenController: BaseViewController {
   // MARK: - Properties
@@ -44,7 +45,12 @@ class HomeEmptyScreenController: BaseViewController {
 
   // MARK: - Handlers
   @IBAction func handleScanButtonTap() {
-    print("Надо открыть сканер QR кодов")
+    if AVCaptureDevice.authorizationStatus(for: .video) ==  .denied {
+      performSegue(withIdentifier: "HomeEmptyScreenToCameraAccessSegue", sender: nil)
+    } else {
+      print("Доступ к камере есть, нужно открыть экран со сканером")
+      performSegue(withIdentifier: "HomeEmptyScreenToQRScannerSegue", sender: nil)
+    }
   }
 }
 

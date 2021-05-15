@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Camera Access Alert Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CameraAccessAlertController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZd-IT-YUO">
+                                <rect key="frame" x="16" y="305.5" width="382" height="285.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCameraAccessRequest" translatesAutoresizingMaskIntoConstraints="NO" id="Yz9-c7-fwj" userLabel="cameraIcon">
+                                        <rect key="frame" x="155" y="20" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Yz9-c7-fwj" secondAttribute="height" multiplier="1:1" id="Hi8-Vv-Nd9"/>
+                                            <constraint firstAttribute="width" constant="72" id="XHv-YJ-O5G"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Доступ к камере" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-3w-x3w" userLabel="titleLabel">
+                                        <rect key="frame" x="20" y="108" width="342" height="24"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-8Z-ovO" userLabel="textLabel">
+                                        <rect key="frame" x="20" y="148" width="342" height="37.5"/>
+                                        <string key="text">Требуется доступ к камере для
+сканирования QR-кода</string>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-Nz-xGF" userLabel="buttonContainer">
+                                        <rect key="frame" x="65" y="217.5" width="252" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-XK-oOf" userLabel="denyButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="fcc-DR-GhA"/>
+                                                    <constraint firstAttribute="height" constant="48" id="q4B-td-5XW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                                <state key="normal" title="Запретить" backgroundImage="buttonBackPrimaryColorStroked">
+                                                    <color key="titleColor" name="PrimaryMain"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleDenyButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rwW-iL-DIC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1x-g7-SXn" userLabel="okButton">
+                                                <rect key="frame" x="132" y="0.0" width="120" height="48"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                                <state key="normal" title="Разрешить" backgroundImage="buttonBackPrimaryColorFilled">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleOKButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pNi-FE-iTU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="nzd-XK-oOf" firstAttribute="bottom" secondItem="bBU-Nz-xGF" secondAttribute="bottom" id="2VL-bq-znE"/>
+                                            <constraint firstItem="I1x-g7-SXn" firstAttribute="bottom" secondItem="nzd-XK-oOf" secondAttribute="bottom" id="EHN-GC-Jir"/>
+                                            <constraint firstItem="nzd-XK-oOf" firstAttribute="leading" secondItem="bBU-Nz-xGF" secondAttribute="leading" id="OPe-gQ-qnZ"/>
+                                            <constraint firstItem="I1x-g7-SXn" firstAttribute="width" secondItem="nzd-XK-oOf" secondAttribute="width" id="Ue2-Jr-uwL"/>
+                                            <constraint firstItem="I1x-g7-SXn" firstAttribute="top" secondItem="nzd-XK-oOf" secondAttribute="top" id="aZc-bj-byX"/>
+                                            <constraint firstItem="nzd-XK-oOf" firstAttribute="top" secondItem="bBU-Nz-xGF" secondAttribute="top" id="b50-ZM-y16"/>
+                                            <constraint firstItem="I1x-g7-SXn" firstAttribute="trailing" secondItem="bBU-Nz-xGF" secondAttribute="trailing" id="hBj-TT-Ync"/>
+                                            <constraint firstItem="I1x-g7-SXn" firstAttribute="leading" secondItem="nzd-XK-oOf" secondAttribute="trailing" constant="12" id="pbP-YB-yZr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1NK-3w-x3w" secondAttribute="trailing" constant="20" id="AKf-nx-z1D"/>
+                                    <constraint firstItem="bBU-Nz-xGF" firstAttribute="top" secondItem="TXw-8Z-ovO" secondAttribute="bottom" constant="32" id="Eab-tf-txl"/>
+                                    <constraint firstItem="TXw-8Z-ovO" firstAttribute="top" secondItem="1NK-3w-x3w" secondAttribute="bottom" constant="16" id="IIe-3o-gO5"/>
+                                    <constraint firstItem="1NK-3w-x3w" firstAttribute="top" secondItem="Yz9-c7-fwj" secondAttribute="bottom" constant="16" id="UiL-fJ-VUm"/>
+                                    <constraint firstItem="bBU-Nz-xGF" firstAttribute="centerX" secondItem="dZd-IT-YUO" secondAttribute="centerX" id="VkG-xF-DVS"/>
+                                    <constraint firstItem="Yz9-c7-fwj" firstAttribute="centerX" secondItem="dZd-IT-YUO" secondAttribute="centerX" id="bef-Qo-H1h"/>
+                                    <constraint firstItem="Yz9-c7-fwj" firstAttribute="top" secondItem="dZd-IT-YUO" secondAttribute="top" constant="20" id="dhe-2R-fch"/>
+                                    <constraint firstAttribute="trailing" secondItem="TXw-8Z-ovO" secondAttribute="trailing" constant="20" id="fb2-7Q-FIp"/>
+                                    <constraint firstAttribute="bottom" secondItem="bBU-Nz-xGF" secondAttribute="bottom" constant="20" id="gKw-yZ-Qfa"/>
+                                    <constraint firstItem="TXw-8Z-ovO" firstAttribute="leading" secondItem="dZd-IT-YUO" secondAttribute="leading" constant="20" id="hO5-6g-dBD"/>
+                                    <constraint firstItem="1NK-3w-x3w" firstAttribute="leading" secondItem="dZd-IT-YUO" secondAttribute="leading" constant="20" id="rR4-3z-8ol"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dZd-IT-YUO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="KdT-CA-mLt"/>
+                            <constraint firstItem="dZd-IT-YUO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Q3j-Dh-qNh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dZd-IT-YUO" secondAttribute="trailing" constant="16" id="V0t-sN-LYb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-125" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buttonBackPrimaryColorFilled" width="19.5" height="19.5"/>
+        <image name="buttonBackPrimaryColorStroked" width="19.5" height="19.5"/>
+        <image name="iconCameraAccessRequest" width="72" height="72"/>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryMain">
+            <color red="1" green="0.66299998760223389" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

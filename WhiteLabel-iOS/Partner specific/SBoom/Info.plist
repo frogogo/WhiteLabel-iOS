@@ -70,5 +70,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Доступ к камере нужен, чтобы сканировать чеки</string>
 </dict>
 </plist>
