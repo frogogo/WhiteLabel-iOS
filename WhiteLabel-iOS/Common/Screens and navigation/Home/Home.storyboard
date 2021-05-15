@@ -304,11 +304,22 @@
                     <connections>
                         <outlet property="mainTable" destination="GhT-bi-4Wx" id="Apn-DI-qda"/>
                         <outlet property="scanCodeButton" destination="BRM-YC-Wzq" id="aYJ-CO-CYb"/>
+                        <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="240.57971014492756" y="433.92857142857139"/>
+        </scene>
+        <!--Coupon-->
+        <scene sceneID="ScM-za-CA8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Coupon" id="iNF-Df-4r4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="48T-8Z-DTt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfB-V8-LjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="434"/>
         </scene>
         <!--Home Empty Screen Controller-->
         <scene sceneID="ska-DU-wGw">
@@ -469,6 +480,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="M46-Ys-gux"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Сканировать чек" image="iconScanQRCodeWhite" backgroundImage="buttonBackPrimaryColor">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

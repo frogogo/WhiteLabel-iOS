@@ -12,6 +12,8 @@ class HomeScreenCouponViewModel: BaseViewModel {
   let titleText = Box(value: "")
   let pictureURL = Box(value: "")
   let numberString = Box(value: "")
+
+  private (set) var couponModel = CouponModel()
   
   // MARK: - Lifecycle methods
   init(withModel couponModel: CouponModel) {
@@ -21,6 +23,7 @@ class HomeScreenCouponViewModel: BaseViewModel {
 
   // MARK: - Internal/public custom methods
   func update(with couponModel: CouponModel) {
+    self.couponModel = couponModel
     numberString.value = "Купон № \(couponModel.identifier)"
   }
 }

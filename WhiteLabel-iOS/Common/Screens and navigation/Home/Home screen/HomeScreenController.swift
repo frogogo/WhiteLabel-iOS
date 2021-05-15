@@ -21,11 +21,21 @@ class HomeScreenController: BaseViewController {
 
   private var couponSectionHeader: HomeScreenCouponSectionHeader?
   private var receiptSectionHeader: HomeScreenReceiptSectionHeader?
+  private var selectedCouponIndex: Int?
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "HomeToCouponDetailsSegue" {
+      guard let couponVC = segue.destination as? CouponDetailScreenController else { return }
+      guard selectedCouponIndex != nil else { return }
+      let couponViewModel = viewModel.couponViewModel(forIndex: selectedCouponIndex!)
+      couponVC.viewModel.coupon = couponViewModel.couponModel
+    }
   }
 
   // MARK: - Overridden methods
@@ -107,7 +117,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let reuseID = cellReuseIDForSections[indexPath.section]
     if reuseID == HomeScreenCouponCell.reuseID {
-      print("Надо открыть купон с индексом \(indexPath.row)")
+      selectedCouponIndex = indexPath.row
+      performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
     }
   }
 
