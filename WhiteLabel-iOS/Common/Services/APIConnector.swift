@@ -29,7 +29,7 @@ class APIConnector {
   // MARK: - Properties
   static let shared = APIConnector()
 
-  private static let host = Host.staging
+  private static let host = Host.production
   private static let route = "api"
   private static let baseURL = host + "/" + route
 
