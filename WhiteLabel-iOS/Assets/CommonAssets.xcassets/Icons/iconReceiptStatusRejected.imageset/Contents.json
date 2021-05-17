@@ -5,12 +5,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "icon-rejected@2x.png",
+      "filename" : "Icon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icon-rejected@3x.png",
+      "filename" : "Icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

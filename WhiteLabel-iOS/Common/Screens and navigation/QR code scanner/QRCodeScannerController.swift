@@ -27,9 +27,31 @@ class QRCodeScannerController: BaseViewController {
     setupCameraPreview()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    captureSession.startRunning()
+  }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    captureSession.stopRunning()
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+
+    guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
+    guard let newReceipt = viewModel.receipt else { return }
+    receiptVC.viewModel.setReceiptModel(newReceipt)
+    receiptVC.onDismiss = {[weak self] in
+      self?.dismiss(animated: true, completion: nil)
+    }
+  }
+
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
+    viewModel.delegate = self
   }
 
   // MARK: - Private custom methods
@@ -53,7 +75,6 @@ class QRCodeScannerController: BaseViewController {
     videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
     videoPreviewLayer?.frame = cameraPreviewContainer.layer.bounds
     cameraPreviewContainer.layer.addSublayer(videoPreviewLayer!)
-    captureSession.startRunning()
   }
 
   private func updateFlashSwitchState() {
@@ -82,7 +103,6 @@ class QRCodeScannerController: BaseViewController {
 
   // MARK: - Handlers
   @IBAction func handleCloseButtonTap() {
-    captureSession.stopRunning()
     dismiss(animated: true, completion: nil)
   }
 
@@ -107,5 +127,11 @@ extension QRCodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
 
     captureSession.stopRunning()
     viewModel.handleParsedQRCodeString(parsedString)
+  }
+}
+
+extension QRCodeScannerController: QRCodeScannerViewModelDelegate {
+  func showScanSuccess() {
+    performSegue(withIdentifier: "QRCodeScannerToReceiptScreenSegue", sender: nil)
   }
 }

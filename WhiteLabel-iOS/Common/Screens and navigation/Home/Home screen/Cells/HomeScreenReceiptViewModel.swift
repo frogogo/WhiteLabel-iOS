@@ -33,13 +33,13 @@ class HomeScreenReceiptViewModel: BaseViewModel {
   private func stateIconName(forReceiptState receiptState: ReceiptState) -> String {
     switch receiptState {
     case .approved:
-      return "iconReceiptStatusApproved"
+      return "iconReceiptStatusApprovedSmall"
     case .processing:
-      return "iconReceiptStatusProcessing"
+      return "iconReceiptStatusProcessingSmall"
     case .rejected:
-      return "iconReceiptStatusRejected"
+      return "iconReceiptStatusRejectedSmall"
     default:
-      return "iconReceiptStatusProcessing"
+      return "iconReceiptStatusProcessingSmall"
     }
   }
 }

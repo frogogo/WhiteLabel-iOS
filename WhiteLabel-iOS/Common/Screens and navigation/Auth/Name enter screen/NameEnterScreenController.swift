@@ -29,6 +29,8 @@ class NameEnterScreenController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
     let destinationVC = segue.destination as? EmailEnterScreenController
     destinationVC?.viewModel.setEnteredName(viewModel.enteredName)
   }

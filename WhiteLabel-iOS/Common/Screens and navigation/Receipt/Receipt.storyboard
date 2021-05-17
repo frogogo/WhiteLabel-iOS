@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Receipt Screen Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ReceiptScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-L0-ONW" userLabel="container">
+                                <rect key="frame" x="16" y="248" width="382" height="400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-4v-kFN" userLabel="statusHead">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="136"/>
+                                        <color key="backgroundColor" name="StatusOrange"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="llE-bU-NNH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6e-55-l04" userLabel="receiptInfoContainer">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 9000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-1E-uTl" userLabel="numberLabel">
+                                                <rect key="frame" x="16" y="16" width="57" height="19"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-gz-KBt" userLabel="sumLabel">
+                                                <rect key="frame" x="334.5" y="16" width="31.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 апреля 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-Jh-sXF" userLabel="dateLabel">
+                                                <rect key="frame" x="138" y="57" width="106.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kC1-Jh-sXF" firstAttribute="bottom" secondItem="Z6e-55-l04" secondAttribute="bottom" id="48a-4g-xSB"/>
+                                            <constraint firstItem="eD2-1E-uTl" firstAttribute="top" secondItem="Z6e-55-l04" secondAttribute="top" constant="16" id="5A0-Zp-SXG"/>
+                                            <constraint firstItem="kC1-Jh-sXF" firstAttribute="top" secondItem="eD2-1E-uTl" secondAttribute="bottom" constant="22" id="T4A-ZR-mGA"/>
+                                            <constraint firstItem="eD2-1E-uTl" firstAttribute="leading" secondItem="Z6e-55-l04" secondAttribute="leading" constant="16" id="TGg-JR-JWe"/>
+                                            <constraint firstItem="kC1-Jh-sXF" firstAttribute="centerX" secondItem="Z6e-55-l04" secondAttribute="centerX" id="XtC-Fy-rYg"/>
+                                            <constraint firstItem="WSn-gz-KBt" firstAttribute="top" secondItem="Z6e-55-l04" secondAttribute="top" constant="16" id="jGd-d9-7Yl"/>
+                                            <constraint firstItem="WSn-gz-KBt" firstAttribute="trailing" secondItem="Z6e-55-l04" secondAttribute="trailing" constant="-16" id="t0c-n9-GH7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlx-c3-sIQ" userLabel="whiteBack">
+                                        <rect key="frame" x="0.0" y="116" width="382" height="284"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconReceiptStatusProcessing" translatesAutoresizingMaskIntoConstraints="NO" id="Qvh-8X-Tib" userLabel="statusIcon">
+                                        <rect key="frame" x="163" y="88" width="56" height="56"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Ваш чек находится на проверке" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-rR-ROC" userLabel="titleLabel">
+                                        <rect key="frame" x="16" y="156" width="350" height="19"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" name="Dark900"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-xV-hcF" userLabel="descriptionLabel">
+                                        <rect key="frame" x="16" y="191" width="350" height="193"/>
+                                        <string key="text">Обычно это занимает несколько минут, но очень редко на это уходит много времени. Когда ваш чек пройдет проверку, вы сможете отсканировать новый чек.</string>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receiptTail" translatesAutoresizingMaskIntoConstraints="NO" id="ioS-6U-H0Z" userLabel="tailImage">
+                                        <rect key="frame" x="0.0" y="399" width="382" height="12"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ioS-6U-H0Z" firstAttribute="leading" secondItem="wlx-c3-sIQ" secondAttribute="leading" id="5a2-Br-5Hk"/>
+                                    <constraint firstItem="aaG-4v-kFN" firstAttribute="leading" secondItem="HLg-L0-ONW" secondAttribute="leading" id="6W8-1d-xRE"/>
+                                    <constraint firstItem="wlx-c3-sIQ" firstAttribute="leading" secondItem="HLg-L0-ONW" secondAttribute="leading" id="8Ud-Ff-Rzb"/>
+                                    <constraint firstItem="Qvh-8X-Tib" firstAttribute="centerY" secondItem="wlx-c3-sIQ" secondAttribute="top" id="Eva-he-xRN"/>
+                                    <constraint firstItem="wlx-c3-sIQ" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" id="GNV-E1-kBy"/>
+                                    <constraint firstItem="Jpy-rR-ROC" firstAttribute="centerX" secondItem="HLg-L0-ONW" secondAttribute="centerX" id="Hon-DO-zCw"/>
+                                    <constraint firstItem="wlx-c3-sIQ" firstAttribute="top" secondItem="aaG-4v-kFN" secondAttribute="bottom" constant="-20" id="KJk-XD-2F3"/>
+                                    <constraint firstItem="Jpy-rR-ROC" firstAttribute="top" secondItem="Qvh-8X-Tib" secondAttribute="bottom" constant="12" id="TA9-RF-twm"/>
+                                    <constraint firstItem="Z6e-55-l04" firstAttribute="top" secondItem="aaG-4v-kFN" secondAttribute="top" id="U1u-Sz-0gY"/>
+                                    <constraint firstItem="Jpy-rR-ROC" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" constant="-16" id="UAX-9k-ImZ"/>
+                                    <constraint firstItem="lpk-xV-hcF" firstAttribute="bottom" secondItem="wlx-c3-sIQ" secondAttribute="bottom" constant="-16" id="Xs8-hP-3AF"/>
+                                    <constraint firstItem="ioS-6U-H0Z" firstAttribute="top" secondItem="wlx-c3-sIQ" secondAttribute="bottom" constant="-1" id="Z91-6f-1FO"/>
+                                    <constraint firstItem="lpk-xV-hcF" firstAttribute="centerX" secondItem="HLg-L0-ONW" secondAttribute="centerX" id="aBx-lY-Bho"/>
+                                    <constraint firstItem="Z6e-55-l04" firstAttribute="trailing" secondItem="aaG-4v-kFN" secondAttribute="trailing" id="aVe-Sj-QpI"/>
+                                    <constraint firstItem="Jpy-rR-ROC" firstAttribute="leading" secondItem="HLg-L0-ONW" secondAttribute="leading" constant="16" id="atN-XX-x6G"/>
+                                    <constraint firstItem="lpk-xV-hcF" firstAttribute="top" secondItem="Jpy-rR-ROC" secondAttribute="bottom" constant="16" id="ciW-DW-Dnv"/>
+                                    <constraint firstItem="aaG-4v-kFN" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" id="f3U-BW-7Os"/>
+                                    <constraint firstItem="Z6e-55-l04" firstAttribute="leading" secondItem="aaG-4v-kFN" secondAttribute="leading" id="gqp-8x-ez5"/>
+                                    <constraint firstItem="wlx-c3-sIQ" firstAttribute="bottom" secondItem="HLg-L0-ONW" secondAttribute="bottom" id="i6O-u8-C6A"/>
+                                    <constraint firstItem="aaG-4v-kFN" firstAttribute="top" secondItem="HLg-L0-ONW" secondAttribute="top" id="mRC-ur-Jzu"/>
+                                    <constraint firstItem="lpk-xV-hcF" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" constant="-16" id="pnF-WB-0lC"/>
+                                    <constraint firstItem="ioS-6U-H0Z" firstAttribute="trailing" secondItem="wlx-c3-sIQ" secondAttribute="trailing" id="qQ3-cx-OEz"/>
+                                    <constraint firstItem="lpk-xV-hcF" firstAttribute="leading" secondItem="HLg-L0-ONW" secondAttribute="leading" constant="16" id="stk-ib-qAH"/>
+                                    <constraint firstItem="Qvh-8X-Tib" firstAttribute="centerX" secondItem="HLg-L0-ONW" secondAttribute="centerX" id="xUy-zk-Wwe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-xL-vo7" userLabel="closeButton">
+                                <rect key="frame" x="185" y="678" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tYU-xL-vo7" secondAttribute="height" multiplier="1:1" id="XyU-u0-STG"/>
+                                    <constraint firstAttribute="width" constant="44" id="zLQ-c1-XK3"/>
+                                </constraints>
+                                <state key="normal" image="buttonCloseRound"/>
+                                <connections>
+                                    <action selector="handleCloseButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VP7-xv-m4X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="HLg-L0-ONW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2GF-04-cWr"/>
+                            <constraint firstItem="tYU-xL-vo7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DHy-wP-8LL"/>
+                            <constraint firstItem="HLg-L0-ONW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Eh3-HN-9xQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" constant="16" id="kAI-xq-Nvw"/>
+                            <constraint firstItem="tYU-xL-vo7" firstAttribute="top" secondItem="HLg-L0-ONW" secondAttribute="bottom" constant="30" id="lwY-ay-gVc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="kC1-Jh-sXF" id="MqI-ej-gY4"/>
+                        <outlet property="statusIcon" destination="Qvh-8X-Tib" id="l2x-fd-Uqg"/>
+                        <outlet property="sumLabel" destination="WSn-gz-KBt" id="yuB-Cr-vgT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120.28985507246378" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buttonCloseRound" width="32" height="32.5"/>
+        <image name="iconReceiptStatusProcessing" width="56" height="56"/>
+        <image name="receiptTail" width="343" height="12"/>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusOrange">
+            <color red="0.97647058823529409" green="0.61568627450980395" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

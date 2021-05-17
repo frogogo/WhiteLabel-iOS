@@ -31,6 +31,8 @@ class HomeScreenController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
     if segue.identifier == "HomeToCouponDetailsSegue" {
       guard let couponVC = segue.destination as? CouponDetailScreenController else { return }
       guard selectedCouponIndex != nil else { return }

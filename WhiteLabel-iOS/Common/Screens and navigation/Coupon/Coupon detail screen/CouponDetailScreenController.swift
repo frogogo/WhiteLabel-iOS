@@ -20,6 +20,8 @@ class CouponDetailScreenController: BaseViewController {
 
   // MARK: - Lifecycle methods
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
     if type(of: segue.destination) == CouponBarcodeScreenController.self {
       let barcodeVC = segue.destination as! CouponBarcodeScreenController
       barcodeVC.generateBarcode(with: viewModel.barcodeString)

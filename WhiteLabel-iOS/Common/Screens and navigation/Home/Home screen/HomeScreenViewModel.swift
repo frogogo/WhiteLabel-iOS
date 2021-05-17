@@ -41,11 +41,14 @@ class HomeScreenViewModel: BaseViewModel {
   override func refreshData() {
     super.refreshData()
 
-    couponProgress = HomeManager.shared.couponProgress
-    createReceiptViewModels(forModels: HomeManager.shared.receipts)
-    createCouponViewModels(forModels: HomeManager.shared.coupons)
+    HomeManager.shared.refreshHomeData { [weak self] in
+      guard let self = self else { return }
+      self.couponProgress = HomeManager.shared.couponProgress
+      self.createReceiptViewModels(forModels: HomeManager.shared.receipts)
+      self.createCouponViewModels(forModels: HomeManager.shared.coupons)
 
-    delegate?.viewModelUpdated()
+      self.delegate?.viewModelUpdated()
+    }
   }
 
   // MARK: - Internal/public custom methods

@@ -7,9 +7,23 @@
 
 import Foundation
 
+protocol QRCodeScannerViewModelDelegate: AnyObject {
+  func showScanSuccess()
+}
+
 class QRCodeScannerViewModel: BaseViewModel {
+  // MARK: - Properties
+  weak var delegate: QRCodeScannerViewModelDelegate?
+
+  var receipt: ReceiptModel?
+
   // MARK: - Internal/public custom methods
   func handleParsedQRCodeString(_ qrCodeString: String) {
-    print("Надо отправить на сервер строку из QR кода:\n \(qrCodeString)")
+    ReceiptManager.shared.sendReceipt(withQRString: qrCodeString) { [weak self] (createdReceipt) in
+      self?.receipt = createdReceipt
+      self?.delegate?.showScanSuccess()
+    } onFailure: { error in
+      print("Ошибка сканирования: \(error)")
+    }
   }
 }

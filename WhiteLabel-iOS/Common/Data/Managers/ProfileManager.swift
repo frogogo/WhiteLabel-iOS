@@ -11,6 +11,7 @@ class ProfileManager: BaseDataManager {
   // MARK: - Properties
   static let shared = ProfileManager()
 
+  // MARK: - Internal/public custom methods
   func update(name nameString: String? = nil,
               email emailString: String? = nil,
               onSuccess: @escaping () -> Void,

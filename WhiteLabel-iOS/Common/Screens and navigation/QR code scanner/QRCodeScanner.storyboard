@@ -158,11 +158,22 @@
                     <connections>
                         <outlet property="cameraPreviewContainer" destination="Nqc-Jh-SXv" id="Yr0-Rz-xvr"/>
                         <outlet property="flashSwitchButton" destination="e3M-hu-4UM" id="dNV-P6-Hb5"/>
+                        <segue destination="0cc-QV-TKE" kind="presentation" identifier="QRCodeScannerToReceiptScreenSegue" modalPresentationStyle="fullScreen" id="sul-S5-7PU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-125" y="74"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="gW1-xa-UIj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receipt" id="0cc-QV-TKE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3Z7-sz-4H6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgW-r1-oXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="74"/>
         </scene>
     </scenes>
     <resources>

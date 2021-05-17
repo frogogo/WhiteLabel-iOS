@@ -36,6 +36,8 @@ class PhoneEnterScreenController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
     if segue.identifier == "PhoneEnterToAuthCodeCheckSegue" {
       let destinationVC = segue.destination as? AuthCodeEnterScreenController
       destinationVC?.viewModel.enteredPhoneNumber = viewModel.enteredPhoneNumber

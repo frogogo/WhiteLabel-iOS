@@ -29,6 +29,14 @@ class HomeManager: BaseDataManager {
     }
   }
 
+  func refreshHomeData(onSuccess: @escaping () -> Void) {
+    updateHomeData {
+      onSuccess()
+    } onFailure: { error in
+      // do nothing
+    }
+  }
+
   // MARK: - Private custom methods
   private func updateHomeData(onSuccess: @escaping () -> Void,
                               onFailure: @escaping (String) -> Void) {
@@ -42,7 +50,7 @@ class HomeManager: BaseDataManager {
         onSuccess()
 
       } else {
-        print("Occured errors = \(errors)")
+        print("\(type(of:self)): home data load error: \(errors)")
         let errorText = errors[0]["error_text"].stringValue
         onFailure(errorText)
       }

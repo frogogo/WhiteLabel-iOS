@@ -31,8 +31,11 @@ class HomeEmptyScreenViewModel: BaseViewModel {
   override func refreshData() {
     super.refreshData()
 
-    promotion = HomeManager.shared.promotion
-    delegate?.viewModelUpdated()
+    HomeManager.shared.refreshHomeData { [weak self] in
+      guard let self = self else { return }
+      self.promotion = HomeManager.shared.promotion
+      self.delegate?.viewModelUpdated()
+    }
   }
 
   // MARK: - Internal/public custom methods
