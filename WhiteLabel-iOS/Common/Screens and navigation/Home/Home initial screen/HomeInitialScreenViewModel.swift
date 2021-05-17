@@ -21,9 +21,7 @@ class HomeInitialScreenViewModel: BaseViewModel {
     super.loadInitialData()
 
     HomeManager.shared.checkHomeData { [weak self] (isHomeDataNotEmpty) in
-      // TODO: вернуть нормальную проверку флага ниже!
-      //if isHomeDataNotEmpty {
-      if false {
+      if isHomeDataNotEmpty {
         self?.delegate?.showHomeScreen()
       } else {
         self?.delegate?.showHomeEmptyStateScreen()

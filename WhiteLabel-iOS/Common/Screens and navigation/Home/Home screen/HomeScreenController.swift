@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class HomeScreenController: BaseViewController {
+class HomeScreenController: BaseViewController, CameraAccessChecker {
   // MARK: - Properties
   let viewModel = HomeScreenViewModel()
 
@@ -78,11 +78,10 @@ class HomeScreenController: BaseViewController {
 
   // MARK: - Handlers
   @IBAction func handleScanButtonTap() {
-    if AVCaptureDevice.authorizationStatus(for: .video) ==  .denied {
-      performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)
-    } else {
-      print("Доступ к камере есть, нужно открыть экран со сканером")
-      performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)
+    checkCameraAccess { [weak self] in
+      self?.performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)
+    } onDenied: { [weak self] in
+      self?.performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)
     }
   }
 }
