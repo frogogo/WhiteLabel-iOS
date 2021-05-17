@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-typealias CompleteHandler = (_ isSuccess: Bool, _ response: JSON, _ errors: [JSON]) -> Void
+typealias CompleteHandler = (_ isSuccess: Bool, _ response: JSON, _ errors: [APIError]) -> Void
 
 enum APIErrorType {
   case unknown
@@ -10,6 +10,11 @@ enum APIErrorType {
   case authorization
   case notFound
   case validation
+}
+
+struct APIError {
+  var name: String
+  var description: String
 }
 
 private struct Host {
@@ -82,12 +87,12 @@ class APIConnector {
     }
 
     if verboseLogging {
-      print("\n----- REQUEST DETAILS -----")
+      print("\n    ----- REQUEST DETAILS -----")
       print("\(method.rawValue.uppercased())-request to \"\(endpoint)\"")
       print("Full URL = \(requestURL)")
       print("\t\tHEADERS:\n\(headersToSend)")
       print("\t\tPARAMETERS:\n\(params ?? [:])")
-      print("----- REQUEST DETAILS END -----\n")
+      print("    ----- REQUEST DETAILS END -----\n")
     }
 
     AF.request(requestURL,
@@ -95,52 +100,77 @@ class APIConnector {
                parameters: params,
                encoding: encoding,
                headers: headersToSend)
-      .responseJSON { (response) in
-
-        if self.verboseLogging {
-          print("\n----- FULL RESPONSE -----")
-          print("\(response)")
-          print("----- FULL RESPONSE END -----\n")
-        }
+      .responseJSON {[weak self] (response) in
+        guard let self = self else { return }
 
         // TODO: тут надо проверить HTTP код ответа и выдать стандартную ошибку, если код не из серии 200
-
-        switch response.result {
-        case .success(let value):
-          let jsonResponse = JSON(value)
-          let error = jsonResponse["error"]
-          if error.isEmpty  {
-            completeHandler(true, JSON(value), [])
-          } else {
-            completeHandler(false, JSON(), [jsonResponse])
-          }
-        case .failure(let error):
-          let parsingError = JSON(["error": "Некорректные данные",
-                                   "error_text": error.errorDescription])
-          completeHandler(false, JSON(), [JSON(parsingError)])
+        guard let httpCode = response.response?.statusCode else {
+          let unknownError = self.standardError(withType: .unknown)
+          completeHandler(false, JSON(), [unknownError])
+          return
         }
+
+        if self.verboseLogging {
+          print("\n    ----- FULL RESPONSE -----")
+          print("\nhttp code \(httpCode)")
+          print("\n\(response)")
+          print("    ----- FULL RESPONSE END -----\n")
+        }
+
+        var parsedResponse = JSON()
+        var occuredErrors = [self.standardError(withType: .unknown)]
+        var isSuccess = false
+
+        switch httpCode {
+        case 200..<300:
+          if let validResponse = response.value {
+            isSuccess = true
+            parsedResponse = JSON(validResponse)
+            occuredErrors = []
+          }
+        case 401:
+          occuredErrors = [self.standardError(withType: .authorization)]
+        case 404:
+          occuredErrors = [self.standardError(withType: .notFound)]
+        case 422:
+          if let validErrorBody = response.value {
+            let errorBody = JSON(validErrorBody)
+            let errorName = errorBody["error"].stringValue
+            let errorDescription = errorBody["error_text"].stringValue
+            occuredErrors = [APIError(name: errorName, description: errorDescription)]
+          } else {
+            print("\(type(of: self)): не удалось распарсить ошибку валидации! Создана неизвестная ошибка")
+            occuredErrors = [self.standardError(withType: .unknown)]
+          }
+        default:
+          occuredErrors = [self.standardError(withType: .unknown)]
+        }
+
+        completeHandler(isSuccess, parsedResponse, occuredErrors)
       }
   }
 
-  private func standardError(withType errorType: APIErrorType) -> JSON {
-    var errorName = ""
-    var errorMessage = ""
+  private func standardError(withType errorType: APIErrorType) -> APIError {
+    let error: APIError?
     switch errorType {
     case .unknown:
-      errorName = "Неизвестная ошибка"
-      errorMessage = "Неизвестная ошибка"
+      error = APIError(name: "Неизвестная ошибка",
+                       description: "Неизвестная ошибка")
     case .connection:
-      errorName = "Ошибка соединения с сервером"
-      errorMessage = "Ошибка соединения с сервером"
+      error = APIError(name: "Ошибка соединения с сервером",
+                       description: "Ошибка соединения с сервером")
     case .authorization:
-      errorName = "Ошибка авторизации"
-      errorMessage = "Ошибка авторизации"
+      error = APIError(name: "Ошибка авторизации",
+                       description: "Ошибка авторизации")
     case .notFound:
-      errorName = "Данные отсутствуют"
-      errorMessage = "Данные отсутствуют"
+      error = APIError(name: "Данные отсутствуют",
+                       description: "Данные отсутствуют")
     default:
+      print("\(type(of: self)): Error creation with type \(errorType) not supported. Created unknown error instead")
+      error = APIError(name: "Неизвестная ошибка",
+                       description: "Неизвестная ошибка")
       break
     }
-    return JSON(["error": errorName, "error_text": errorMessage])
+    return error!
   }
 }

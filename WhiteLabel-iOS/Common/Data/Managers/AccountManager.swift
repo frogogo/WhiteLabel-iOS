@@ -38,8 +38,8 @@ class AccountManager: BaseDataManager {
         let refreshDelay = response["password_refresh_rate"].intValue
         onSuccess(refreshDelay)
       } else {
-        print("Occured errors = \(errors)")
-        let errorText = errors[0]["error_text"].stringValue
+        print("\(type(of: self)): auth code request failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
         onFailure(errorText)
       }
     }
@@ -63,8 +63,8 @@ class AccountManager: BaseDataManager {
         self?.save(authToken: authToken, andRefreshToken: refreshToken)
         onSuccess(isNewUser)
       } else {
-        print("Occured errors = \(errors)")
-        let errorText = errors[0]["error_text"].stringValue
+        print("\(type(of: self)): auth token request failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
         onFailure(errorText)
       }
     }

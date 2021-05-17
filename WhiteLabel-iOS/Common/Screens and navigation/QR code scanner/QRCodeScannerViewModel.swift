@@ -9,6 +9,7 @@ import Foundation
 
 protocol QRCodeScannerViewModelDelegate: AnyObject {
   func showScanSuccess()
+  func showScanError(_ errorText: String)
 }
 
 class QRCodeScannerViewModel: BaseViewModel {
@@ -22,8 +23,8 @@ class QRCodeScannerViewModel: BaseViewModel {
     ReceiptManager.shared.sendReceipt(withQRString: qrCodeString) { [weak self] (createdReceipt) in
       self?.receipt = createdReceipt
       self?.delegate?.showScanSuccess()
-    } onFailure: { error in
-      print("Ошибка сканирования: \(error)")
+    } onFailure: { [weak self] (errorText) in
+      self?.delegate?.showScanError(errorText)
     }
   }
 }

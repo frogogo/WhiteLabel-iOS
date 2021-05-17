@@ -50,8 +50,8 @@ class HomeManager: BaseDataManager {
         onSuccess()
 
       } else {
-        print("\(type(of:self)): home data load error: \(errors)")
-        let errorText = errors[0]["error_text"].stringValue
+        print("\(type(of: self)): home data load failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
         onFailure(errorText)
       }
     }

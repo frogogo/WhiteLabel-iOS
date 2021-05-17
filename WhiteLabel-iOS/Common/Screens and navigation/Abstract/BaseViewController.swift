@@ -44,4 +44,12 @@ class BaseViewController: UIViewController {
   func setupStaticContentForDisplay() {
 
   }
+
+  func showStandardAlert(withMessage message: String, onDismiss: (() -> Void)? = nil) {
+    let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .actionSheet)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+      onDismiss?()
+    }))
+    self.present(alert, animated: true, completion: nil)
+  }
 }

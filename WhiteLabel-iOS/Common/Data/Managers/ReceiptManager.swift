@@ -23,8 +23,8 @@ class ReceiptManager: BaseDataManager {
         parsedReceipt.update(with: response)
         onSuccess(parsedReceipt)
       } else {
-        print("Occured errors = \(errors)")
-        let errorText = errors[0]["error_text"].stringValue
+        print("\(type(of: self)): QR code sending failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
         onFailure(errorText)
       }
     }

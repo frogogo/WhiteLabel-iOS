@@ -29,12 +29,12 @@ class QRCodeScannerController: BaseViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    captureSession.startRunning()
+    startCamera()
   }
 
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    captureSession.stopRunning()
+    stopCamera()
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,6 +101,15 @@ class QRCodeScannerController: BaseViewController {
     }
   }
 
+  private func startCamera() {
+    captureSession.startRunning()
+    updateFlashSwitchState()
+  }
+
+  private func stopCamera() {
+    captureSession.stopRunning()
+  }
+
   // MARK: - Handlers
   @IBAction func handleCloseButtonTap() {
     dismiss(animated: true, completion: nil)
@@ -125,7 +134,7 @@ extension QRCodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
     guard parsedObject.type == .qr else { return }
     guard let parsedString = parsedObject.stringValue else { return }
 
-    captureSession.stopRunning()
+    stopCamera()
     viewModel.handleParsedQRCodeString(parsedString)
   }
 }
@@ -133,5 +142,11 @@ extension QRCodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
 extension QRCodeScannerController: QRCodeScannerViewModelDelegate {
   func showScanSuccess() {
     performSegue(withIdentifier: "QRCodeScannerToReceiptScreenSegue", sender: nil)
+  }
+
+  func showScanError(_ errorText: String) {
+    showStandardAlert(withMessage: errorText, onDismiss: { [weak self] in
+      self?.startCamera()
+    })
   }
 }
