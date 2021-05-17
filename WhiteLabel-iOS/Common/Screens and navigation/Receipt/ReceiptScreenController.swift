@@ -13,6 +13,7 @@ class ReceiptScreenController: BaseViewController {
 
   var onDismiss: () -> Void = {}
 
+  @IBOutlet private var numberLabel: UILabel!
   @IBOutlet private var sumLabel: UILabel!
   @IBOutlet private var dateLabel: UILabel!
   @IBOutlet private var statusIcon: UIImageView!
@@ -25,6 +26,9 @@ class ReceiptScreenController: BaseViewController {
   override func addBindings() {
     super.addBindings()
 
+    viewModel.numberText.bind { [weak self] (numberTextString) in
+      self?.numberLabel.text = numberTextString
+    }
     viewModel.sumText.bind { [weak self] (sumTextString) in
       self?.sumLabel.text = sumTextString
     }

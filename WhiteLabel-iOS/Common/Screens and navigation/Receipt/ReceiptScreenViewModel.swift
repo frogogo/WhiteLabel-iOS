@@ -20,8 +20,8 @@ class ReceiptScreenViewModel: BaseViewModel {
     sumText.value = CurrencyHelper.readableSumInRubles(withAmount: receiptModel.sum)
     statusIconName.value = stateIconName(forReceiptState: receiptModel.state)
 
-    if let scanDate = receiptModel.timestamp {
-      dateText.value = scanDate.readableDateWithTime()
+    if let receiptDate = receiptModel.timestamp {
+      dateText.value = receiptDate.readableDateWithTime()
     }
   }
 

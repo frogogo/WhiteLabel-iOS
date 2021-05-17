@@ -27,7 +27,7 @@ class HomeInitialScreenViewModel: BaseViewModel {
         self?.delegate?.showHomeEmptyStateScreen()
       }
     } onFailure: { (error) in
-      print("Не удалось проверить данные для главной страницы")
+      print("Не удалось проверить данные для главной страницы: \(error)")
     }
   }
 }

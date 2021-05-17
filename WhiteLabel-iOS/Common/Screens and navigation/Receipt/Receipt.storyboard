@@ -47,19 +47,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="76"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 9000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-1E-uTl" userLabel="numberLabel">
-                                                <rect key="frame" x="16" y="16" width="57" height="19"/>
+                                                <rect key="frame" x="16" y="16" width="64.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-gz-KBt" userLabel="sumLabel">
-                                                <rect key="frame" x="334.5" y="16" width="31.5" height="19"/>
+                                                <rect key="frame" x="329.5" y="16" width="36.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 апреля 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-Jh-sXF" userLabel="dateLabel">
-                                                <rect key="frame" x="138" y="57" width="106.5" height="19"/>
+                                                <rect key="frame" x="136.5" y="57" width="109" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -151,6 +151,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="kC1-Jh-sXF" id="MqI-ej-gY4"/>
+                        <outlet property="numberLabel" destination="eD2-1E-uTl" id="Axa-Wf-BZN"/>
                         <outlet property="statusIcon" destination="Qvh-8X-Tib" id="l2x-fd-Uqg"/>
                         <outlet property="sumLabel" destination="WSn-gz-KBt" id="yuB-Cr-vgT"/>
                     </connections>
