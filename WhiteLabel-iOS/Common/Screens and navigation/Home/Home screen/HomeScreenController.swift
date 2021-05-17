@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class HomeScreenController: BaseViewController, CameraAccessChecker {
+class HomeScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = HomeScreenViewModel()
 
@@ -78,7 +78,7 @@ class HomeScreenController: BaseViewController, CameraAccessChecker {
 
   // MARK: - Handlers
   @IBAction func handleScanButtonTap() {
-    checkCameraAccess { [weak self] in
+    CameraAccessChecker.checkCameraAccess { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)
     } onDenied: { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)

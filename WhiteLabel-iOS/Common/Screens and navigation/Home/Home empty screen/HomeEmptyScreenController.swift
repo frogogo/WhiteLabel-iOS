@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import AVKit
 
-class HomeEmptyScreenController: BaseViewController, CameraAccessChecker {
+class HomeEmptyScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = HomeEmptyScreenViewModel()
 
@@ -45,7 +45,7 @@ class HomeEmptyScreenController: BaseViewController, CameraAccessChecker {
 
   // MARK: - Handlers
   @IBAction func handleScanButtonTap() {
-    checkCameraAccess { [weak self] in
+    CameraAccessChecker.checkCameraAccess { [weak self] in
       self?.performSegue(withIdentifier: "HomeEmptyScreenToQRScannerSegue", sender: nil)
     } onDenied: { [weak self] in
       self?.performSegue(withIdentifier: "HomeEmptyScreenToCameraAccessSegue", sender: nil)

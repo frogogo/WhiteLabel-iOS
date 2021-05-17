@@ -8,12 +8,8 @@
 import Foundation
 import AVKit
 
-protocol CameraAccessChecker {
-  func checkCameraAccess(onGranted: @escaping () -> Void, onDenied: @escaping () -> Void)
-}
-
-extension CameraAccessChecker {
-  func checkCameraAccess(onGranted: @escaping () -> Void,
+class CameraAccessChecker {
+  static func checkCameraAccess(onGranted: @escaping () -> Void,
                          onDenied: @escaping () -> Void) {
     let currentCameraAuthStatus = AVCaptureDevice.authorizationStatus(for: .video)
 
