@@ -31,9 +31,12 @@ class ProfileManager: BaseDataManager {
 
     APIConnector.shared.requestPATCH("user", params: params) { (isOK, response, errors) in
       if isOK {
-        print("Успешно отправлены на сервер данные пользователя:")
+        print("\(type(of: self)): profile data sent")
+        onSuccess()
       } else {
-        print("Не удалось отправить данные пользователя на сервер")
+        print("\(type(of: self)): home data load failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
+        onFailure(errorText)
       }
     }
   }

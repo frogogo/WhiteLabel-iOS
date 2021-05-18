@@ -46,6 +46,9 @@ class EmailEnterScreenController: BaseViewController {
     viewModel.errorToShow.bind { [weak self] (errorTextString) in
       self?.errorIndicator.isHidden = errorTextString == nil
       self?.errorLabel.text = errorTextString
+      if errorTextString != nil && errorTextString != "" {
+        self?.emailField.resignFirstResponder()
+      }
     }
   }
 
@@ -76,6 +79,7 @@ class EmailEnterScreenController: BaseViewController {
     let keyboardSizeKey = UIResponder.keyboardFrameEndUserInfoKey
     guard let keyboardSize = (userInfo[keyboardSizeKey] as? NSValue)?.cgRectValue else { return }
     continueButtonBottomConstraint.constant = -(keyboardSize.height + continueButtonBottomGap)
+    viewModel.errorToShow.value = nil
   }
 
   @objc func handleNotifKeyboardHide() {

@@ -103,7 +103,6 @@ class APIConnector {
       .responseJSON {[weak self] (response) in
         guard let self = self else { return }
 
-        // TODO: тут надо проверить HTTP код ответа и выдать стандартную ошибку, если код не из серии 200
         guard let httpCode = response.response?.statusCode else {
           let unknownError = self.standardError(withType: .unknown)
           completeHandler(false, JSON(), [unknownError])
@@ -123,10 +122,10 @@ class APIConnector {
 
         switch httpCode {
         case 200..<300:
+          isSuccess = true
+          occuredErrors = []
           if let validResponse = response.value {
-            isSuccess = true
             parsedResponse = JSON(validResponse)
-            occuredErrors = []
           }
         case 401:
           occuredErrors = [self.standardError(withType: .authorization)]
