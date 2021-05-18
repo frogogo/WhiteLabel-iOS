@@ -160,7 +160,7 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     let reuseID = cellReuseIDForSections[section]
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
-      return UITableView.automaticDimension
+      return viewModel.couponCount > 0 ? UITableView.automaticDimension : 0
     case HomeScreenReceiptCell.reuseID:
       return UITableView.automaticDimension
     default:
@@ -172,7 +172,7 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     let reuseID = cellReuseIDForSections[section]
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
-      return preparedCouponSectionHeader()
+      return viewModel.couponCount > 0 ? preparedCouponSectionHeader() : nil
     case HomeScreenReceiptCell.reuseID:
       let header = preparedReceiptSectionHeader()
       header.setNoticeVisible(to: viewModel.receiptInProcess.value)
