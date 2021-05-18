@@ -18,7 +18,11 @@ class RootController: UIViewController {
   private func tryAutoLogin() {
     AccountManager.shared.tryAutoLogin { [weak self] in
       self?.performSegue(withIdentifier: "RootToHomeSegue", sender: nil)
+
     } onFailure: { [weak self] in
+      if !AccountManager.shared.didUserSeeOnboarding {
+        self?.performSegue(withIdentifier: "RootToOnboardingSegue", sender: nil)
+      }
       self?.performSegue(withIdentifier: "RootToAuthSegue", sender: nil)
     }
   }

@@ -20,13 +20,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="E6p-ys-c2r" kind="presentation" identifier="RootToAuthSegue" modalPresentationStyle="fullScreen" id="6lq-Xt-Klv"/>
-                        <segue destination="WSs-eH-TkJ" kind="presentation" identifier="RootToHomeSegue" modalPresentationStyle="fullScreen" id="NNj-rs-wi8"/>
+                        <segue destination="E6p-ys-c2r" kind="presentation" identifier="RootToAuthSegue" animates="NO" modalPresentationStyle="fullScreen" id="6lq-Xt-Klv"/>
+                        <segue destination="WSs-eH-TkJ" kind="presentation" identifier="RootToHomeSegue" animates="NO" modalPresentationStyle="fullScreen" id="NNj-rs-wi8"/>
+                        <segue destination="E5J-JT-7xU" kind="presentation" identifier="RootToOnboardingSegue" animates="NO" modalPresentationStyle="fullScreen" id="CXp-AZ-JeJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTo-nu-zjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="117"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="3ac-CY-JcW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="E5J-JT-7xU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7pz-EX-Jjf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqv-OA-DjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="-9"/>
         </scene>
         <!--Auth-->
         <scene sceneID="emU-so-a5l">
@@ -36,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yu2-gd-7jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="15"/>
+            <point key="canvasLocation" x="909" y="117"/>
         </scene>
         <!--Home-->
         <scene sceneID="I3t-fJ-O2e">
@@ -46,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QH-7d-0WE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="222"/>
+            <point key="canvasLocation" x="914" y="212"/>
         </scene>
     </scenes>
     <resources>

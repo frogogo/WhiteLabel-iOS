@@ -11,8 +11,13 @@ class AccountManager: BaseDataManager {
   // MARK: - Properties
   static let shared = AccountManager()
 
+  var didUserSeeOnboarding: Bool {
+    return UserDefaults.standard.bool(forKey: userDefaultsDidUserSeeOnboardingKey)
+  }
+
   private let userDefaultsAuthTokenKey = "userAuthToken"
   private let userDefaultsRefreshTokenKey = "userRefreshToken"
+  private let userDefaultsDidUserSeeOnboardingKey = "didUserSeeOnboarding"
 
   // MARK: - Internal/public custom methods
   func tryAutoLogin(onSuccess: @escaping () -> Void,
@@ -70,6 +75,11 @@ class AccountManager: BaseDataManager {
     }
   }
 
+  func registerUserDidSeeOnboarding() {
+    UserDefaults.standard.setValue(true, forKey: userDefaultsDidUserSeeOnboardingKey)
+    UserDefaults.standard.synchronize()
+  }
+
   // MARK: - Private custom methods
   private func save(authToken authTokenString: String, andRefreshToken refreshTokenString: String) {
     // TODO: need to save tokens in database properly.
@@ -78,6 +88,7 @@ class AccountManager: BaseDataManager {
     print("Written refresh token \(refreshTokenString)")
     UserDefaults.standard.set(authTokenString, forKey: userDefaultsAuthTokenKey)
     UserDefaults.standard.set(refreshTokenString, forKey: userDefaultsRefreshTokenKey)
+    UserDefaults.standard.synchronize()
   }
 
   private func savedAuthToken() -> String? {
