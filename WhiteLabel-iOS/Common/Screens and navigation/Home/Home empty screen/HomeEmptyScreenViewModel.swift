@@ -35,6 +35,8 @@ class HomeEmptyScreenViewModel: BaseViewModel {
       guard let self = self else { return }
       self.promotion = HomeManager.shared.promotion
       self.delegate?.viewModelUpdated()
+    } onFailure: { error in
+      print("\(type(of: self)): data refresh failed: \(error)")
     }
   }
 

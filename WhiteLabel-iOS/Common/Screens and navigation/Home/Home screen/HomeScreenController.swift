@@ -15,6 +15,8 @@ class HomeScreenController: BaseViewController {
   @IBOutlet private var mainTable: UITableView!
   @IBOutlet private var scanCodeButton: UIButton!
 
+  private let pullToRefreshControl = UIRefreshControl()
+
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeScreenCouponProgressCell.reuseID,
                                         HomeScreenCouponCell.reuseID,
@@ -28,6 +30,7 @@ class HomeScreenController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
+    setupRefreshControl()
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,9 +56,24 @@ class HomeScreenController: BaseViewController {
     viewModel.receiptInProcess.bind { [weak self] receiptInProcess in
       self?.scanCodeButton.isEnabled = !receiptInProcess
     }
+
+    viewModel.dataRefreshInProcess.bind { [weak self] dataRefreshInProcess in
+      if dataRefreshInProcess {
+        self?.pullToRefreshControl.beginRefreshing()
+      } else {
+        self?.pullToRefreshControl.endRefreshing()
+      }
+    }
   }
 
   // MARK: - Private custom methods
+  private func setupRefreshControl() {
+    pullToRefreshControl.tintColor = UIColor(named: "PrimaryMain")
+    pullToRefreshControl.addTarget(self, action: #selector(handlePullToRefresh), for: .valueChanged)
+    mainTable.refreshControl = pullToRefreshControl
+    mainTable.addSubview(pullToRefreshControl)
+  }
+
   private func updateCouponProgressCell(_ cell: HomeScreenCouponProgressCell) {
     cell.currentValueLabel.text = viewModel.currentSumText
     cell.targetValueLabel.text = viewModel.targetSumText
@@ -79,6 +97,10 @@ class HomeScreenController: BaseViewController {
   }
 
   // MARK: - Handlers
+  @objc func handlePullToRefresh() {
+    viewModel.refreshData()
+  }
+
   @IBAction func handleScanButtonTap() {
     CameraAccessChecker.checkCameraAccess { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)

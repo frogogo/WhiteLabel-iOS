@@ -32,6 +32,7 @@ class HomeScreenViewModel: BaseViewModel {
     return receiptViewModels.count
   }
   var receiptInProcess = Box(value: false)
+  var dataRefreshInProcess = Box(value: false)
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
@@ -41,13 +42,18 @@ class HomeScreenViewModel: BaseViewModel {
   override func refreshData() {
     super.refreshData()
 
+    dataRefreshInProcess.value = true
+
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
       self.couponProgress = HomeManager.shared.couponProgress
       self.createReceiptViewModels(forModels: HomeManager.shared.receipts)
       self.createCouponViewModels(forModels: HomeManager.shared.coupons)
-
+      self.dataRefreshInProcess.value = false
       self.delegate?.viewModelUpdated()
+
+    } onFailure: { [weak self] error in
+      self?.dataRefreshInProcess.value = false
     }
   }
 

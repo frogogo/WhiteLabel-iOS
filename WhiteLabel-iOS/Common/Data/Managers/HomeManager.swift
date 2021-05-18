@@ -29,11 +29,12 @@ class HomeManager: BaseDataManager {
     }
   }
 
-  func refreshHomeData(onSuccess: @escaping () -> Void) {
+  func refreshHomeData(onSuccess: @escaping () -> Void,
+                       onFailure: @escaping (String) -> Void) {
     updateHomeData {
       onSuccess()
     } onFailure: { error in
-      // do nothing
+      onFailure(error)
     }
   }
 
