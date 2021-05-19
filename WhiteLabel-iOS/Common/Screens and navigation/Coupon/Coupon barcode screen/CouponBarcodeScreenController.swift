@@ -12,11 +12,22 @@ class CouponBarcodeScreenController: UIViewController {
   @IBOutlet private var barcodeImage: UIImageView!
 
   private var generatedBarcodeCIImage: CIImage!
+  private var userBrightnessLevel: CGFloat = 0.5
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     tryToSetBarcodeImage()
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setBrightnessToMax()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    revertBrightnessToUserLevel()
   }
 
   // MARK: - Internal/public custom methods
@@ -40,6 +51,15 @@ class CouponBarcodeScreenController: UIViewController {
     guard generatedBarcodeCIImage != nil else { return }
 
     barcodeImage.image = UIImage(ciImage: generatedBarcodeCIImage)
+  }
+
+  private func setBrightnessToMax() {
+    userBrightnessLevel = UIScreen.main.brightness
+    UIScreen.main.brightness = 1.0
+  }
+
+  private func revertBrightnessToUserLevel() {
+    UIScreen.main.brightness = userBrightnessLevel
   }
 
   // MARK: - Handlers
