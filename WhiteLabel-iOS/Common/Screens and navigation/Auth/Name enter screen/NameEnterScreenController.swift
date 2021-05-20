@@ -12,6 +12,8 @@ class NameEnterScreenController: BaseViewController {
   let viewModel = NameEnterScreenViewModel()
 
   @IBOutlet var nameField: UITextField!
+  @IBOutlet var errorLabel: UILabel!
+  @IBOutlet var errorIndicator: UIImageView!
   @IBOutlet var continueButtonBottomConstraint: NSLayoutConstraint!
 
   private let continueButtonBottomGap: CGFloat = 24
@@ -41,6 +43,18 @@ class NameEnterScreenController: BaseViewController {
     viewModel.delegate = self
   }
 
+  override func addBindings() {
+    super.addBindings()
+
+    viewModel.errorToShow.bind { [weak self] (errorTextString) in
+      self?.errorIndicator.isHidden = errorTextString == nil
+      self?.errorLabel.text = errorTextString
+      if errorTextString != nil && errorTextString != "" {
+        self?.nameField.resignFirstResponder()
+      }
+    }
+  }
+
   // MARK: - Private custom methods
   private func subscribeForKeyboardNotifications() {
     NotificationCenter.default.addObserver(self,
@@ -68,6 +82,7 @@ class NameEnterScreenController: BaseViewController {
     let keyboardSizeKey = UIResponder.keyboardFrameEndUserInfoKey
     guard let keyboardSize = (userInfo[keyboardSizeKey] as? NSValue)?.cgRectValue else { return }
     continueButtonBottomConstraint.constant = -(keyboardSize.height + continueButtonBottomGap)
+    viewModel.errorToShow.value = nil
   }
 
   @objc func handleNotifKeyboardHide() {
