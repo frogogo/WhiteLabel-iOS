@@ -12,6 +12,7 @@ class HomeManager: BaseDataManager {
   static let shared = HomeManager()
 
   let promotion = PromotionModel()
+  let commonCouponInfo = CommonCouponInfoModel()
   let couponProgress = CouponProgressModel()
   var receipts: [ReceiptModel] = []
   var coupons: [CouponModel] = []
@@ -45,6 +46,7 @@ class HomeManager: BaseDataManager {
       guard let self = self else { return }
       if isOK {
         self.promotion.update(with: response["promotion"])
+        self.commonCouponInfo.update(with: response["coupon"])
         self.couponProgress.update(with: response["progress"])
         self.receipts = ReceiptModel.array(withJSONDataArray: response["receipts"].arrayValue)
         self.coupons = CouponModel.array(withJSONDataArray: response["coupons"].arrayValue)
