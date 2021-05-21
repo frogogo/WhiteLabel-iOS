@@ -27,9 +27,10 @@ class EmailEnterScreenViewModel: BaseViewModel {
   }
 
   func setEnteredEmail(_ enteredEmailString: String) {
-    print("Надо отправить на сервер имя \(enteredName) и email \(enteredEmailString)")
-    // TODO: тут надо сделать валидацию и отправить емейл на сервер
-    // TODO: показать ошибку, если валидация не прошла
+    guard isValidEmail(enteredEmailString) else {
+      errorToShow.value = "Такой email не подойдёт"
+      return
+    }
 
     ProfileManager.shared.update(name: enteredName, email: enteredEmailString) { [weak self] in
       self?.delegate?.didSendEnteredEmail()
@@ -37,5 +38,10 @@ class EmailEnterScreenViewModel: BaseViewModel {
       print("Не удалось обновить email: \(error)")
       self?.errorToShow.value = error
     }
+  }
+
+  // MARK: - Private custom methods
+  private func isValidEmail(_ emailString: String) -> Bool {
+    return emailString.isValidEmail
   }
 }
