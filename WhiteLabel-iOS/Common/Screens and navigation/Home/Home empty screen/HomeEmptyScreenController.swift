@@ -9,9 +9,14 @@ import UIKit
 import Kingfisher
 import AVKit
 
+protocol HomeEmptyScreenControllerDelegate: AnyObject {
+  func didFinishFirstQRCodeScan(_ controller: HomeEmptyScreenController)
+}
+
 class HomeEmptyScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = HomeEmptyScreenViewModel()
+  weak var delegate: HomeEmptyScreenControllerDelegate?
 
   @IBOutlet private var mainTable: UITableView!
 
@@ -24,6 +29,15 @@ class HomeEmptyScreenController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+
+    if segue.identifier == "HomeEmptyScreenToQRScannerSegue" {
+      guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
+      scannerVC.delegate = self
+    }
   }
 
   // MARK: - Overridden methods
@@ -90,5 +104,15 @@ extension HomeEmptyScreenController: UITableViewDataSource {
 extension HomeEmptyScreenController: HomeEmptyScreenViewModelDelegate {
   func viewModelUpdated() {
     mainTable.reloadData()
+  }
+}
+
+// MARK: - QR code scanner controller delegate methods
+extension HomeEmptyScreenController: QRCodeScannerControllerDelegate {
+  func didDismissScanResult(for scannerController: QRCodeScannerController) {
+    scannerController.dismiss(animated: false) { [weak self] in
+      guard let self = self else { return }
+      self.delegate?.didFinishFirstQRCodeScan(self)
+    }
   }
 }

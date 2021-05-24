@@ -8,9 +8,15 @@
 import UIKit
 import AVKit
 
+protocol QRCodeScannerControllerDelegate: AnyObject {
+  func didDismissScanResult(for scannerController: QRCodeScannerController)
+}
+
 class QRCodeScannerController: BaseViewController {
   // MARK: - Properties
   var viewModel = QRCodeScannerViewModel()
+  weak var delegate: QRCodeScannerControllerDelegate?
+
   private let supportedCodesForScan: [AVMetadataObject.ObjectType] = [.qr]
 
   @IBOutlet private var cameraPreviewContainer: UIView!
@@ -43,8 +49,9 @@ class QRCodeScannerController: BaseViewController {
     guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
     guard let newReceipt = viewModel.receipt else { return }
     receiptVC.viewModel.setReceiptModel(newReceipt)
-    receiptVC.onDismiss = {[weak self] in
-      self?.dismiss(animated: true, completion: nil)
+    receiptVC.onDismiss = { [weak self] in
+      guard let self = self else { return }
+      self.delegate?.didDismissScanResult(for: self)
     }
   }
 
@@ -125,6 +132,7 @@ class QRCodeScannerController: BaseViewController {
   }
 }
 
+// MARK: - Camera delegate methods
 extension QRCodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
   func metadataOutput(_ output: AVCaptureMetadataOutput,
                       didOutput metadataObjects: [AVMetadataObject],
@@ -139,6 +147,7 @@ extension QRCodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
   }
 }
 
+// MARK: View model delegate methods
 extension QRCodeScannerController: QRCodeScannerViewModelDelegate {
   func showScanSuccess() {
     performSegue(withIdentifier: "QRCodeScannerToReceiptScreenSegue", sender: nil)
