@@ -29,7 +29,7 @@ class ProfileManager: BaseDataManager {
       return
     }
 
-    APIConnector.shared.requestPATCH("user", params: params) { (isOK, response, errors) in
+    apiConnector.requestPATCH("user", params: params) { (isOK, response, errors) in
       if isOK {
         print("\(type(of: self)): profile data sent")
         onSuccess()

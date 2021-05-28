@@ -42,7 +42,7 @@ class HomeManager: BaseDataManager {
   // MARK: - Private custom methods
   private func updateHomeData(onSuccess: @escaping () -> Void,
                               onFailure: @escaping (String) -> Void) {
-    APIConnector.shared.requestGET("home") { [weak self] (isOK, response, errors) in
+    apiConnector.requestGET("home") { [weak self] (isOK, response, errors) in
       guard let self = self else { return }
       if isOK {
         self.promotion.update(with: response["promotion"])
