@@ -18,34 +18,34 @@ class CouponDetailScreenViewModel: BaseViewModel {
   var coupon = CouponModel()
 
   var instructionStepsCount: Int {
-    return promotion.steps.count
+    return commonCouponInfoModel.steps.count
   }
   var displayName: String {
-    return promotion.name
+    return commonCouponInfoModel.name
   }
   var number: String {
     return "Купон №\(coupon.identifier)"
   }
   var pictureURL: String {
-    return promotion.photo.largePhotoURL
+    return commonCouponInfoModel.photo.largePhotoURL
   }
   var barcodeString: String {
     return coupon.code
   }
 
-  private var promotion = PromotionModel()
+  private var commonCouponInfoModel = CommonCouponInfoModel()
 
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
 
-    promotion = HomeManager.shared.promotion
+    commonCouponInfoModel = HomeManager.shared.commonCouponInfo
     delegate?.viewModelUpdated()
   }
 
   // MARK: - Internal/public custom methods
   func stepInstructionText(forIndex stepIndex: Int) -> String {
-    guard stepIndex <= promotion.steps.endIndex else { return "" }
-    return promotion.steps[stepIndex]
+    guard stepIndex <= commonCouponInfoModel.steps.endIndex else { return "" }
+    return commonCouponInfoModel.steps[stepIndex]
   }
 }
