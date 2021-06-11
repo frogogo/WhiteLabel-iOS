@@ -31,10 +31,6 @@ class QRCodeScannerController: BaseViewController {
     super.viewDidLoad()
     setupCameraSession()
     setupCameraPreview()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
     startCamera()
   }
 
@@ -84,6 +80,15 @@ class QRCodeScannerController: BaseViewController {
     cameraPreviewContainer.layer.addSublayer(videoPreviewLayer!)
   }
 
+  private func startCamera() {
+    captureSession.startRunning()
+    updateFlashSwitchState()
+  }
+
+  private func stopCamera() {
+    captureSession.stopRunning()
+  }
+
   private func updateFlashSwitchState() {
     let flashButtonIconName = isFlashSwitchedOn ? "iconFlashOn" : "iconFlashOff"
     flashSwitchButton.setImage(UIImage(named: flashButtonIconName), for: .normal)
@@ -106,15 +111,6 @@ class QRCodeScannerController: BaseViewController {
         print(error)
       }
     }
-  }
-
-  private func startCamera() {
-    captureSession.startRunning()
-    updateFlashSwitchState()
-  }
-
-  private func stopCamera() {
-    captureSession.stopRunning()
   }
 
   // MARK: - Handlers
