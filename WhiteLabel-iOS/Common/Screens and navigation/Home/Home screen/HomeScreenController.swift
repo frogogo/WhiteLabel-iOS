@@ -41,6 +41,10 @@ class HomeScreenController: BaseViewController {
       guard selectedCouponIndex != nil else { return }
       let couponViewModel = viewModel.couponViewModel(forIndex: selectedCouponIndex!)
       couponVC.viewModel.coupon = couponViewModel.couponModel
+
+    } else if segue.identifier == "HomeScreenToQRScannerSegue" {
+      guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
+      scannerVC.delegate = self
     }
   }
 
@@ -187,5 +191,12 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
 extension HomeScreenController: HomeScreenViewModelDelegate {
   func viewModelUpdated() {
     mainTable.reloadData()
+  }
+}
+
+// MARK: - QR code scanner controller delegate methods
+extension HomeScreenController: QRCodeScannerControllerDelegate {
+  func didDismissScanResult(for scannerController: QRCodeScannerController) {
+    scannerController.dismiss(animated: true, completion: nil)
   }
 }

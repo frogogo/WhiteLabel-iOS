@@ -198,10 +198,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconOnboardingPage3" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-dZ-aFC" userLabel="icon">
-                                <rect key="frame" x="159" y="184.5" width="96" height="96"/>
+                                <rect key="frame" x="159" y="175" width="96" height="96"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYG-JC-0O6" userLabel="textContainer">
-                                <rect key="frame" x="40" y="395.5" width="334" height="105"/>
+                                <rect key="frame" x="40" y="386" width="334" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получи купон" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPH-dx-7jJ" userLabel="titleLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="32"/>
@@ -209,8 +209,8 @@
                                         <color key="textColor" name="Dark900"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На бесплатный чайник Lion Sabatier International, когда купишь акционных товаров на 3300 ₽" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI5-eB-l94" userLabel="textLabel">
-                                        <rect key="frame" x="0.0" y="48" width="334" height="57"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На покупку чайника за 1 рубль. После приобретения акционных товаров Lion Sabatier International на сумму 3300 рублей" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI5-eB-l94" userLabel="textLabel">
+                                        <rect key="frame" x="0.0" y="48" width="334" height="76"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <color key="textColor" name="Dark700"/>
                                         <nil key="highlightedColor"/>
