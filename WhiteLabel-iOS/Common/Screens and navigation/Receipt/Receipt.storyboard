@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-L0-ONW" userLabel="container">
-                                <rect key="frame" x="16" y="248" width="382" height="400"/>
+                                <rect key="frame" x="16" y="198" width="382" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-4v-kFN" userLabel="statusHead">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="136"/>
@@ -47,19 +47,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="76"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 9000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-1E-uTl" userLabel="numberLabel">
-                                                <rect key="frame" x="16" y="16" width="57" height="19"/>
+                                                <rect key="frame" x="16" y="16" width="64.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-gz-KBt" userLabel="sumLabel">
-                                                <rect key="frame" x="334.5" y="16" width="31.5" height="19"/>
+                                                <rect key="frame" x="329.5" y="16" width="36.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 апреля 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-Jh-sXF" userLabel="dateLabel">
-                                                <rect key="frame" x="138" y="57" width="106.5" height="19"/>
+                                                <rect key="frame" x="136.5" y="57" width="109" height="19"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-xL-vo7" userLabel="closeButton">
-                                <rect key="frame" x="185" y="678" width="44" height="44"/>
+                                <rect key="frame" x="185" y="628" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tYU-xL-vo7" secondAttribute="height" multiplier="1:1" id="XyU-u0-STG"/>
                                     <constraint firstAttribute="width" constant="44" id="zLQ-c1-XK3"/>
@@ -141,10 +141,11 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HLg-L0-ONW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2GF-04-cWr"/>
                             <constraint firstItem="tYU-xL-vo7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DHy-wP-8LL"/>
-                            <constraint firstItem="HLg-L0-ONW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Eh3-HN-9xQ"/>
+                            <constraint firstItem="HLg-L0-ONW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="Eh3-HN-9xQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" constant="16" id="kAI-xq-Nvw"/>
                             <constraint firstItem="tYU-xL-vo7" firstAttribute="top" secondItem="HLg-L0-ONW" secondAttribute="bottom" constant="30" id="lwY-ay-gVc"/>
                         </constraints>

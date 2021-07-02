@@ -308,7 +308,7 @@
                         <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
-                        <segue destination="DoS-qF-93B" kind="presentation" identifier="HomeScreenToReceiptScreenSegue" modalPresentationStyle="fullScreen" id="Z2k-My-fpQ"/>
+                        <segue destination="DoS-qF-93B" kind="showDetail" identifier="HomeScreenToReceiptScreenSegue" id="Z2k-My-fpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
