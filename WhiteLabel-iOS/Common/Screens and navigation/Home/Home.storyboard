@@ -308,6 +308,7 @@
                         <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
+                        <segue destination="DoS-qF-93B" kind="presentation" identifier="HomeScreenToReceiptScreenSegue" modalPresentationStyle="fullScreen" id="Z2k-My-fpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -323,6 +324,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfB-V8-LjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="951"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="bLL-9F-3MQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receipt" id="DoS-qF-93B" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWD-LW-4hS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="951"/>
         </scene>
         <!--Home Empty Screen Controller-->
         <scene sceneID="ska-DU-wGw">
@@ -557,7 +566,7 @@
             <color red="0.8901960784313725" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.66274509803921566" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -25,6 +25,7 @@ class HomeScreenController: BaseViewController {
   private var couponSectionHeader: HomeScreenCouponSectionHeader?
   private var receiptSectionHeader: HomeScreenReceiptSectionHeader?
   private var selectedCouponIndex: Int?
+  private var selectedReceiptIndex: Int?
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -45,6 +46,12 @@ class HomeScreenController: BaseViewController {
     } else if segue.identifier == "HomeScreenToQRScannerSegue" {
       guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
       scannerVC.delegate = self
+
+    } else if segue.identifier == "HomeScreenToReceiptScreenSegue" {
+      guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
+      guard selectedReceiptIndex != nil else { return }
+      let receiptToShow = viewModel.receipt(forIndex: selectedReceiptIndex!)
+      receiptVC.viewModel.setReceiptModel(receiptToShow)
     }
   }
 
@@ -154,9 +161,16 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let reuseID = cellReuseIDForSections[indexPath.section]
-    if reuseID == HomeScreenCouponCell.reuseID {
+
+    switch reuseID {
+    case HomeScreenCouponCell.reuseID:
       selectedCouponIndex = indexPath.row
       performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
+    case HomeScreenReceiptCell.reuseID:
+      selectedReceiptIndex = indexPath.row
+      performSegue(withIdentifier: "HomeScreenToReceiptScreenSegue", sender: nil)
+    default:
+      break
     }
   }
 
