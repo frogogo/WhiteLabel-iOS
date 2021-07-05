@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-L0-ONW" userLabel="container">
-                                <rect key="frame" x="16" y="248" width="382" height="400"/>
+                                <rect key="frame" x="16" y="198" width="382" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-4v-kFN" userLabel="statusHead">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="136"/>
@@ -129,7 +129,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-xL-vo7" userLabel="closeButton">
-                                <rect key="frame" x="185" y="678" width="44" height="44"/>
+                                <rect key="frame" x="185" y="628" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tYU-xL-vo7" secondAttribute="height" multiplier="1:1" id="XyU-u0-STG"/>
                                     <constraint firstAttribute="width" constant="44" id="zLQ-c1-XK3"/>
@@ -141,19 +141,23 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HLg-L0-ONW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2GF-04-cWr"/>
                             <constraint firstItem="tYU-xL-vo7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DHy-wP-8LL"/>
-                            <constraint firstItem="HLg-L0-ONW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Eh3-HN-9xQ"/>
+                            <constraint firstItem="HLg-L0-ONW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="Eh3-HN-9xQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HLg-L0-ONW" secondAttribute="trailing" constant="16" id="kAI-xq-Nvw"/>
                             <constraint firstItem="tYU-xL-vo7" firstAttribute="top" secondItem="HLg-L0-ONW" secondAttribute="bottom" constant="30" id="lwY-ay-gVc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="kC1-Jh-sXF" id="MqI-ej-gY4"/>
+                        <outlet property="descriptionLabel" destination="lpk-xV-hcF" id="om9-pv-oDw"/>
                         <outlet property="numberLabel" destination="eD2-1E-uTl" id="Axa-Wf-BZN"/>
+                        <outlet property="statusHead" destination="aaG-4v-kFN" id="gHv-A0-1CS"/>
                         <outlet property="statusIcon" destination="Qvh-8X-Tib" id="l2x-fd-Uqg"/>
                         <outlet property="sumLabel" destination="WSn-gz-KBt" id="yuB-Cr-vgT"/>
+                        <outlet property="titleLabel" destination="Jpy-rR-ROC" id="8QW-Eo-bZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

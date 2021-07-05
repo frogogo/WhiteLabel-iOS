@@ -16,7 +16,10 @@ class ReceiptScreenController: BaseViewController {
   @IBOutlet private var numberLabel: UILabel!
   @IBOutlet private var sumLabel: UILabel!
   @IBOutlet private var dateLabel: UILabel!
+  @IBOutlet private var statusHead: UIView!
   @IBOutlet private var statusIcon: UIImageView!
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var descriptionLabel: UILabel!
 
   // MARK: - Overridden methods
   override func createViewModel() {
@@ -37,6 +40,15 @@ class ReceiptScreenController: BaseViewController {
     }
     viewModel.statusIconName.bind { [weak self] iconName in
       self?.statusIcon.image = UIImage(named: iconName)
+    }
+    viewModel.statusColorName.bind { [weak self] colorName in
+      self?.statusHead.backgroundColor = UIColor(named: colorName)
+    }
+    viewModel.statusTitle.bind { [weak self] statusTitle in
+      self?.titleLabel.text = statusTitle
+    }
+    viewModel.statusDescription.bind { [weak self] statusDescription in
+      self?.descriptionLabel.text = statusDescription
     }
   }
 
