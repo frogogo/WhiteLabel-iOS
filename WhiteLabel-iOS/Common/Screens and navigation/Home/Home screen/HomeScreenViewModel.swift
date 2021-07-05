@@ -37,6 +37,7 @@ class HomeScreenViewModel: BaseViewModel {
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
   private var receiptViewModels: [HomeScreenReceiptViewModel] = []
+  private var receipts: [ReceiptModel] = []
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -66,8 +67,13 @@ class HomeScreenViewModel: BaseViewModel {
     return receiptViewModels[index]
   }
 
+  func receipt(forIndex index: Int) -> ReceiptModel {
+    return receipts[index]
+  }
+
   // MARK: - Private custom methods
   private func createReceiptViewModels(forModels receiptModels: [ReceiptModel]) {
+    receipts = receiptModels
     receiptViewModels.removeAll()
     receiptInProcess.value = false
 

@@ -22,6 +22,7 @@ class ReceiptModel: BaseDataModel {
   var state = ReceiptState.unknown
   var sum = 0
   var timestamp: Date?
+  var rejectReason = ""
 
   // MARK: - Overridden methods
   override func update(with jsonData: JSON) {
@@ -30,6 +31,7 @@ class ReceiptModel: BaseDataModel {
     identifier = jsonData["id"].stringValue
     number = jsonData["number"].stringValue
     sum = jsonData["sum"].intValue
+    rejectReason = jsonData["reject_reason"]["reason_text"].stringValue
 
     let stateRawValue = jsonData["state"].stringValue
     if let updatedState = ReceiptState(rawValue: stateRawValue) {

@@ -158,7 +158,7 @@
                     <connections>
                         <outlet property="cameraPreviewContainer" destination="Nqc-Jh-SXv" id="Yr0-Rz-xvr"/>
                         <outlet property="flashSwitchButton" destination="e3M-hu-4UM" id="dNV-P6-Hb5"/>
-                        <segue destination="0cc-QV-TKE" kind="presentation" identifier="QRCodeScannerToReceiptScreenSegue" modalPresentationStyle="fullScreen" id="sul-S5-7PU"/>
+                        <segue destination="0cc-QV-TKE" kind="showDetail" identifier="QRCodeScannerToReceiptScreenSegue" id="sul-S5-7PU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
