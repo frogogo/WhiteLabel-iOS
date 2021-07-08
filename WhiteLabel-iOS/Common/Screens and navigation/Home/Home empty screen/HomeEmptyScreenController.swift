@@ -23,7 +23,8 @@ class HomeEmptyScreenController: BaseViewController {
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeEmptyScreenPromotionItemCell.reuseID,
                                         HomeEmptyScreenInstructionHeaderCell.reuseID,
-                                        HomeEmptyScreenInstructionStepCell.reuseID]
+                                        HomeEmptyScreenInstructionStepCell.reuseID,
+                                        HomeEmptyScreenProductSectionHeaderCell.reuseID]
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -75,9 +76,10 @@ extension HomeEmptyScreenController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let reuseID = cellReuseIDForSections[section]
-    if reuseID == HomeEmptyScreenInstructionStepCell.reuseID {
+    switch reuseID {
+    case HomeEmptyScreenInstructionStepCell.reuseID:
       return viewModel.promotionStepsCount
-    } else {
+    default:
       return 1
     }
   }
