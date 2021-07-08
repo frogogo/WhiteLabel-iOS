@@ -26,6 +26,7 @@ class HomeEmptyScreenViewModel: BaseViewModel {
   }
 
   private var promotion = PromotionModel()
+  private var productList: [ProductModel] = []
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -38,6 +39,14 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     } onFailure: { error in
       print("\(type(of: self)): data refresh failed: \(error)")
     }
+
+    ProductManager.shared.loadProducts {[weak self] (products) in
+      guard let self = self else { return }
+      self.productList = products
+      self.delegate?.viewModelUpdated()
+    } onFailure: { error in
+      print("\(type(of: self)): products load failed: \(error)")
+    }
   }
 
   // MARK: - Internal/public custom methods
@@ -45,4 +54,6 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     guard stepIndex <= promotion.steps.endIndex else { return "" }
     return promotion.steps[stepIndex]
   }
+
+  // TODO: need to add method for product cell view model creation here
 }

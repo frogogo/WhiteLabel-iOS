@@ -157,6 +157,10 @@
 		67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
 		67FDD1152696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1142696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift */; };
 		67FDD1162696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1142696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift */; };
+		67FDD1182696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
+		67FDD1192696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
+		67FDD11B2696D74200420DE3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
+		67FDD11C2696D74200420DE3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
 		67FE38292625594900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE382B2625594900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
@@ -252,6 +256,8 @@
 		67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenController.swift; sourceTree = "<group>"; };
 		67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenViewModel.swift; sourceTree = "<group>"; };
 		67FDD1142696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyScreenProductSectionHeaderCell.swift; sourceTree = "<group>"; };
+		67FDD1172696D64900420DE3 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		67FDD11A2696D74200420DE3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		67FE38252625594900750368 /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -649,6 +655,7 @@
 				6706BBF02639425500CE4328 /* ProfileManager.swift */,
 				67243ECF264C2C7300139AC6 /* HomeManager.swift */,
 				6790129E265293A200C4A4D5 /* ReceiptManager.swift */,
+				67FDD1172696D64900420DE3 /* ProductManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -663,6 +670,7 @@
 				67243EDB264D680900139AC6 /* ReceiptModel.swift */,
 				67243EDE264D681300139AC6 /* CouponModel.swift */,
 				6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */,
+				67FDD11A2696D74200420DE3 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -924,7 +932,9 @@
 				67243F16264F31E300139AC6 /* CouponDetailScreenMainInfoCell.swift in Sources */,
 				67FDD1152696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift in Sources */,
 				67243EDF264D681300139AC6 /* CouponModel.swift in Sources */,
+				67FDD11B2696D74200420DE3 /* ProductModel.swift in Sources */,
 				6706BBE72639339700CE4328 /* EmailEnterScreenController.swift in Sources */,
+				67FDD1182696D64900420DE3 /* ProductManager.swift in Sources */,
 				675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EEC264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
@@ -991,7 +1001,9 @@
 				67243F17264F31E300139AC6 /* CouponDetailScreenMainInfoCell.swift in Sources */,
 				67FDD1162696B37B00420DE3 /* HomeEmptyScreenProductSectionHeaderCell.swift in Sources */,
 				67243EE0264D681300139AC6 /* CouponModel.swift in Sources */,
+				67FDD11C2696D74200420DE3 /* ProductModel.swift in Sources */,
 				6706BBE82639339700CE4328 /* EmailEnterScreenController.swift in Sources */,
+				67FDD1192696D64900420DE3 /* ProductManager.swift in Sources */,
 				675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EED264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
