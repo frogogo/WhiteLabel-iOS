@@ -16,16 +16,12 @@ class HomeEmptyScreenViewModel: BaseViewModel {
   weak var delegate: HomeEmptyScreenViewModelDelegate?
 
   var promotionStepsCount: Int {
-    return promotion.steps.count
-  }
-  var promotionName: String {
-    return promotion.name
-  }
-  var promotionPictureURL: String {
-    return promotion.photo.largePhotoURL
+    return promotionModel.steps.count
   }
 
-  private var promotion = PromotionModel()
+  private (set) var promotionViewModel = PromotionItemViewModel(withModel: nil)
+
+  private var promotionModel = PromotionModel()
   private var productList: [ProductModel] = []
 
   // MARK: - Overridden methods
@@ -34,7 +30,8 @@ class HomeEmptyScreenViewModel: BaseViewModel {
 
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
-      self.promotion = HomeManager.shared.promotion
+      self.promotionModel = HomeManager.shared.promotion
+      self.promotionViewModel.update(with: self.promotionModel)
       self.delegate?.viewModelUpdated()
     } onFailure: { error in
       print("\(type(of: self)): data refresh failed: \(error)")
@@ -51,8 +48,8 @@ class HomeEmptyScreenViewModel: BaseViewModel {
 
   // MARK: - Internal/public custom methods
   func stepInstructionText(forIndex stepIndex: Int) -> String {
-    guard stepIndex <= promotion.steps.endIndex else { return "" }
-    return promotion.steps[stepIndex]
+    guard stepIndex <= promotionModel.steps.endIndex else { return "" }
+    return promotionModel.steps[stepIndex]
   }
 
   // TODO: need to add method for product cell view model creation here

@@ -9,8 +9,30 @@ import UIKit
 
 class PromotionItemCell: UITableViewCell {
   // MARK: - Properties
-  @IBOutlet var nameLabel: UILabel!
-  @IBOutlet var picture: UIImageView!
-  @IBOutlet var priceLabel: UILabel!
-  @IBOutlet var discountedPriceLabel: UILabel!
+  var viewModel: PromotionItemViewModel? {
+    didSet {
+      addBindings()
+    }
+  }
+
+  @IBOutlet private var nameLabel: UILabel!
+  @IBOutlet private var picture: UIImageView!
+  @IBOutlet private var priceLabel: UILabel!
+  @IBOutlet private var discountedPriceLabel: UILabel!
+
+  // MARK: - Private custom methods
+  private func addBindings() {
+    viewModel?.pictureURL.bind { [weak self] pictureURL in
+      self?.picture.kf.setImage(with: URL(string: pictureURL))
+    }
+    viewModel?.nameString.bind { [weak self] nameString in
+      self?.nameLabel.text = nameString
+    }
+    viewModel?.priceString.bind { [weak self] priceString in
+      self?.priceLabel.text = priceString
+    }
+    viewModel?.discountedPriceString.bind { [weak self] discountedPriceString in
+      self?.discountedPriceLabel.text = discountedPriceString
+    }
+  }
 }

@@ -175,6 +175,8 @@
 		67FDD13B2698032D00420DE3 /* PromotionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1392698032D00420DE3 /* PromotionItemCell.swift */; };
 		67FDD13D269803FB00420DE3 /* PromotionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */; };
 		67FDD13E269803FB00420DE3 /* PromotionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */; };
+		67FDD14126981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */; };
+		67FDD14226981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */; };
 		67FE38292625594900750368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
 		67FE382B2625594900750368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
@@ -279,6 +281,7 @@
 		67FDD1352698028500420DE3 /* ProductListHintCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListHintCell.swift; sourceTree = "<group>"; };
 		67FDD1392698032D00420DE3 /* PromotionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionItemCell.swift; sourceTree = "<group>"; };
 		67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionItemCell.xib; sourceTree = "<group>"; };
+		67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionItemViewModel.swift; sourceTree = "<group>"; };
 		67FE38252625594900750368 /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -594,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				67FDD138269802FF00420DE3 /* Promotion item cell */,
+				67FDD13F26981D9A00420DE3 /* Product cell */,
 			);
 			path = "UI components";
 			sourceTree = "<group>";
@@ -723,8 +727,16 @@
 			children = (
 				67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */,
 				67FDD1392698032D00420DE3 /* PromotionItemCell.swift */,
+				67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */,
 			);
 			path = "Promotion item cell";
+			sourceTree = "<group>";
+		};
+		67FDD13F26981D9A00420DE3 /* Product cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Product cell";
 			sourceTree = "<group>";
 		};
 		67FE381C2625594900750368 = {
@@ -996,6 +1008,7 @@
 				675634F8262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EEC264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
+				67FDD14126981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */,
 				67FDD1292696DD7D00420DE3 /* ProductListScreenController.swift in Sources */,
 				67243EE2264D697B00139AC6 /* PhotoModel.swift in Sources */,
 				67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
@@ -1070,6 +1083,7 @@
 				675634F9262E3BFE009C4CAE /* BaseViewController.swift in Sources */,
 				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EED264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
+				67FDD14226981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */,
 				67FDD12A2696DD7D00420DE3 /* ProductListScreenController.swift in Sources */,
 				67243EE3264D697B00139AC6 /* PhotoModel.swift in Sources */,
 				67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,

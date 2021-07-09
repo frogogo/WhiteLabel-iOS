@@ -60,8 +60,7 @@ class HomeEmptyScreenController: BaseViewController {
   }
 
   private func updatePromotionItemCell(_ cell: PromotionItemCell) {
-    cell.nameLabel.text = viewModel.promotionName
-    cell.picture.kf.setImage(with: URL(string: viewModel.promotionPictureURL))
+    cell.viewModel = viewModel.promotionViewModel
   }
 
   // MARK: - Handlers

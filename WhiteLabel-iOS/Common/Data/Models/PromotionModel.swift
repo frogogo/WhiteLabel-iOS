@@ -10,8 +10,10 @@ import SwiftyJSON
 
 class PromotionModel: BaseDataModel {
   // MARK: - Properties
-  var photo = PhotoModel()
   var name = ""
+  var price = 0
+  var discountedPrice = 0
+  var photo = PhotoModel()
   var steps: [String] = []
 
   // MARK: - Overridden methods
@@ -19,6 +21,8 @@ class PromotionModel: BaseDataModel {
     super.update(with: jsonData)
 
     name = jsonData["name"].stringValue
+    price = jsonData["price"].intValue
+    discountedPrice = jsonData["discounted_price"].intValue
     photo.update(with: jsonData["photo"])
 
     if let stepsArray = jsonData["steps"].arrayObject as? [String] {
