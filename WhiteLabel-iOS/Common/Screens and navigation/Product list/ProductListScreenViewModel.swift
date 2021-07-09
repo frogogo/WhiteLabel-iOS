@@ -40,6 +40,7 @@ class ProductListScreenViewModel: BaseViewModel {
     }
   }
 
+  // MARK: - Internal/public custom methods
   func productViewModel(forIndex index: Int) -> ProductViewModel {
     return productViewModels[index]
   }

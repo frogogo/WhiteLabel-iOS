@@ -24,12 +24,14 @@ class HomeEmptyScreenController: BaseViewController {
   private let cellReuseIDForSections = [PromotionItemCell.reuseID,
                                         HomeEmptyScreenInstructionHeaderCell.reuseID,
                                         HomeEmptyScreenInstructionStepCell.reuseID,
-                                        HomeEmptyScreenProductSectionHeaderCell.reuseID]
+                                        ProductCell.reuseID]
+  private var productSectionHeader: SectionHeader?
 
-  // MARK: - Lifecycle methods
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  // MARK: - Overridden methods
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
     registerCells()
+    setupProductSectionHeader()
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
   }
 
@@ -52,6 +54,15 @@ class HomeEmptyScreenController: BaseViewController {
   private func registerCells() {
     let xibForPromotionItemCell = UINib(nibName: PromotionItemCell.xibName, bundle: .main)
     mainTable.register(xibForPromotionItemCell, forCellReuseIdentifier: PromotionItemCell.reuseID)
+
+    let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
+    mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)
+  }
+
+  private func setupProductSectionHeader() {
+    let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
+    productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
+    productSectionHeader?.titleLabel.text = "Товары участвующие в акции"
   }
 
   private func updateInstructionStepCell(_ cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
@@ -70,7 +81,7 @@ class HomeEmptyScreenController: BaseViewController {
 }
 
 // MARK: - Table data source methods
-extension HomeEmptyScreenController: UITableViewDataSource {
+extension HomeEmptyScreenController: UITableViewDataSource, UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
     return cellReuseIDForSections.count
   }
@@ -80,6 +91,8 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     switch reuseID {
     case HomeEmptyScreenInstructionStepCell.reuseID:
       return viewModel.promotionStepsCount
+    case ProductCell.reuseID:
+      return viewModel.productCellCount
     default:
       return 1
     }
@@ -96,10 +109,33 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
       updateInstructionStepCell(stepCell, forRow: indexPath.row)
+    case ProductCell.reuseID:
+      guard let productCell = cell as? ProductCell else { return cell }
+      productCell.viewModel = viewModel.productViewModel(forIndex: indexPath.row)
     default:
       return cell
     }
     return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    let reuseID = cellReuseIDForSections[section]
+    switch reuseID {
+    case ProductCell.reuseID:
+      return UITableView.automaticDimension
+    default:
+      return 0
+    }
+  }
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let reuseID = cellReuseIDForSections[section]
+    switch reuseID {
+    case ProductCell.reuseID:
+      return productSectionHeader
+    default:
+      return nil
+    }
   }
 }
 

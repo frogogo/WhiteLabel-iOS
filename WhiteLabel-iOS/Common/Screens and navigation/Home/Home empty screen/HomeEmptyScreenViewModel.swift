@@ -19,10 +19,20 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     return promotionModel.steps.count
   }
 
+  var productCellCount: Int {
+    return productSectionViewModel.productCellCount
+  }
+
   private (set) var promotionViewModel = PromotionItemViewModel(withModel: nil)
 
+  private let productSectionViewModel = ProductListScreenViewModel()
   private var promotionModel = PromotionModel()
-  private var productList: [ProductModel] = []
+
+  // MARK: - Lifecycle methods
+  override init() {
+    super.init()
+    productSectionViewModel.delegate = self
+  }
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -37,13 +47,7 @@ class HomeEmptyScreenViewModel: BaseViewModel {
       print("\(type(of: self)): data refresh failed: \(error)")
     }
 
-    ProductManager.shared.loadProducts {[weak self] (products) in
-      guard let self = self else { return }
-      self.productList = products
-      self.delegate?.viewModelUpdated()
-    } onFailure: { error in
-      print("\(type(of: self)): products load failed: \(error)")
-    }
+    productSectionViewModel.refreshData()
   }
 
   // MARK: - Internal/public custom methods
@@ -52,5 +56,14 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     return promotionModel.steps[stepIndex]
   }
 
-  // TODO: need to add method for product cell view model creation here
+  func productViewModel(forIndex index: Int) -> ProductViewModel {
+    return productSectionViewModel.productViewModel(forIndex: index)
+  }
+}
+
+// MARK: - View model delegate methods
+extension HomeEmptyScreenViewModel: ProductListScreenViewModelDelegate {
+  func viewModelUpdated() {
+    delegate?.viewModelUpdated()
+  }
 }
