@@ -85,7 +85,13 @@ extension ProductListScreenController: UITableViewDataSource, UITableViewDelegat
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return UITableView.automaticDimension
+    let reuseID = cellReuseIDForSections[section]
+    switch reuseID {
+    case ProductCell.reuseID:
+      return UITableView.automaticDimension
+    default:
+      return 0
+    }
   }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
