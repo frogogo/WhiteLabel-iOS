@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-qR-Izh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-qR-Izh" userLabel="tableView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -81,13 +81,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-k4-eKA" userLabel="closeButton">
+                                <rect key="frame" x="16" y="68" width="24" height="24"/>
+                                <state key="normal" image="buttonClose"/>
+                                <connections>
+                                    <action selector="closeButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BRy-GH-vs6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mQG-qR-Izh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2x8-Eo-fgk"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mQG-qR-Izh" secondAttribute="trailing" id="D8L-29-tQP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mQG-qR-Izh" secondAttribute="bottom" id="LTf-SR-iV6"/>
+                            <constraint firstItem="mQG-qR-Izh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="D8L-29-tQP"/>
+                            <constraint firstItem="mQG-qR-Izh" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="LTf-SR-iV6"/>
+                            <constraint firstItem="qcZ-k4-eKA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="SBh-3K-R3V"/>
+                            <constraint firstItem="qcZ-k4-eKA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="cOI-Sw-WqO"/>
                             <constraint firstItem="mQG-qR-Izh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="p4o-xY-GS2"/>
                         </constraints>
                     </view>
@@ -98,6 +107,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buttonClose" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

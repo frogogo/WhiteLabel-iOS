@@ -15,4 +15,9 @@ class ProductListScreenController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
   }
+
+  // MARK: - Handlers
+  @IBAction func closeButtonTap() {
+    dismiss(animated: true, completion: nil)
+  }
 }
