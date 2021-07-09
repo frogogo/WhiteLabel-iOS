@@ -59,10 +59,6 @@ class HomeEmptyScreenController: BaseViewController {
     cell.stepTextLabel.text = viewModel.stepInstructionText(forIndex: rowIndex)
   }
 
-  private func updatePromotionItemCell(_ cell: PromotionItemCell) {
-    cell.viewModel = viewModel.promotionViewModel
-  }
-
   // MARK: - Handlers
   @IBAction func handleScanButtonTap() {
     CameraAccessChecker.checkCameraAccess { [weak self] in
@@ -96,7 +92,7 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     switch reuseID {
     case PromotionItemCell.reuseID:
       guard let itemCell = cell as? PromotionItemCell else { return cell }
-      updatePromotionItemCell(itemCell)
+      itemCell.viewModel = viewModel.promotionViewModel
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
       updateInstructionStepCell(stepCell, forRow: indexPath.row)
