@@ -23,7 +23,7 @@ class HomeScreenController: BaseViewController {
                                         HomeScreenCouponCell.reuseID,
                                         HomeScreenReceiptCell.reuseID]
 
-  private var couponSectionHeader: HomeScreenCouponSectionHeader?
+  private var couponSectionHeader: SectionHeader?
   private var receiptSectionHeader: HomeScreenReceiptSectionHeader?
   private var selectedCouponIndex: Int?
   private var selectedReceiptIndex: Int?
@@ -92,10 +92,11 @@ class HomeScreenController: BaseViewController {
     cell.progressBar.progress = viewModel.progressRatio
   }
 
-  private func preparedCouponSectionHeader() -> HomeScreenCouponSectionHeader {
+  private func preparedCouponSectionHeader() -> SectionHeader {
     if couponSectionHeader == nil {
-      let headerXib = UINib(nibName: "HomeScreenCouponSectionHeader", bundle: .main)
-      couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? HomeScreenCouponSectionHeader
+      let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
+      couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
+      couponSectionHeader?.titleLabel.text = "Купоны"
     }
     return couponSectionHeader!
   }

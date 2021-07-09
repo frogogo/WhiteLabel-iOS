@@ -48,19 +48,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="42 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-Fg-ieP" userLabel="discountedPriceLabel">
-                                <rect key="frame" x="12" y="251" width="35.5" height="19"/>
+                                <rect key="frame" x="12" y="251" width="31.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" text="9000 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI6-tn-WrR" userLabel="priceLabel">
-                                <rect key="frame" x="55.5" y="255" width="41" height="15"/>
+                                <rect key="frame" x="51.5" y="256" width="37" height="14"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                 <color key="textColor" name="Dark500"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-wc-b45" userLabel="priceStroke">
-                                <rect key="frame" x="53.5" y="262" width="45" height="1"/>
+                                <rect key="frame" x="49.5" y="262.5" width="41" height="1"/>
                                 <color key="backgroundColor" name="Dark900"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pnm-91-gZ3"/>
@@ -121,19 +121,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="42 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-bg-Q6U" userLabel="discountedPriceLabel">
-                                <rect key="frame" x="12" y="251" width="35.5" height="19"/>
+                                <rect key="frame" x="12" y="251" width="31.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" text="9000 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHq-Ff-Xzu" userLabel="priceLabel">
-                                <rect key="frame" x="55.5" y="255" width="41" height="15"/>
+                                <rect key="frame" x="51.5" y="256" width="37" height="14"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                 <color key="textColor" name="Dark500"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wdb-XH-olS" userLabel="priceStroke">
-                                <rect key="frame" x="53.5" y="262" width="45" height="1"/>
+                                <rect key="frame" x="49.5" y="262.5" width="41" height="1"/>
                                 <color key="backgroundColor" name="Dark900"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="vOg-io-Nxy"/>

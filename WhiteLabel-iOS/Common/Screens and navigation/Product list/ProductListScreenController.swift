@@ -16,12 +16,7 @@ class ProductListScreenController: BaseViewController {
   private let cellReuseIDForSections = [PromotionItemCell.reuseID,
                                         ProductListHintCell.reuseID,
                                         ProductCell.reuseID]
-
-  // MARK: - Lifecycle methods
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    registerCells()
-  }
+  private var productSectionHeader: SectionHeader?
 
   // MARK: - Overridden methods
   override func createViewModel() {
@@ -29,12 +24,25 @@ class ProductListScreenController: BaseViewController {
     viewModel.delegate = self
   }
 
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+    registerCells()
+    setupProductSectionHeader()
+  }
+
+  // MARK: - Private custom methods
   private func registerCells() {
     let xibForPromotionItemCell = UINib(nibName: PromotionItemCell.xibName, bundle: .main)
     mainTable.register(xibForPromotionItemCell, forCellReuseIdentifier: PromotionItemCell.reuseID)
 
     let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
     mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)
+  }
+
+  private func setupProductSectionHeader() {
+    let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
+    productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
+    productSectionHeader?.titleLabel.text = "Товары участвующие в акции"
   }
 
   // MARK: - Handlers
@@ -81,8 +89,13 @@ extension ProductListScreenController: UITableViewDataSource, UITableViewDelegat
   }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    // TODO: need to return proper header for section
-    return nil
+    let reuseID = cellReuseIDForSections[section]
+    switch reuseID {
+    case ProductCell.reuseID:
+      return productSectionHeader
+    default:
+      return nil
+    }
   }
 }
 
