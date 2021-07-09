@@ -19,6 +19,7 @@ class HomeScreenController: BaseViewController {
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeScreenCouponProgressCell.reuseID,
+                                        HomeScreenSeeProductListCell.reuseID,
                                         HomeScreenCouponCell.reuseID,
                                         HomeScreenReceiptCell.reuseID]
 
@@ -163,6 +164,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     let reuseID = cellReuseIDForSections[indexPath.section]
 
     switch reuseID {
+    case HomeScreenSeeProductListCell.reuseID:
+      performSegue(withIdentifier: "HomeScreenToProductListScreenSegue", sender: nil)
     case HomeScreenCouponCell.reuseID:
       selectedCouponIndex = indexPath.row
       performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
