@@ -21,7 +21,7 @@ class HomeEmptyScreenController: BaseViewController {
   @IBOutlet private var mainTable: UITableView!
 
   private let tableBottomScrollInset: CGFloat = 120
-  private let cellReuseIDForSections = [HomeEmptyScreenPromotionItemCell.reuseID,
+  private let cellReuseIDForSections = [PromotionItemCell.reuseID,
                                         HomeEmptyScreenInstructionHeaderCell.reuseID,
                                         HomeEmptyScreenInstructionStepCell.reuseID,
                                         HomeEmptyScreenProductSectionHeaderCell.reuseID]
@@ -29,6 +29,7 @@ class HomeEmptyScreenController: BaseViewController {
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    registerCells()
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
   }
 
@@ -48,12 +49,17 @@ class HomeEmptyScreenController: BaseViewController {
   }
 
   // MARK: - Private custom methods
+  private func registerCells() {
+    let xibForPromotionItemCell = UINib(nibName: PromotionItemCell.xibName, bundle: .main)
+    mainTable.register(xibForPromotionItemCell, forCellReuseIdentifier: PromotionItemCell.reuseID)
+  }
+
   private func updateInstructionStepCell(_ cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
     cell.stepNumberLabel.text = "\(rowIndex + 1)"
     cell.stepTextLabel.text = viewModel.stepInstructionText(forIndex: rowIndex)
   }
 
-  private func updatePromotionItemCell(_ cell: HomeEmptyScreenPromotionItemCell) {
+  private func updatePromotionItemCell(_ cell: PromotionItemCell) {
     cell.nameLabel.text = viewModel.promotionName
     cell.picture.kf.setImage(with: URL(string: viewModel.promotionPictureURL))
   }
@@ -89,8 +95,8 @@ extension HomeEmptyScreenController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
 
     switch reuseID {
-    case HomeEmptyScreenPromotionItemCell.reuseID:
-      guard let itemCell = cell as? HomeEmptyScreenPromotionItemCell else { return cell }
+    case PromotionItemCell.reuseID:
+      guard let itemCell = cell as? PromotionItemCell else { return cell }
       updatePromotionItemCell(itemCell)
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
