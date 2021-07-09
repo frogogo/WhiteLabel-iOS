@@ -14,8 +14,8 @@ class ProductListScreenController: BaseViewController {
   @IBOutlet private var mainTable: UITableView!
 
   private let cellReuseIDForSections = [PromotionItemCell.reuseID,
-                                        ProductListHintCell.reuseID
-                                        ]
+                                        ProductListHintCell.reuseID,
+                                        ProductCell.reuseID]
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -26,11 +26,15 @@ class ProductListScreenController: BaseViewController {
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
+    viewModel.delegate = self
   }
 
   private func registerCells() {
     let xibForPromotionItemCell = UINib(nibName: PromotionItemCell.xibName, bundle: .main)
     mainTable.register(xibForPromotionItemCell, forCellReuseIdentifier: PromotionItemCell.reuseID)
+
+    let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
+    mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)
   }
 
   // MARK: - Handlers
@@ -48,9 +52,8 @@ extension ProductListScreenController: UITableViewDataSource, UITableViewDelegat
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let reuseID = cellReuseIDForSections[section]
     switch reuseID {
-    case ProductSlotCell.reuseID:
-      // TODO: need to count rows correctly
-      return 2
+    case ProductCell.reuseID:
+      return viewModel.productCellCount
     default:
       return 1
     }
@@ -62,11 +65,11 @@ extension ProductListScreenController: UITableViewDataSource, UITableViewDelegat
 
     switch reuseID {
     case PromotionItemCell.reuseID:
-      guard let itemCell = cell as? PromotionItemCell else { return cell }
-      itemCell.viewModel = viewModel.promotionViewModel
-    case ProductSlotCell.reuseID:
-      // TODO: need to set viewmodel for cell
-      print("Need to set viewmodel here")
+      guard let promotionCell = cell as? PromotionItemCell else { return cell }
+      promotionCell.viewModel = viewModel.promotionViewModel
+    case ProductCell.reuseID:
+      guard let productCell = cell as? ProductCell else { return cell }
+      productCell.viewModel = viewModel.productViewModel(forIndex: indexPath.row)
     default:
       return cell
     }
@@ -80,5 +83,12 @@ extension ProductListScreenController: UITableViewDataSource, UITableViewDelegat
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     // TODO: need to return proper header for section
     return nil
+  }
+}
+
+// MARK: - View model delegate methods
+extension ProductListScreenController: ProductListScreenViewModelDelegate {
+  func viewModelUpdated() {
+    mainTable.reloadData()
   }
 }
