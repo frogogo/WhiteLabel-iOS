@@ -16,16 +16,23 @@ class HomeEmptyScreenViewModel: BaseViewModel {
   weak var delegate: HomeEmptyScreenViewModelDelegate?
 
   var promotionStepsCount: Int {
-    return promotion.steps.count
-  }
-  var promotionName: String {
-    return promotion.name
-  }
-  var promotionPictureURL: String {
-    return promotion.photo.largePhotoURL
+    return promotionModel.steps.count
   }
 
-  private var promotion = PromotionModel()
+  var productCellCount: Int {
+    return productSectionViewModel.productCellCount
+  }
+
+  private (set) var promotionViewModel = PromotionItemViewModel(withModel: nil)
+
+  private let productSectionViewModel = ProductListScreenViewModel()
+  private var promotionModel = PromotionModel()
+
+  // MARK: - Lifecycle methods
+  override init() {
+    super.init()
+    productSectionViewModel.delegate = self
+  }
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -33,16 +40,30 @@ class HomeEmptyScreenViewModel: BaseViewModel {
 
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
-      self.promotion = HomeManager.shared.promotion
+      self.promotionModel = HomeManager.shared.promotion
+      self.promotionViewModel.update(with: self.promotionModel)
       self.delegate?.viewModelUpdated()
     } onFailure: { error in
       print("\(type(of: self)): data refresh failed: \(error)")
     }
+
+    productSectionViewModel.refreshData()
   }
 
   // MARK: - Internal/public custom methods
   func stepInstructionText(forIndex stepIndex: Int) -> String {
-    guard stepIndex <= promotion.steps.endIndex else { return "" }
-    return promotion.steps[stepIndex]
+    guard stepIndex <= promotionModel.steps.endIndex else { return "" }
+    return promotionModel.steps[stepIndex]
+  }
+
+  func productViewModel(forIndex index: Int) -> ProductViewModel {
+    return productSectionViewModel.productViewModel(forIndex: index)
+  }
+}
+
+// MARK: - View model delegate methods
+extension HomeEmptyScreenViewModel: ProductListScreenViewModelDelegate {
+  func viewModelUpdated() {
+    delegate?.viewModelUpdated()
   }
 }

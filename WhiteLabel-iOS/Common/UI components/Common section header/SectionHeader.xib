@@ -16,11 +16,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeScreenCouponSectionHeader" customModule="Generic" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionHeader" customModule="Generic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Купоны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-xs-hUe" userLabel="titleLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-xs-hUe" userLabel="titleLabel">
                     <rect key="frame" x="16" y="24" width="382" height="27"/>
                     <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                     <nil key="textColor"/>
@@ -36,6 +36,9 @@
                 <constraint firstItem="YRX-xs-hUe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="md6-AT-lKL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="YRX-xs-hUe" id="y1c-ZT-WCT"/>
+            </connections>
             <point key="canvasLocation" x="-52.173913043478265" y="-202.56696428571428"/>
         </view>
     </objects>
