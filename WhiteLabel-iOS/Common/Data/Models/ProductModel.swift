@@ -1,32 +1,29 @@
 //
-//  PromotionModel.swift
+//  ProductModel.swift
 //  WhiteLabel-iOS
 //
-//  Created by megaorega on 13.05.2021.
+//  Created by megaorega on 08.07.2021.
 //
 
 import Foundation
 import SwiftyJSON
 
-class PromotionModel: BaseDataModel {
+class ProductModel: BaseDataModel {
   // MARK: - Properties
+  var photoURL = ""
   var name = ""
+  var specs = ""
   var price = 0
   var discountedPrice = 0
-  var photo = PhotoModel()
-  var steps: [String] = []
 
   // MARK: - Overridden methods
   override func update(with jsonData: JSON) {
     super.update(with: jsonData)
 
+    photoURL = jsonData["image_url"].stringValue
     name = jsonData["name"].stringValue
+    specs = jsonData["specs"].stringValue
     price = jsonData["price"].intValue
     discountedPrice = jsonData["discounted_price"].intValue
-    photo.update(with: jsonData["photo"])
-
-    if let stepsArray = jsonData["steps"].arrayObject as? [String] {
-      steps = stepsArray
-    }
   }
 }

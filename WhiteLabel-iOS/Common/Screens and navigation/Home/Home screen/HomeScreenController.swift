@@ -19,10 +19,11 @@ class HomeScreenController: BaseViewController {
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeScreenCouponProgressCell.reuseID,
+                                        HomeScreenSeeProductListCell.reuseID,
                                         HomeScreenCouponCell.reuseID,
                                         HomeScreenReceiptCell.reuseID]
 
-  private var couponSectionHeader: HomeScreenCouponSectionHeader?
+  private var couponSectionHeader: SectionHeader?
   private var receiptSectionHeader: HomeScreenReceiptSectionHeader?
   private var selectedCouponIndex: Int?
   private var selectedReceiptIndex: Int?
@@ -91,10 +92,11 @@ class HomeScreenController: BaseViewController {
     cell.progressBar.progress = viewModel.progressRatio
   }
 
-  private func preparedCouponSectionHeader() -> HomeScreenCouponSectionHeader {
+  private func preparedCouponSectionHeader() -> SectionHeader {
     if couponSectionHeader == nil {
-      let headerXib = UINib(nibName: "HomeScreenCouponSectionHeader", bundle: .main)
-      couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? HomeScreenCouponSectionHeader
+      let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
+      couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
+      couponSectionHeader?.titleLabel.text = "Купоны"
     }
     return couponSectionHeader!
   }
@@ -163,6 +165,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     let reuseID = cellReuseIDForSections[indexPath.section]
 
     switch reuseID {
+    case HomeScreenSeeProductListCell.reuseID:
+      performSegue(withIdentifier: "HomeScreenToProductListScreenSegue", sender: nil)
     case HomeScreenCouponCell.reuseID:
       selectedCouponIndex = indexPath.row
       performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
@@ -180,7 +184,7 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     case HomeScreenCouponCell.reuseID:
       return viewModel.couponCount > 0 ? UITableView.automaticDimension : 0
     case HomeScreenReceiptCell.reuseID:
-      return UITableView.automaticDimension
+      return viewModel.receiptCount > 0 ? UITableView.automaticDimension : 0
     default:
       return 0
     }
@@ -194,7 +198,7 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     case HomeScreenReceiptCell.reuseID:
       let header = preparedReceiptSectionHeader()
       header.setNoticeVisible(to: viewModel.receiptInProcess.value)
-      return header
+      return viewModel.receiptCount > 0 ? header : nil
     default:
       return nil
     }
