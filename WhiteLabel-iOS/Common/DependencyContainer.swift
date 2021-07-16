@@ -34,5 +34,6 @@ class DependencyContainer {
     HomeManager.shared.apiConnector = apiConnector
     ProfileManager.shared.apiConnector = apiConnector
     ReceiptManager.shared.apiConnector = apiConnector
+    ProductManager.shared.apiConnector = apiConnector
   }
 }

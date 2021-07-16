@@ -21,7 +21,7 @@ class AccountManager: BaseDataManager {
   private let userDefaultsAuthTokenCreationDateKey = "userAuthTokenCreationDate"
   private let userDefaultsDidUserSeeOnboardingKey = "didUserSeeOnboarding"
 
-  private let authTokenLifetimeInSeconds: TimeInterval = 20//2 * 24 * 60 * 60
+  private let authTokenLifetimeInSeconds: TimeInterval = 2 * 24 * 60 * 60
 
   private var authTokenString: String?
   private var authTokenCreationDate: Date?
@@ -29,22 +29,18 @@ class AccountManager: BaseDataManager {
   // MARK: - Internal/public custom methods
   func tryAutoLogin(onSuccess: @escaping () -> Void,
                     onFailure: @escaping () -> Void) {
-    guard let savedToken = savedAuthToken(), savedToken != "" else {
-      tryToRefreshAuthToken { (isRefreshedOK) in
-        if isRefreshedOK {
-          onSuccess()
-        } else {
-          onFailure()
-        }
-      }
+    if let savedToken = savedAuthToken(), savedToken != "" {
+      authTokenString = savedToken
+      onSuccess()
       return
     }
 
-    authTokenString = savedToken
-    print("\(type(of: self)): autologin OK (using token = \(savedToken)")
-
-    checkAuthTokenDateAndRefreshIfNeeded {
-      onSuccess()
+    tryToRefreshAuthToken { (isRefreshedOK) in
+      if isRefreshedOK {
+        onSuccess()
+      } else {
+        onFailure()
+      }
     }
   }
 
@@ -93,37 +89,31 @@ class AccountManager: BaseDataManager {
     UserDefaults.standard.synchronize()
   }
 
-  func checkAuthTokenDateAndRefreshIfNeeded(_ onComplete: (() -> Void)? = nil) {
-    print("\(type(of: self)): checking auth token expiration date")
+  func checkAuthTokenDateAndRefreshIfNeeded() {
     authTokenCreationDate = savedAuthTokenCreationDate()
 
     var needToRefresh = false
-    if authTokenCreationDate == nil {
-      needToRefresh = true
-    } else {
+    if authTokenCreationDate != nil {
       let tokenExpiringDate = authTokenCreationDate!.addingTimeInterval(authTokenLifetimeInSeconds)
-      needToRefresh = authTokenCreationDate! > tokenExpiringDate
+      needToRefresh = Date() > tokenExpiringDate
     }
 
-    if needToRefresh {
-      print("\(type(of: self)): token expired NEED refresh")
-      tryToRefreshAuthToken { _ in
-        onComplete?()
-      }
-    } else {
-      print("\(type(of: self)): token is not expired, NO NEED to refresh")
-      onComplete?()
+    guard needToRefresh else { return }
+    tryToRefreshAuthToken { (isRefreshedOK) in
+      print("\(type(of: self)): Token refresh \(isRefreshedOK ? "OK" : "FAILED")")
     }
   }
 
   func logout() {
     deleteTokens()
     deleteOnboardingSeenMark()
+    postNotification(withName: .logout)
   }
 
   // MARK: - Private custom methods
   private func tryToRefreshAuthToken(_ onComplete: ((Bool) -> Void)? = nil) {
     guard let retrievedRefreshToken = savedRefreshToken() else {
+      postNotification(withName: .authorizationRequired)
       onComplete?(false)
       return
     }
@@ -133,10 +123,10 @@ class AccountManager: BaseDataManager {
       [weak self] (isOK, response, errors) in
 
       if isOK {
-        print("\(type(of: self)): auth token refresh SUCCESS")
         self?.parseAndSaveTokens(from: response)
         onComplete?(true)
       } else {
+        self?.postNotification(withName: .authorizationRequired)
         print("\(type(of: self)): auth token refresh failed. Occured errors = \(errors)")
         onComplete?(false)
       }
@@ -149,15 +139,12 @@ class AccountManager: BaseDataManager {
     authTokenString = authToken
     authTokenCreationDate = Date()
 
-    print("\(type(of: self)): auth token set OK. Token = \(authToken)")
     save(authToken: authToken, andRefreshToken: refreshToken)
   }
 
   private func save(authToken authTokenString: String, andRefreshToken refreshTokenString: String) {
     // TODO: need to save tokens in database properly.
     // temporary solution – saving in UserDefaults
-    print("Written auth token \(authTokenString)")
-    print("Written refresh token \(refreshTokenString)")
     UserDefaults.standard.set(authTokenString, forKey: userDefaultsAuthTokenKey)
     UserDefaults.standard.set(refreshTokenString, forKey: userDefaultsRefreshTokenKey)
     UserDefaults.standard.set(authTokenCreationDate, forKey: userDefaultsAuthTokenCreationDateKey)
@@ -173,7 +160,7 @@ class AccountManager: BaseDataManager {
   private func savedAuthTokenCreationDate() -> Date? {
     // TODO: need to retrieve token creation date from database
     // temporary solution - retrieving from UserDefaults
-    return UserDefaults.standard.object(forKey: userDefaultsRefreshTokenKey) as? Date
+    return UserDefaults.standard.object(forKey: userDefaultsAuthTokenCreationDateKey) as? Date
   }
 
   private func savedRefreshToken() -> String? {

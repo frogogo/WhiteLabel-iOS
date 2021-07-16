@@ -135,6 +135,7 @@ class APIConnector {
           self.authenticator?.refreshAuthToken { (isRefreshedOK) in
             let retriedAlready = requestToSend.retryCount > 0
             if isRefreshedOK && !retriedAlready {
+              print("\(type(of: self)): original request was failed due to auth error, RETRYING")
               AF.retryRequest(requestToSend, withDelay: 0)
             } else {
               occuredErrors = [self.standardError(withType: .authorization)]
