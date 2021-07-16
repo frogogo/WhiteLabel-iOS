@@ -17,7 +17,7 @@ class ReceiptManager: BaseDataManager {
                    onFailure: @escaping (String) -> Void) {
 
     let params = ["qr_string": parsedQRString]
-    APIConnector.shared.requestPOST("receipts", params: params) { isOK, response, errors in
+    apiConnector.requestPOST("receipts", params: params) { isOK, response, errors in
       if isOK {
         let parsedReceipt = ReceiptModel()
         parsedReceipt.update(with: response)

@@ -22,18 +22,22 @@ private struct Host {
   static let production = "https://sboom.herokuapp.com"
 }
 
+protocol APIAuthenticator: AnyObject {
+  var authToken: String? { get }
+  func refreshAuthToken(_ onComplete: @escaping (Bool) -> Void)
+}
+
 /**
  A wrapper class for network module
  */
 class APIConnector {
-  // MARK: - Properties
-  static let shared = APIConnector()
-
+  // MARK: - Class properties
   private static let host = Host.production
   private static let route = "api"
   private static let baseURL = host + "/" + route
 
-  var authToken = ""
+  // MARK: - Instance properties
+  weak var authenticator: APIAuthenticator?
 
   private let defaultAPIVersion = "1"
   private let verboseLogging = true
@@ -74,12 +78,11 @@ class APIConnector {
                                       "API-Version": defaultAPIVersion]
 
     if addAuthToken {
-      if authToken == "" {
+      guard let authToken = authenticator?.authToken, authToken != "" else {
         completeHandler(false, JSON(""), [standardError(withType: .authorization)])
         return
-      } else {
-        headersToSend["Authorization"] = "Bearer " + authToken
       }
+      headersToSend["Authorization"] = "Bearer " + authToken
     }
 
     if let overriddenAPIVersion = apiVersion {
@@ -95,12 +98,13 @@ class APIConnector {
       print("    ----- REQUEST DETAILS END -----\n")
     }
 
-    AF.request(requestURL,
-               method: method,
-               parameters: params,
-               encoding: encoding,
-               headers: headersToSend)
-      .responseJSON {[weak self] (response) in
+    let requestToSend = AF.request(requestURL,
+                                   method: method,
+                                   parameters: params,
+                                   encoding: encoding,
+                                   headers: headersToSend)
+
+    requestToSend.responseJSON {[weak self] (response) in
         guard let self = self else { return }
 
         guard let httpCode = response.response?.statusCode else {
@@ -111,7 +115,7 @@ class APIConnector {
 
         if self.verboseLogging {
           print("\n    ----- FULL RESPONSE -----")
-          print("\nhttp code \(httpCode)")
+          print("\nHTTP CODE \(httpCode)")
           print("\n\(response)")
           print("    ----- FULL RESPONSE END -----\n")
         }
@@ -128,7 +132,17 @@ class APIConnector {
             parsedResponse = JSON(validResponse)
           }
         case 401:
-          occuredErrors = [self.standardError(withType: .authorization)]
+          self.authenticator?.refreshAuthToken { (isRefreshedOK) in
+            let retriedAlready = requestToSend.retryCount > 0
+            if isRefreshedOK && !retriedAlready {
+              print("\(type(of: self)): original request was failed due to auth error, RETRYING")
+              AF.retryRequest(requestToSend, withDelay: 0)
+            } else {
+              occuredErrors = [self.standardError(withType: .authorization)]
+              completeHandler(isSuccess, parsedResponse, occuredErrors)
+            }
+          }
+          return
         case 404:
           occuredErrors = [self.standardError(withType: .notFound)]
         case 422:
@@ -141,6 +155,10 @@ class APIConnector {
             print("\(type(of: self)): не удалось распарсить ошибку валидации! Создана неизвестная ошибка")
             occuredErrors = [self.standardError(withType: .unknown)]
           }
+        case 500..<600:
+          var connectionError = self.standardError(withType: .connection)
+          connectionError.description += ". Код ошибки \(httpCode)"
+          occuredErrors = [connectionError]
         default:
           occuredErrors = [self.standardError(withType: .unknown)]
         }

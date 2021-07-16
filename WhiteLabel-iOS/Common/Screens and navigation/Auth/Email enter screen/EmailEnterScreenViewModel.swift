@@ -35,7 +35,7 @@ class EmailEnterScreenViewModel: BaseViewModel {
     ProfileManager.shared.update(name: enteredName, email: enteredEmailString) { [weak self] in
       self?.delegate?.didSendEnteredEmail()
     } onFailure: { [weak self] (error) in
-      print("Не удалось обновить email: \(error)")
+      print("Email update error: \(error)")
       self?.errorToShow.value = error
     }
   }

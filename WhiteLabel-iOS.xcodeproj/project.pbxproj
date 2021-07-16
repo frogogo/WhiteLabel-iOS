@@ -113,6 +113,8 @@
 		676158402656F2FF00601A97 /* CommonCouponInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */; };
 		67615842265791E600601A97 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67615841265791E600601A97 /* String.swift */; };
 		67615843265791E600601A97 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67615841265791E600601A97 /* String.swift */; };
+		678C109B267B32A800A4136B /* DataEventNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C109A267B32A800A4136B /* DataEventNotifications.swift */; };
+		678C109C267B32A800A4136B /* DataEventNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C109A267B32A800A4136B /* DataEventNotifications.swift */; };
 		679012992652565900C4A4D5 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */; };
 		6790129A2652565900C4A4D5 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */; };
 		6790129C265289D400C4A4D5 /* CameraAccessChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */; };
@@ -153,6 +155,8 @@
 		67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */; };
 		67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
 		67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
+		67FBB48F265D910E004538D4 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB48E265D910E004538D4 /* DependencyContainer.swift */; };
+		67FBB490265D910E004538D4 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB48E265D910E004538D4 /* DependencyContainer.swift */; };
 		67FDD1182696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
 		67FDD1192696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
 		67FDD11B2696D74200420DE3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
@@ -251,6 +255,7 @@
 		6761583C265355B700601A97 /* OnboardingAgreementScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgreementScreenController.swift; sourceTree = "<group>"; };
 		6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCouponInfoModel.swift; sourceTree = "<group>"; };
 		67615841265791E600601A97 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		678C109A267B32A800A4136B /* DataEventNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEventNotifications.swift; sourceTree = "<group>"; };
 		679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
 		6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAccessChecker.swift; sourceTree = "<group>"; };
 		6790129E265293A200C4A4D5 /* ReceiptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptManager.swift; sourceTree = "<group>"; };
@@ -274,6 +279,7 @@
 		67F14B402631943900FF36E3 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenController.swift; sourceTree = "<group>"; };
 		67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenViewModel.swift; sourceTree = "<group>"; };
+		67FBB48E265D910E004538D4 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		67FDD1172696D64900420DE3 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		67FDD11A2696D74200420DE3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		67FDD1222696DD4D00420DE3 /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
@@ -571,6 +577,8 @@
 		679541AA262581FB00C04495 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				67FBB48E265D910E004538D4 /* DependencyContainer.swift */,
+				678C109A267B32A800A4136B /* DataEventNotifications.swift */,
 				679541AC262582FF00C04495 /* Data */,
 				679541AB262582F300C04495 /* Services */,
 				679541AE2625830F00C04495 /* UI components */,
@@ -683,10 +691,10 @@
 			children = (
 				67F14B392631941C00FF36E3 /* BaseDataManager.swift */,
 				67F14B402631943900FF36E3 /* AccountManager.swift */,
-				6706BBF02639425500CE4328 /* ProfileManager.swift */,
 				67243ECF264C2C7300139AC6 /* HomeManager.swift */,
-				6790129E265293A200C4A4D5 /* ReceiptManager.swift */,
 				67FDD1172696D64900420DE3 /* ProductManager.swift */,
+				6706BBF02639425500CE4328 /* ProfileManager.swift */,
+				6790129E265293A200C4A4D5 /* ReceiptManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -980,6 +988,7 @@
 				67243ED9264D65B100139AC6 /* CouponProgressModel.swift in Sources */,
 				67FDD14A26984A5600420DE3 /* ProductViewModel.swift in Sources */,
 				67243EF5264E52C600139AC6 /* CurrencyHelper.swift in Sources */,
+				678C109B267B32A800A4136B /* DataEventNotifications.swift in Sources */,
 				6706BBEA263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */,
 				6706BBFD263C1B3E00CE4328 /* HomeInitialScreenController.swift in Sources */,
 				67243EF8264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */,
@@ -987,6 +996,7 @@
 				67243EE5264DEC2B00139AC6 /* HomeScreenViewModel.swift in Sources */,
 				6706BBE02638A85100CE4328 /* NameEnterScreenController.swift in Sources */,
 				67FDD13A2698032D00420DE3 /* PromotionItemCell.swift in Sources */,
+				67FBB48F265D910E004538D4 /* DependencyContainer.swift in Sources */,
 				67243EDC264D680900139AC6 /* ReceiptModel.swift in Sources */,
 				6790129F265293A200C4A4D5 /* ReceiptManager.swift in Sources */,
 				67B60941264AB6A100C50130 /* UITableViewCell.swift in Sources */,
@@ -1056,6 +1066,7 @@
 				67243EDA264D65B100139AC6 /* CouponProgressModel.swift in Sources */,
 				67FDD14B26984A5600420DE3 /* ProductViewModel.swift in Sources */,
 				67243EF6264E52C600139AC6 /* CurrencyHelper.swift in Sources */,
+				678C109C267B32A800A4136B /* DataEventNotifications.swift in Sources */,
 				6706BBEB263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */,
 				6706BBFE263C1B3E00CE4328 /* HomeInitialScreenController.swift in Sources */,
 				67243EF9264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */,
@@ -1063,6 +1074,7 @@
 				67243EE6264DEC2B00139AC6 /* HomeScreenViewModel.swift in Sources */,
 				6706BBE12638A85100CE4328 /* NameEnterScreenController.swift in Sources */,
 				67FDD13B2698032D00420DE3 /* PromotionItemCell.swift in Sources */,
+				67FBB490265D910E004538D4 /* DependencyContainer.swift in Sources */,
 				67243EDD264D680900139AC6 /* ReceiptModel.swift in Sources */,
 				679012A0265293A200C4A4D5 /* ReceiptManager.swift in Sources */,
 				67B60942264AB6A100C50130 /* UITableViewCell.swift in Sources */,
