@@ -23,7 +23,7 @@ class ProductManager: BaseDataManager {
       return
     }
 
-    APIConnector.shared.requestGET("items") {[weak self] isOK, response, errors in
+    apiConnector.requestGET("items") {[weak self] isOK, response, errors in
       guard let self = self else { return }
 
       if isOK {
