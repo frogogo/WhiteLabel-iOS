@@ -26,6 +26,7 @@ class HomeEmptyScreenController: BaseViewController {
                                         HomeEmptyScreenInstructionStepCell.reuseID,
                                         ProductCell.reuseID]
   private var productSectionHeader: SectionHeader?
+  private var selectedProductIndex: Int?
 
   // MARK: - Overridden methods
   override func setupStaticContentForDisplay() {
@@ -38,9 +39,17 @@ class HomeEmptyScreenController: BaseViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
 
-    if segue.identifier == "HomeEmptyScreenToQRScannerSegue" {
+    switch segue.identifier {
+    case "HomeEmptyScreenToQRScannerSegue":
       guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
       scannerVC.delegate = self
+    case "HomeEmptyScreenToProductSegue":
+      guard let productScreenVC = segue.destination as? ProductScreenController else { return }
+      guard let selectedProductIndex = selectedProductIndex else { return }
+      guard let selectedProduct = viewModel.productModel(forIndex: selectedProductIndex) else { return }
+      productScreenVC.viewModel.productModel = selectedProduct
+    default:
+      break
     }
   }
 
@@ -111,7 +120,8 @@ extension HomeEmptyScreenController: UITableViewDataSource, UITableViewDelegate 
       updateInstructionStepCell(stepCell, forRow: indexPath.row)
     case ProductCell.reuseID:
       guard let productCell = cell as? ProductCell else { return cell }
-      productCell.viewModel = viewModel.productViewModel(forIndex: indexPath.row)
+      productCell.viewModel = viewModel.productCellViewModel(forIndex: indexPath.row)
+      productCell.delegate = self
     default:
       return cell
     }
@@ -153,5 +163,16 @@ extension HomeEmptyScreenController: QRCodeScannerControllerDelegate {
       guard let self = self else { return }
       self.delegate?.didFinishFirstQRCodeScan(self)
     }
+  }
+}
+
+// MARK: - Product cell delegate methods
+extension HomeEmptyScreenController: ProductCellDelegate {
+  func productCell(_ cell: ProductCell, didSelectSlotWithIndex slotIndex: Int) {
+    guard let cellIndex = mainTable.indexPath(for: cell)?.row else { return }
+    let productIndex = (cellIndex * 2) + slotIndex
+
+    selectedProductIndex = productIndex
+    performSegue(withIdentifier: "HomeEmptyScreenToProductSegue", sender: nil)
   }
 }

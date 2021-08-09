@@ -21,7 +21,8 @@ class ProductListScreenViewModel: BaseViewModel {
 
   private (set) var promotionViewModel = PromotionItemViewModel(withModel: nil)
 
-  private var productViewModels: [ProductViewModel] = []
+  private var productViewModels: [ProductCellViewModel] = []
+  private var productList: [ProductModel] = []
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -32,6 +33,7 @@ class ProductListScreenViewModel: BaseViewModel {
 
     ProductManager.shared.loadProducts { [weak self] (loadedProducts) in
       guard let self = self else { return }
+      self.productList = loadedProducts
       self.createProductViewModels(withProductModels: loadedProducts)
       self.delegate?.viewModelUpdated()
       
@@ -41,7 +43,12 @@ class ProductListScreenViewModel: BaseViewModel {
   }
 
   // MARK: - Internal/public custom methods
-  func productViewModel(forIndex index: Int) -> ProductViewModel {
+  func productModel(forIndex index: Int) -> ProductModel? {
+    guard index < productList.count else { return nil }
+    return productList[index]
+  }
+
+  func productViewModel(forIndex index: Int) -> ProductCellViewModel {
     return productViewModels[index]
   }
 
@@ -61,7 +68,7 @@ class ProductListScreenViewModel: BaseViewModel {
         productModelsToSet.append(rightSlotModel)
       }
 
-      let productViewModel = ProductViewModel()
+      let productViewModel = ProductCellViewModel()
       productViewModel.setProducts(productModelsToSet)
       productViewModels.append(productViewModel)
     }

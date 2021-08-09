@@ -10,6 +10,7 @@ import SwiftyJSON
 
 class ProductModel: BaseDataModel {
   // MARK: - Properties
+  var identifier = ""
   var photoURL = ""
   var name = ""
   var specs = ""
@@ -20,6 +21,7 @@ class ProductModel: BaseDataModel {
   override func update(with jsonData: JSON) {
     super.update(with: jsonData)
 
+    identifier = jsonData["id"].stringValue
     photoURL = jsonData["image_url"].stringValue
     name = jsonData["name"].stringValue
     specs = jsonData["specs"].stringValue

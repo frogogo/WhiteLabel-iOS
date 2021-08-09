@@ -101,11 +101,22 @@
                     </view>
                     <connections>
                         <outlet property="mainTable" destination="mQG-qR-Izh" id="3dx-QR-AfX"/>
+                        <segue destination="70l-ap-fTS" kind="presentation" identifier="ProductListScreenToProductScreenSegue" id="J7u-s6-cBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="66.964285714285708"/>
+        </scene>
+        <!--Product-->
+        <scene sceneID="0vi-xd-34H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Product" id="70l-ap-fTS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hvx-Rv-WId"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpy-aZ-CF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="67"/>
         </scene>
     </scenes>
     <resources>

@@ -56,8 +56,12 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     return promotionModel.steps[stepIndex]
   }
 
-  func productViewModel(forIndex index: Int) -> ProductViewModel {
+  func productCellViewModel(forIndex index: Int) -> ProductCellViewModel {
     return productSectionViewModel.productViewModel(forIndex: index)
+  }
+
+  func productModel(forIndex index: Int) -> ProductModel? {
+    return productSectionViewModel.productModel(forIndex: index)
   }
 }
 
