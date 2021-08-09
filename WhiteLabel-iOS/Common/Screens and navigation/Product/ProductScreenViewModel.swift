@@ -7,23 +7,34 @@
 
 import Foundation
 
+protocol ProductScreenViewModelDelegate: AnyObject {
+  func occuredError(withText errorText: String)
+}
+
 class ProductScreenViewModel: BaseViewModel {
   // MARK: - Properties
+  weak var delegate: ProductScreenViewModelDelegate?
+  var productIDForDisplay: String?
+
   let productName = Box(value: "")
 
-  var productModel: ProductModel? {
-    didSet {
-      refreshData()
-    }
-  }
+  private var productModel: ProductModel?
 
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
 
-    guard let productID = productModel?.name else { return }
-    // TODO: тут надо загрузить данные о товаре
-    // TODO: remove string below
-    productName.value = productID
+    guard let productID = productIDForDisplay else { return }
+    ProductManager.shared.loadProduct(withID: productID) { [weak self] loadedProduct in
+      self?.productModel = loadedProduct
+      self?.updateInfoForDisplay()
+    } onFailure: { [weak self] error in
+      self?.delegate?.occuredError(withText: error)
+    }
+  }
+
+  private func updateInfoForDisplay() {
+    guard let productToDisplay = productModel else { return }
+    productName.value = productToDisplay.name
   }
 }

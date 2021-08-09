@@ -43,9 +43,9 @@ class ProductListScreenViewModel: BaseViewModel {
   }
 
   // MARK: - Internal/public custom methods
-  func productModel(forIndex index: Int) -> ProductModel? {
+  func productID(forIndex index: Int) -> String? {
     guard index < productList.count else { return nil }
-    return productList[index]
+    return productList[index].identifier
   }
 
   func productViewModel(forIndex index: Int) -> ProductCellViewModel {

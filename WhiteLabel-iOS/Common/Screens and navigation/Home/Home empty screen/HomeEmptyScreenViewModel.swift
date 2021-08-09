@@ -60,8 +60,8 @@ class HomeEmptyScreenViewModel: BaseViewModel {
     return productSectionViewModel.productViewModel(forIndex: index)
   }
 
-  func productModel(forIndex index: Int) -> ProductModel? {
-    return productSectionViewModel.productModel(forIndex: index)
+  func productID(forIndex index: Int) -> String? {
+    return productSectionViewModel.productID(forIndex: index)
   }
 }
 

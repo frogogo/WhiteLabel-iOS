@@ -18,6 +18,7 @@ class ProductScreenController: BaseViewController {
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
+    viewModel.delegate = self
   }
 
   override func addBindings() {
@@ -31,5 +32,11 @@ class ProductScreenController: BaseViewController {
   // MARK: - Handlers
   @IBAction func closeButtonTap() {
     dismiss(animated: true, completion: nil)
+  }
+}
+
+extension ProductScreenController: ProductScreenViewModelDelegate {
+  func occuredError(withText errorText: String) {
+    showStandardErrorAlert(withMessage: errorText)
   }
 }

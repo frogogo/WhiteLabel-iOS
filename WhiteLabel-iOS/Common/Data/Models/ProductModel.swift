@@ -13,6 +13,7 @@ class ProductModel: BaseDataModel {
   var identifier = ""
   var photoURL = ""
   var name = ""
+  var description = ""
   var specs = ""
   var price = 0
   var discountedPrice = 0
@@ -24,6 +25,7 @@ class ProductModel: BaseDataModel {
     identifier = jsonData["id"].stringValue
     photoURL = jsonData["image_url"].stringValue
     name = jsonData["name"].stringValue
+    description = jsonData["description"].stringValue
     specs = jsonData["specs"].stringValue
     price = jsonData["price"].intValue
     discountedPrice = jsonData["discounted_price"].intValue

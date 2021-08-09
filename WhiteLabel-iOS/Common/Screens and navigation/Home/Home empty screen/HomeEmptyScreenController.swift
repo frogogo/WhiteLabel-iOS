@@ -46,8 +46,8 @@ class HomeEmptyScreenController: BaseViewController {
     case "HomeEmptyScreenToProductSegue":
       guard let productScreenVC = segue.destination as? ProductScreenController else { return }
       guard let selectedProductIndex = selectedProductIndex else { return }
-      guard let selectedProduct = viewModel.productModel(forIndex: selectedProductIndex) else { return }
-      productScreenVC.viewModel.productModel = selectedProduct
+      guard let selectedProductID = viewModel.productID(forIndex: selectedProductIndex) else { return }
+      productScreenVC.viewModel.productIDForDisplay = selectedProductID
     default:
       break
     }
