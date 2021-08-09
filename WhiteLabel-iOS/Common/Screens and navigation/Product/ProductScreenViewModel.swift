@@ -16,7 +16,12 @@ class ProductScreenViewModel: BaseViewModel {
   weak var delegate: ProductScreenViewModelDelegate?
   var productIDForDisplay: String?
 
+  let pictureURL = Box(value: "")
+  let discountedPrice = Box(value: "")
+  let price = Box(value: "")
   let productName = Box(value: "")
+  let specs = Box(value: "")
+  let description = Box(value: "")
 
   private var productModel: ProductModel?
 
@@ -35,6 +40,11 @@ class ProductScreenViewModel: BaseViewModel {
 
   private func updateInfoForDisplay() {
     guard let productToDisplay = productModel else { return }
+    pictureURL.value = productToDisplay.photoURL
+    discountedPrice.value = CurrencyHelper.readableSumInRubles(withAmount: productToDisplay.discountedPrice)
+    price.value = CurrencyHelper.readableSumInRubles(withAmount: productToDisplay.price)
     productName.value = productToDisplay.name
+    specs.value = productToDisplay.specs
+    description.value = productToDisplay.description
   }
 }

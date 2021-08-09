@@ -4,10 +4,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Product Screen Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -24,33 +33,127 @@
                                     <action selector="closeButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y7M-QV-pEK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkf-Qu-fge">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvD-Bk-yLR" userLabel="scrollView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixX-rE-6yo" userLabel="picture">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="245"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ixX-rE-6yo" secondAttribute="height" multiplier="343:220" id="tBN-vW-HYR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-Kv-p4P" userLabel="priceContainer">
+                                        <rect key="frame" x="16" y="245" width="122.5" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDx-Q8-cXD" userLabel="discountedPriceLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="28"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
+                                                <color key="textColor" name="StatusRed"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9000 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-B6-5IL" userLabel="priceLabel">
+                                                <rect key="frame" x="59" y="7" width="61.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                                <color key="textColor" name="Dark500"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priceStroke" translatesAutoresizingMaskIntoConstraints="NO" id="UeE-Jh-SXi">
+                                                <rect key="frame" x="57" y="16.5" width="65.5" height="2"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cx4-B6-5IL" firstAttribute="leading" secondItem="wDx-Q8-cXD" secondAttribute="trailing" constant="6" id="71j-Ei-1k8"/>
+                                            <constraint firstAttribute="trailing" secondItem="UeE-Jh-SXi" secondAttribute="trailing" id="Efj-5Q-2o0"/>
+                                            <constraint firstItem="wDx-Q8-cXD" firstAttribute="leading" secondItem="6Yz-Kv-p4P" secondAttribute="leading" id="FmY-ce-Nov"/>
+                                            <constraint firstItem="wDx-Q8-cXD" firstAttribute="bottom" secondItem="6Yz-Kv-p4P" secondAttribute="bottom" id="GFn-0k-G9s"/>
+                                            <constraint firstItem="cx4-B6-5IL" firstAttribute="bottom" secondItem="wDx-Q8-cXD" secondAttribute="bottom" id="JLW-Zg-zg3"/>
+                                            <constraint firstItem="UeE-Jh-SXi" firstAttribute="centerY" secondItem="cx4-B6-5IL" secondAttribute="centerY" id="Ovu-Vg-cPF"/>
+                                            <constraint firstItem="UeE-Jh-SXi" firstAttribute="trailing" secondItem="cx4-B6-5IL" secondAttribute="trailing" constant="2" id="RhU-U3-Kb1"/>
+                                            <constraint firstItem="wDx-Q8-cXD" firstAttribute="top" secondItem="6Yz-Kv-p4P" secondAttribute="top" id="UYc-Dg-Pr1"/>
+                                            <constraint firstItem="UeE-Jh-SXi" firstAttribute="leading" secondItem="cx4-B6-5IL" secondAttribute="leading" constant="-2" id="r1D-oE-NVS"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Товар по акции" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIv-ZQ-Z5f" userLabel="nameLabel">
+                                        <rect key="frame" x="16" y="277" width="382" height="24"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                        <color key="textColor" name="Dark900"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размер" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-zR-C9h" userLabel="specsLabel">
+                                        <rect key="frame" x="16" y="305" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-Wp-a8F" userLabel="descriptionLabel">
+                                        <rect key="frame" x="16" y="330.5" width="382" height="19"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iqo-zR-C9h" firstAttribute="leading" secondItem="DIv-ZQ-Z5f" secondAttribute="leading" id="32C-hB-pmn"/>
+                                    <constraint firstItem="ixX-rE-6yo" firstAttribute="leading" secondItem="yaI-dD-DX4" secondAttribute="leading" constant="16" id="5Qw-bz-dFp"/>
+                                    <constraint firstItem="6Yz-Kv-p4P" firstAttribute="top" secondItem="ixX-rE-6yo" secondAttribute="bottom" id="6IT-lr-Fo8"/>
+                                    <constraint firstItem="6Yz-Kv-p4P" firstAttribute="leading" secondItem="ixX-rE-6yo" secondAttribute="leading" id="DRo-bt-Kep"/>
+                                    <constraint firstItem="DIv-ZQ-Z5f" firstAttribute="leading" secondItem="ixX-rE-6yo" secondAttribute="leading" id="FGQ-KU-K6j"/>
+                                    <constraint firstItem="ixX-rE-6yo" firstAttribute="top" secondItem="yaI-dD-DX4" secondAttribute="top" id="JqA-LV-B5x"/>
+                                    <constraint firstItem="DIv-ZQ-Z5f" firstAttribute="trailing" secondItem="ixX-rE-6yo" secondAttribute="trailing" id="Roi-ye-oPV"/>
+                                    <constraint firstItem="DIv-ZQ-Z5f" firstAttribute="top" secondItem="6Yz-Kv-p4P" secondAttribute="bottom" constant="4" id="UPE-jA-gno"/>
+                                    <constraint firstItem="iqo-zR-C9h" firstAttribute="top" secondItem="DIv-ZQ-Z5f" secondAttribute="bottom" constant="4" id="a8i-ub-oUg"/>
+                                    <constraint firstItem="pEH-PT-SG2" firstAttribute="trailing" secondItem="ixX-rE-6yo" secondAttribute="trailing" constant="16" id="kEr-ph-XUj"/>
+                                    <constraint firstItem="Chk-Wp-a8F" firstAttribute="leading" secondItem="DIv-ZQ-Z5f" secondAttribute="leading" id="nvi-Lw-TMg"/>
+                                    <constraint firstItem="Chk-Wp-a8F" firstAttribute="trailing" secondItem="DIv-ZQ-Z5f" secondAttribute="trailing" id="o2F-VS-LR2"/>
+                                    <constraint firstItem="Chk-Wp-a8F" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="yaI-dD-DX4" secondAttribute="bottom" id="qjc-Nk-Kpq"/>
+                                    <constraint firstItem="Chk-Wp-a8F" firstAttribute="top" secondItem="iqo-zR-C9h" secondAttribute="bottom" constant="4" id="uWU-8k-pIM"/>
+                                    <constraint firstItem="iqo-zR-C9h" firstAttribute="trailing" secondItem="DIv-ZQ-Z5f" secondAttribute="trailing" id="yd1-oM-eMM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="yaI-dD-DX4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pEH-PT-SG2"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xkf-Qu-fge" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="G38-VK-RPb"/>
+                            <constraint firstItem="jvD-Bk-yLR" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="3X0-VC-NgN"/>
                             <constraint firstItem="tIF-EF-Cqs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="Umq-aT-lVx"/>
-                            <constraint firstItem="xkf-Qu-fge" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Y3u-lv-mmS"/>
+                            <constraint firstItem="jvD-Bk-yLR" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="YWQ-GZ-bjD"/>
+                            <constraint firstItem="jvD-Bk-yLR" firstAttribute="top" secondItem="tIF-EF-Cqs" secondAttribute="bottom" constant="12" id="ZLD-mL-ALf"/>
                             <constraint firstItem="tIF-EF-Cqs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Zuk-y2-jGp"/>
+                            <constraint firstItem="jvD-Bk-yLR" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="r0D-zb-tQk"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameLabel" destination="xkf-Qu-fge" id="wZh-CB-CZK"/>
+                        <outlet property="descriptionLabel" destination="Chk-Wp-a8F" id="59p-cj-Zyq"/>
+                        <outlet property="discountedPriceLabel" destination="wDx-Q8-cXD" id="TGw-9g-co4"/>
+                        <outlet property="nameLabel" destination="DIv-ZQ-Z5f" id="qVy-Ua-jEw"/>
+                        <outlet property="picture" destination="ixX-rE-6yo" id="rkg-62-t46"/>
+                        <outlet property="priceLabel" destination="cx4-B6-5IL" id="Xq7-iZ-Fxu"/>
+                        <outlet property="specsLabel" destination="iqo-zR-C9h" id="aSe-ax-E18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="54"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="53.571428571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="buttonClose" width="24" height="24"/>
+        <image name="priceStroke" width="62" height="2"/>
+        <namedColor name="Dark500">
+            <color red="0.67450980392156867" green="0.72156862745098038" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusRed">
+            <color red="1" green="0.41568627450980394" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
