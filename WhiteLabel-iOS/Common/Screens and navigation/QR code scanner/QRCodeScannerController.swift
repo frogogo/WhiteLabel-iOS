@@ -150,7 +150,7 @@ extension QRCodeScannerController: QRCodeScannerViewModelDelegate {
   }
 
   func showScanError(_ errorText: String) {
-    showStandardAlert(withMessage: errorText, onDismiss: { [weak self] in
+    showStandardErrorAlert(withMessage: errorText, onDismiss: { [weak self] in
       self?.startCamera()
     })
   }
