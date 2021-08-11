@@ -23,7 +23,7 @@ class ProductManager: BaseDataManager {
       return
     }
 
-    apiConnector.requestGET("items") {[weak self] isOK, response, errors in
+    apiConnector.requestGET("items") { [weak self] isOK, response, errors in
       guard let self = self else { return }
 
       if isOK {
@@ -32,6 +32,23 @@ class ProductManager: BaseDataManager {
         onSuccess(self.products)
       } else {
         print("\(type(of: self)): product list load failed. Occured errors = \(errors)")
+        let errorText = errors[0].description
+        onFailure(errorText)
+      }
+    }
+  }
+
+  func loadProduct(withID productID: String,
+                   onSuccess: @escaping (ProductModel) -> Void,
+                   onFailure: @escaping (String) -> Void) {
+
+    apiConnector.requestGET("items/\(productID)") { [weak self] isOK, response, errors in
+      if isOK {
+        let parsedProduct = ProductModel()
+        parsedProduct.update(with: response)
+        onSuccess(parsedProduct)
+      } else {
+        print("\(type(of: self)): product load failed. Occured errors = \(errors)")
         let errorText = errors[0].description
         onFailure(errorText)
       }

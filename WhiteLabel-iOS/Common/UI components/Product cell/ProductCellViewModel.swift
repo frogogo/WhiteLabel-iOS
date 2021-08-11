@@ -1,5 +1,5 @@
 //
-//  ProductViewModel.swift
+//  ProductCellViewModel.swift
 //  WhiteLabel-iOS
 //
 //  Created by megaorega on 09.07.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProductViewModel: BaseViewModel {
+class ProductCellViewModel: BaseViewModel {
   // MARK: - Properties
   var needToDisplayRightSlot: Bool {
     return products.count > 1

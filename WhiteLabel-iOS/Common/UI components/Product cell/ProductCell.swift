@@ -8,9 +8,15 @@
 import UIKit
 import Kingfisher
 
+protocol ProductCellDelegate: AnyObject {
+  func productCell(_ cell: ProductCell, didSelectSlotWithIndex slotIndex: Int)
+}
+
 class ProductCell: UITableViewCell {
   // MARK: - Properties
-  var viewModel: ProductViewModel? {
+  weak var delegate: ProductCellDelegate?
+
+  var viewModel: ProductCellViewModel? {
     didSet {
       updateDisplayedInfo()
     }
@@ -58,5 +64,20 @@ class ProductCell: UITableViewCell {
     slotToUpdate.specsLabel.text = viewModel.productSpecs(forSlot: slotIndex)
     slotToUpdate.priceLabel.text = viewModel.productPrice(forSlot: slotIndex)
     slotToUpdate.discountedPriceLabel.text = viewModel.productDiscountedPrice(forSlot: slotIndex)
+    slotToUpdate.delegate = self
+  }
+}
+
+// MARK: - Product cell slot delegate methods
+extension ProductCell: ProductCellSlotDelegate {
+  func productCellSlotDidTap(_ slot: ProductCellSlot) {
+    switch slot {
+    case leftSlot:
+      delegate?.productCell(self, didSelectSlotWithIndex: 0)
+    case rightSlot:
+      delegate?.productCell(self, didSelectSlotWithIndex: 1)
+    default:
+      break
+    }
   }
 }

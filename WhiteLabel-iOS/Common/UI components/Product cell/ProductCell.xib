@@ -66,11 +66,19 @@
                                     <constraint firstAttribute="height" constant="1" id="pnm-91-gZ3"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-ue-Fcb" userLabel="tapArea">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="282"/>
+                                <connections>
+                                    <action selector="tapHandler" destination="4Ka-wh-CHX" eventType="touchUpInside" id="whd-TR-a60"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZAe-Fg-ieP" firstAttribute="bottom" secondItem="4Ka-wh-CHX" secondAttribute="bottom" constant="-12" id="0vp-cH-vsu"/>
                             <constraint firstItem="yEB-wS-Uw4" firstAttribute="leading" secondItem="4Ka-wh-CHX" secondAttribute="leading" constant="12" id="0x2-Zw-uNH"/>
+                            <constraint firstItem="CYC-ue-Fcb" firstAttribute="bottom" secondItem="4Ka-wh-CHX" secondAttribute="bottom" id="1YQ-he-7Uv"/>
+                            <constraint firstItem="CYC-ue-Fcb" firstAttribute="trailing" secondItem="4Ka-wh-CHX" secondAttribute="trailing" id="8KA-b6-zVu"/>
                             <constraint firstItem="yEB-wS-Uw4" firstAttribute="trailing" secondItem="4Ka-wh-CHX" secondAttribute="trailing" constant="-12" id="8t7-66-nZr"/>
                             <constraint firstItem="ZAe-Fg-ieP" firstAttribute="top" secondItem="sxD-wO-jOC" secondAttribute="bottom" constant="12" id="Lwi-6y-oFR"/>
                             <constraint firstItem="yI6-tn-WrR" firstAttribute="leading" secondItem="ZAe-Fg-ieP" secondAttribute="trailing" constant="8" id="Mmd-P0-UWU"/>
@@ -82,8 +90,10 @@
                             <constraint firstItem="8PL-wc-b45" firstAttribute="trailing" secondItem="yI6-tn-WrR" secondAttribute="trailing" constant="2" id="idJ-5p-dwd"/>
                             <constraint firstItem="8PL-wc-b45" firstAttribute="leading" secondItem="yI6-tn-WrR" secondAttribute="leading" constant="-2" id="jOw-WV-ECg"/>
                             <constraint firstItem="sxD-wO-jOC" firstAttribute="top" secondItem="yEB-wS-Uw4" secondAttribute="bottom" constant="12" id="kg4-55-861"/>
+                            <constraint firstItem="CYC-ue-Fcb" firstAttribute="top" secondItem="4Ka-wh-CHX" secondAttribute="top" id="p8w-Wk-UQU"/>
                             <constraint firstItem="ZAe-Fg-ieP" firstAttribute="leading" secondItem="4Ka-wh-CHX" secondAttribute="leading" constant="12" id="rZ7-w8-acK"/>
                             <constraint firstItem="ZAe-Fg-ieP" firstAttribute="bottom" secondItem="yI6-tn-WrR" secondAttribute="bottom" id="srd-HK-Cb3"/>
+                            <constraint firstItem="CYC-ue-Fcb" firstAttribute="leading" secondItem="4Ka-wh-CHX" secondAttribute="leading" id="x8d-jV-uGM"/>
                             <constraint firstItem="ewL-Pm-XwT" firstAttribute="top" secondItem="4Ka-wh-CHX" secondAttribute="top" constant="4" id="xQx-bT-uRf"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -139,12 +149,20 @@
                                     <constraint firstAttribute="height" constant="1" id="vOg-io-Nxy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPy-Py-YgZ" userLabel="tapArea">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="282"/>
+                                <connections>
+                                    <action selector="tapHandler" destination="2BS-he-osb" eventType="touchUpInside" id="Ylf-xU-qh4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GEI-Ff-oJZ" firstAttribute="trailing" secondItem="2BS-he-osb" secondAttribute="trailing" constant="-12" id="1ee-eK-RBl"/>
+                            <constraint firstItem="YPy-Py-YgZ" firstAttribute="leading" secondItem="2BS-he-osb" secondAttribute="leading" id="9oc-Gt-JaY"/>
                             <constraint firstItem="ddG-gT-uFh" firstAttribute="top" secondItem="GEI-Ff-oJZ" secondAttribute="bottom" constant="12" id="Dzi-o3-XFy"/>
                             <constraint firstItem="GEI-Ff-oJZ" firstAttribute="top" secondItem="2BS-he-osb" secondAttribute="top" constant="4" id="GfX-ub-IgW"/>
+                            <constraint firstItem="YPy-Py-YgZ" firstAttribute="trailing" secondItem="2BS-he-osb" secondAttribute="trailing" id="HPz-jM-A6A"/>
                             <constraint firstItem="ddG-gT-uFh" firstAttribute="leading" secondItem="2BS-he-osb" secondAttribute="leading" constant="12" id="IDT-wy-Jmu"/>
                             <constraint firstItem="Wdb-XH-olS" firstAttribute="leading" secondItem="AHq-Ff-Xzu" secondAttribute="leading" constant="-2" id="Nsm-ae-Gbz"/>
                             <constraint firstItem="sH1-bg-Q6U" firstAttribute="top" secondItem="Vgs-zT-m8j" secondAttribute="bottom" constant="12" id="SLm-Dg-sXF"/>
@@ -156,6 +174,8 @@
                             <constraint firstItem="Vgs-zT-m8j" firstAttribute="leading" secondItem="2BS-he-osb" secondAttribute="leading" constant="12" id="jKM-Kr-6Fe"/>
                             <constraint firstItem="Vgs-zT-m8j" firstAttribute="top" secondItem="ddG-gT-uFh" secondAttribute="bottom" constant="12" id="jiU-pI-TnJ"/>
                             <constraint firstItem="sH1-bg-Q6U" firstAttribute="leading" secondItem="2BS-he-osb" secondAttribute="leading" constant="12" id="oNF-89-3BM"/>
+                            <constraint firstItem="YPy-Py-YgZ" firstAttribute="top" secondItem="2BS-he-osb" secondAttribute="top" id="p3x-FN-XgU"/>
+                            <constraint firstItem="YPy-Py-YgZ" firstAttribute="bottom" secondItem="2BS-he-osb" secondAttribute="bottom" id="rjQ-m6-Yhb"/>
                             <constraint firstItem="ddG-gT-uFh" firstAttribute="trailing" secondItem="2BS-he-osb" secondAttribute="trailing" constant="-12" id="sfc-wc-67i"/>
                             <constraint firstItem="Wdb-XH-olS" firstAttribute="trailing" secondItem="AHq-Ff-Xzu" secondAttribute="trailing" constant="2" id="wFj-4m-WHy"/>
                         </constraints>
