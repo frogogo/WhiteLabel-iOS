@@ -137,60 +137,8 @@
                                             <outlet property="targetValueLabel" destination="pbA-VZ-94I" id="xy2-jS-aHs"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeScreenSeeProductListCell" id="uUe-2y-QRd" userLabel="HomeScreenSeeProductsListCell" customClass="HomeScreenSeeProductListCell" customModule="Generic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136.5" width="414" height="104"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uUe-2y-QRd" id="7CD-0S-2Cy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osv-aH-R2O" userLabel="container">
-                                                    <rect key="frame" x="16" y="16" width="382" height="72"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="iconSeeAllProducts" translatesAutoresizingMaskIntoConstraints="NO" id="jFS-MM-v3F" userLabel="icon">
-                                                            <rect key="frame" x="20" y="20" width="32" height="32"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Товары участвующие в акции" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQa-nQ-5Dz" userLabel="titleLabel">
-                                                            <rect key="frame" x="70" y="27.5" width="262" height="17"/>
-                                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="iconDisclosureMarkDark" translatesAutoresizingMaskIntoConstraints="NO" id="z6u-lh-ioP" userLabel="mark">
-                                                            <rect key="frame" x="348" y="29" width="14" height="14"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="leading" secondItem="osv-aH-R2O" secondAttribute="leading" constant="20" id="3qt-Xy-eyA"/>
-                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="centerY" secondItem="NQa-nQ-5Dz" secondAttribute="centerY" id="5xf-C8-Zwl"/>
-                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="leading" secondItem="NQa-nQ-5Dz" secondAttribute="trailing" constant="16" id="Eiv-Kj-8xI"/>
-                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="trailing" secondItem="osv-aH-R2O" secondAttribute="trailing" constant="-20" id="JUy-fb-1ZK"/>
-                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="top" secondItem="osv-aH-R2O" secondAttribute="top" constant="20" id="Zwk-ao-TJm"/>
-                                                        <constraint firstItem="NQa-nQ-5Dz" firstAttribute="leading" secondItem="jFS-MM-v3F" secondAttribute="trailing" constant="18" id="l5F-Sf-cLB"/>
-                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="bottom" secondItem="osv-aH-R2O" secondAttribute="bottom" constant="-20" id="vBY-Th-jBJ"/>
-                                                        <constraint firstItem="NQa-nQ-5Dz" firstAttribute="centerY" secondItem="jFS-MM-v3F" secondAttribute="centerY" id="zA8-w0-48b"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="osv-aH-R2O" firstAttribute="leading" secondItem="7CD-0S-2Cy" secondAttribute="leading" constant="16" id="6En-5z-4uf"/>
-                                                <constraint firstAttribute="trailing" secondItem="osv-aH-R2O" secondAttribute="trailing" constant="16" id="IF0-8R-g44"/>
-                                                <constraint firstAttribute="bottom" secondItem="osv-aH-R2O" secondAttribute="bottom" constant="16" id="NCj-HU-mIs"/>
-                                                <constraint firstItem="osv-aH-R2O" firstAttribute="top" secondItem="7CD-0S-2Cy" secondAttribute="top" constant="16" id="ssf-EL-DJV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="container" destination="osv-aH-R2O" id="t3m-K7-cyF"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeScreenCouponCell" rowHeight="115" id="Tz2-Wq-H0j" customClass="HomeScreenCouponCell" customModule="Generic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240.5" width="414" height="115"/>
+                                        <rect key="frame" x="0.0" y="136.5" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tz2-Wq-H0j" id="IUY-l9-klc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
@@ -255,6 +203,58 @@
                                             <outlet property="numberLabel" destination="QK4-F4-6wB" id="1rF-yV-4S4"/>
                                             <outlet property="picture" destination="LZi-lI-Gc9" id="8T4-6O-86F"/>
                                             <outlet property="titleLabel" destination="5ep-LA-aHw" id="PJs-Ud-pnb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeScreenSeeReceiptListButtonCell" id="uUe-2y-QRd" userLabel="HomeScreenSeeReceiptListButtonCell" customClass="HomeScreenSeeReceiptListButtonCell" customModule="Generic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="251.5" width="414" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uUe-2y-QRd" id="7CD-0S-2Cy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osv-aH-R2O" userLabel="container">
+                                                    <rect key="frame" x="16" y="16" width="382" height="72"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="iconSeeReceiptList" translatesAutoresizingMaskIntoConstraints="NO" id="jFS-MM-v3F" userLabel="icon">
+                                                            <rect key="frame" x="20" y="20" width="32" height="32"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои чеки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQa-nQ-5Dz" userLabel="titleLabel">
+                                                            <rect key="frame" x="70" y="27.5" width="262" height="17"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="iconDisclosureMarkDark" translatesAutoresizingMaskIntoConstraints="NO" id="z6u-lh-ioP" userLabel="mark">
+                                                            <rect key="frame" x="348" y="29" width="14" height="14"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="leading" secondItem="osv-aH-R2O" secondAttribute="leading" constant="20" id="3qt-Xy-eyA"/>
+                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="centerY" secondItem="NQa-nQ-5Dz" secondAttribute="centerY" id="5xf-C8-Zwl"/>
+                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="leading" secondItem="NQa-nQ-5Dz" secondAttribute="trailing" constant="16" id="Eiv-Kj-8xI"/>
+                                                        <constraint firstItem="z6u-lh-ioP" firstAttribute="trailing" secondItem="osv-aH-R2O" secondAttribute="trailing" constant="-20" id="JUy-fb-1ZK"/>
+                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="top" secondItem="osv-aH-R2O" secondAttribute="top" constant="20" id="Zwk-ao-TJm"/>
+                                                        <constraint firstItem="NQa-nQ-5Dz" firstAttribute="leading" secondItem="jFS-MM-v3F" secondAttribute="trailing" constant="18" id="l5F-Sf-cLB"/>
+                                                        <constraint firstItem="jFS-MM-v3F" firstAttribute="bottom" secondItem="osv-aH-R2O" secondAttribute="bottom" constant="-20" id="vBY-Th-jBJ"/>
+                                                        <constraint firstItem="NQa-nQ-5Dz" firstAttribute="centerY" secondItem="jFS-MM-v3F" secondAttribute="centerY" id="zA8-w0-48b"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="osv-aH-R2O" firstAttribute="leading" secondItem="7CD-0S-2Cy" secondAttribute="leading" constant="16" id="6En-5z-4uf"/>
+                                                <constraint firstAttribute="trailing" secondItem="osv-aH-R2O" secondAttribute="trailing" constant="16" id="IF0-8R-g44"/>
+                                                <constraint firstAttribute="bottom" secondItem="osv-aH-R2O" secondAttribute="bottom" constant="16" id="NCj-HU-mIs"/>
+                                                <constraint firstItem="osv-aH-R2O" firstAttribute="top" secondItem="7CD-0S-2Cy" secondAttribute="top" constant="16" id="ssf-EL-DJV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="container" destination="osv-aH-R2O" id="t3m-K7-cyF"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeScreenReceiptCell" rowHeight="68" id="zjc-J4-J2O" customClass="HomeScreenReceiptCell" customModule="Generic" customModuleProvider="target">
@@ -360,23 +360,11 @@
                         <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
-                        <segue destination="DoS-qF-93B" kind="showDetail" identifier="HomeScreenToReceiptScreenSegue" id="Z2k-My-fpQ"/>
-                        <segue destination="Rdx-EI-gko" kind="show" identifier="HomeScreenToProductListScreenSegue" id="3Cm-dd-tWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="240.57971014492756" y="433.92857142857139"/>
-        </scene>
-        <!--ProductList-->
-        <scene sceneID="4Aw-FI-W2H">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ProductList" id="Rdx-EI-gko" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vzv-oY-dHc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9I5-yN-8g1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1204" y="434"/>
         </scene>
         <!--Coupon-->
         <scene sceneID="ScM-za-CA8">
@@ -387,14 +375,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfB-V8-LjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="951"/>
-        </scene>
-        <!--Receipt-->
-        <scene sceneID="bLL-9F-3MQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Receipt" id="DoS-qF-93B" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vWD-LW-4hS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="454" y="951"/>
         </scene>
         <!--Home Empty Screen Controller-->
         <scene sceneID="ska-DU-wGw">
@@ -549,8 +529,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UKG-2k-hxj"/>
-        <segue reference="D8K-nu-gbR"/>
+        <segue reference="MRb-6F-9He"/>
+        <segue reference="uwz-wV-5O7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackDisabled" width="19.5" height="19.5"/>
@@ -558,7 +538,7 @@
         <image name="iconDisclosureMarkDark" width="14" height="14"/>
         <image name="iconDisclosureMarkGray" width="24" height="24"/>
         <image name="iconScanQRCodeWhite" width="24" height="24"/>
-        <image name="iconSeeAllProducts" width="32" height="32"/>
+        <image name="iconSeeReceiptList" width="32" height="32"/>
         <image name="instructionStepNumberCircle" width="22" height="22"/>
         <namedColor name="Dark700">
             <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

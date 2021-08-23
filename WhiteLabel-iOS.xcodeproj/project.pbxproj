@@ -167,8 +167,8 @@
 		67FDD1272696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */; };
 		67FDD1292696DD7D00420DE3 /* ProductListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */; };
 		67FDD12A2696DD7D00420DE3 /* ProductListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */; };
-		67FDD12C269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */; };
-		67FDD12D269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */; };
+		67FDD12C269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */; };
+		67FDD12D269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */; };
 		67FDD1362698028500420DE3 /* ProductListHintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1352698028500420DE3 /* ProductListHintCell.swift */; };
 		67FDD1372698028500420DE3 /* ProductListHintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1352698028500420DE3 /* ProductListHintCell.swift */; };
 		67FDD13A2698032D00420DE3 /* PromotionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1392698032D00420DE3 /* PromotionItemCell.swift */; };
@@ -291,7 +291,7 @@
 		67FDD1222696DD4D00420DE3 /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
 		67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreenViewModel.swift; sourceTree = "<group>"; };
 		67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreenController.swift; sourceTree = "<group>"; };
-		67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenSeeProductListCell.swift; sourceTree = "<group>"; };
+		67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenSeeReceiptListButtonCell.swift; sourceTree = "<group>"; };
 		67FDD1352698028500420DE3 /* ProductListHintCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListHintCell.swift; sourceTree = "<group>"; };
 		67FDD1392698032D00420DE3 /* PromotionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionItemCell.swift; sourceTree = "<group>"; };
 		67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionItemCell.xib; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */,
-				67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */,
+				67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */,
 				67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */,
 				67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */,
 				67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */,
@@ -1069,7 +1069,7 @@
 				67243EF2264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
 				67FDD1262696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				67F14B3A2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
-				67FDD12C269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */,
+				67FDD12C269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
 				67243EFB264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
 				675634EA262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
@@ -1149,7 +1149,7 @@
 				67243EF3264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
 				67FDD1272696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				675634EB262E3B4B009C4CAE /* Box.swift in Sources */,
-				67FDD12D269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */,
+				67FDD12D269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
 				67243EFC264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
 				67F14B45263195F500FF36E3 /* APIConnector.swift in Sources */,
 			);
