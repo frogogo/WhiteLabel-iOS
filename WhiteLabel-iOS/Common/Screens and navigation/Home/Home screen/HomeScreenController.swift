@@ -24,7 +24,6 @@ class HomeScreenController: BaseViewController {
 
   private var couponSectionHeader: SectionHeader?
   private var selectedCouponIndex: Int?
-  private var selectedReceiptIndex: Int?
 
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -47,10 +46,11 @@ class HomeScreenController: BaseViewController {
       scannerVC.delegate = self
 
     } else if segue.identifier == "HomeScreenToReceiptScreenSegue" {
-      guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
-      guard selectedReceiptIndex != nil else { return }
-      let receiptToShow = viewModel.receipt(forIndex: selectedReceiptIndex!)
-      receiptVC.viewModel.setReceiptModel(receiptToShow)
+      // TODO: этот код нужно переместить в контроллер экрана со списком чеков
+      //guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
+      //guard selectedReceiptIndex != nil else { return }
+      //let receiptToShow = viewModel.receipt(forIndex: selectedReceiptIndex!)
+      //receiptVC.viewModel.setReceiptModel(receiptToShow)
     }
   }
 
