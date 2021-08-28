@@ -86,13 +86,13 @@
                                                     <rect key="frame" x="16" y="36" width="382" height="68"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-DG-1od" userLabel="currentValueLabel">
-                                                            <rect key="frame" x="16" y="8" width="19.5" height="38"/>
+                                                            <rect key="frame" x="16" y="8" width="22.5" height="38"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-VZ-94I" userLabel="targetValueLabel">
-                                                            <rect key="frame" x="323" y="8" width="43" height="17"/>
+                                                            <rect key="frame" x="316.5" y="8" width="49.5" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
@@ -155,7 +155,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Купон №9000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-F4-6wB" userLabel="numberLabel">
-                                                            <rect key="frame" x="100" y="8" width="77" height="14"/>
+                                                            <rect key="frame" x="100" y="8" width="82" height="14"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
@@ -268,7 +268,7 @@
                                                     <rect key="frame" x="16" y="4" width="382" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0li-0B-XvN" userLabel="timeLabel">
-                                                            <rect key="frame" x="16" y="27" width="86.5" height="25"/>
+                                                            <rect key="frame" x="16" y="27" width="88.5" height="25"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-bx-26h" userLabel="sumLabel">
-                                                            <rect key="frame" x="16" y="8" width="22.5" height="19"/>
+                                                            <rect key="frame" x="16" y="8" width="25.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
@@ -360,11 +360,22 @@
                         <segue destination="iNF-Df-4r4" kind="show" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
+                        <segue destination="Piu-uk-zgO" kind="show" identifier="HomeScreenToReceiptListScreenSegue" id="B65-3o-Knl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="240.57971014492756" y="433.92857142857139"/>
+        </scene>
+        <!--ReceiptList-->
+        <scene sceneID="dHK-qM-ma6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReceiptList" id="Piu-uk-zgO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hkw-QF-b5F"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuF-vy-Osr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="951"/>
         </scene>
         <!--Coupon-->
         <scene sceneID="ScM-za-CA8">
@@ -550,7 +561,7 @@
             <color red="0.95686274509803926" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="1" green="0.66274509803921566" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

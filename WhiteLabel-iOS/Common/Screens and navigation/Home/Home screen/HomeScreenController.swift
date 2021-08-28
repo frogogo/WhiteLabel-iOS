@@ -151,9 +151,7 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
 
     switch reuseID {
     case HomeScreenSeeReceiptListButtonCell.reuseID:
-      // TODO: надо вызвать сегвей, который откроет экран с чекамин
-      //performSegue(withIdentifier: "HomeScreenToReceiptListScreenSegue", sender: nil)
-      print("Надо открыть экран \"Мои чеки\"")
+      performSegue(withIdentifier: "HomeScreenToReceiptListScreenSegue", sender: nil)
     case HomeScreenCouponCell.reuseID:
       selectedCouponIndex = indexPath.row
       performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
