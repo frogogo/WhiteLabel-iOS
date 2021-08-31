@@ -1,5 +1,5 @@
 //
-//  HomeScreenReceiptCell.swift
+//  ReceiptListReceiptCell.swift
 //  WhiteLabel-iOS
 //
 //  Created by megaorega on 14.05.2021.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class HomeScreenReceiptCell: UITableViewCell {
+class ReceiptListReceiptCell: UITableViewCell {
   // MARK: - Properties
-  var viewModel: HomeScreenReceiptViewModel? {
+  var viewModel: ReceiptListReceiptViewModel? {
     didSet {
       addBindings()
     }

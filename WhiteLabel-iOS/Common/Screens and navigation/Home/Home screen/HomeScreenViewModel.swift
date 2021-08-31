@@ -36,7 +36,7 @@ class HomeScreenViewModel: BaseViewModel {
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
-  private var receiptViewModels: [HomeScreenReceiptViewModel] = []
+  private var receiptViewModels: [ReceiptListReceiptViewModel] = []
   private var receipts: [ReceiptModel] = []
 
   // MARK: - Overridden methods
@@ -63,7 +63,7 @@ class HomeScreenViewModel: BaseViewModel {
     return couponViewModels[index]
   }
 
-  func receiptViewModel(forIndex index: Int) -> HomeScreenReceiptViewModel {
+  func receiptViewModel(forIndex index: Int) -> ReceiptListReceiptViewModel {
     return receiptViewModels[index]
   }
 
@@ -81,7 +81,7 @@ class HomeScreenViewModel: BaseViewModel {
       if receiptModel.state == .processing {
         receiptInProcess.value = true
       }
-      receiptViewModels.append(HomeScreenReceiptViewModel(withModel: receiptModel))
+      receiptViewModels.append(ReceiptListReceiptViewModel(withModel: receiptModel))
     }
   }
 

@@ -59,14 +59,14 @@
 		67243EED264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */; };
 		67243EEF264E4F4200139AC6 /* HomeScreenCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */; };
 		67243EF0264E4F4200139AC6 /* HomeScreenCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */; };
-		67243EF2264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */; };
-		67243EF3264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */; };
+		67243EF2264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */; };
+		67243EF3264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */; };
 		67243EF5264E52C600139AC6 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF4264E52C600139AC6 /* CurrencyHelper.swift */; };
 		67243EF6264E52C600139AC6 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF4264E52C600139AC6 /* CurrencyHelper.swift */; };
 		67243EF8264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */; };
 		67243EF9264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */; };
-		67243EFB264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */; };
-		67243EFC264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */; };
+		67243EFB264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */; };
+		67243EFC264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */; };
 		67243EFE264EEC2000139AC6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFD264EEC2000139AC6 /* SectionHeader.swift */; };
 		67243EFF264EEC2000139AC6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFD264EEC2000139AC6 /* SectionHeader.swift */; };
 		67243F01264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */; };
@@ -238,10 +238,10 @@
 		67243EE7264DFE1200139AC6 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponProgressCell.swift; sourceTree = "<group>"; };
 		67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponCell.swift; sourceTree = "<group>"; };
-		67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptCell.swift; sourceTree = "<group>"; };
+		67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListReceiptCell.swift; sourceTree = "<group>"; };
 		67243EF4264E52C600139AC6 /* CurrencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyHelper.swift; sourceTree = "<group>"; };
 		67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponViewModel.swift; sourceTree = "<group>"; };
-		67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptViewModel.swift; sourceTree = "<group>"; };
+		67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListReceiptViewModel.swift; sourceTree = "<group>"; };
 		67243EFD264EEC2000139AC6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptSectionHeader.swift; sourceTree = "<group>"; };
 		67243F03264EECDB00139AC6 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
@@ -466,8 +466,6 @@
 				67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */,
 				67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */,
 				67243F06264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib */,
-				67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */,
-				67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -573,12 +571,22 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		676D241F26DD17D4006E730B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */,
+				67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6772F2BE26DA923400904346 /* Receipt list */ = {
 			isa = PBXGroup;
 			children = (
 				6772F2BF26DA924B00904346 /* ReceiptList.storyboard */,
 				6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */,
 				6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */,
+				676D241F26DD17D4006E730B /* Cells */,
 			);
 			path = "Receipt list";
 			sourceTree = "<group>";
@@ -1090,11 +1098,11 @@
 				67FDD14D2698B9B800420DE3 /* ProductCellSlot.swift in Sources */,
 				67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
 				67243EE8264DFE1200139AC6 /* DateHelper.swift in Sources */,
-				67243EF2264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
+				67243EF2264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */,
 				67FDD1262696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				67F14B3A2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
 				67FDD12C269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
-				67243EFB264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
+				67243EFB264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */,
 				675634EA262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1172,11 +1180,11 @@
 				67FDD14E2698B9B800420DE3 /* ProductCellSlot.swift in Sources */,
 				67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
 				67243EE9264DFE1200139AC6 /* DateHelper.swift in Sources */,
-				67243EF3264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
+				67243EF3264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */,
 				67FDD1272696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				675634EB262E3B4B009C4CAE /* Box.swift in Sources */,
 				67FDD12D269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
-				67243EFC264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
+				67243EFC264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */,
 				67F14B45263195F500FF36E3 /* APIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

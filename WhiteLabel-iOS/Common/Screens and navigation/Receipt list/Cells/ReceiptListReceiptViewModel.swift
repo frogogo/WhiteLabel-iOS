@@ -1,5 +1,5 @@
 //
-//  HomeScreenReceiptViewModel.swift
+//  ReceiptListReceiptViewModel.swift
 //  WhiteLabel-iOS
 //
 //  Created by megaorega on 14.05.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeScreenReceiptViewModel: BaseViewModel {
+class ReceiptListReceiptViewModel: BaseViewModel {
   // MARK: - Properties
   let sumText = Box(value: "")
   let timeText = Box(value: "")
