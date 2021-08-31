@@ -26,49 +26,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-Wc-c59" userLabel="mainTable">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-Wc-c59" userLabel="mainTable">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiptListReceiptCell" rowHeight="68" id="0nW-Ig-EJ9" userLabel="ReceiptCell" customClass="ReceiptListReceiptCell" customModule="Generic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="68"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiptListReceiptCell" rowHeight="77" id="0nW-Ig-EJ9" userLabel="ReceiptCell" customClass="ReceiptListReceiptCell" customModule="Generic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0nW-Ig-EJ9" id="G8O-4c-DGh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-2h-a9a" userLabel="container">
-                                                    <rect key="frame" x="16" y="4" width="382" height="60"/>
+                                                    <rect key="frame" x="16" y="4" width="382" height="69"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z32-gH-mHh" userLabel="timeLabel">
-                                                            <rect key="frame" x="16" y="27" width="88.5" height="25"/>
-                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                                                            <color key="textColor" name="Dark700"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 888999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-pd-UXk" userLabel="numberLabel">
+                                                            <rect key="frame" x="16" y="8" width="81.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                            <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-O5-8zl" userLabel="statusIcon">
-                                                            <rect key="frame" x="344" y="19" width="22" height="22"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="d3S-O5-8zl" secondAttribute="height" multiplier="1:1" id="G4e-te-lmG"/>
-                                                                <constraint firstAttribute="width" constant="22" id="ZDs-FG-Vdc"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-aP-TQd" userLabel="sumLabel">
-                                                            <rect key="frame" x="16" y="8" width="25.5" height="19"/>
+                                                            <rect key="frame" x="340.5" y="8" width="25.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z32-gH-mHh" userLabel="timeLabel">
+                                                            <rect key="frame" x="16" y="44" width="103.5" height="17"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                            <color key="textColor" name="Dark700"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-fA-o11" userLabel="statusContainer">
+                                                            <rect key="frame" x="289.5" y="35" width="76.5" height="26"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Принят" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-xm-ZHP" userLabel="statusTitleLabel">
+                                                                    <rect key="frame" x="26" y="2" width="44.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconReceiptStatusApprovedSmall" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-O5-8zl" userLabel="statusIcon">
+                                                                    <rect key="frame" x="6" y="5" width="16" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="d3S-O5-8zl" secondAttribute="height" multiplier="1:1" id="G4e-te-lmG"/>
+                                                                        <constraint firstAttribute="width" constant="16" id="ZDs-FG-Vdc"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="StatusGreen"/>
+                                                            <constraints>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="leading" secondItem="d3S-O5-8zl" secondAttribute="trailing" constant="4" id="2ES-BH-CDB"/>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="centerY" secondItem="d3S-O5-8zl" secondAttribute="centerY" id="75H-lH-ljC"/>
+                                                                <constraint firstItem="d3S-O5-8zl" firstAttribute="leading" secondItem="wsY-fA-o11" secondAttribute="leading" constant="6" id="Mhk-pB-0cZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="4ps-xm-ZHP" secondAttribute="bottom" constant="2" id="Ql5-qt-m2j"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4ps-xm-ZHP" secondAttribute="trailing" constant="6" id="p0t-2F-8Xq"/>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="top" secondItem="wsY-fA-o11" secondAttribute="top" constant="2" id="t0G-8B-vlH"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="top" secondItem="Qg6-aP-TQd" secondAttribute="bottom" constant="8" id="4xF-1L-i5q"/>
+                                                        <constraint firstItem="z32-gH-mHh" firstAttribute="leading" secondItem="8Sh-pd-UXk" secondAttribute="leading" id="5bc-au-kqf"/>
                                                         <constraint firstItem="z32-gH-mHh" firstAttribute="bottom" secondItem="B4e-2h-a9a" secondAttribute="bottom" constant="-8" id="7a3-VB-DkK"/>
-                                                        <constraint firstItem="d3S-O5-8zl" firstAttribute="trailing" secondItem="B4e-2h-a9a" secondAttribute="trailing" constant="-16" id="YzX-7l-NAX"/>
-                                                        <constraint firstItem="z32-gH-mHh" firstAttribute="top" secondItem="Qg6-aP-TQd" secondAttribute="bottom" id="beU-zo-0vN"/>
-                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="top" secondItem="B4e-2h-a9a" secondAttribute="top" constant="8" id="jtE-IG-ACU"/>
-                                                        <constraint firstItem="d3S-O5-8zl" firstAttribute="centerY" secondItem="B4e-2h-a9a" secondAttribute="centerY" id="kIQ-L4-eyA"/>
-                                                        <constraint firstItem="z32-gH-mHh" firstAttribute="leading" secondItem="Qg6-aP-TQd" secondAttribute="leading" id="oXe-Dy-85v"/>
-                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="leading" secondItem="B4e-2h-a9a" secondAttribute="leading" constant="16" id="ykk-Xv-vHT"/>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="bottom" secondItem="B4e-2h-a9a" secondAttribute="bottom" constant="-8" id="ESN-K1-kEI"/>
+                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="centerY" secondItem="8Sh-pd-UXk" secondAttribute="centerY" id="QJw-Lm-tNK"/>
+                                                        <constraint firstItem="8Sh-pd-UXk" firstAttribute="leading" secondItem="B4e-2h-a9a" secondAttribute="leading" constant="16" id="gTB-TX-Fom"/>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="trailing" secondItem="B4e-2h-a9a" secondAttribute="trailing" constant="-16" id="hRN-dB-wqG"/>
+                                                        <constraint firstItem="8Sh-pd-UXk" firstAttribute="top" secondItem="B4e-2h-a9a" secondAttribute="top" constant="8" id="kE4-H3-rD2"/>
+                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="trailing" secondItem="B4e-2h-a9a" secondAttribute="trailing" constant="-16" id="qi8-Cm-1gJ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -86,7 +119,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="container" destination="B4e-2h-a9a" id="S6G-ed-zkN"/>
+                                            <outlet property="numberLabel" destination="8Sh-pd-UXk" id="XEg-WW-AwU"/>
+                                            <outlet property="statusContainer" destination="wsY-fA-o11" id="YAw-ff-JGG"/>
                                             <outlet property="statusIcon" destination="d3S-O5-8zl" id="ghP-ZZ-M6F"/>
+                                            <outlet property="statusTitleLabel" destination="4ps-xm-ZHP" id="611-5M-X8I"/>
                                             <outlet property="sumLabel" destination="Qg6-aP-TQd" id="V67-nF-4oS"/>
                                             <outlet property="timeLabel" destination="z32-gH-mHh" id="8Fn-ha-VYc"/>
                                         </connections>
@@ -117,11 +153,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconReceiptStatusApprovedSmall" width="16" height="16"/>
         <namedColor name="Dark700">
             <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Dark900">
             <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusGreen">
+            <color red="0.31764705882352939" green="0.74901960784313726" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
