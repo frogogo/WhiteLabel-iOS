@@ -44,13 +44,6 @@ class HomeScreenController: BaseViewController {
     } else if segue.identifier == "HomeScreenToQRScannerSegue" {
       guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
       scannerVC.delegate = self
-
-    } else if segue.identifier == "HomeScreenToReceiptScreenSegue" {
-      // TODO: этот код нужно переместить в контроллер экрана со списком чеков
-      //guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
-      //guard selectedReceiptIndex != nil else { return }
-      //let receiptToShow = viewModel.receipt(forIndex: selectedReceiptIndex!)
-      //receiptVC.viewModel.setReceiptModel(receiptToShow)
     }
   }
 

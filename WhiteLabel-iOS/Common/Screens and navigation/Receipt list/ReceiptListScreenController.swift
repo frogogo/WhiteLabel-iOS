@@ -12,11 +12,21 @@ class ReceiptListScreenController: BaseViewController {
   let viewModel = ReceiptListScreenViewModel()
 
   @IBOutlet private var mainTable: UITableView!
+  private var selectedReceiptIndex: Int?
 
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ReceiptListScreenToReceiptScreenSegue" {
+     guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
+     guard selectedReceiptIndex != nil else { return }
+     let receiptToShow = viewModel.receiptModel(forIndex: selectedReceiptIndex!)
+     receiptVC.viewModel.setReceiptModel(receiptToShow)
+   }
   }
 }
 
@@ -39,8 +49,8 @@ extension ReceiptListScreenController: UITableViewDataSource, UITableViewDelegat
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let selectedIndex = indexPath.row
-    print("Надо открыть чек с индексом \(selectedIndex)")
+    selectedReceiptIndex = indexPath.row
+    performSegue(withIdentifier: "ReceiptListScreenToReceiptScreenSegue", sender: nil)
   }
 }
 

@@ -145,11 +145,22 @@
                     </view>
                     <connections>
                         <outlet property="mainTable" destination="MRn-Wc-c59" id="kUo-hA-r5V"/>
+                        <segue destination="xNL-7P-67U" kind="presentation" identifier="ReceiptListScreenToReceiptScreenSegue" id="AIW-go-KKr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="69.642857142857139"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="cMl-Aq-v0g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receipt" id="xNL-7P-67U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O7w-lC-hFP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FpS-qT-oDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="70"/>
         </scene>
     </scenes>
     <resources>

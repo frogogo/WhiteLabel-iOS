@@ -20,6 +20,7 @@ class ReceiptListScreenViewModel: BaseViewModel {
   }
 
   private var receiptViewModels: [ReceiptListReceiptViewModel] = []
+  private var receipts: [ReceiptModel] = []
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -34,8 +35,13 @@ class ReceiptListScreenViewModel: BaseViewModel {
     return receiptViewModels[index]
   }
 
+  func receiptModel(forIndex index: Int) -> ReceiptModel {
+    return receipts[index]
+  }
+
   // MARK: - Private custom methods
   private func createReceiptViewModels(forModels receiptModels: [ReceiptModel]) {
+    receipts = receiptModels
     receiptViewModels.removeAll()
     for receiptModel in receiptModels {
       receiptViewModels.append(ReceiptListReceiptViewModel(withModel: receiptModel))
