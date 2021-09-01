@@ -86,13 +86,13 @@
                                                     <rect key="frame" x="16" y="36" width="382" height="68"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-DG-1od" userLabel="currentValueLabel">
-                                                            <rect key="frame" x="16" y="8" width="19.5" height="38"/>
+                                                            <rect key="frame" x="16" y="8" width="22.5" height="38"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000 ₽" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-VZ-94I" userLabel="targetValueLabel">
-                                                            <rect key="frame" x="323" y="8" width="43" height="17"/>
+                                                            <rect key="frame" x="316.5" y="8" width="49.5" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
@@ -155,7 +155,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Купон №9000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-F4-6wB" userLabel="numberLabel">
-                                                            <rect key="frame" x="100" y="8" width="77" height="14"/>
+                                                            <rect key="frame" x="100" y="8" width="82" height="14"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
@@ -268,7 +268,7 @@
                                                     <rect key="frame" x="16" y="4" width="382" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0li-0B-XvN" userLabel="timeLabel">
-                                                            <rect key="frame" x="16" y="27" width="86.5" height="25"/>
+                                                            <rect key="frame" x="16" y="27" width="88.5" height="25"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-bx-26h" userLabel="sumLabel">
-                                                            <rect key="frame" x="16" y="8" width="22.5" height="19"/>
+                                                            <rect key="frame" x="16" y="8" width="25.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
@@ -353,7 +353,9 @@
                             <constraint firstItem="GhT-bi-4Wx" firstAttribute="bottom" secondItem="D7m-CS-b75" secondAttribute="bottom" id="vMN-Po-aMh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6dZ-Ir-Hhp"/>
+                    <navigationItem key="navigationItem" title=" " id="6dZ-Ir-Hhp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mVl-Ty-BQ4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTable" destination="GhT-bi-4Wx" id="Apn-DI-qda"/>
                         <outlet property="scanCodeButton" destination="BRM-YC-Wzq" id="aYJ-CO-CYb"/>
