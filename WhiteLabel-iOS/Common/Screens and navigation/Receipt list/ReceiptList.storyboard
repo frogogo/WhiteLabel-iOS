@@ -41,28 +41,28 @@
                                                     <rect key="frame" x="16" y="6" width="382" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 888999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-pd-UXk" userLabel="numberLabel">
-                                                            <rect key="frame" x="16" y="8" width="81.5" height="19"/>
+                                                            <rect key="frame" x="16" y="8" width="74.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-aP-TQd" userLabel="sumLabel">
-                                                            <rect key="frame" x="340.5" y="8" width="25.5" height="19"/>
+                                                            <rect key="frame" x="343.5" y="8" width="22.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                                             <color key="textColor" name="Dark900"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z32-gH-mHh" userLabel="timeLabel">
-                                                            <rect key="frame" x="16" y="40" width="103.5" height="17"/>
+                                                            <rect key="frame" x="16" y="40" width="101" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-fA-o11" userLabel="statusContainer">
-                                                            <rect key="frame" x="289.5" y="35" width="76.5" height="22"/>
+                                                            <rect key="frame" x="292.5" y="35" width="73.5" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Принят" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-xm-ZHP" userLabel="statusTitleLabel">
-                                                                    <rect key="frame" x="26" y="2" width="44.5" height="18"/>
+                                                                    <rect key="frame" x="26" y="2" width="41.5" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>

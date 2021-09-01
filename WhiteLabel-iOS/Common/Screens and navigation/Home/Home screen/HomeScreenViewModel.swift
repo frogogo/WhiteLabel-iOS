@@ -28,16 +28,11 @@ class HomeScreenViewModel: BaseViewModel {
   var couponCount: Int {
     return couponViewModels.count
   }
-  var receiptCount: Int {
-    return receiptViewModels.count
-  }
   var receiptInProcess = Box(value: false)
   var dataRefreshInProcess = Box(value: false)
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
-  private var receiptViewModels: [ReceiptListReceiptViewModel] = []
-  private var receipts: [ReceiptModel] = []
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -48,7 +43,7 @@ class HomeScreenViewModel: BaseViewModel {
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
       self.couponProgress = HomeManager.shared.couponProgress
-      self.createReceiptViewModels(forModels: HomeManager.shared.receipts)
+      self.checkForProcessingReceipts(withModels: HomeManager.shared.receipts)
       self.createCouponViewModels(forModels: HomeManager.shared.coupons)
       self.dataRefreshInProcess.value = false
       self.delegate?.viewModelUpdated()
@@ -63,25 +58,14 @@ class HomeScreenViewModel: BaseViewModel {
     return couponViewModels[index]
   }
 
-  func receiptViewModel(forIndex index: Int) -> ReceiptListReceiptViewModel {
-    return receiptViewModels[index]
-  }
-
-  func receipt(forIndex index: Int) -> ReceiptModel {
-    return receipts[index]
-  }
-
   // MARK: - Private custom methods
-  private func createReceiptViewModels(forModels receiptModels: [ReceiptModel]) {
-    receipts = receiptModels
-    receiptViewModels.removeAll()
+  private func checkForProcessingReceipts(withModels receiptModels: [ReceiptModel]) {
     receiptInProcess.value = false
 
     for receiptModel in receiptModels {
       if receiptModel.state == .processing {
         receiptInProcess.value = true
       }
-      receiptViewModels.append(ReceiptListReceiptViewModel(withModel: receiptModel))
     }
   }
 
