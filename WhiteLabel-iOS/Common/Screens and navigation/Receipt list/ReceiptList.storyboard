@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Мои купоны-->
+        <!--Мои чеки-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Мои купоны" id="Y6W-OH-hqX" customClass="ReceiptListScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Мои чеки" id="Y6W-OH-hqX" customClass="ReceiptListScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-2h-a9a" userLabel="container">
-                                                    <rect key="frame" x="16" y="4" width="382" height="69"/>
+                                                    <rect key="frame" x="16" y="6" width="382" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 888999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-pd-UXk" userLabel="numberLabel">
                                                             <rect key="frame" x="16" y="8" width="81.5" height="19"/>
@@ -53,22 +53,22 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z32-gH-mHh" userLabel="timeLabel">
-                                                            <rect key="frame" x="16" y="44" width="103.5" height="17"/>
+                                                            <rect key="frame" x="16" y="40" width="103.5" height="17"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                             <color key="textColor" name="Dark700"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-fA-o11" userLabel="statusContainer">
-                                                            <rect key="frame" x="289.5" y="35" width="76.5" height="26"/>
+                                                            <rect key="frame" x="289.5" y="35" width="76.5" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Принят" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-xm-ZHP" userLabel="statusTitleLabel">
-                                                                    <rect key="frame" x="26" y="2" width="44.5" height="22"/>
+                                                                    <rect key="frame" x="26" y="2" width="44.5" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconReceiptStatusApprovedSmall" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-O5-8zl" userLabel="statusIcon">
-                                                                    <rect key="frame" x="6" y="5" width="16" height="16"/>
+                                                                    <rect key="frame" x="6" y="3" width="16" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="d3S-O5-8zl" secondAttribute="height" multiplier="1:1" id="G4e-te-lmG"/>
                                                                         <constraint firstAttribute="width" constant="16" id="ZDs-FG-Vdc"/>
@@ -111,9 +111,9 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="top" secondItem="G8O-4c-DGh" secondAttribute="top" constant="4" id="Are-hO-Ho2"/>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="top" secondItem="G8O-4c-DGh" secondAttribute="top" constant="6" id="Are-hO-Ho2"/>
                                                 <constraint firstItem="B4e-2h-a9a" firstAttribute="trailing" secondItem="G8O-4c-DGh" secondAttribute="trailing" constant="-16" id="DFP-yw-qt4"/>
-                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="bottom" secondItem="G8O-4c-DGh" secondAttribute="bottom" constant="-4" id="RSK-Tv-6wp"/>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="bottom" secondItem="G8O-4c-DGh" secondAttribute="bottom" constant="-6" id="RSK-Tv-6wp"/>
                                                 <constraint firstItem="B4e-2h-a9a" firstAttribute="leading" secondItem="G8O-4c-DGh" secondAttribute="leading" constant="16" id="qel-Ye-HRL"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -143,6 +143,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MRn-Wc-c59" secondAttribute="trailing" id="gTT-CL-0hD"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mainTable" destination="MRn-Wc-c59" id="kUo-hA-r5V"/>
                         <segue destination="xNL-7P-67U" kind="presentation" identifier="ReceiptListScreenToReceiptScreenSegue" id="AIW-go-KKr"/>

@@ -56,24 +56,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="MWd-yx-1Lu"/>
                     <connections>
-                        <segue destination="P8n-zY-7eE" kind="presentation" identifier="HomeInitialToHomeEmptyScreenSegue" animates="NO" modalPresentationStyle="fullScreen" id="fCH-eT-njd"/>
-                        <segue destination="7Gk-mn-wjS" kind="presentation" identifier="HomeInitialToHomeScreenSegue" animates="NO" modalPresentationStyle="fullScreen" id="m7H-r8-Nb6"/>
+                        <segue destination="P8n-zY-7eE" kind="show" identifier="HomeInitialToHomeEmptyScreenSegue" animates="NO" id="fCH-eT-njd"/>
+                        <segue destination="7Gk-mn-wjS" kind="show" identifier="HomeInitialToHomeScreenSegue" animates="NO" id="m7H-r8-Nb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-970" y="61"/>
         </scene>
-        <!--Home Screen Controller-->
+        <!-- -->
         <scene sceneID="s4d-3n-qoT">
             <objects>
-                <viewController id="7Gk-mn-wjS" customClass="HomeScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " id="7Gk-mn-wjS" customClass="HomeScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Zd-Fv-fzL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-bi-4Wx" userLabel="table">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeScreenCouponProgressCell" rowHeight="112" id="sIY-wZ-1fh" customClass="HomeScreenCouponProgressCell" customModule="Generic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="112"/>
@@ -396,7 +396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp0-4c-UmM" userLabel="table">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeEmptyScreenInstructionHeaderCell" rowHeight="98" id="Uvw-Qi-Yix" customClass="HomeEmptyScreenInstructionHeaderCell" customModule="Generic" customModuleProvider="target">
@@ -499,6 +499,7 @@
                             <constraint firstItem="Fp0-4c-UmM" firstAttribute="bottom" secondItem="Dcj-m6-Vga" secondAttribute="bottom" id="hoT-vH-H2t"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hpM-4M-Kup"/>
                     <connections>
                         <outlet property="mainTable" destination="Fp0-4c-UmM" id="LuQ-q0-viy"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeEmptyScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="D8K-nu-gbR"/>

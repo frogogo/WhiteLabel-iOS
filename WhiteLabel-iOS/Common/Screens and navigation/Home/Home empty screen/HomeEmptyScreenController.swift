@@ -28,6 +28,12 @@ class HomeEmptyScreenController: BaseViewController {
   private var productSectionHeader: SectionHeader?
   private var selectedProductIndex: Int?
 
+  // MARK: - Lifecycle methods
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+  }
+  
   // MARK: - Overridden methods
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()

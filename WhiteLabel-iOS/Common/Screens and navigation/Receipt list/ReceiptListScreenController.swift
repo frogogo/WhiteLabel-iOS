@@ -14,6 +14,12 @@ class ReceiptListScreenController: BaseViewController {
   @IBOutlet private var mainTable: UITableView!
   private var selectedReceiptIndex: Int?
 
+  // MARK: - Lifecycle methods
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = false
+  }
+
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
