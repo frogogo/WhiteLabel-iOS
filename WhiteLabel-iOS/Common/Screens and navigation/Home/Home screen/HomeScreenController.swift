@@ -20,6 +20,7 @@ class HomeScreenController: BaseViewController {
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeScreenCouponProgressCell.reuseID,
                                         HomeScreenCouponCell.reuseID,
+                                        HomeScreenScanWarningCell.reuseID,
                                         HomeScreenSeeReceiptListButtonCell.reuseID]
 
   private var couponSectionHeader: SectionHeader?
@@ -122,6 +123,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
       return viewModel.couponCount
+    case HomeScreenScanWarningCell.reuseID:
+      return viewModel.receiptInProcess.value ? 1 : 0
     default:
       return 1
     }
