@@ -38,6 +38,13 @@ class HomeScreenViewModel: BaseViewModel {
   private var couponViewModels: [HomeScreenCouponViewModel] = []
   private let productSectionViewModel = ProductListScreenViewModel()
 
+  // MARK: - Lifecycle methods
+  // MARK: - Lifecycle methods
+  override init() {
+    super.init()
+    productSectionViewModel.delegate = self
+  }
+  
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
@@ -93,5 +100,12 @@ class HomeScreenViewModel: BaseViewModel {
       couponViewModel.pictureURL.value = promotion.photo.thumbPhotoURL
       couponViewModels.append(couponViewModel)
     }
+  }
+}
+
+// MARK: - View model delegate methods
+extension HomeScreenViewModel: ProductListScreenViewModelDelegate {
+  func viewModelUpdated() {
+    delegate?.viewModelUpdated()
   }
 }
