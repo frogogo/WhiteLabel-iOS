@@ -28,11 +28,15 @@ class HomeScreenViewModel: BaseViewModel {
   var couponCount: Int {
     return couponViewModels.count
   }
+  var productCellCount: Int {
+    return productSectionViewModel.productCellCount
+  }
   var receiptInProcess = Box(value: false)
   var dataRefreshInProcess = Box(value: false)
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
+  private let productSectionViewModel = ProductListScreenViewModel()
 
   // MARK: - Overridden methods
   override func refreshData() {
@@ -51,11 +55,21 @@ class HomeScreenViewModel: BaseViewModel {
     } onFailure: { [weak self] error in
       self?.dataRefreshInProcess.value = false
     }
+
+    productSectionViewModel.refreshData()
   }
 
   // MARK: - Internal/public custom methods
   func couponViewModel(forIndex index: Int) -> HomeScreenCouponViewModel {
     return couponViewModels[index]
+  }
+
+  func productCellViewModel(forIndex index: Int) -> ProductCellViewModel {
+    return productSectionViewModel.productViewModel(forIndex: index)
+  }
+
+  func productID(forIndex index: Int) -> String? {
+    return productSectionViewModel.productID(forIndex: index)
   }
 
   // MARK: - Private custom methods

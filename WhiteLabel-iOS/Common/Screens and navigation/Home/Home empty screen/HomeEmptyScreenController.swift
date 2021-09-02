@@ -35,6 +35,11 @@ class HomeEmptyScreenController: BaseViewController {
   }
   
   // MARK: - Overridden methods
+  override func createViewModel() {
+    commonTypeViewModel = viewModel
+    viewModel.delegate = self
+  }
+
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()
     registerCells()
@@ -57,12 +62,6 @@ class HomeEmptyScreenController: BaseViewController {
     default:
       break
     }
-  }
-
-  // MARK: - Overridden methods
-  override func createViewModel() {
-    commonTypeViewModel = viewModel
-    viewModel.delegate = self
   }
 
   // MARK: - Private custom methods

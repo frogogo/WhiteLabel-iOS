@@ -415,6 +415,7 @@
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
                         <segue destination="Piu-uk-zgO" kind="show" identifier="HomeScreenToReceiptListScreenSegue" id="B65-3o-Knl"/>
+                        <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeScreenToProductSegue" id="KIy-er-6Lq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -573,7 +574,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Q1-XN-VPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-492"/>
+            <point key="canvasLocation" x="1810" y="-23"/>
         </scene>
         <!--QRCodeScanner-->
         <scene sceneID="2Al-Q4-Dsg">
@@ -597,6 +598,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="MRb-6F-9He"/>
         <segue reference="uwz-wV-5O7"/>
+        <segue reference="KIy-er-6Lq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackDisabled" width="19.5" height="19.5"/>
