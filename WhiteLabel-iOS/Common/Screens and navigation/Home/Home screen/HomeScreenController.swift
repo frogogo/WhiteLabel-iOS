@@ -30,12 +30,6 @@ class HomeScreenController: BaseViewController {
   private var selectedProductIndex: Int?
 
   // MARK: - Lifecycle methods
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
-    setupRefreshControl()
-  }
-
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.isNavigationBarHidden = true
@@ -49,8 +43,10 @@ class HomeScreenController: BaseViewController {
 
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()
+    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
     registerCells()
     setupProductSectionHeader()
+    setupRefreshControl()
   }
 
   override func addBindings() {

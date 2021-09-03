@@ -42,9 +42,9 @@ class HomeEmptyScreenController: BaseViewController {
 
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()
+    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
     registerCells()
     setupProductSectionHeader()
-    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
