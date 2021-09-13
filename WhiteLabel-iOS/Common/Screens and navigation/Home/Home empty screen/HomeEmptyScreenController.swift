@@ -28,12 +28,23 @@ class HomeEmptyScreenController: BaseViewController {
   private var productSectionHeader: SectionHeader?
   private var selectedProductIndex: Int?
 
+  // MARK: - Lifecycle methods
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+  }
+  
   // MARK: - Overridden methods
+  override func createViewModel() {
+    commonTypeViewModel = viewModel
+    viewModel.delegate = self
+  }
+
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()
+    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
     registerCells()
     setupProductSectionHeader()
-    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,12 +62,6 @@ class HomeEmptyScreenController: BaseViewController {
     default:
       break
     }
-  }
-
-  // MARK: - Overridden methods
-  override func createViewModel() {
-    commonTypeViewModel = viewModel
-    viewModel.delegate = self
   }
 
   // MARK: - Private custom methods

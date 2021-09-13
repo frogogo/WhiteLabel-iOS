@@ -15,6 +15,7 @@ class HomeInitialScreenController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.setNavigationBarHidden(true, animated: false)
+    navigationController?.navigationBar.tintColor = UIColor(named: "Dark900")
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

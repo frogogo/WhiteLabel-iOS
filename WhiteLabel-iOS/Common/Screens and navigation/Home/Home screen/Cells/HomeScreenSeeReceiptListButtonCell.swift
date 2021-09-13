@@ -1,5 +1,5 @@
 //
-//  HomeScreenSeeProductListCell.swift
+//  HomeScreenSeeReceiptListButtonCell.swift
 //  WhiteLabel-iOS
 //
 //  Created by megaorega on 08.07.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeScreenSeeProductListCell: UITableViewCell {
+class HomeScreenSeeReceiptListButtonCell: UITableViewCell {
   // MARK: - Properties
   @IBOutlet private var container:UIView!
   

@@ -1,5 +1,5 @@
 //
-//  HomeScreenReceiptCell.swift
+//  ReceiptListReceiptCell.swift
 //  WhiteLabel-iOS
 //
 //  Created by megaorega on 14.05.2021.
@@ -7,18 +7,21 @@
 
 import UIKit
 
-class HomeScreenReceiptCell: UITableViewCell {
+class ReceiptListReceiptCell: UITableViewCell {
   // MARK: - Properties
-  var viewModel: HomeScreenReceiptViewModel? {
+  var viewModel: ReceiptListReceiptViewModel? {
     didSet {
       addBindings()
     }
   }
 
   @IBOutlet private var container: UIView!
-  @IBOutlet private var sumLabel: UILabel!
+  @IBOutlet private var numberLabel: UILabel!
   @IBOutlet private var timeLabel: UILabel!
+  @IBOutlet private var sumLabel: UILabel!
+  @IBOutlet private var statusTitleLabel: UILabel!
   @IBOutlet private var statusIcon: UIImageView!
+  @IBOutlet private var statusContainer: UIView!
 
   // MARK: - Lifecycle methods
   override func awakeFromNib() {
@@ -31,6 +34,9 @@ class HomeScreenReceiptCell: UITableViewCell {
 
   // MARK: - Private custom methods
   private func addBindings() {
+    viewModel?.numberString.bind { [weak self] numberString in
+      self?.numberLabel.text = numberString
+    }
     viewModel?.sumText.bind { [weak self] sumTextString in
       self?.sumLabel.text = sumTextString
     }
@@ -39,6 +45,12 @@ class HomeScreenReceiptCell: UITableViewCell {
     }
     viewModel?.statusIconName.bind { [weak self] iconName in
       self?.statusIcon.image = UIImage(named: iconName)
+    }
+    viewModel?.statusTitleText.bind { [weak self] statusText in
+      self?.statusTitleLabel.text = statusText
+    }
+    viewModel?.statusColorName.bind { [weak self] colorNameString in
+      self?.statusContainer.backgroundColor = UIColor(named: colorNameString)
     }
   }
 }
