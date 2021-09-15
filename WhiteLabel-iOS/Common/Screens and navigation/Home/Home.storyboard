@@ -255,6 +255,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="container" destination="XCx-48-Ydo" id="eax-uC-iIX"/>
+                                            <outlet property="hintLabel" destination="GBK-HZ-eOO" id="wnf-GG-eAg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeScreenSeeReceiptListButtonCell" id="uUe-2y-QRd" userLabel="HomeScreenSeeReceiptListButtonCell" customClass="HomeScreenSeeReceiptListButtonCell" customModule="Generic" customModuleProvider="target">
@@ -307,6 +308,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="container" destination="osv-aH-R2O" id="t3m-K7-cyF"/>
+                                            <outlet property="titleLabel" destination="NQa-nQ-5Dz" id="usp-Nq-oZO"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeScreenReceiptCell" rowHeight="68" id="zjc-J4-J2O" customClass="HomeScreenReceiptCell" customModule="Generic" customModuleProvider="target">
@@ -376,7 +378,7 @@
                                     <outlet property="delegate" destination="7Gk-mn-wjS" id="YDA-9K-HMM"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-YC-Wzq" userLabel="scanCodeButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-YC-Wzq" userLabel="scanButton">
                                 <rect key="frame" x="16" y="778" width="382" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="nb8-pJ-flB"/>
@@ -475,6 +477,9 @@
                                                 <constraint firstItem="l4z-qO-9sA" firstAttribute="top" secondItem="fgB-pq-zCy" secondAttribute="top" constant="32" id="uGx-i7-Ndt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="l4z-qO-9sA" id="7VG-Sx-a1a"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeEmptyScreenInstructionStepCell" rowHeight="185" id="ZHx-r3-EAo" customClass="HomeEmptyScreenInstructionStepCell" customModule="Generic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="122.5" width="414" height="185"/>

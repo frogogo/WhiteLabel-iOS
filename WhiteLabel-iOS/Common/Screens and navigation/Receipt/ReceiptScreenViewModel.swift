@@ -42,21 +42,20 @@ class ReceiptScreenViewModel: BaseViewModel {
 
   // MARK: - Private custom methods
   private func statusInfo(forReceipt receiptModel: ReceiptModel) -> ReceiptStatusInfo {
-    // TODO: need localization for texts below
     switch receiptModel.state {
     case .approved:
       // TODO: need to add partner specific text for description below
-      return ReceiptStatusInfo(title: "Поздравляем, чек принят!",
-                               description: "Когда общая сумма чеков будет равна 3 300, вы получите купон на покупку электрического чайника Lion Sabatier International за 1 рубль",
+      return ReceiptStatusInfo(title: LocalizedString(forKey: "receipt_screen.status.approved.title"),
+                               description: LocalizedString(forKey: "receipt_screen.status.approved.description"),
                                iconName: "iconReceiptStatusApproved",
                                colorName: "StatusGreen")
     case .processing:
-      return ReceiptStatusInfo(title: "Ваш чек находится на проверке",
-                               description: "Обычно это занимает несколько минут, но очень редко на это уходит много времени.\nКогда ваш чек пройдет проверку, вы сможете отсканировать новый.",
+      return ReceiptStatusInfo(title: LocalizedString(forKey: "receipt_screen.status.processing.title"),
+                               description: LocalizedString(forKey: "receipt_screen.status.processing.description"),
                                iconName: "iconReceiptStatusProcessing",
                                colorName: "StatusOrange")
     case .rejected:
-      return ReceiptStatusInfo(title: "Ваш чек не прошел проверку!",
+      return ReceiptStatusInfo(title: LocalizedString(forKey: "receipt_screen.status.rejected.title"),
                                description: receiptModel.rejectReason,
                                iconName: "iconReceiptStatusRejected",
                                colorName: "StatusRed")

@@ -17,6 +17,9 @@ class PhoneEnterScreenViewModel: BaseViewModel {
   var enteredPhoneNumber = ""
   var retryDelayInSeconds = 0
 
+  let titleText = LocalizedString(forKey: "auth.phone_enter_screen.title")
+  let hintText = LocalizedString(forKey: "auth.phone_enter_screen.hint")
+  let retryButtonTitleText = LocalizedString(forKey: "auth.phone_enter_screen.retry_button.title")
   let phoneCode = Box(value: "")
   let showActivity = Box(value: false)
   let errorToShow: Box<String?> = Box(value: nil)
@@ -39,7 +42,7 @@ class PhoneEnterScreenViewModel: BaseViewModel {
     if enteredPhoneNumber != "" {
       sendPhoneNumberForCheck(enteredPhoneNumber)
     } else {
-      errorToShow.value = "Проверьте номер телефона."
+      errorToShow.value = LocalizedString(forKey: "auth.phone_enter_screen.error.incorrect_phone_number")
     }
   }
 
@@ -54,7 +57,7 @@ class PhoneEnterScreenViewModel: BaseViewModel {
       self?.delegate?.didSendEnteredPhone()
     } onFailure: { [weak self] (error) in
       self?.showActivity.value = false
-      self?.errorToShow.value = "Что-то пошло не так!"
+      self?.errorToShow.value = LocalizedString(forKey: "error.unknown")
     }
   }
 }

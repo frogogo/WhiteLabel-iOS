@@ -19,8 +19,10 @@ class QRCodeScannerController: BaseViewController {
 
   private let supportedCodesForScan: [AVMetadataObject.ObjectType] = [.qr]
 
+  @IBOutlet private var hintLabel: UILabel!
   @IBOutlet private var cameraPreviewContainer: UIView!
   @IBOutlet private var flashSwitchButton: UIButton!
+  @IBOutlet private var helpButton: UIButton!
 
   private var captureSession = AVCaptureSession()
   private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -55,6 +57,13 @@ class QRCodeScannerController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    hintLabel.text = viewModel.hintText
+    helpButton.setTitle(viewModel.helpButtonTitle, for: .normal)
   }
 
   // MARK: - Private custom methods

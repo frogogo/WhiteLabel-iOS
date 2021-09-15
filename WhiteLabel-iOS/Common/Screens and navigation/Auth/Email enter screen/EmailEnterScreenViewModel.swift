@@ -15,6 +15,9 @@ class EmailEnterScreenViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: EmailEnterScreenViewModelDelegate?
 
+  let hintText = LocalizedString(forKey: "auth.email_enter_screen.hint")
+  let emailEnterFieldPlaceholder = LocalizedString(forKey: "auth.email_enter_screen.email_enter_field.placeholder")
+  let continueButtonTitle = LocalizedString(forKey: "auth.email_enter_screen.сontinue_button.title")
   let greetings = Box(value: "")
   let errorToShow: Box<String?> = Box(value: nil)
 
@@ -23,12 +26,12 @@ class EmailEnterScreenViewModel: BaseViewModel {
   // MARK: - Internal/public custom methods
   func setEnteredName(_ enteredNameString: String) {
     enteredName = enteredNameString
-    greetings.value = "Отлично,\n\(enteredNameString)!"
+    greetings.value = LocalizedString(forKey: "auth.email_enter_screen.greetings") + "\n\(enteredNameString)!"
   }
 
   func setEnteredEmail(_ enteredEmailString: String) {
     guard isValidEmail(enteredEmailString) else {
-      errorToShow.value = "Такой email не подойдёт"
+      errorToShow.value = LocalizedString(forKey: "auth.email_enter_screen.error.incorrect_email")
       return
     }
 

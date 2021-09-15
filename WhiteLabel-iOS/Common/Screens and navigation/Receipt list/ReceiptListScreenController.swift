@@ -26,6 +26,11 @@ class ReceiptListScreenController: BaseViewController {
     viewModel.delegate = self
   }
 
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+    title = LocalizedString(forKey: "receipt_list_screen.title")
+  }
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ReceiptListScreenToReceiptScreenSegue" {
      guard let receiptVC = segue.destination as? ReceiptScreenController else { return }

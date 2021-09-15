@@ -15,6 +15,10 @@ class NameEnterScreenViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: NameEnterScreenViewModelDelegate?
 
+  let titleText = LocalizedString(forKey: "auth.name_enter_screen.title")
+  let hintText = LocalizedString(forKey: "auth.name_enter_screen.hint")
+  let nameEnterFieldPlaceholder = LocalizedString(forKey: "auth.name_enter_screen.name_enter_field.placeholder")
+  let continueButtonTitle = LocalizedString(forKey: "auth.name_enter_screen.сontinue_button.title")
   let errorToShow: Box<String?> = Box(value: nil)
 
   private (set) var enteredName = ""
@@ -25,8 +29,7 @@ class NameEnterScreenViewModel: BaseViewModel {
       enteredName = enteredNameString
       delegate?.didSendEnteredName()
     } else {
-      // TODO: need localization
-      errorToShow.value = "Имя не должно быть пустым и содержать пробелы"
+      errorToShow.value = LocalizedString(forKey: "auth.name_enter_screen.error.name_is_empty_or_contain_spaces")
     }
   }
 

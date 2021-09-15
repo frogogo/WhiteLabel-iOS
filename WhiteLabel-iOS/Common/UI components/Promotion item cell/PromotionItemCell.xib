@@ -109,6 +109,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="couponTagLabel" destination="zff-ye-AOe" id="g6A-JO-AlJ"/>
                 <outlet property="discountedPriceLabel" destination="qmh-lw-IXg" id="a5k-ii-hbu"/>
                 <outlet property="nameLabel" destination="VPv-yq-r57" id="f84-HA-25d"/>
                 <outlet property="picture" destination="xtI-Rg-iLh" id="l0q-vr-kXh"/>
@@ -126,10 +127,10 @@
             <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="1" green="0.66274509803921566" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="StatusRed">
-            <color red="1" green="0.41568627450980394" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.30588235294117649" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

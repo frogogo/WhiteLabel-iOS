@@ -32,6 +32,10 @@ class AuthCodeEnterScreenViewModel: BaseViewModel {
     }
   }
 
+  let titleText = LocalizedString(forKey: "auth.auth_code_enter_screen.title")
+  let hintText = LocalizedString(forKey: "auth.auth_code_enter_screen.hint")
+  let changePhoneNumberButtonTitleText = LocalizedString(forKey: "auth.auth_code_enter_screen.change_phone_number_button.title")
+  let requestNewCodeButtonTitleText = LocalizedString(forKey: "auth.auth_code_enter_screen.request_new_code_button.title")
   let phoneNumber = Box(value: "")
   let retryTimerText = Box(value: "")
   let errorToShow: Box<String?> = Box(value: nil)
@@ -68,7 +72,7 @@ class AuthCodeEnterScreenViewModel: BaseViewModel {
       self?.newAuthCodeRetryDelayInSeconds = retryDelayInSeconds
     } onFailure: { [weak self] (error) in
       self?.showActivity.value = false
-      self?.errorToShow.value = "Что-то пошло не так!"
+      self?.errorToShow.value = LocalizedString(forKey: "error.unknown")
     }
   }
 
@@ -96,6 +100,6 @@ class AuthCodeEnterScreenViewModel: BaseViewModel {
 
   private func updateRetryTimerText() {
     // TODO: add plural for seconds
-    retryTimerText.value = "Повторно запросить код можно через: \(newAuthCodeRetryDelayInSeconds)"
+    retryTimerText.value = LocalizedString(forKey: "auth.auth_code_enter_screen.retry_time_text") + " \(newAuthCodeRetryDelayInSeconds)"
   }
 }
