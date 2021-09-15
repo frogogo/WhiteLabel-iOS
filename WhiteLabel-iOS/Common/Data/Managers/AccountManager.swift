@@ -27,19 +27,16 @@ class AccountManager: BaseDataManager {
   private var authTokenCreationDate: Date?
 
   // MARK: - Internal/public custom methods
-  func tryAutoLogin(onSuccess: @escaping () -> Void,
-                    onFailure: @escaping () -> Void) {
+  func tryAutoLogin() {
     if let savedToken = savedAuthToken(), savedToken != "" {
       authTokenString = savedToken
-      onSuccess()
+      postNotification(withName: .autoLoginOK)
       return
     }
 
-    tryToRefreshAuthToken { (isRefreshedOK) in
+    tryToRefreshAuthToken { [weak self] (isRefreshedOK) in
       if isRefreshedOK {
-        onSuccess()
-      } else {
-        onFailure()
+        self?.postNotification(withName: .autoLoginOK)
       }
     }
   }

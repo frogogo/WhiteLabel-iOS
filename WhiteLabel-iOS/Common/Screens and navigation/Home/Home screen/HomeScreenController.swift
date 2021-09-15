@@ -13,7 +13,7 @@ class HomeScreenController: BaseViewController {
   let viewModel = HomeScreenViewModel()
 
   @IBOutlet private var mainTable: UITableView!
-  @IBOutlet private var scanCodeButton: UIButton!
+  @IBOutlet private var scanReceiptButton: UIButton!
 
   private let pullToRefreshControl = UIRefreshControl()
 
@@ -47,14 +47,14 @@ class HomeScreenController: BaseViewController {
     registerCells()
     setupProductSectionHeader()
     setupRefreshControl()
-    scanCodeButton.setTitle(LocalizedString(forKey: "home.home_screen.scan_button.title"), for: .normal)
+    scanReceiptButton.setTitle(LocalizedString(forKey: "home.home_screen.scan_button.title"), for: .normal)
   }
 
   override func addBindings() {
     super.addBindings()
 
     viewModel.receiptInProcess.bind { [weak self] receiptInProcess in
-      self?.scanCodeButton.isEnabled = !receiptInProcess
+      self?.scanReceiptButton.isEnabled = !receiptInProcess
     }
 
     viewModel.dataRefreshInProcess.bind { [weak self] dataRefreshInProcess in

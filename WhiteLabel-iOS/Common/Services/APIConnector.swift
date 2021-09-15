@@ -17,11 +17,6 @@ struct APIError {
   var description: String
 }
 
-private struct Host {
-  static let staging    = "https://sboom-staging.herokuapp.com"
-  static let production = "https://sboom.herokuapp.com"
-}
-
 protocol APIAuthenticator: AnyObject {
   var authToken: String? { get }
   func refreshAuthToken(_ onComplete: @escaping (Bool) -> Void)
@@ -32,7 +27,7 @@ protocol APIAuthenticator: AnyObject {
  */
 class APIConnector {
   // MARK: - Class properties
-  private static let host = Host.production
+  private static let host = Configuration.activeHost
   private static let route = "api"
   private static let baseURL = host + "/" + route
 
