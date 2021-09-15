@@ -8,5 +8,6 @@
 import UIKit
 
 class HomeEmptyScreenInstructionHeaderCell: UITableViewCell {
-
+  // MARK: - Properties
+  @IBOutlet var titleLabel: UILabel!
 }

@@ -47,6 +47,7 @@ class HomeScreenController: BaseViewController {
     registerCells()
     setupProductSectionHeader()
     setupRefreshControl()
+    scanCodeButton.setTitle(LocalizedString(forKey: "home.home_screen.scan_button.title"), for: .normal)
   }
 
   override func addBindings() {
@@ -105,7 +106,7 @@ class HomeScreenController: BaseViewController {
   private func setupProductSectionHeader() {
     let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
     productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
-    productSectionHeader?.titleLabel.text = "Товары участвующие в акции"
+    productSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_screen.product_section_header.title")
   }
 
   private func updateCouponProgressCell(_ cell: HomeScreenCouponProgressCell) {
@@ -118,7 +119,7 @@ class HomeScreenController: BaseViewController {
     if couponSectionHeader == nil {
       let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
       couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
-      couponSectionHeader?.titleLabel.text = "Купоны"
+      couponSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_screen.coupon_section_header.title")
     }
     return couponSectionHeader!
   }

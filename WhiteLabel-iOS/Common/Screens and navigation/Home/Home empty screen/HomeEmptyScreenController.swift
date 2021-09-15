@@ -76,7 +76,7 @@ class HomeEmptyScreenController: BaseViewController {
   private func setupProductSectionHeader() {
     let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
     productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
-    productSectionHeader?.titleLabel.text = "Товары участвующие в акции"
+    productSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_empty_screen.product_section_header.title")
   }
 
   private func updateInstructionStepCell(_ cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
@@ -120,6 +120,9 @@ extension HomeEmptyScreenController: UITableViewDataSource, UITableViewDelegate 
     case PromotionItemCell.reuseID:
       guard let itemCell = cell as? PromotionItemCell else { return cell }
       itemCell.viewModel = viewModel.promotionViewModel
+    case HomeEmptyScreenInstructionHeaderCell.reuseID:
+      guard let headerCell = cell as? HomeEmptyScreenInstructionHeaderCell else { return cell }
+      headerCell.titleLabel.text = LocalizedString(forKey: "home.home_empty_screen.instruction_section_header.title")
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
       updateInstructionStepCell(stepCell, forRow: indexPath.row)

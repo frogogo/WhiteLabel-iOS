@@ -13,6 +13,8 @@ class PhoneEnterScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = PhoneEnterScreenViewModel()
 
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var hintLabel: UILabel!
   @IBOutlet private var phoneCodeLabel: UILabel!
   @IBOutlet private var phoneField: UITextField!
   @IBOutlet private var phoneFieldListener: MaskedTextFieldDelegate!
@@ -20,6 +22,7 @@ class PhoneEnterScreenController: BaseViewController {
   @IBOutlet private var errorContainer: UIView!
   @IBOutlet private var errorContainerBottomConstraint: NSLayoutConstraint!
   @IBOutlet private var errorLabel: UILabel!
+  @IBOutlet private var retryButton: UIButton!
 
   private let errorContainerBottomGap: CGFloat = 24
 
@@ -49,6 +52,14 @@ class PhoneEnterScreenController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    titleLabel.text = viewModel.titleText
+    hintLabel.text = viewModel.hintText
+    retryButton.setTitle(viewModel.retryButtonTitleText, for: .normal)
   }
 
   override func addBindings() {

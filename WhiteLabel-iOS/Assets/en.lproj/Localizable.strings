@@ -1,0 +1,72 @@
+// Auth screens
+"auth.phone_enter_screen.title" = "Enter";
+"auth.phone_enter_screen.hint" = "Enter your phone number";
+"auth.phone_enter_screen.retry_button.title" = "Retry";
+"auth.phone_enter_screen.error.incorrect_phone_number" = "Check entered phone number.";
+
+"auth.auth_code_enter_screen.title" = "Type code";
+"auth.auth_code_enter_screen.hint" = "The code was sent to the number";
+"auth.auth_code_enter_screen.change_phone_number_button.title" = "Edit";
+"auth.auth_code_enter_screen.request_new_code_button.title" = "Send a new code";
+"auth.auth_code_enter_screen.retry_time_text" = "You can request code again after:";
+
+"auth.name_enter_screen.title" = "Let’s meet!";
+"auth.name_enter_screen.hint" = "What is your name?";
+"auth.name_enter_screen.name_enter_field.placeholder" = "Your name";
+"auth.name_enter_screen.сontinue_button.title" = "Сontinue";
+"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Name must not be empty or contain spaces";
+
+"auth.email_enter_screen.greetings" = "Fine,";
+"auth.email_enter_screen.hint" = "It remains to enter your email";
+"auth.email_enter_screen.email_enter_field.placeholder" = "Your email address";
+"auth.email_enter_screen.сontinue_button.title" = "Сontinue";
+"auth.email_enter_screen.error.incorrect_email" = "This email not correct";
+
+// Home screens
+"home.home_empty_screen.instruction_section_header.title" = "Remember 2 simple rules";
+"home.home_empty_screen.product_section_header.title" = "Promotional products";
+
+"home.home_screen.product_section_header.title" = "Promotional products";
+"home.home_screen.coupon_section_header.title" = "Coupons";
+"home.home_screen.coupon_cell.coupon_number" = "Coupon №";
+"home.home_screen.see_receipt_list_button.title" = "My receipts";
+"home.home_screen.scan_warning_cell.hint_text" = "When your receipt passes verification, you will be able to scan a new receipt";
+"home.home_screen.scan_button.title" = "Scan the receipt";
+
+// Coupon screen
+"coupon.coupon_detail_screen.coupon_number" = "Coupon №";
+"coupon.coupon_detail_screen.instruction_title" = "Instructions for receiving";
+"coupon.coupon_detail_screen.show_code_button.title" = "Show the code to the cashier";
+
+// Coupon barcode screen
+"coupon.coupon_barcode_screen.hint" = "Show this code to the cashier";
+
+// QR code scanner screen
+"qr_code_scanner_screen.hint" = "Point the camera at the QR code on the receipt";
+"qr_code_scanner_screen.help_button.title" = "Help";
+
+// Camera access alert
+"camera_access_alert.title" = "Camera access";
+"camera_access_alert.hint" = "To scan receipts, access to the camera is required";
+"camera_access_alert.ok_button.title" = "Allow";
+"camera_access_alert.deny_button.title" = "Deny";
+
+// Receipt list screen
+"receipt_list_screen.title" = "My receipts";
+"receipt_list_screen.receipt_cell.status.approved" = "Approved";
+"receipt_list_screen.receipt_cell.status.processing" = "Processing";
+"receipt_list_screen.receipt_cell.status.rejected" = "Rejected";
+"receipt_list_screen.receipt_cell.status.unknown" = "Unknown";
+
+// Receipt screen
+"receipt_screen.status.approved.title" = "Great, the receipt has been accepted!";
+"receipt_screen.status.approved.description" = "As soon as the total amount of receipts is equal to 3,300, you will receive a coupon for the purchase of an electric kettle Lion Sabatier International for 1 ruble";
+"receipt_screen.status.processing.title" = "Your receipt is being checked";
+"receipt_screen.status.processing.description" = "This usually takes a few minutes, but it is very rare when it takes more of time.";
+"receipt_screen.status.rejected.title" = "Your receipt has not been verified!";
+
+// Promotion item cell
+"common.promotion_item_cell.coupon_hint" = "Coupon";
+
+// Common errors
+"error.unknown" = "Something went wrong!";

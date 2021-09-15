@@ -49,7 +49,7 @@
                                                     <color key="textColor" name="Dark900"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-9u-gaE" userLabel="scanCodeButton">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-9u-gaE" userLabel="showCodeButton">
                                                     <rect key="frame" x="16" y="433" width="382" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="Eil-l2-ClA"/>
@@ -96,9 +96,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="instructionTitle" destination="8Xv-eu-fdd" id="7Ec-dD-pPX"/>
                                             <outlet property="nameLabel" destination="K8p-tl-1ao" id="hzc-2T-0Eb"/>
                                             <outlet property="numberLabel" destination="NqB-aF-QIn" id="lZP-aj-IlV"/>
                                             <outlet property="picture" destination="D00-YU-YLa" id="Pjo-ql-mkb"/>
+                                            <outlet property="showCodeButton" destination="YtT-9u-gaE" id="jRC-GQ-Xwv"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CouponDetailScreenInstructionStepCell" rowHeight="185" id="GFh-j4-Yub" customClass="CouponDetailScreenInstructionStepCell" customModule="Generic" customModuleProvider="target">
@@ -193,7 +195,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ceX-xW-j8E" userLabel="barcodePicture">
                                         <rect key="frame" x="24" y="32" width="252" height="324"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покажите штрихкод кассиру" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h18-J8-nRA" userLabel="titleLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покажите штрихкод кассиру" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h18-J8-nRA" userLabel="hintLabel">
                                         <rect key="frame" x="32" y="380" width="236" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                         <color key="textColor" name="Dark700"/>
@@ -239,6 +241,7 @@
                     <navigationItem key="navigationItem" id="MfJ-8D-oYT"/>
                     <connections>
                         <outlet property="barcodeImage" destination="ceX-xW-j8E" id="ekg-D0-ndR"/>
+                        <outlet property="hintLabel" destination="h18-J8-nRA" id="dAO-GZ-XOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDK-f4-Emi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

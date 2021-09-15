@@ -10,6 +10,7 @@ import UIKit
 class CouponBarcodeScreenController: UIViewController {
   // MARK: - Properties
   @IBOutlet private var barcodeImage: UIImageView!
+  @IBOutlet private var hintLabel: UILabel!
 
   private var generatedBarcodeCIImage: CIImage!
   private var userBrightnessLevel: CGFloat = 0.5
@@ -18,6 +19,7 @@ class CouponBarcodeScreenController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tryToSetBarcodeImage()
+    hintLabel.text = LocalizedString(forKey: "coupon.coupon_barcode_screen.hint")
   }
 
   override func viewWillAppear(_ animated: Bool) {

@@ -35,7 +35,7 @@
                                 <color key="textColor" name="Dark900"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-aS-0m9" userLabel="infoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-aS-0m9" userLabel="hintLabel">
                                 <rect key="frame" x="40" y="269" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
@@ -116,9 +116,12 @@
                         <outlet property="errorContainer" destination="Csn-XN-RlS" id="yPY-mq-89v"/>
                         <outlet property="errorContainerBottomConstraint" destination="bsF-e9-4gh" id="f4W-HV-mVc"/>
                         <outlet property="errorLabel" destination="Kkd-06-sxS" id="u3Z-b6-eDH"/>
+                        <outlet property="hintLabel" destination="loA-aS-0m9" id="cbH-rC-3lL"/>
                         <outlet property="phoneCodeLabel" destination="ET5-wi-AgF" id="Mdo-8S-9eH"/>
                         <outlet property="phoneField" destination="I9v-5C-NII" id="Apv-LD-u7I"/>
                         <outlet property="phoneFieldListener" destination="f1q-Ns-yP5" id="7Sh-dE-ARV"/>
+                        <outlet property="retryButton" destination="D3Q-PI-mMg" id="zNH-AH-VZb"/>
+                        <outlet property="titleLabel" destination="Ojw-f4-0qw" id="DMR-nL-XNn"/>
                         <segue destination="aJL-HF-tvr" kind="show" identifier="PhoneEnterToAuthCodeCheckSegue" id="pf4-MF-K6K"/>
                     </connections>
                 </viewController>
@@ -150,7 +153,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="infoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="hintLabel">
                                 <rect key="frame" x="40" y="269" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
@@ -250,12 +253,15 @@
                     <connections>
                         <outlet property="activityIndicator" destination="8vL-rt-ArP" id="Gsc-O5-i0k"/>
                         <outlet property="authCodeField" destination="Tss-qN-DnQ" id="pWe-Ec-40D"/>
+                        <outlet property="changePhoneNumberButton" destination="Clv-lY-Qwu" id="e4q-bQ-tbH"/>
                         <outlet property="enteredPhoneNumberLabel" destination="GhU-XE-qZS" id="LRf-Om-BDT"/>
                         <outlet property="errorIndicator" destination="UX9-8k-OX1" id="bYK-XC-pyq"/>
                         <outlet property="errorLabel" destination="c8f-Gh-NaM" id="eV2-5J-WfH"/>
+                        <outlet property="hintLabel" destination="vS5-PH-BJE" id="i9A-4T-IJk"/>
                         <outlet property="requestNewAuthCodeButton" destination="Z8o-AK-bwI" id="tcE-xB-klG"/>
                         <outlet property="retryComponentStackBottomConstraint" destination="S6p-iX-Vhc" id="BuI-q4-Qd3"/>
                         <outlet property="retryTimerLabel" destination="g0m-Kl-NWT" id="rL7-Um-TRi"/>
+                        <outlet property="titleLabel" destination="5cN-pN-beE" id="fyw-b4-xGE"/>
                         <segue destination="iPc-yN-ptf" kind="presentation" identifier="AuthCodeToMainUISegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="5Ex-pY-eX7"/>
                         <segue destination="unq-VB-8We" kind="show" identifier="AuthCodeToEnterNameScreenSegue" id="dJ0-sN-Y0a"/>
                     </connections>
@@ -288,7 +294,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вас зовут?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-5U-tLw" userLabel="infoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вас зовут?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-5U-tLw" userLabel="hintLabel">
                                 <rect key="frame" x="40" y="308.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
@@ -352,10 +358,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="uh4-Cs-myu"/>
                     <connections>
+                        <outlet property="continueButton" destination="vBU-bb-pPh" id="ggA-T2-f3K"/>
                         <outlet property="continueButtonBottomConstraint" destination="oE5-qg-7Wi" id="uTO-Wd-dIt"/>
                         <outlet property="errorIndicator" destination="OVb-Wi-mbc" id="uIw-uh-PlU"/>
                         <outlet property="errorLabel" destination="6En-Ov-Qce" id="rjj-dF-dlQ"/>
+                        <outlet property="hintLabel" destination="KfC-5U-tLw" id="rDn-92-MER"/>
                         <outlet property="nameField" destination="37E-2Y-3H7" id="nMY-H4-1hl"/>
+                        <outlet property="titleLabel" destination="RdJ-lo-WE6" id="KrR-SQ-4bP"/>
                         <segue destination="ygF-hb-jzt" kind="show" identifier="EnterNameToEnterEmailScreenSegue" id="3f3-yF-uCS"/>
                     </connections>
                 </viewController>
@@ -443,11 +452,13 @@ username</string>
                     </view>
                     <navigationItem key="navigationItem" id="sfm-PM-28a"/>
                     <connections>
+                        <outlet property="continueButton" destination="IYr-aT-0BU" id="Nld-6P-uY5"/>
                         <outlet property="continueButtonBottomConstraint" destination="gCC-Cg-NWb" id="eI7-3y-cT6"/>
                         <outlet property="emailField" destination="czF-Dd-MHt" id="S2u-GL-Vpj"/>
                         <outlet property="errorIndicator" destination="wPB-w3-7qG" id="DL0-aJ-QMN"/>
                         <outlet property="errorLabel" destination="mRQ-f3-QMh" id="GMZ-qz-Ki2"/>
                         <outlet property="greetingsLabel" destination="m2i-fK-0hr" id="d72-fB-qj8"/>
+                        <outlet property="hintLabel" destination="exd-97-f71" id="la3-ta-fkc"/>
                         <segue destination="iPc-yN-ptf" kind="presentation" identifier="EnterEmailToMainUISegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Ijp-kO-Tdl"/>
                     </connections>
                 </viewController>
@@ -482,7 +493,7 @@ username</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ijp-kO-Tdl"/>
+        <segue reference="5Ex-pY-eX7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackPrimaryColorFilled" width="19.5" height="19.5"/>
@@ -497,7 +508,7 @@ username</string>
             <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="StatusRed">
-            <color red="1" green="0.41568627450980394" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.30588235294117649" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

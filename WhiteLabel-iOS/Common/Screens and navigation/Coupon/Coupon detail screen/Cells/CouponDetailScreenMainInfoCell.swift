@@ -15,6 +15,8 @@ class CouponDetailScreenMainInfoCell: UITableViewCell {
   weak var delegate: CouponDetailScreenMainInfoCellDelegate?
 
   @IBOutlet var picture: UIImageView!
+  @IBOutlet var instructionTitle: UILabel!
   @IBOutlet var numberLabel: UILabel!
   @IBOutlet var nameLabel: UILabel!
+  @IBOutlet var showCodeButton: UIButton!
 }

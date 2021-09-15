@@ -17,6 +17,8 @@ class CouponDetailScreenViewModel: BaseViewModel {
 
   var coupon = CouponModel()
 
+  let instructionTitleText = LocalizedString(forKey: "coupon.coupon_detail_screen.instruction_title")
+  let showCodeButtonTitle = LocalizedString(forKey: "coupon.coupon_detail_screen.show_code_button.title")
   var instructionStepsCount: Int {
     return commonCouponInfoModel.steps.count
   }
@@ -24,7 +26,7 @@ class CouponDetailScreenViewModel: BaseViewModel {
     return commonCouponInfoModel.name
   }
   var number: String {
-    return "Купон №\(coupon.identifier)"
+    return LocalizedString(forKey: "coupon.coupon_detail_screen.coupon_number") + " " + coupon.identifier
   }
   var pictureURL: String {
     return commonCouponInfoModel.photo.largePhotoURL

@@ -24,7 +24,7 @@ class HomeScreenCouponViewModel: BaseViewModel {
   // MARK: - Internal/public custom methods
   func update(with couponModel: CouponModel) {
     self.couponModel = couponModel
-    // TODO: need localization
-    numberString.value = "Купон № \(couponModel.identifier)"
+
+    numberString.value = LocalizedString(forKey: "home.home_screen.coupon_cell.coupon_number") + " " + couponModel.identifier
   }
 }

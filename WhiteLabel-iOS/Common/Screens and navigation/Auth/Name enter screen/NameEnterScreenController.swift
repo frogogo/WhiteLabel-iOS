@@ -11,10 +11,13 @@ class NameEnterScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = NameEnterScreenViewModel()
 
-  @IBOutlet var nameField: UITextField!
-  @IBOutlet var errorLabel: UILabel!
-  @IBOutlet var errorIndicator: UIImageView!
-  @IBOutlet var continueButtonBottomConstraint: NSLayoutConstraint!
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var hintLabel: UILabel!
+  @IBOutlet private var nameField: UITextField!
+  @IBOutlet private var errorLabel: UILabel!
+  @IBOutlet private var errorIndicator: UIImageView!
+  @IBOutlet private var continueButton: UIButton!
+  @IBOutlet private var continueButtonBottomConstraint: NSLayoutConstraint!
 
   private let continueButtonBottomGap: CGFloat = 24
 
@@ -41,6 +44,15 @@ class NameEnterScreenController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    titleLabel.text = viewModel.titleText
+    hintLabel.text = viewModel.hintText
+    nameField.placeholder = viewModel.nameEnterFieldPlaceholder
+    continueButton.setTitle(viewModel.continueButtonTitle, for: .normal)
   }
 
   override func addBindings() {
