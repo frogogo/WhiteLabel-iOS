@@ -15,6 +15,7 @@ class PromotionItemCell: UITableViewCell {
     }
   }
 
+  @IBOutlet private var couponTagLabel: UILabel!
   @IBOutlet private var nameLabel: UILabel!
   @IBOutlet private var picture: UIImageView!
   @IBOutlet private var priceLabel: UILabel!
@@ -22,6 +23,9 @@ class PromotionItemCell: UITableViewCell {
 
   // MARK: - Private custom methods
   private func addBindings() {
+    viewModel?.couponTagString.bind { [weak self] couponTagString in
+      self?.couponTagLabel.text = couponTagString
+    }
     viewModel?.pictureURL.bind { [weak self] pictureURL in
       self?.picture.kf.setImage(with: URL(string: pictureURL))
     }

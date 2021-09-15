@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Мои чеки-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController title="Мои чеки" id="Y6W-OH-hqX" customClass="ReceiptListScreenController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-Wc-c59" userLabel="mainTable">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiptListReceiptCell" rowHeight="77" id="0nW-Ig-EJ9" userLabel="ReceiptCell" customClass="ReceiptListReceiptCell" customModule="Generic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0nW-Ig-EJ9" id="G8O-4c-DGh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-2h-a9a" userLabel="container">
+                                                    <rect key="frame" x="16" y="6" width="382" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 888999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-pd-UXk" userLabel="numberLabel">
+                                                            <rect key="frame" x="16" y="8" width="74.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                            <color key="textColor" name="Dark900"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-aP-TQd" userLabel="sumLabel">
+                                                            <rect key="frame" x="343.5" y="8" width="22.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                                            <color key="textColor" name="Dark900"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z32-gH-mHh" userLabel="timeLabel">
+                                                            <rect key="frame" x="16" y="40" width="101" height="17"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                            <color key="textColor" name="Dark700"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-fA-o11" userLabel="statusContainer">
+                                                            <rect key="frame" x="292.5" y="35" width="73.5" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Принят" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-xm-ZHP" userLabel="statusTitleLabel">
+                                                                    <rect key="frame" x="26" y="2" width="41.5" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconReceiptStatusApprovedSmall" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-O5-8zl" userLabel="statusIcon">
+                                                                    <rect key="frame" x="6" y="3" width="16" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="d3S-O5-8zl" secondAttribute="height" multiplier="1:1" id="G4e-te-lmG"/>
+                                                                        <constraint firstAttribute="width" constant="16" id="ZDs-FG-Vdc"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="StatusGreen"/>
+                                                            <constraints>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="leading" secondItem="d3S-O5-8zl" secondAttribute="trailing" constant="4" id="2ES-BH-CDB"/>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="centerY" secondItem="d3S-O5-8zl" secondAttribute="centerY" id="75H-lH-ljC"/>
+                                                                <constraint firstItem="d3S-O5-8zl" firstAttribute="leading" secondItem="wsY-fA-o11" secondAttribute="leading" constant="6" id="Mhk-pB-0cZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="4ps-xm-ZHP" secondAttribute="bottom" constant="2" id="Ql5-qt-m2j"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4ps-xm-ZHP" secondAttribute="trailing" constant="6" id="p0t-2F-8Xq"/>
+                                                                <constraint firstItem="4ps-xm-ZHP" firstAttribute="top" secondItem="wsY-fA-o11" secondAttribute="top" constant="2" id="t0G-8B-vlH"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="top" secondItem="Qg6-aP-TQd" secondAttribute="bottom" constant="8" id="4xF-1L-i5q"/>
+                                                        <constraint firstItem="z32-gH-mHh" firstAttribute="leading" secondItem="8Sh-pd-UXk" secondAttribute="leading" id="5bc-au-kqf"/>
+                                                        <constraint firstItem="z32-gH-mHh" firstAttribute="bottom" secondItem="B4e-2h-a9a" secondAttribute="bottom" constant="-8" id="7a3-VB-DkK"/>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="bottom" secondItem="B4e-2h-a9a" secondAttribute="bottom" constant="-8" id="ESN-K1-kEI"/>
+                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="centerY" secondItem="8Sh-pd-UXk" secondAttribute="centerY" id="QJw-Lm-tNK"/>
+                                                        <constraint firstItem="8Sh-pd-UXk" firstAttribute="leading" secondItem="B4e-2h-a9a" secondAttribute="leading" constant="16" id="gTB-TX-Fom"/>
+                                                        <constraint firstItem="wsY-fA-o11" firstAttribute="trailing" secondItem="B4e-2h-a9a" secondAttribute="trailing" constant="-16" id="hRN-dB-wqG"/>
+                                                        <constraint firstItem="8Sh-pd-UXk" firstAttribute="top" secondItem="B4e-2h-a9a" secondAttribute="top" constant="8" id="kE4-H3-rD2"/>
+                                                        <constraint firstItem="Qg6-aP-TQd" firstAttribute="trailing" secondItem="B4e-2h-a9a" secondAttribute="trailing" constant="-16" id="qi8-Cm-1gJ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="top" secondItem="G8O-4c-DGh" secondAttribute="top" constant="6" id="Are-hO-Ho2"/>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="trailing" secondItem="G8O-4c-DGh" secondAttribute="trailing" constant="-16" id="DFP-yw-qt4"/>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="bottom" secondItem="G8O-4c-DGh" secondAttribute="bottom" constant="-6" id="RSK-Tv-6wp"/>
+                                                <constraint firstItem="B4e-2h-a9a" firstAttribute="leading" secondItem="G8O-4c-DGh" secondAttribute="leading" constant="16" id="qel-Ye-HRL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="container" destination="B4e-2h-a9a" id="S6G-ed-zkN"/>
+                                            <outlet property="numberLabel" destination="8Sh-pd-UXk" id="XEg-WW-AwU"/>
+                                            <outlet property="statusContainer" destination="wsY-fA-o11" id="YAw-ff-JGG"/>
+                                            <outlet property="statusIcon" destination="d3S-O5-8zl" id="ghP-ZZ-M6F"/>
+                                            <outlet property="statusTitleLabel" destination="4ps-xm-ZHP" id="611-5M-X8I"/>
+                                            <outlet property="sumLabel" destination="Qg6-aP-TQd" id="V67-nF-4oS"/>
+                                            <outlet property="timeLabel" destination="z32-gH-mHh" id="8Fn-ha-VYc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="U8s-Ql-n7f"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="cWp-jl-y3i"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MRn-Wc-c59" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1za-yP-tJP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MRn-Wc-c59" secondAttribute="bottom" id="DgQ-Bh-2DP"/>
+                            <constraint firstItem="MRn-Wc-c59" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Xd8-cw-2Fy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MRn-Wc-c59" secondAttribute="trailing" id="gTT-CL-0hD"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mainTable" destination="MRn-Wc-c59" id="kUo-hA-r5V"/>
+                        <segue destination="xNL-7P-67U" kind="presentation" identifier="ReceiptListScreenToReceiptScreenSegue" id="AIW-go-KKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="69.642857142857139"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="cMl-Aq-v0g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receipt" id="xNL-7P-67U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O7w-lC-hFP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FpS-qT-oDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconReceiptStatusApprovedSmall" width="16" height="16"/>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusGreen">
+            <color red="0.31764705882352939" green="0.74901960784313726" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -13,47 +13,26 @@ class HomeScreenController: BaseViewController {
   let viewModel = HomeScreenViewModel()
 
   @IBOutlet private var mainTable: UITableView!
-  @IBOutlet private var scanCodeButton: UIButton!
+  @IBOutlet private var scanReceiptButton: UIButton!
 
   private let pullToRefreshControl = UIRefreshControl()
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [HomeScreenCouponProgressCell.reuseID,
-                                        HomeScreenSeeProductListCell.reuseID,
                                         HomeScreenCouponCell.reuseID,
-                                        HomeScreenReceiptCell.reuseID]
+                                        HomeScreenScanWarningCell.reuseID,
+                                        HomeScreenSeeReceiptListButtonCell.reuseID,
+                                        ProductCell.reuseID]
 
   private var couponSectionHeader: SectionHeader?
-  private var receiptSectionHeader: HomeScreenReceiptSectionHeader?
   private var selectedCouponIndex: Int?
-  private var selectedReceiptIndex: Int?
+  private var productSectionHeader: SectionHeader?
+  private var selectedProductIndex: Int?
 
   // MARK: - Lifecycle methods
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
-    setupRefreshControl()
-  }
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    super.prepare(for: segue, sender: sender)
-    
-    if segue.identifier == "HomeToCouponDetailsSegue" {
-      guard let couponVC = segue.destination as? CouponDetailScreenController else { return }
-      guard selectedCouponIndex != nil else { return }
-      let couponViewModel = viewModel.couponViewModel(forIndex: selectedCouponIndex!)
-      couponVC.viewModel.coupon = couponViewModel.couponModel
-
-    } else if segue.identifier == "HomeScreenToQRScannerSegue" {
-      guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
-      scannerVC.delegate = self
-
-    } else if segue.identifier == "HomeScreenToReceiptScreenSegue" {
-      guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
-      guard selectedReceiptIndex != nil else { return }
-      let receiptToShow = viewModel.receipt(forIndex: selectedReceiptIndex!)
-      receiptVC.viewModel.setReceiptModel(receiptToShow)
-    }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
   }
 
   // MARK: - Overridden methods
@@ -62,11 +41,20 @@ class HomeScreenController: BaseViewController {
     viewModel.delegate = self
   }
 
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
+    registerCells()
+    setupProductSectionHeader()
+    setupRefreshControl()
+    scanReceiptButton.setTitle(LocalizedString(forKey: "home.home_screen.scan_button.title"), for: .normal)
+  }
+
   override func addBindings() {
     super.addBindings()
 
     viewModel.receiptInProcess.bind { [weak self] receiptInProcess in
-      self?.scanCodeButton.isEnabled = !receiptInProcess
+      self?.scanReceiptButton.isEnabled = !receiptInProcess
     }
 
     viewModel.dataRefreshInProcess.bind { [weak self] dataRefreshInProcess in
@@ -78,12 +66,47 @@ class HomeScreenController: BaseViewController {
     }
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+
+    switch segue.identifier {
+    case "HomeToCouponDetailsSegue":
+      guard let couponVC = segue.destination as? CouponDetailScreenController else { return }
+      guard selectedCouponIndex != nil else { return }
+      let couponViewModel = viewModel.couponViewModel(forIndex: selectedCouponIndex!)
+      couponVC.viewModel.coupon = couponViewModel.couponModel
+
+    case "HomeScreenToProductSegue":
+      guard let productScreenVC = segue.destination as? ProductScreenController else { return }
+      guard let selectedProductIndex = selectedProductIndex else { return }
+      guard let selectedProductID = viewModel.productID(forIndex: selectedProductIndex) else { return }
+      productScreenVC.viewModel.productIDForDisplay = selectedProductID
+
+    case "HomeScreenToQRScannerSegue":
+      guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
+      scannerVC.delegate = self
+    default:
+      break
+    }
+  }
+
   // MARK: - Private custom methods
+  private func registerCells() {
+    let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
+    mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)
+  }
+
   private func setupRefreshControl() {
     pullToRefreshControl.tintColor = UIColor(named: "PrimaryMain")
     pullToRefreshControl.addTarget(self, action: #selector(handlePullToRefresh), for: .valueChanged)
     mainTable.refreshControl = pullToRefreshControl
     mainTable.addSubview(pullToRefreshControl)
+  }
+
+  private func setupProductSectionHeader() {
+    let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
+    productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
+    productSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_screen.product_section_header.title")
   }
 
   private func updateCouponProgressCell(_ cell: HomeScreenCouponProgressCell) {
@@ -96,17 +119,9 @@ class HomeScreenController: BaseViewController {
     if couponSectionHeader == nil {
       let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
       couponSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
-      couponSectionHeader?.titleLabel.text = "Купоны"
+      couponSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_screen.coupon_section_header.title")
     }
     return couponSectionHeader!
-  }
-
-  private func preparedReceiptSectionHeader() -> HomeScreenReceiptSectionHeader {
-    if receiptSectionHeader == nil {
-      let headerXib = UINib(nibName: "HomeScreenReceiptSectionHeader", bundle: .main)
-      receiptSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? HomeScreenReceiptSectionHeader
-    }
-    return receiptSectionHeader!
   }
 
   // MARK: - Handlers
@@ -134,8 +149,10 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
       return viewModel.couponCount
-    case HomeScreenReceiptCell.reuseID:
-      return viewModel.receiptCount
+    case HomeScreenScanWarningCell.reuseID:
+      return viewModel.receiptInProcess.value ? 1 : 0
+    case ProductCell.reuseID:
+      return viewModel.productCellCount
     default:
       return 1
     }
@@ -152,9 +169,10 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     case HomeScreenCouponCell.reuseID:
       guard let couponCell = cell as? HomeScreenCouponCell else { return cell }
       couponCell.viewModel = viewModel.couponViewModel(forIndex: indexPath.row)
-    case HomeScreenReceiptCell.reuseID:
-      guard let receiptCell = cell as? HomeScreenReceiptCell else { return cell }
-      receiptCell.viewModel = viewModel.receiptViewModel(forIndex: indexPath.row)
+    case ProductCell.reuseID:
+      guard let productCell = cell as? ProductCell else { return cell }
+      productCell.viewModel = viewModel.productCellViewModel(forIndex: indexPath.row)
+      productCell.delegate = self
     default:
       return cell
     }
@@ -165,14 +183,11 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     let reuseID = cellReuseIDForSections[indexPath.section]
 
     switch reuseID {
-    case HomeScreenSeeProductListCell.reuseID:
-      performSegue(withIdentifier: "HomeScreenToProductListScreenSegue", sender: nil)
+    case HomeScreenSeeReceiptListButtonCell.reuseID:
+      performSegue(withIdentifier: "HomeScreenToReceiptListScreenSegue", sender: nil)
     case HomeScreenCouponCell.reuseID:
       selectedCouponIndex = indexPath.row
       performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
-    case HomeScreenReceiptCell.reuseID:
-      selectedReceiptIndex = indexPath.row
-      performSegue(withIdentifier: "HomeScreenToReceiptScreenSegue", sender: nil)
     default:
       break
     }
@@ -183,8 +198,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
       return viewModel.couponCount > 0 ? UITableView.automaticDimension : 0
-    case HomeScreenReceiptCell.reuseID:
-      return viewModel.receiptCount > 0 ? UITableView.automaticDimension : 0
+    case ProductCell.reuseID:
+      return UITableView.automaticDimension
     default:
       return 0
     }
@@ -195,10 +210,8 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
     switch reuseID {
     case HomeScreenCouponCell.reuseID:
       return viewModel.couponCount > 0 ? preparedCouponSectionHeader() : nil
-    case HomeScreenReceiptCell.reuseID:
-      let header = preparedReceiptSectionHeader()
-      header.setNoticeVisible(to: viewModel.receiptInProcess.value)
-      return viewModel.receiptCount > 0 ? header : nil
+    case ProductCell.reuseID:
+      return productSectionHeader
     default:
       return nil
     }
@@ -216,5 +229,16 @@ extension HomeScreenController: HomeScreenViewModelDelegate {
 extension HomeScreenController: QRCodeScannerControllerDelegate {
   func didDismissScanResult(for scannerController: QRCodeScannerController) {
     scannerController.dismiss(animated: true, completion: nil)
+  }
+}
+
+// MARK: - Product cell delegate methods
+extension HomeScreenController: ProductCellDelegate {
+  func productCell(_ cell: ProductCell, didSelectSlotWithIndex slotIndex: Int) {
+    guard let cellIndex = mainTable.indexPath(for: cell)?.row else { return }
+    let productIndex = (cellIndex * 2) + slotIndex
+
+    selectedProductIndex = productIndex
+    performSegue(withIdentifier: "HomeScreenToProductSegue", sender: nil)
   }
 }

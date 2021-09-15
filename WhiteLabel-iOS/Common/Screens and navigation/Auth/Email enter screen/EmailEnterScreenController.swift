@@ -11,11 +11,13 @@ class EmailEnterScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = EmailEnterScreenViewModel()
 
-  @IBOutlet var greetingsLabel: UILabel!
-  @IBOutlet var emailField: UITextField!
-  @IBOutlet var errorLabel: UILabel!
-  @IBOutlet var errorIndicator: UIImageView!
-  @IBOutlet var continueButtonBottomConstraint: NSLayoutConstraint!
+  @IBOutlet private var greetingsLabel: UILabel!
+  @IBOutlet private var hintLabel: UILabel!
+  @IBOutlet private var emailField: UITextField!
+  @IBOutlet private var errorLabel: UILabel!
+  @IBOutlet private var errorIndicator: UIImageView!
+  @IBOutlet private var continueButton: UIButton!
+  @IBOutlet private var continueButtonBottomConstraint: NSLayoutConstraint!
 
   private let continueButtonBottomGap: CGFloat = 24
 
@@ -35,6 +37,14 @@ class EmailEnterScreenController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    hintLabel.text = viewModel.hintText
+    emailField.placeholder = viewModel.emailEnterFieldPlaceholder
+    continueButton.setTitle(viewModel.continueButtonTitle, for: .normal)
   }
 
   override func addBindings() {

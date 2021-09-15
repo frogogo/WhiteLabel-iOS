@@ -19,6 +19,7 @@ class HomeEmptyScreenController: BaseViewController {
   weak var delegate: HomeEmptyScreenControllerDelegate?
 
   @IBOutlet private var mainTable: UITableView!
+  @IBOutlet private var scanReceiptButton: UIButton!
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [PromotionItemCell.reuseID,
@@ -28,12 +29,24 @@ class HomeEmptyScreenController: BaseViewController {
   private var productSectionHeader: SectionHeader?
   private var selectedProductIndex: Int?
 
+  // MARK: - Lifecycle methods
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+  }
+  
   // MARK: - Overridden methods
+  override func createViewModel() {
+    commonTypeViewModel = viewModel
+    viewModel.delegate = self
+  }
+
   override func setupStaticContentForDisplay() {
     super.setupStaticContentForDisplay()
+    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
     registerCells()
     setupProductSectionHeader()
-    mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
+    scanReceiptButton.setTitle(LocalizedString(forKey: "home.home_empty_screen.scan_button.title"), for: .normal)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,12 +66,6 @@ class HomeEmptyScreenController: BaseViewController {
     }
   }
 
-  // MARK: - Overridden methods
-  override func createViewModel() {
-    commonTypeViewModel = viewModel
-    viewModel.delegate = self
-  }
-
   // MARK: - Private custom methods
   private func registerCells() {
     let xibForPromotionItemCell = UINib(nibName: PromotionItemCell.xibName, bundle: .main)
@@ -71,7 +78,7 @@ class HomeEmptyScreenController: BaseViewController {
   private func setupProductSectionHeader() {
     let headerXib = UINib(nibName: "SectionHeader", bundle: .main)
     productSectionHeader = headerXib.instantiate(withOwner: nil, options: nil)[0] as? SectionHeader
-    productSectionHeader?.titleLabel.text = "Товары участвующие в акции"
+    productSectionHeader?.titleLabel.text = LocalizedString(forKey: "home.home_empty_screen.product_section_header.title")
   }
 
   private func updateInstructionStepCell(_ cell: HomeEmptyScreenInstructionStepCell, forRow rowIndex: Int) {
@@ -115,6 +122,9 @@ extension HomeEmptyScreenController: UITableViewDataSource, UITableViewDelegate 
     case PromotionItemCell.reuseID:
       guard let itemCell = cell as? PromotionItemCell else { return cell }
       itemCell.viewModel = viewModel.promotionViewModel
+    case HomeEmptyScreenInstructionHeaderCell.reuseID:
+      guard let headerCell = cell as? HomeEmptyScreenInstructionHeaderCell else { return cell }
+      headerCell.titleLabel.text = LocalizedString(forKey: "home.home_empty_screen.instruction_section_header.title")
     case HomeEmptyScreenInstructionStepCell.reuseID:
       guard let stepCell = cell as? HomeEmptyScreenInstructionStepCell else { return cell }
       updateInstructionStepCell(stepCell, forRow: indexPath.row)
@@ -159,7 +169,7 @@ extension HomeEmptyScreenController: HomeEmptyScreenViewModelDelegate {
 // MARK: - QR code scanner controller delegate methods
 extension HomeEmptyScreenController: QRCodeScannerControllerDelegate {
   func didDismissScanResult(for scannerController: QRCodeScannerController) {
-    scannerController.dismiss(animated: false) { [weak self] in
+    dismiss(animated: true) { [weak self] in
       guard let self = self else { return }
       self.delegate?.didFinishFirstQRCodeScan(self)
     }

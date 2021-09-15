@@ -12,7 +12,10 @@ class AuthCodeEnterScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel =  AuthCodeEnterScreenViewModel()
 
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var hintLabel: UILabel!
   @IBOutlet private var enteredPhoneNumberLabel: UILabel!
+  @IBOutlet private var changePhoneNumberButton: UIButton!
   @IBOutlet private var authCodeField: UITextField!
   @IBOutlet private var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private var errorIndicator: UIImageView!
@@ -39,6 +42,15 @@ class AuthCodeEnterScreenController: BaseViewController {
   override func createViewModel() {
     commonTypeViewModel = viewModel
     viewModel.delegate = self
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    titleLabel.text = viewModel.titleText
+    hintLabel.text = viewModel.hintText
+    changePhoneNumberButton.setTitle(viewModel.changePhoneNumberButtonTitleText, for: .normal)
+    requestNewAuthCodeButton.setTitle(viewModel.requestNewCodeButtonTitleText, for: .normal)
   }
 
   override func addBindings() {

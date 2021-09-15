@@ -14,7 +14,6 @@ protocol ProductListScreenViewModelDelegate: AnyObject {
 class ProductListScreenViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: ProductListScreenViewModelDelegate?
-
   var productCellCount: Int {
     return productViewModels.count
   }

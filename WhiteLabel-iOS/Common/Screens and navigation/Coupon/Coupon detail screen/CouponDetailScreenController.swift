@@ -39,6 +39,8 @@ class CouponDetailScreenController: BaseViewController {
     cell.nameLabel.text = viewModel.displayName
     cell.numberLabel.text = viewModel.number
     cell.picture.kf.setImage(with: URL(string: viewModel.pictureURL))
+    cell.instructionTitle.text = viewModel.instructionTitleText
+    cell.showCodeButton.setTitle(viewModel.showCodeButtonTitle, for: .normal)
   }
 
   private func updateInstructionStepCell(_ cell: CouponDetailScreenInstructionStepCell, forRow rowIndex: Int) {

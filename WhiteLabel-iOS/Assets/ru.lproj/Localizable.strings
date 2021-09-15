@@ -1,0 +1,74 @@
+// Auth screens
+"auth.phone_enter_screen.title" = "Вход";
+"auth.phone_enter_screen.hint" = "Введите номер телефона";
+"auth.phone_enter_screen.continue_button.title" = "Продолжить";
+"auth.phone_enter_screen.retry_button.title" = "Повторить";
+"auth.phone_enter_screen.error.incorrect_phone_number" = "Проверьте номер телефона.";
+
+"auth.auth_code_enter_screen.title" = "Введите код";
+"auth.auth_code_enter_screen.hint" = "Код отправлен на номер";
+"auth.auth_code_enter_screen.change_phone_number_button.title" = "Изменить";
+"auth.auth_code_enter_screen.request_new_code_button.title" = "Выслать новый код";
+"auth.auth_code_enter_screen.retry_time_text" = "Повторно запросить код можно через:";
+
+"auth.name_enter_screen.title" = "Давайте познакомимся!";
+"auth.name_enter_screen.hint" = "Как вас зовут?";
+"auth.name_enter_screen.name_enter_field.placeholder" = "Имя";
+"auth.name_enter_screen.сontinue_button.title" = "Продолжить";
+"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Имя не должно быть пустым и содержать пробелы";
+
+"auth.email_enter_screen.greetings" = "Отлично,";
+"auth.email_enter_screen.hint" = "Осталось ввести email";
+"auth.email_enter_screen.email_enter_field.placeholder" = "Ваш email";
+"auth.email_enter_screen.сontinue_button.title" = "Продолжить";
+"auth.email_enter_screen.error.incorrect_email" = "Такой email не подойдёт";
+
+// Home screens
+"home.home_empty_screen.instruction_section_header.title" = "Правила акции";
+"home.home_empty_screen.product_section_header.title" = "Товары участвующие в акции";
+"home.home_empty_screen.scan_button.title" = "Сканировать чек";
+
+"home.home_screen.product_section_header.title" = "Товары участвующие в акции";
+"home.home_screen.coupon_section_header.title" = "Купоны";
+"home.home_screen.coupon_cell.coupon_number" = "Купон №";
+"home.home_screen.see_receipt_list_button.title" = "Мои чеки";
+"home.home_screen.scan_warning_cell.hint_text" = "Когда ваш чек пройдет проверку, вы сможете отсканировать новый чек";
+"home.home_screen.scan_button.title" = "Сканировать чек";
+
+// Coupon screen
+"coupon.coupon_detail_screen.coupon_number" = "Купон №";
+"coupon.coupon_detail_screen.instruction_title" = "Инструкция по получению";
+"coupon.coupon_detail_screen.show_code_button.title" = "Показать код кассиру";
+
+// Coupon barcode screen
+"coupon.coupon_barcode_screen.hint" = "Покажите штрихкод кассиру";
+
+// QR code scanner screen
+"qr_code_scanner_screen.hint" = "Наведите камеру на QR код на чеке";
+"qr_code_scanner_screen.help_button.title" = "Помощь";
+
+// Camera access alert
+"camera_access_alert.title" = "Доступ к камере";
+"camera_access_alert.hint" = "Требуется доступ к камере для\nсканирования QR-кода";
+"camera_access_alert.ok_button.title" = "Разрешить";
+"camera_access_alert.deny_button.title" = "Запретить";
+
+// Receipt list screen
+"receipt_list_screen.title" = "Мои чеки";
+"receipt_list_screen.receipt_cell.status.approved" = "Принят";
+"receipt_list_screen.receipt_cell.status.processing" = "Проверяется";
+"receipt_list_screen.receipt_cell.status.rejected" = "Отклонен";
+"receipt_list_screen.receipt_cell.status.unknown" = "Неизвестно";
+
+// Receipt screen
+"receipt_screen.status.approved.title" = "Поздравляем, чек принят!";
+"receipt_screen.status.approved.description" = "Когда общая сумма чеков будет равна 3 300, вы получите купон на покупку электрического чайника Lion Sabatier International за 1 рубль";
+"receipt_screen.status.processing.title" = "Ваш чек находится на проверке";
+"receipt_screen.status.processing.description" = "Обычно это занимает несколько минут, но очень редко на это уходит много времени.\nКогда ваш чек пройдет проверку, вы сможете отсканировать новый.";
+"receipt_screen.status.rejected.title" = "Ваш чек не прошел проверку!";
+
+// Promotion item cell
+"common.promotion_item_cell.coupon_hint" = "Купон";
+
+// Common errors
+"error.unknown" = "Что-то пошло не так!";

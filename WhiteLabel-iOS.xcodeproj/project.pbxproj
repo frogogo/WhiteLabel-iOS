@@ -59,22 +59,18 @@
 		67243EED264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */; };
 		67243EEF264E4F4200139AC6 /* HomeScreenCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */; };
 		67243EF0264E4F4200139AC6 /* HomeScreenCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */; };
-		67243EF2264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */; };
-		67243EF3264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */; };
+		67243EF2264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */; };
+		67243EF3264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */; };
 		67243EF5264E52C600139AC6 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF4264E52C600139AC6 /* CurrencyHelper.swift */; };
 		67243EF6264E52C600139AC6 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF4264E52C600139AC6 /* CurrencyHelper.swift */; };
 		67243EF8264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */; };
 		67243EF9264E75F900139AC6 /* HomeScreenCouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */; };
-		67243EFB264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */; };
-		67243EFC264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */; };
+		67243EFB264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */; };
+		67243EFC264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */; };
 		67243EFE264EEC2000139AC6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFD264EEC2000139AC6 /* SectionHeader.swift */; };
 		67243EFF264EEC2000139AC6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFD264EEC2000139AC6 /* SectionHeader.swift */; };
-		67243F01264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */; };
-		67243F02264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */; };
 		67243F04264EECDB00139AC6 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67243F03264EECDB00139AC6 /* SectionHeader.xib */; };
 		67243F05264EECDB00139AC6 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67243F03264EECDB00139AC6 /* SectionHeader.xib */; };
-		67243F07264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67243F06264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib */; };
-		67243F08264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67243F06264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib */; };
 		67243F0B264F2B3A00139AC6 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67243F0A264F2B3A00139AC6 /* Coupon.storyboard */; };
 		67243F0C264F2B3B00139AC6 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67243F0A264F2B3A00139AC6 /* Coupon.storyboard */; };
 		67243F0F264F2BCC00139AC6 /* CouponDetailScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F0E264F2BCC00139AC6 /* CouponDetailScreenController.swift */; };
@@ -113,6 +109,14 @@
 		676158402656F2FF00601A97 /* CommonCouponInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */; };
 		67615842265791E600601A97 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67615841265791E600601A97 /* String.swift */; };
 		67615843265791E600601A97 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67615841265791E600601A97 /* String.swift */; };
+		676D241E26DA9B9A006E730B /* ReceiptList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6772F2BF26DA924B00904346 /* ReceiptList.storyboard */; };
+		676D242426E02682006E730B /* HomeScreenScanWarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D242326E02682006E730B /* HomeScreenScanWarningCell.swift */; };
+		676D242526E02682006E730B /* HomeScreenScanWarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D242326E02682006E730B /* HomeScreenScanWarningCell.swift */; };
+		6772F2C226DA925C00904346 /* ReceiptListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */; };
+		6772F2C326DA925C00904346 /* ReceiptListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */; };
+		6772F2C526DA926B00904346 /* ReceiptListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */; };
+		6772F2C626DA926B00904346 /* ReceiptListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */; };
+		6772F2CA26DA9B7500904346 /* ReceiptList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6772F2BF26DA924B00904346 /* ReceiptList.storyboard */; };
 		678C109B267B32A800A4136B /* DataEventNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C109A267B32A800A4136B /* DataEventNotifications.swift */; };
 		678C109C267B32A800A4136B /* DataEventNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C109A267B32A800A4136B /* DataEventNotifications.swift */; };
 		679012992652565900C4A4D5 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */; };
@@ -137,6 +141,108 @@
 		67DBB4042644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB4022644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift */; };
 		67DBB406264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */; };
 		67DBB407264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */; };
+		67DD595526E6B1E500F2F237 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67DD595826E6B1E500F2F237 /* Localizable.strings */; };
+		67DD595626E6B1E500F2F237 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67DD595826E6B1E500F2F237 /* Localizable.strings */; };
+		67DD595D26E746DF00F2F237 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B332631939000FF36E3 /* APIConnector.swift */; };
+		67DD595E26E746DF00F2F237 /* ReceiptScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012A526529B0F00C4A4D5 /* ReceiptScreenController.swift */; };
+		67DD595F26E746DF00F2F237 /* HomeEmptyScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C045E626458F02006D1829 /* HomeEmptyScreenViewModel.swift */; };
+		67DD596026E746DF00F2F237 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B402631943900FF36E3 /* AccountManager.swift */; };
+		67DD596126E746DF00F2F237 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */; };
+		67DD596226E746DF00F2F237 /* HomeEmptyScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF3263C1AC300CE4328 /* HomeEmptyScreenController.swift */; };
+		67DD596326E746DF00F2F237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE38282625594900750368 /* AppDelegate.swift */; };
+		67DD596426E746DF00F2F237 /* HomeInitialScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BC00263C464600CE4328 /* HomeInitialScreenViewModel.swift */; };
+		67DD596526E746DF00F2F237 /* CouponProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243ED8264D65B100139AC6 /* CouponProgressModel.swift */; };
+		67DD596626E746DF00F2F237 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD14926984A5600420DE3 /* ProductCellViewModel.swift */; };
+		67DD596726E746DF00F2F237 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF4264E52C600139AC6 /* CurrencyHelper.swift */; };
+		67DD596826E746DF00F2F237 /* DataEventNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C109A267B32A800A4136B /* DataEventNotifications.swift */; };
+		67DD596926E746DF00F2F237 /* EmailEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */; };
+		67DD596A26E746DF00F2F237 /* HomeInitialScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBFC263C1B3E00CE4328 /* HomeInitialScreenController.swift */; };
+		67DD596B26E746DF00F2F237 /* HomeScreenCouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */; };
+		67DD596C26E746DF00F2F237 /* CouponDetailScreenInstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F18264F320A00139AC6 /* CouponDetailScreenInstructionStepCell.swift */; };
+		67DD596D26E746DF00F2F237 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EE4264DEC2B00139AC6 /* HomeScreenViewModel.swift */; };
+		67DD596E26E746DF00F2F237 /* NameEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBDF2638A85100CE4328 /* NameEnterScreenController.swift */; };
+		67DD596F26E746DF00F2F237 /* PromotionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1392698032D00420DE3 /* PromotionItemCell.swift */; };
+		67DD597026E746DF00F2F237 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB48E265D910E004538D4 /* DependencyContainer.swift */; };
+		67DD597126E746DF00F2F237 /* ProductScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FEC4D726BD3F7000C85B05 /* ProductScreenViewModel.swift */; };
+		67DD597226E746DF00F2F237 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EDB264D680900139AC6 /* ReceiptModel.swift */; };
+		67DD597326E746DF00F2F237 /* ReceiptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790129E265293A200C4A4D5 /* ReceiptManager.swift */; };
+		67DD597426E746DF00F2F237 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B60940264AB6A100C50130 /* UITableViewCell.swift */; };
+		67DD597526E746DF00F2F237 /* CouponDetailScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F0E264F2BCC00139AC6 /* CouponDetailScreenController.swift */; };
+		67DD597626E746DF00F2F237 /* HomeEmptyScreenInstructionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB4022644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift */; };
+		67DD597726E746DF00F2F237 /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243ED5264D123700139AC6 /* PromotionModel.swift */; };
+		67DD597826E746DF00F2F237 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF8263C1AE800CE4328 /* HomeScreenController.swift */; };
+		67DD597926E746DF00F2F237 /* ReceiptListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */; };
+		67DD597A26E746DF00F2F237 /* ReceiptScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679012A826529B2400C4A4D5 /* ReceiptScreenViewModel.swift */; };
+		67DD597B26E746DF00F2F237 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
+		67DD597C26E746DF00F2F237 /* PhoneEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */; };
+		67DD597D26E746DF00F2F237 /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243ED2264D116500139AC6 /* BaseDataModel.swift */; };
+		67DD597E26E746DF00F2F237 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
+		67DD597F26E746DF00F2F237 /* CameraAccessChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */; };
+		67DD598026E746DF00F2F237 /* QRCodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F2D265251CB00139AC6 /* QRCodeScannerController.swift */; };
+		67DD598126E746DF00F2F237 /* HomeEmptyScreenInstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */; };
+		67DD598226E746DF00F2F237 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243ECF264C2C7300139AC6 /* HomeManager.swift */; };
+		67DD598326E746DF00F2F237 /* HomeScreenScanWarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D242326E02682006E730B /* HomeScreenScanWarningCell.swift */; };
+		67DD598426E746DF00F2F237 /* CommonCouponInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */; };
+		67DD598526E746DF00F2F237 /* CouponBarcodeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F1C264FBD6E00139AC6 /* CouponBarcodeScreenController.swift */; };
+		67DD598626E746DF00F2F237 /* ProductScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FEC4DA26BD3F7A00C85B05 /* ProductScreenController.swift */; };
+		67DD598826E746DF00F2F237 /* ReceiptListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */; };
+		67DD598926E746DF00F2F237 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFD264EEC2000139AC6 /* SectionHeader.swift */; };
+		67DD598A26E746DF00F2F237 /* AuthCodeEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */; };
+		67DD598B26E746DF00F2F237 /* CameraAccessAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F232650066100139AC6 /* CameraAccessAlertController.swift */; };
+		67DD598C26E746DF00F2F237 /* CouponDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F11264F2BD700139AC6 /* CouponDetailScreenViewModel.swift */; };
+		67DD598D26E746DF00F2F237 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F4262E3BFE009C4CAE /* BaseViewModel.swift */; };
+		67DD598E26E746DF00F2F237 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1432698285800420DE3 /* ProductCell.swift */; };
+		67DD598F26E746DF00F2F237 /* NameEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE32638A87D00CE4328 /* NameEnterScreenViewModel.swift */; };
+		67DD599026E746DF00F2F237 /* HomeScreenCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */; };
+		67DD599126E746DF00F2F237 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67615841265791E600601A97 /* String.swift */; };
+		67DD599226E746DF00F2F237 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9D78A2629B8E1005A3C66 /* RootController.swift */; };
+		67DD599326E746DF00F2F237 /* CouponDetailScreenMainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F15264F31E300139AC6 /* CouponDetailScreenMainInfoCell.swift */; };
+		67DD599426E746DF00F2F237 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EDE264D681300139AC6 /* CouponModel.swift */; };
+		67DD599526E746DF00F2F237 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
+		67DD599626E746DF00F2F237 /* EmailEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */; };
+		67DD599726E746DF00F2F237 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
+		67DD599826E746DF00F2F237 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634F5262E3BFE009C4CAE /* BaseViewController.swift */; };
+		67DD599926E746DF00F2F237 /* PhoneEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634EE262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift */; };
+		67DD599A26E746DF00F2F237 /* HomeScreenCouponProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */; };
+		67DD599B26E746DF00F2F237 /* PromotionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */; };
+		67DD599C26E746DF00F2F237 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EE1264D697B00139AC6 /* PhotoModel.swift */; };
+		67DD599D26E746DF00F2F237 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7CCC826E36E0000A8E262 /* LocalizationHelper.swift */; };
+		67DD599E26E746DF00F2F237 /* ProductCellSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD14C2698B9B800420DE3 /* ProductCellSlot.swift */; };
+		67DD599F26E746DF00F2F237 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
+		67DD59A026E746DF00F2F237 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EE7264DFE1200139AC6 /* DateHelper.swift */; };
+		67DD59A126E746DF00F2F237 /* ReceiptListReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */; };
+		67DD59A226E746DF00F2F237 /* ProductListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */; };
+		67DD59A326E746DF00F2F237 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B392631941C00FF36E3 /* BaseDataManager.swift */; };
+		67DD59A426E746DF00F2F237 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */; };
+		67DD59A526E746DF00F2F237 /* ReceiptListReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */; };
+		67DD59A626E746DF00F2F237 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E9262E3B4B009C4CAE /* Box.swift */; };
+		67DD59A826E746DF00F2F237 /* libPods-Generic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F66A24379860CA50F1C05B8 /* libPods-Generic.a */; };
+		67DD59AA26E746DF00F2F237 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7852629B8BE005A3C66 /* Root.storyboard */; };
+		67DD59AB26E746DF00F2F237 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6706BBED26393DFB00CE4328 /* Home.storyboard */; };
+		67DD59AC26E746DF00F2F237 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67243F0A264F2B3A00139AC6 /* Coupon.storyboard */; };
+		67DD59AE26E746DF00F2F237 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6710935126280B3D00A8B554 /* Auth.storyboard */; };
+		67DD59AF26E746DF00F2F237 /* CameraAccessAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67243F2626500B5300139AC6 /* CameraAccessAlert.storyboard */; };
+		67DD59B026E746DF00F2F237 /* QRCodeScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67243F2A26500CE200139AC6 /* QRCodeScanner.storyboard */; };
+		67DD59B126E746DF00F2F237 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109378262883CF00A8B554 /* Rubik-Regular.ttf */; };
+		67DD59B226E746DF00F2F237 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6710935E26280E2000A8B554 /* Colors.xcassets */; };
+		67DD59B426E746DF00F2F237 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109377262883CF00A8B554 /* Rubik-Medium.ttf */; };
+		67DD59B526E746DF00F2F237 /* PromotionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */; };
+		67DD59B626E746DF00F2F237 /* CommonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE38312625594A00750368 /* CommonAssets.xcassets */; };
+		67DD59B726E746DF00F2F237 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67DD595826E6B1E500F2F237 /* Localizable.strings */; };
+		67DD59B926E746DF00F2F237 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67109376262883CF00A8B554 /* Rubik-Bold.ttf */; };
+		67DD59BA26E746DF00F2F237 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FEC4D426BD3F5000C85B05 /* Product.storyboard */; };
+		67DD59BB26E746DF00F2F237 /* ReceiptList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6772F2BF26DA924B00904346 /* ReceiptList.storyboard */; };
+		67DD59BD26E746DF00F2F237 /* Receipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679012A226529B0200C4A4D5 /* Receipt.storyboard */; };
+		67DD59BE26E746DF00F2F237 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67243F03264EECDB00139AC6 /* SectionHeader.xib */; };
+		67DD59BF26E746DF00F2F237 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD14626984A1B00420DE3 /* ProductCell.xib */; };
+		67DD59C926E7483E00F2F237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD59C826E7483800F2F237 /* Assets.xcassets */; };
+		67DD59CA26E7483E00F2F237 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD59C726E7483800F2F237 /* Colors.xcassets */; };
+		67DD59D026E74DCE00F2F237 /* OnboardingAgreementScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD59CE26E74DCE00F2F237 /* OnboardingAgreementScreenController.swift */; };
+		67DD59D126E74DCE00F2F237 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DD59CF26E74DCE00F2F237 /* Onboarding.storyboard */; };
+		67DD59DB26E74DFC00F2F237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DD59DA26E74DFC00F2F237 /* LaunchScreen.storyboard */; };
+		67DD59DD26E75F9D00F2F237 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD59DC26E75F9D00F2F237 /* Configuration.swift */; };
+		67DD59DF26E7615000F2F237 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD59DE26E7615000F2F237 /* Configuration.swift */; };
+		67DD59E126E7615B00F2F237 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD59E026E7615B00F2F237 /* Configuration.swift */; };
 		67E9D7722629B3EA005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7712629B3EA005A3C66 /* Assets.xcassets */; };
 		67E9D7762629B3F9005A3C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D7752629B3F9005A3C66 /* Assets.xcassets */; };
 		67E9D77F2629B7CC005A3C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */; };
@@ -155,22 +261,18 @@
 		67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */; };
 		67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
 		67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */; };
+		67F7CCC926E36E0000A8E262 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7CCC826E36E0000A8E262 /* LocalizationHelper.swift */; };
+		67F7CCCA26E36E0000A8E262 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7CCC826E36E0000A8E262 /* LocalizationHelper.swift */; };
 		67FBB48F265D910E004538D4 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB48E265D910E004538D4 /* DependencyContainer.swift */; };
 		67FBB490265D910E004538D4 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB48E265D910E004538D4 /* DependencyContainer.swift */; };
 		67FDD1182696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
 		67FDD1192696D64900420DE3 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1172696D64900420DE3 /* ProductManager.swift */; };
 		67FDD11B2696D74200420DE3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
 		67FDD11C2696D74200420DE3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD11A2696D74200420DE3 /* ProductModel.swift */; };
-		67FDD1232696DD4D00420DE3 /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD1222696DD4D00420DE3 /* ProductList.storyboard */; };
-		67FDD1242696DD4D00420DE3 /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD1222696DD4D00420DE3 /* ProductList.storyboard */; };
 		67FDD1262696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */; };
 		67FDD1272696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */; };
-		67FDD1292696DD7D00420DE3 /* ProductListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */; };
-		67FDD12A2696DD7D00420DE3 /* ProductListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */; };
-		67FDD12C269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */; };
-		67FDD12D269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */; };
-		67FDD1362698028500420DE3 /* ProductListHintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1352698028500420DE3 /* ProductListHintCell.swift */; };
-		67FDD1372698028500420DE3 /* ProductListHintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1352698028500420DE3 /* ProductListHintCell.swift */; };
+		67FDD12C269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */; };
+		67FDD12D269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */; };
 		67FDD13A2698032D00420DE3 /* PromotionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1392698032D00420DE3 /* PromotionItemCell.swift */; };
 		67FDD13B2698032D00420DE3 /* PromotionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FDD1392698032D00420DE3 /* PromotionItemCell.swift */; };
 		67FDD13D269803FB00420DE3 /* PromotionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */; };
@@ -232,14 +334,12 @@
 		67243EE7264DFE1200139AC6 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponProgressCell.swift; sourceTree = "<group>"; };
 		67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponCell.swift; sourceTree = "<group>"; };
-		67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptCell.swift; sourceTree = "<group>"; };
+		67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListReceiptCell.swift; sourceTree = "<group>"; };
 		67243EF4264E52C600139AC6 /* CurrencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyHelper.swift; sourceTree = "<group>"; };
 		67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCouponViewModel.swift; sourceTree = "<group>"; };
-		67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptViewModel.swift; sourceTree = "<group>"; };
+		67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListReceiptViewModel.swift; sourceTree = "<group>"; };
 		67243EFD264EEC2000139AC6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenReceiptSectionHeader.swift; sourceTree = "<group>"; };
 		67243F03264EECDB00139AC6 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
-		67243F06264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenReceiptSectionHeader.xib; sourceTree = "<group>"; };
 		67243F0A264F2B3A00139AC6 /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		67243F0E264F2BCC00139AC6 /* CouponDetailScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailScreenController.swift; sourceTree = "<group>"; };
 		67243F11264F2BD700139AC6 /* CouponDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailScreenViewModel.swift; sourceTree = "<group>"; };
@@ -261,6 +361,10 @@
 		6761583C265355B700601A97 /* OnboardingAgreementScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgreementScreenController.swift; sourceTree = "<group>"; };
 		6761583E2656F2FF00601A97 /* CommonCouponInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCouponInfoModel.swift; sourceTree = "<group>"; };
 		67615841265791E600601A97 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		676D242326E02682006E730B /* HomeScreenScanWarningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenScanWarningCell.swift; sourceTree = "<group>"; };
+		6772F2BF26DA924B00904346 /* ReceiptList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiptList.storyboard; sourceTree = "<group>"; };
+		6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListScreenController.swift; sourceTree = "<group>"; };
+		6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListScreenViewModel.swift; sourceTree = "<group>"; };
 		678C109A267B32A800A4136B /* DataEventNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEventNotifications.swift; sourceTree = "<group>"; };
 		679012982652565900C4A4D5 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
 		6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAccessChecker.swift; sourceTree = "<group>"; };
@@ -275,9 +379,24 @@
 		67C045E626458F02006D1829 /* HomeEmptyScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyScreenViewModel.swift; sourceTree = "<group>"; };
 		67DBB4022644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyScreenInstructionHeaderCell.swift; sourceTree = "<group>"; };
 		67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyScreenInstructionStepCell.swift; sourceTree = "<group>"; };
+		67DD595126E6B10200F2F237 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67DD595226E6B11700F2F237 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67DD595326E6B12C00F2F237 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67DD595426E6B12C00F2F237 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67DD595726E6B1E500F2F237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		67DD595926E6B1EA00F2F237 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		67DD59C326E746DF00F2F237 /* ZBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DD59C626E747C500F2F237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67DD59C726E7483800F2F237 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		67DD59C826E7483800F2F237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67DD59CE26E74DCE00F2F237 /* OnboardingAgreementScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingAgreementScreenController.swift; sourceTree = "<group>"; };
+		67DD59CF26E74DCE00F2F237 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		67DD59DA26E74DFC00F2F237 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67DD59DC26E75F9D00F2F237 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		67DD59DE26E7615000F2F237 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		67DD59E026E7615B00F2F237 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		67E9D7712629B3EA005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E9D7752629B3F9005A3C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		67E9D77E2629B7CC005A3C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E9D7852629B8BE005A3C66 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		67E9D78A2629B8E1005A3C66 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		67F14B332631939000FF36E3 /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
@@ -285,14 +404,12 @@
 		67F14B402631943900FF36E3 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		67F14B562632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenController.swift; sourceTree = "<group>"; };
 		67F14B5B2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeEnterScreenViewModel.swift; sourceTree = "<group>"; };
+		67F7CCC826E36E0000A8E262 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
 		67FBB48E265D910E004538D4 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		67FDD1172696D64900420DE3 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		67FDD11A2696D74200420DE3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
-		67FDD1222696DD4D00420DE3 /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
 		67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreenViewModel.swift; sourceTree = "<group>"; };
-		67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreenController.swift; sourceTree = "<group>"; };
-		67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenSeeProductListCell.swift; sourceTree = "<group>"; };
-		67FDD1352698028500420DE3 /* ProductListHintCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListHintCell.swift; sourceTree = "<group>"; };
+		67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenSeeReceiptListButtonCell.swift; sourceTree = "<group>"; };
 		67FDD1392698032D00420DE3 /* PromotionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionItemCell.swift; sourceTree = "<group>"; };
 		67FDD13C269803FB00420DE3 /* PromotionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionItemCell.xib; sourceTree = "<group>"; };
 		67FDD14026981E1B00420DE3 /* PromotionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionItemViewModel.swift; sourceTree = "<group>"; };
@@ -304,7 +421,6 @@
 		67FE38282625594900750368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE382A2625594900750368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		67FE38312625594A00750368 /* CommonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonAssets.xcassets; sourceTree = "<group>"; };
-		67FE38342625594A00750368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67FE38362625594A00750368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FE384A2625596900750368 /* S-Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-Boom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FEC4D426BD3F5000C85B05 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
@@ -317,6 +433,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		67DD59A726E746DF00F2F237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD59A826E746DF00F2F237 /* libPods-Generic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67FE38222625594900750368 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +558,7 @@
 				6710936626287E2300A8B554 /* Rubik font */,
 				6710935E26280E2000A8B554 /* Colors.xcassets */,
 				67FE38312625594A00750368 /* CommonAssets.xcassets */,
+				67DD595826E6B1E500F2F237 /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -452,13 +577,10 @@
 			isa = PBXGroup;
 			children = (
 				67243EEB264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift */,
-				67FDD12B269776BC00420DE3 /* HomeScreenSeeProductListCell.swift */,
 				67243EEE264E4F4200139AC6 /* HomeScreenCouponCell.swift */,
 				67243EF7264E75F900139AC6 /* HomeScreenCouponViewModel.swift */,
-				67243F00264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift */,
-				67243F06264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib */,
-				67243EF1264E4F4C00139AC6 /* HomeScreenReceiptCell.swift */,
-				67243EFA264E764900139AC6 /* HomeScreenReceiptViewModel.swift */,
+				67FDD12B269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift */,
+				676D242326E02682006E730B /* HomeScreenScanWarningCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -564,6 +686,26 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		676D241F26DD17D4006E730B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67243EF1264E4F4C00139AC6 /* ReceiptListReceiptCell.swift */,
+				67243EFA264E764900139AC6 /* ReceiptListReceiptViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6772F2BE26DA923400904346 /* Receipt list */ = {
+			isa = PBXGroup;
+			children = (
+				6772F2BF26DA924B00904346 /* ReceiptList.storyboard */,
+				6772F2C426DA926B00904346 /* ReceiptListScreenViewModel.swift */,
+				6772F2C126DA925C00904346 /* ReceiptListScreenController.swift */,
+				676D241F26DD17D4006E730B /* Cells */,
+			);
+			path = "Receipt list";
+			sourceTree = "<group>";
+		};
 		679012A126529AEF00C4A4D5 /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +721,7 @@
 			children = (
 				679541AF2625833C00C04495 /* Generic */,
 				679541B02625834300C04495 /* SBoom */,
+				67DD59C526E7474B00F2F237 /* ZBoom */,
 			);
 			path = "Partner specific";
 			sourceTree = "<group>";
@@ -627,6 +770,7 @@
 		679541AF2625833C00C04495 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				67DD59DC26E75F9D00F2F237 /* Configuration.swift */,
 				67FE38362625594A00750368 /* Info.plist */,
 				67E9D7712629B3EA005A3C66 /* Assets.xcassets */,
 				67B60943264C26B600C50130 /* Colors.xcassets */,
@@ -639,6 +783,7 @@
 		679541B02625834300C04495 /* SBoom */ = {
 			isa = PBXGroup;
 			children = (
+				67DD59DE26E7615000F2F237 /* Configuration.swift */,
 				679541A626255D3E00C04495 /* Info.plist */,
 				67E9D7752629B3F9005A3C66 /* Assets.xcassets */,
 				67B60945264C26C400C50130 /* Colors.xcassets */,
@@ -658,6 +803,7 @@
 				67243F09264F2B1A00139AC6 /* Coupon */,
 				67243F2926500CB600139AC6 /* QR code scanner */,
 				67243F1F265005ED00139AC6 /* Camera access alert */,
+				6772F2BE26DA923400904346 /* Receipt list */,
 				679012A126529AEF00C4A4D5 /* Receipt */,
 				67FDD1212696DD3F00420DE3 /* Product list */,
 				67FEC4D326BD3F1500C85B05 /* Product */,
@@ -672,6 +818,7 @@
 				6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */,
 				67243EF4264E52C600139AC6 /* CurrencyHelper.swift */,
 				67243EE7264DFE1200139AC6 /* DateHelper.swift */,
+				67F7CCC826E36E0000A8E262 /* LocalizationHelper.swift */,
 				67615841265791E600601A97 /* String.swift */,
 				67B60940264AB6A100C50130 /* UITableViewCell.swift */,
 			);
@@ -685,6 +832,28 @@
 				67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		67DD59C526E7474B00F2F237 /* ZBoom */ = {
+			isa = PBXGroup;
+			children = (
+				67DD59E026E7615B00F2F237 /* Configuration.swift */,
+				67DD59C626E747C500F2F237 /* Info.plist */,
+				67DD59C826E7483800F2F237 /* Assets.xcassets */,
+				67DD59C726E7483800F2F237 /* Colors.xcassets */,
+				67DD59DA26E74DFC00F2F237 /* LaunchScreen.storyboard */,
+				67DD59CD26E74DCE00F2F237 /* Onboarding */,
+			);
+			path = ZBoom;
+			sourceTree = "<group>";
+		};
+		67DD59CD26E74DCE00F2F237 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				67DD59CF26E74DCE00F2F237 /* Onboarding.storyboard */,
+				67DD59CE26E74DCE00F2F237 /* OnboardingAgreementScreenController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		67E9D7842629B8B2005A3C66 /* Root */ = {
@@ -727,20 +896,9 @@
 		67FDD1212696DD3F00420DE3 /* Product list */ = {
 			isa = PBXGroup;
 			children = (
-				67FDD1222696DD4D00420DE3 /* ProductList.storyboard */,
 				67FDD1252696DD6000420DE3 /* ProductListScreenViewModel.swift */,
-				67FDD1282696DD7D00420DE3 /* ProductListScreenController.swift */,
-				67FDD12E2698023A00420DE3 /* Cells */,
 			);
 			path = "Product list";
-			sourceTree = "<group>";
-		};
-		67FDD12E2698023A00420DE3 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				67FDD1352698028500420DE3 /* ProductListHintCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		67FDD138269802FF00420DE3 /* Promotion item cell */ = {
@@ -788,6 +946,7 @@
 			children = (
 				67FE38252625594900750368 /* Generic.app */,
 				67FE384A2625596900750368 /* S-Boom.app */,
+				67DD59C326E746DF00F2F237 /* ZBoom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -817,6 +976,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		67DD595A26E746DF00F2F237 /* ZBoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DD59C026E746DF00F2F237 /* Build configuration list for PBXNativeTarget "ZBoom" */;
+			buildPhases = (
+				67DD595B26E746DF00F2F237 /* [CP] Check Pods Manifest.lock */,
+				67DD595C26E746DF00F2F237 /* Sources */,
+				67DD59A726E746DF00F2F237 /* Frameworks */,
+				67DD59A926E746DF00F2F237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZBoom;
+			productName = "WhiteLabel-iOS";
+			productReference = 67DD59C326E746DF00F2F237 /* ZBoom.app */;
+			productType = "com.apple.product-type.application";
+		};
 		67FE38242625594900750368 /* Generic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE38392625594A00750368 /* Build configuration list for PBXNativeTarget "Generic" */;
@@ -873,7 +1050,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 67FE381C2625594900750368;
 			productRefGroup = 67FE38262625594900750368 /* Products */;
@@ -882,11 +1059,41 @@
 			targets = (
 				67FE38242625594900750368 /* Generic */,
 				67FE383D2625596900750368 /* S-Boom */,
+				67DD595A26E746DF00F2F237 /* ZBoom */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		67DD59A926E746DF00F2F237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD59AA26E746DF00F2F237 /* Root.storyboard in Resources */,
+				67DD59AB26E746DF00F2F237 /* Home.storyboard in Resources */,
+				67DD59AC26E746DF00F2F237 /* Coupon.storyboard in Resources */,
+				67DD59C926E7483E00F2F237 /* Assets.xcassets in Resources */,
+				67DD59AE26E746DF00F2F237 /* Auth.storyboard in Resources */,
+				67DD59AF26E746DF00F2F237 /* CameraAccessAlert.storyboard in Resources */,
+				67DD59B026E746DF00F2F237 /* QRCodeScanner.storyboard in Resources */,
+				67DD59B126E746DF00F2F237 /* Rubik-Regular.ttf in Resources */,
+				67DD59B226E746DF00F2F237 /* Colors.xcassets in Resources */,
+				67DD59DB26E74DFC00F2F237 /* LaunchScreen.storyboard in Resources */,
+				67DD59B426E746DF00F2F237 /* Rubik-Medium.ttf in Resources */,
+				67DD59B526E746DF00F2F237 /* PromotionItemCell.xib in Resources */,
+				67DD59B626E746DF00F2F237 /* CommonAssets.xcassets in Resources */,
+				67DD59B726E746DF00F2F237 /* Localizable.strings in Resources */,
+				67DD59B926E746DF00F2F237 /* Rubik-Bold.ttf in Resources */,
+				67DD59BA26E746DF00F2F237 /* Product.storyboard in Resources */,
+				67DD59BB26E746DF00F2F237 /* ReceiptList.storyboard in Resources */,
+				67DD59BD26E746DF00F2F237 /* Receipt.storyboard in Resources */,
+				67DD59CA26E7483E00F2F237 /* Colors.xcassets in Resources */,
+				67DD59D126E74DCE00F2F237 /* Onboarding.storyboard in Resources */,
+				67DD59BE26E746DF00F2F237 /* SectionHeader.xib in Resources */,
+				67DD59BF26E746DF00F2F237 /* ProductCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67FE38232625594900750368 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -895,7 +1102,6 @@
 				6706BBEE26393DFB00CE4328 /* Home.storyboard in Resources */,
 				67243F0B264F2B3A00139AC6 /* Coupon.storyboard in Resources */,
 				67B60944264C26B600C50130 /* Colors.xcassets in Resources */,
-				67243F07264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib in Resources */,
 				6710935226280B3D00A8B554 /* Auth.storyboard in Resources */,
 				67243F2726500B5300139AC6 /* CameraAccessAlert.storyboard in Resources */,
 				67243F2B26500CE200139AC6 /* QRCodeScanner.storyboard in Resources */,
@@ -905,13 +1111,14 @@
 				6710937B262883CF00A8B554 /* Rubik-Medium.ttf in Resources */,
 				67FDD13D269803FB00420DE3 /* PromotionItemCell.xib in Resources */,
 				67FE38322625594A00750368 /* CommonAssets.xcassets in Resources */,
+				67DD595526E6B1E500F2F237 /* Localizable.strings in Resources */,
 				67E9D7722629B3EA005A3C66 /* Assets.xcassets in Resources */,
 				67109379262883CF00A8B554 /* Rubik-Bold.ttf in Resources */,
 				67FEC4D526BD3F5000C85B05 /* Product.storyboard in Resources */,
+				6772F2CA26DA9B7500904346 /* ReceiptList.storyboard in Resources */,
 				676158372653464300601A97 /* Onboarding.storyboard in Resources */,
 				679012A326529B0200C4A4D5 /* Receipt.storyboard in Resources */,
 				67243F04264EECDB00139AC6 /* SectionHeader.xib in Resources */,
-				67FDD1232696DD4D00420DE3 /* ProductList.storyboard in Resources */,
 				67FDD14726984A1B00420DE3 /* ProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -924,7 +1131,6 @@
 				6706BBEF26393DFB00CE4328 /* Home.storyboard in Resources */,
 				67243F0C264F2B3B00139AC6 /* Coupon.storyboard in Resources */,
 				67B60946264C26C400C50130 /* Colors.xcassets in Resources */,
-				67243F08264EF30500139AC6 /* HomeScreenReceiptSectionHeader.xib in Resources */,
 				6710936026280E2000A8B554 /* Colors.xcassets in Resources */,
 				67243F2826500B5300139AC6 /* CameraAccessAlert.storyboard in Resources */,
 				67243F2C26500CE200139AC6 /* QRCodeScanner.storyboard in Resources */,
@@ -934,13 +1140,14 @@
 				67E9D7762629B3F9005A3C66 /* Assets.xcassets in Resources */,
 				67FDD13E269803FB00420DE3 /* PromotionItemCell.xib in Resources */,
 				67E9D77F2629B7CC005A3C66 /* LaunchScreen.storyboard in Resources */,
+				67DD595626E6B1E500F2F237 /* Localizable.strings in Resources */,
 				67FE38452625596900750368 /* CommonAssets.xcassets in Resources */,
 				6710937C262883CF00A8B554 /* Rubik-Medium.ttf in Resources */,
 				67FEC4D626BD3F5000C85B05 /* Product.storyboard in Resources */,
+				676D241E26DA9B9A006E730B /* ReceiptList.storyboard in Resources */,
 				676158352653463800601A97 /* Onboarding.storyboard in Resources */,
 				679012A426529B0200C4A4D5 /* Receipt.storyboard in Resources */,
 				67243F05264EECDB00139AC6 /* SectionHeader.xib in Resources */,
-				67FDD1242696DD4D00420DE3 /* ProductList.storyboard in Resources */,
 				67FDD14826984A1B00420DE3 /* ProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,6 +1155,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		67DD595B26E746DF00F2F237 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Generic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DB872031F27A67585D01F23D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -995,6 +1224,88 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		67DD595C26E746DF00F2F237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD595D26E746DF00F2F237 /* APIConnector.swift in Sources */,
+				67DD595E26E746DF00F2F237 /* ReceiptScreenController.swift in Sources */,
+				67DD595F26E746DF00F2F237 /* HomeEmptyScreenViewModel.swift in Sources */,
+				67DD596026E746DF00F2F237 /* AccountManager.swift in Sources */,
+				67DD596126E746DF00F2F237 /* QRCodeScannerViewModel.swift in Sources */,
+				67DD596226E746DF00F2F237 /* HomeEmptyScreenController.swift in Sources */,
+				67DD596326E746DF00F2F237 /* AppDelegate.swift in Sources */,
+				67DD596426E746DF00F2F237 /* HomeInitialScreenViewModel.swift in Sources */,
+				67DD596526E746DF00F2F237 /* CouponProgressModel.swift in Sources */,
+				67DD596626E746DF00F2F237 /* ProductCellViewModel.swift in Sources */,
+				67DD596726E746DF00F2F237 /* CurrencyHelper.swift in Sources */,
+				67DD59D026E74DCE00F2F237 /* OnboardingAgreementScreenController.swift in Sources */,
+				67DD596826E746DF00F2F237 /* DataEventNotifications.swift in Sources */,
+				67DD596926E746DF00F2F237 /* EmailEnterScreenViewModel.swift in Sources */,
+				67DD596A26E746DF00F2F237 /* HomeInitialScreenController.swift in Sources */,
+				67DD596B26E746DF00F2F237 /* HomeScreenCouponViewModel.swift in Sources */,
+				67DD596C26E746DF00F2F237 /* CouponDetailScreenInstructionStepCell.swift in Sources */,
+				67DD596D26E746DF00F2F237 /* HomeScreenViewModel.swift in Sources */,
+				67DD596E26E746DF00F2F237 /* NameEnterScreenController.swift in Sources */,
+				67DD596F26E746DF00F2F237 /* PromotionItemCell.swift in Sources */,
+				67DD597026E746DF00F2F237 /* DependencyContainer.swift in Sources */,
+				67DD597126E746DF00F2F237 /* ProductScreenViewModel.swift in Sources */,
+				67DD597226E746DF00F2F237 /* ReceiptModel.swift in Sources */,
+				67DD597326E746DF00F2F237 /* ReceiptManager.swift in Sources */,
+				67DD597426E746DF00F2F237 /* UITableViewCell.swift in Sources */,
+				67DD597526E746DF00F2F237 /* CouponDetailScreenController.swift in Sources */,
+				67DD597626E746DF00F2F237 /* HomeEmptyScreenInstructionHeaderCell.swift in Sources */,
+				67DD597726E746DF00F2F237 /* PromotionModel.swift in Sources */,
+				67DD597826E746DF00F2F237 /* HomeScreenController.swift in Sources */,
+				67DD597926E746DF00F2F237 /* ReceiptListScreenController.swift in Sources */,
+				67DD597A26E746DF00F2F237 /* ReceiptScreenViewModel.swift in Sources */,
+				67DD597B26E746DF00F2F237 /* SceneDelegate.swift in Sources */,
+				67DD597C26E746DF00F2F237 /* PhoneEnterScreenController.swift in Sources */,
+				67DD597D26E746DF00F2F237 /* BaseDataModel.swift in Sources */,
+				67DD597E26E746DF00F2F237 /* ProfileManager.swift in Sources */,
+				67DD597F26E746DF00F2F237 /* CameraAccessChecker.swift in Sources */,
+				67DD59E126E7615B00F2F237 /* Configuration.swift in Sources */,
+				67DD598026E746DF00F2F237 /* QRCodeScannerController.swift in Sources */,
+				67DD598126E746DF00F2F237 /* HomeEmptyScreenInstructionStepCell.swift in Sources */,
+				67DD598226E746DF00F2F237 /* HomeManager.swift in Sources */,
+				67DD598326E746DF00F2F237 /* HomeScreenScanWarningCell.swift in Sources */,
+				67DD598426E746DF00F2F237 /* CommonCouponInfoModel.swift in Sources */,
+				67DD598526E746DF00F2F237 /* CouponBarcodeScreenController.swift in Sources */,
+				67DD598626E746DF00F2F237 /* ProductScreenController.swift in Sources */,
+				67DD598826E746DF00F2F237 /* ReceiptListScreenViewModel.swift in Sources */,
+				67DD598926E746DF00F2F237 /* SectionHeader.swift in Sources */,
+				67DD598A26E746DF00F2F237 /* AuthCodeEnterScreenController.swift in Sources */,
+				67DD598B26E746DF00F2F237 /* CameraAccessAlertController.swift in Sources */,
+				67DD598C26E746DF00F2F237 /* CouponDetailScreenViewModel.swift in Sources */,
+				67DD598D26E746DF00F2F237 /* BaseViewModel.swift in Sources */,
+				67DD598E26E746DF00F2F237 /* ProductCell.swift in Sources */,
+				67DD598F26E746DF00F2F237 /* NameEnterScreenViewModel.swift in Sources */,
+				67DD599026E746DF00F2F237 /* HomeScreenCouponCell.swift in Sources */,
+				67DD599126E746DF00F2F237 /* String.swift in Sources */,
+				67DD599226E746DF00F2F237 /* RootController.swift in Sources */,
+				67DD599326E746DF00F2F237 /* CouponDetailScreenMainInfoCell.swift in Sources */,
+				67DD599426E746DF00F2F237 /* CouponModel.swift in Sources */,
+				67DD599526E746DF00F2F237 /* ProductModel.swift in Sources */,
+				67DD599626E746DF00F2F237 /* EmailEnterScreenController.swift in Sources */,
+				67DD599726E746DF00F2F237 /* ProductManager.swift in Sources */,
+				67DD599826E746DF00F2F237 /* BaseViewController.swift in Sources */,
+				67DD599926E746DF00F2F237 /* PhoneEnterScreenViewModel.swift in Sources */,
+				67DD599A26E746DF00F2F237 /* HomeScreenCouponProgressCell.swift in Sources */,
+				67DD599B26E746DF00F2F237 /* PromotionItemViewModel.swift in Sources */,
+				67DD599C26E746DF00F2F237 /* PhotoModel.swift in Sources */,
+				67DD599D26E746DF00F2F237 /* LocalizationHelper.swift in Sources */,
+				67DD599E26E746DF00F2F237 /* ProductCellSlot.swift in Sources */,
+				67DD599F26E746DF00F2F237 /* AuthCodeEnterScreenViewModel.swift in Sources */,
+				67DD59A026E746DF00F2F237 /* DateHelper.swift in Sources */,
+				67DD59A126E746DF00F2F237 /* ReceiptListReceiptCell.swift in Sources */,
+				67DD59A226E746DF00F2F237 /* ProductListScreenViewModel.swift in Sources */,
+				67DD59A326E746DF00F2F237 /* BaseDataManager.swift in Sources */,
+				67DD59A426E746DF00F2F237 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
+				67DD59A526E746DF00F2F237 /* ReceiptListReceiptViewModel.swift in Sources */,
+				67DD59A626E746DF00F2F237 /* Box.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67FE38212625594900750368 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1027,6 +1338,7 @@
 				67DBB4032644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift in Sources */,
 				67243ED6264D123700139AC6 /* PromotionModel.swift in Sources */,
 				6706BBF9263C1AE800CE4328 /* HomeScreenController.swift in Sources */,
+				6772F2C226DA925C00904346 /* ReceiptListScreenController.swift in Sources */,
 				679012A926529B2400C4A4D5 /* ReceiptScreenViewModel.swift in Sources */,
 				67FE382B2625594900750368 /* SceneDelegate.swift in Sources */,
 				675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
@@ -1034,15 +1346,16 @@
 				6706BBF12639425500CE4328 /* ProfileManager.swift in Sources */,
 				6790129C265289D400C4A4D5 /* CameraAccessChecker.swift in Sources */,
 				67243F2E265251CB00139AC6 /* QRCodeScannerController.swift in Sources */,
+				67DD59DD26E75F9D00F2F237 /* Configuration.swift in Sources */,
 				67DBB406264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift in Sources */,
 				67243ED0264C2C7300139AC6 /* HomeManager.swift in Sources */,
+				676D242426E02682006E730B /* HomeScreenScanWarningCell.swift in Sources */,
 				6761583F2656F2FF00601A97 /* CommonCouponInfoModel.swift in Sources */,
 				67243F1D264FBD6E00139AC6 /* CouponBarcodeScreenController.swift in Sources */,
 				67FEC4DB26BD3F7A00C85B05 /* ProductScreenController.swift in Sources */,
 				6761583D265355B700601A97 /* OnboardingAgreementScreenController.swift in Sources */,
-				67FDD1362698028500420DE3 /* ProductListHintCell.swift in Sources */,
+				6772F2C526DA926B00904346 /* ReceiptListScreenViewModel.swift in Sources */,
 				67243EFE264EEC2000139AC6 /* SectionHeader.swift in Sources */,
-				67243F01264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift in Sources */,
 				67F14B572632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
 				67243F242650066100139AC6 /* CameraAccessAlertController.swift in Sources */,
 				67243F12264F2BD700139AC6 /* CouponDetailScreenViewModel.swift in Sources */,
@@ -1061,16 +1374,16 @@
 				675634EF262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EEC264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
 				67FDD14126981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */,
-				67FDD1292696DD7D00420DE3 /* ProductListScreenController.swift in Sources */,
 				67243EE2264D697B00139AC6 /* PhotoModel.swift in Sources */,
+				67F7CCC926E36E0000A8E262 /* LocalizationHelper.swift in Sources */,
 				67FDD14D2698B9B800420DE3 /* ProductCellSlot.swift in Sources */,
 				67F14B5C2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
 				67243EE8264DFE1200139AC6 /* DateHelper.swift in Sources */,
-				67243EF2264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
+				67243EF2264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */,
 				67FDD1262696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				67F14B3A2631941C00FF36E3 /* BaseDataManager.swift in Sources */,
-				67FDD12C269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */,
-				67243EFB264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
+				67FDD12C269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
+				67243EFB264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */,
 				675634EA262E3B4B009C4CAE /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1107,6 +1420,7 @@
 				67DBB4042644327F00BBCEB4 /* HomeEmptyScreenInstructionHeaderCell.swift in Sources */,
 				67243ED7264D123700139AC6 /* PromotionModel.swift in Sources */,
 				6706BBFA263C1AE800CE4328 /* HomeScreenController.swift in Sources */,
+				6772F2C326DA925C00904346 /* ReceiptListScreenController.swift in Sources */,
 				679012AA26529B2400C4A4D5 /* ReceiptScreenViewModel.swift in Sources */,
 				675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
 				675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
@@ -1114,15 +1428,16 @@
 				6706BBF22639425500CE4328 /* ProfileManager.swift in Sources */,
 				6790129D265289D400C4A4D5 /* CameraAccessChecker.swift in Sources */,
 				67243F2F265251CC00139AC6 /* QRCodeScannerController.swift in Sources */,
+				67DD59DF26E7615000F2F237 /* Configuration.swift in Sources */,
 				67DBB407264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift in Sources */,
 				67243ED1264C2C7300139AC6 /* HomeManager.swift in Sources */,
+				676D242526E02682006E730B /* HomeScreenScanWarningCell.swift in Sources */,
 				676158402656F2FF00601A97 /* CommonCouponInfoModel.swift in Sources */,
 				67243F1E264FBD6E00139AC6 /* CouponBarcodeScreenController.swift in Sources */,
 				67FEC4DC26BD3F7A00C85B05 /* ProductScreenController.swift in Sources */,
 				6761583A265354E100601A97 /* OnboardingAgreementScreenController.swift in Sources */,
-				67FDD1372698028500420DE3 /* ProductListHintCell.swift in Sources */,
+				6772F2C626DA926B00904346 /* ReceiptListScreenViewModel.swift in Sources */,
 				67243EFF264EEC2000139AC6 /* SectionHeader.swift in Sources */,
-				67243F02264EEC3900139AC6 /* HomeScreenReceiptSectionHeader.swift in Sources */,
 				67F14B582632DFCB00FF36E3 /* AuthCodeEnterScreenController.swift in Sources */,
 				67243F252650066100139AC6 /* CameraAccessAlertController.swift in Sources */,
 				67243F13264F2BD700139AC6 /* CouponDetailScreenViewModel.swift in Sources */,
@@ -1141,16 +1456,16 @@
 				675634F0262E3B7C009C4CAE /* PhoneEnterScreenViewModel.swift in Sources */,
 				67243EED264E4F3700139AC6 /* HomeScreenCouponProgressCell.swift in Sources */,
 				67FDD14226981E1B00420DE3 /* PromotionItemViewModel.swift in Sources */,
-				67FDD12A2696DD7D00420DE3 /* ProductListScreenController.swift in Sources */,
 				67243EE3264D697B00139AC6 /* PhotoModel.swift in Sources */,
+				67F7CCCA26E36E0000A8E262 /* LocalizationHelper.swift in Sources */,
 				67FDD14E2698B9B800420DE3 /* ProductCellSlot.swift in Sources */,
 				67F14B5D2632DFF000FF36E3 /* AuthCodeEnterScreenViewModel.swift in Sources */,
 				67243EE9264DFE1200139AC6 /* DateHelper.swift in Sources */,
-				67243EF3264E4F4C00139AC6 /* HomeScreenReceiptCell.swift in Sources */,
+				67243EF3264E4F4C00139AC6 /* ReceiptListReceiptCell.swift in Sources */,
 				67FDD1272696DD6000420DE3 /* ProductListScreenViewModel.swift in Sources */,
 				675634EB262E3B4B009C4CAE /* Box.swift in Sources */,
-				67FDD12D269776BC00420DE3 /* HomeScreenSeeProductListCell.swift in Sources */,
-				67243EFC264E764900139AC6 /* HomeScreenReceiptViewModel.swift in Sources */,
+				67FDD12D269776BC00420DE3 /* HomeScreenSeeReceiptListButtonCell.swift in Sources */,
+				67243EFC264E764900139AC6 /* ReceiptListReceiptViewModel.swift in Sources */,
 				67F14B45263195F500FF36E3 /* APIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1158,10 +1473,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		67DD595826E6B1E500F2F237 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67DD595726E6B1E500F2F237 /* en */,
+				67DD595926E6B1EA00F2F237 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		67E9D77D2629B7CC005A3C66 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				67E9D77E2629B7CC005A3C66 /* Base */,
+				67DD595226E6B11700F2F237 /* en */,
+				67DD595426E6B12C00F2F237 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1169,7 +1494,8 @@
 		67FE38332625594A00750368 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				67FE38342625594A00750368 /* Base */,
+				67DD595126E6B10200F2F237 /* en */,
+				67DD595326E6B12C00F2F237 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1177,10 +1503,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		67DD59C126E746DF00F2F237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B19222CA81983FA0DD33C2E /* Pods-Generic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 78G7TDD2DB;
+				INFOPLIST_FILE = "WhiteLabel-iOS/Partner specific/ZBoom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.zboom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		67DD59C226E746DF00F2F237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928DEFFD579EA9EDA82B2FC8 /* Pods-Generic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 78G7TDD2DB;
+				INFOPLIST_FILE = "WhiteLabel-iOS/Partner specific/ZBoom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.frogogo.WhiteLabel-iOS.zboom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		67FE38372625594A00750368 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1242,6 +1615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1388,6 +1762,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		67DD59C026E746DF00F2F237 /* Build configuration list for PBXNativeTarget "ZBoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DD59C126E746DF00F2F237 /* Debug */,
+				67DD59C226E746DF00F2F237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		67FE38202625594900750368 /* Build configuration list for PBXProject "WhiteLabel-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

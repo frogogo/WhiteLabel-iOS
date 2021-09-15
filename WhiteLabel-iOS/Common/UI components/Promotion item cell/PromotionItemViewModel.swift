@@ -9,6 +9,7 @@ import Foundation
 
 class PromotionItemViewModel: BaseViewModel {
   // MARK: - Properties
+  let couponTagString = Box(value: LocalizedString(forKey: "common.promotion_item_cell.coupon_hint"))
   let pictureURL = Box(value: "")
   let nameString = Box(value: "")
   let discountedPriceString = Box(value: "")

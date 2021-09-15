@@ -13,15 +13,19 @@ class PhoneEnterScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = PhoneEnterScreenViewModel()
 
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var hintLabel: UILabel!
   @IBOutlet private var phoneCodeLabel: UILabel!
   @IBOutlet private var phoneField: UITextField!
   @IBOutlet private var phoneFieldListener: MaskedTextFieldDelegate!
   @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet private var continueButton: UIButton!
   @IBOutlet private var errorContainer: UIView!
   @IBOutlet private var errorContainerBottomConstraint: NSLayoutConstraint!
   @IBOutlet private var errorLabel: UILabel!
+  @IBOutlet private var retryButton: UIButton!
 
-  private let errorContainerBottomGap: CGFloat = 24
+  private let errorContainerBottomGap: CGFloat = 16
 
   // MARK: - Lifecycle methods
   override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +55,15 @@ class PhoneEnterScreenController: BaseViewController {
     viewModel.delegate = self
   }
 
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+
+    titleLabel.text = viewModel.titleText
+    hintLabel.text = viewModel.hintText
+    continueButton.setTitle(viewModel.continueButtonTitleText, for: .normal)
+    retryButton.setTitle(viewModel.retryButtonTitleText, for: .normal)
+  }
+
   override func addBindings() {
     super.addBindings()
 
@@ -74,7 +87,7 @@ class PhoneEnterScreenController: BaseViewController {
   private func subscribeForKeyboardNotifications() {
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(handleNotifKeyboardShow),
-                                           name: UIResponder.keyboardWillShowNotification,
+                                           name: UIResponder.keyboardDidShowNotification,
                                            object: nil)
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(handleNotifKeyboardHide),
@@ -87,6 +100,12 @@ class PhoneEnterScreenController: BaseViewController {
   }
 
   // MARK: - Handlers
+  @IBAction private func handleContinueButtonTap() {
+    guard let enteredPhone = phoneField.text else { return }
+    viewModel.sendEnteredPhone(enteredPhone)
+    phoneField.resignFirstResponder()
+  }
+
   @IBAction private func handleRetryButtonTap() {
     viewModel.retryEnteredPhoneSending()
   }
@@ -95,8 +114,8 @@ class PhoneEnterScreenController: BaseViewController {
     guard let userInfo = notification.userInfo else { return }
     let keyboardSizeKey = UIResponder.keyboardFrameEndUserInfoKey
     guard let keyboardSize = (userInfo[keyboardSizeKey] as? NSValue)?.cgRectValue else { return }
-
     errorContainerBottomConstraint.constant = -(keyboardSize.height + errorContainerBottomGap)
+    errorContainer.isHidden = true
   }
 
   @objc func handleNotifKeyboardHide() {

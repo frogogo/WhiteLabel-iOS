@@ -28,17 +28,23 @@ class HomeScreenViewModel: BaseViewModel {
   var couponCount: Int {
     return couponViewModels.count
   }
-  var receiptCount: Int {
-    return receiptViewModels.count
+  var productCellCount: Int {
+    return productSectionViewModel.productCellCount
   }
   var receiptInProcess = Box(value: false)
   var dataRefreshInProcess = Box(value: false)
 
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
-  private var receiptViewModels: [HomeScreenReceiptViewModel] = []
-  private var receipts: [ReceiptModel] = []
+  private let productSectionViewModel = ProductListScreenViewModel()
 
+  // MARK: - Lifecycle methods
+  // MARK: - Lifecycle methods
+  override init() {
+    super.init()
+    productSectionViewModel.delegate = self
+  }
+  
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
@@ -48,7 +54,7 @@ class HomeScreenViewModel: BaseViewModel {
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
       self.couponProgress = HomeManager.shared.couponProgress
-      self.createReceiptViewModels(forModels: HomeManager.shared.receipts)
+      self.checkForProcessingReceipts(withModels: HomeManager.shared.receipts)
       self.createCouponViewModels(forModels: HomeManager.shared.coupons)
       self.dataRefreshInProcess.value = false
       self.delegate?.viewModelUpdated()
@@ -56,6 +62,8 @@ class HomeScreenViewModel: BaseViewModel {
     } onFailure: { [weak self] error in
       self?.dataRefreshInProcess.value = false
     }
+
+    productSectionViewModel.refreshData()
   }
 
   // MARK: - Internal/public custom methods
@@ -63,25 +71,22 @@ class HomeScreenViewModel: BaseViewModel {
     return couponViewModels[index]
   }
 
-  func receiptViewModel(forIndex index: Int) -> HomeScreenReceiptViewModel {
-    return receiptViewModels[index]
+  func productCellViewModel(forIndex index: Int) -> ProductCellViewModel {
+    return productSectionViewModel.productViewModel(forIndex: index)
   }
 
-  func receipt(forIndex index: Int) -> ReceiptModel {
-    return receipts[index]
+  func productID(forIndex index: Int) -> String? {
+    return productSectionViewModel.productID(forIndex: index)
   }
 
   // MARK: - Private custom methods
-  private func createReceiptViewModels(forModels receiptModels: [ReceiptModel]) {
-    receipts = receiptModels
-    receiptViewModels.removeAll()
+  private func checkForProcessingReceipts(withModels receiptModels: [ReceiptModel]) {
     receiptInProcess.value = false
 
     for receiptModel in receiptModels {
       if receiptModel.state == .processing {
         receiptInProcess.value = true
       }
-      receiptViewModels.append(HomeScreenReceiptViewModel(withModel: receiptModel))
     }
   }
 
@@ -95,5 +100,12 @@ class HomeScreenViewModel: BaseViewModel {
       couponViewModel.pictureURL.value = promotion.photo.thumbPhotoURL
       couponViewModels.append(couponViewModel)
     }
+  }
+}
+
+// MARK: - View model delegate methods
+extension HomeScreenViewModel: ProductListScreenViewModelDelegate {
+  func viewModelUpdated() {
+    delegate?.viewModelUpdated()
   }
 }

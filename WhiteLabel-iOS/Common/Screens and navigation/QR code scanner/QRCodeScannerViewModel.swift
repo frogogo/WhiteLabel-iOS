@@ -16,6 +16,8 @@ class QRCodeScannerViewModel: BaseViewModel {
   // MARK: - Properties
   weak var delegate: QRCodeScannerViewModelDelegate?
 
+  let hintText = LocalizedString(forKey: "qr_code_scanner_screen.hint")
+  let helpButtonTitle = LocalizedString(forKey: "qr_code_scanner_screen.hint")
   var receipt: ReceiptModel?
 
   // MARK: - Internal/public custom methods
