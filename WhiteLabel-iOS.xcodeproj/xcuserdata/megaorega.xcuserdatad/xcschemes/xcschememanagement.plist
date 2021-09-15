@@ -14,9 +14,19 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ZBoom.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>67DD595A26E746DF00F2F237</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>67FE38242625594900750368</key>
 		<dict>
 			<key>primary</key>

@@ -48,8 +48,10 @@ class QRCodeScannerController: BaseViewController {
     guard let newReceipt = viewModel.receipt else { return }
     receiptVC.viewModel.setReceiptModel(newReceipt)
     receiptVC.onDismiss = { [weak self] in
-      guard let self = self else { return }
-      self.delegate?.didDismissScanResult(for: self)
+      self?.dismiss(animated: true) { [weak self] in
+        guard let self = self else { return }
+        self.delegate?.didDismissScanResult(for: self)
+      }
     }
   }
 

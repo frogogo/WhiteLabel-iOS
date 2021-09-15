@@ -13,6 +13,8 @@ class RootController: UIViewController {
   private var authController: UIViewController?
   private var mainUIController: UIViewController?
 
+  var needAutoLogin = true
+
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,22 +23,15 @@ class RootController: UIViewController {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    tryAutoLogin()
-  }
 
-  // MARK: - Private custom methods
-  private func tryAutoLogin() {
-    AccountManager.shared.tryAutoLogin { [weak self] in
-      self?.showMainUI()
-      
-    } onFailure: { [weak self] in
-      if !AccountManager.shared.didUserSeeOnboarding {
-        self?.showOnboarding()
-      }
-      self?.showAuth()
+    // TODO: Remove check below. This is temporary solution. This check prevents multiple calls of autologin (it occurs after first scan result dismiss)
+    if needAutoLogin {
+      AccountManager.shared.tryAutoLogin()
+      needAutoLogin = false
     }
   }
 
+  // MARK: - Private custom methods
   private func showScreenWithController(_ controllerToShow: UIViewController) {
     navigationController?.popToRootViewController(animated: false)
     dismiss(animated: false, completion: nil)
@@ -83,6 +78,10 @@ class RootController: UIViewController {
   private func subscribeForNotifications() {
     let notificationCenter = NotificationCenter.default
     notificationCenter.addObserver(self,
+                                   selector: #selector(handleNotifAutoLoginOK),
+                                   name: .autoLoginOK,
+                                   object: nil)
+    notificationCenter.addObserver(self,
                                    selector: #selector(handleNotifAuthRequired),
                                    name: .authorizationRequired,
                                    object: nil)
@@ -90,7 +89,16 @@ class RootController: UIViewController {
 
   // MARK: - Notification handlers
   @objc func handleNotifAuthRequired() {
-    print("\(type(of: self)): Auth required, opening auth UI")
-    showAuth()
+    print("\(type(of: self)): Auth required, opening AUTH UI")
+    if AccountManager.shared.didUserSeeOnboarding {
+      showAuth()
+    } else {
+      showOnboarding()
+    }
+  }
+
+  @objc func handleNotifAutoLoginOK() {
+    print("\(type(of: self)): Auto login OK, opening MAIN UI")
+    showMainUI()
   }
 }

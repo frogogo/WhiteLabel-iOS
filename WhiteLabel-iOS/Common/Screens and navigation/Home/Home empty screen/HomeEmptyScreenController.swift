@@ -19,6 +19,7 @@ class HomeEmptyScreenController: BaseViewController {
   weak var delegate: HomeEmptyScreenControllerDelegate?
 
   @IBOutlet private var mainTable: UITableView!
+  @IBOutlet private var scanReceiptButton: UIButton!
 
   private let tableBottomScrollInset: CGFloat = 120
   private let cellReuseIDForSections = [PromotionItemCell.reuseID,
@@ -45,6 +46,7 @@ class HomeEmptyScreenController: BaseViewController {
     mainTable.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableBottomScrollInset, right: 0)
     registerCells()
     setupProductSectionHeader()
+    scanReceiptButton.setTitle(LocalizedString(forKey: "home.home_empty_screen.scan_button.title"), for: .normal)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -167,7 +169,7 @@ extension HomeEmptyScreenController: HomeEmptyScreenViewModelDelegate {
 // MARK: - QR code scanner controller delegate methods
 extension HomeEmptyScreenController: QRCodeScannerControllerDelegate {
   func didDismissScanResult(for scannerController: QRCodeScannerController) {
-    scannerController.dismiss(animated: false) { [weak self] in
+    dismiss(animated: true) { [weak self] in
       guard let self = self else { return }
       self.delegate?.didFinishFirstQRCodeScan(self)
     }

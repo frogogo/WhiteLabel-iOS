@@ -19,12 +19,13 @@ class PhoneEnterScreenViewModel: BaseViewModel {
 
   let titleText = LocalizedString(forKey: "auth.phone_enter_screen.title")
   let hintText = LocalizedString(forKey: "auth.phone_enter_screen.hint")
+  let continueButtonTitleText = LocalizedString(forKey: "auth.phone_enter_screen.continue_button.title")
   let retryButtonTitleText = LocalizedString(forKey: "auth.phone_enter_screen.retry_button.title")
   let phoneCode = Box(value: "")
   let showActivity = Box(value: false)
   let errorToShow: Box<String?> = Box(value: nil)
 
-  private let phoneCodeString = "+7"
+  private let phoneCodeString = Configuration.phoneNumberPrefix
 
   // MARK: - Lifecycle methods
   override init() {

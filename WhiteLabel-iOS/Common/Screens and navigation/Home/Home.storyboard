@@ -412,7 +412,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTable" destination="GhT-bi-4Wx" id="Apn-DI-qda"/>
-                        <outlet property="scanCodeButton" destination="BRM-YC-Wzq" id="aYJ-CO-CYb"/>
+                        <outlet property="scanReceiptButton" destination="BRM-YC-Wzq" id="hev-u1-dC2"/>
                         <segue destination="iNF-Df-4r4" kind="presentation" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
@@ -532,7 +532,7 @@
                                     <outlet property="delegate" destination="P8n-zY-7eE" id="jTd-e5-wQs"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-Fp-5MS" userLabel="scanCodeButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-Fp-5MS" userLabel="scanReceiptButton">
                                 <rect key="frame" x="16" y="778" width="382" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="M46-Ys-gux"/>
@@ -562,6 +562,7 @@
                     <navigationItem key="navigationItem" id="hpM-4M-Kup"/>
                     <connections>
                         <outlet property="mainTable" destination="Fp0-4c-UmM" id="LuQ-q0-viy"/>
+                        <outlet property="scanReceiptButton" destination="6aU-Fp-5MS" id="hOX-xL-gGT"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeEmptyScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="D8K-nu-gbR"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeEmptyScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="UKG-2k-hxj"/>
                         <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeEmptyScreenToProductSegue" id="eDv-k3-OEL"/>

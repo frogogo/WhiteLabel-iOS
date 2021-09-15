@@ -30,65 +30,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-f4-0qw" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="40"/>
+                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <color key="textColor" name="Dark900"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-aS-0m9" userLabel="hintLabel">
-                                <rect key="frame" x="40" y="269" width="334" height="19"/>
+                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="+7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-wi-AgF" userLabel="phoneCodeLabel">
-                                <rect key="frame" x="40" y="360" width="31.5" height="32"/>
+                                <rect key="frame" x="40" y="360.5" width="29.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(000) 000-00-00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9v-5C-NII" userLabel="phoneNumberField">
-                                <rect key="frame" x="77.5" y="359.5" width="193" height="33"/>
+                                <rect key="frame" x="75.5" y="360" width="221" height="33.5"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
-                                <connections>
-                                    <outlet property="delegate" destination="f1q-Ns-yP5" id="axZ-Wa-w35"/>
-                                </connections>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-XN-RlS" userLabel="errorContainer">
-                                <rect key="frame" x="40" y="807" width="334" height="19"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="154" height="19"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                                        <color key="textColor" name="Dark700"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="retryButton">
-                                        <rect key="frame" x="162" y="-7.5" width="89" height="34"/>
-                                        <state key="normal" title="Повторить">
-                                            <color key="titleColor" name="PrimaryMain"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="handleRetryButtonTap" destination="8df-z3-OFl" eventType="touchUpInside" id="GdV-LD-E5v"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="D3Q-PI-mMg" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Csn-XN-RlS" secondAttribute="trailing" id="50e-Lv-aXO"/>
-                                    <constraint firstItem="Kkd-06-sxS" firstAttribute="bottom" secondItem="Csn-XN-RlS" secondAttribute="bottom" id="NGT-OH-Z5I"/>
-                                    <constraint firstItem="D3Q-PI-mMg" firstAttribute="leading" secondItem="Kkd-06-sxS" secondAttribute="trailing" constant="8" id="RGd-oM-9o2"/>
-                                    <constraint firstItem="Kkd-06-sxS" firstAttribute="top" secondItem="Csn-XN-RlS" secondAttribute="top" id="UVd-JV-3GW"/>
-                                    <constraint firstItem="D3Q-PI-mMg" firstAttribute="centerY" secondItem="Kkd-06-sxS" secondAttribute="centerY" id="m4g-zm-KlT"/>
-                                    <constraint firstItem="Kkd-06-sxS" firstAttribute="leading" secondItem="Csn-XN-RlS" secondAttribute="leading" id="wqR-77-PUM"/>
-                                </constraints>
-                            </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-Ag-i2X" userLabel="activityIndicator">
-                                <rect key="frame" x="282.5" y="366" width="20" height="20"/>
+                                <rect key="frame" x="308.5" y="366.5" width="20" height="20"/>
                                 <color key="color" name="PrimaryMain"/>
                             </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9LN-4o-hf8" userLabel="buttonContainer">
+                                <rect key="frame" x="40" y="747" width="334" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKY-py-O37" userLabel="continueButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Afi-Ck-ZaI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                        <state key="normal" title="Продолжить" backgroundImage="buttonBackPrimaryColorFilled">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleContinueButtonTap" destination="8df-z3-OFl" eventType="touchUpInside" id="7ev-fK-Cdc"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-XN-RlS" userLabel="errorContainer">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-06-sxS" userLabel="errorLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                <color key="textColor" name="Dark700"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-PI-mMg" userLabel="retryButton">
+                                                <rect key="frame" x="167" y="8" width="89" height="34"/>
+                                                <state key="normal" title="Повторить">
+                                                    <color key="titleColor" name="PrimaryMain"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleRetryButtonTap" destination="8df-z3-OFl" eventType="touchUpInside" id="GdV-LD-E5v"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="D3Q-PI-mMg" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Csn-XN-RlS" secondAttribute="trailing" id="50e-Lv-aXO"/>
+                                            <constraint firstItem="Kkd-06-sxS" firstAttribute="bottom" secondItem="Csn-XN-RlS" secondAttribute="bottom" id="NGT-OH-Z5I"/>
+                                            <constraint firstItem="D3Q-PI-mMg" firstAttribute="leading" secondItem="Kkd-06-sxS" secondAttribute="trailing" constant="8" id="RGd-oM-9o2"/>
+                                            <constraint firstItem="Kkd-06-sxS" firstAttribute="top" secondItem="Csn-XN-RlS" secondAttribute="top" id="UVd-JV-3GW"/>
+                                            <constraint firstItem="D3Q-PI-mMg" firstAttribute="centerY" secondItem="Kkd-06-sxS" secondAttribute="centerY" id="m4g-zm-KlT"/>
+                                            <constraint firstItem="Kkd-06-sxS" firstAttribute="leading" secondItem="Csn-XN-RlS" secondAttribute="leading" id="wqR-77-PUM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M8n-XL-cHt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,14 +112,14 @@
                             <constraint firstItem="ET5-wi-AgF" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="7bu-sz-Dyc"/>
                             <constraint firstItem="loA-aS-0m9" firstAttribute="top" secondItem="Ojw-f4-0qw" secondAttribute="bottom" constant="24" id="8wS-Sk-UO0"/>
                             <constraint firstItem="I9v-5C-NII" firstAttribute="leading" secondItem="ET5-wi-AgF" secondAttribute="trailing" constant="6" id="GZ2-Sf-aCD"/>
-                            <constraint firstItem="Csn-XN-RlS" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="IZB-hd-wFo"/>
                             <constraint firstItem="Ojw-f4-0qw" firstAttribute="trailing" secondItem="M8n-XL-cHt" secondAttribute="trailing" constant="-40" id="MZs-Fg-0VW"/>
                             <constraint firstItem="Ojw-f4-0qw" firstAttribute="leading" secondItem="M8n-XL-cHt" secondAttribute="leading" constant="40" id="OUk-KT-1Wj"/>
                             <constraint firstItem="JNm-Ag-i2X" firstAttribute="leading" secondItem="I9v-5C-NII" secondAttribute="trailing" constant="12" id="Vsx-1x-I4s"/>
+                            <constraint firstItem="9LN-4o-hf8" firstAttribute="bottom" secondItem="M8n-XL-cHt" secondAttribute="bottom" constant="-5" id="Xs9-6i-RO2"/>
                             <constraint firstItem="loA-aS-0m9" firstAttribute="trailing" secondItem="M8n-XL-cHt" secondAttribute="trailing" constant="-40" id="ZXi-aY-LDp"/>
-                            <constraint firstItem="Csn-XN-RlS" firstAttribute="bottom" secondItem="M8n-XL-cHt" secondAttribute="bottom" constant="-36" id="bsF-e9-4gh"/>
-                            <constraint firstItem="Csn-XN-RlS" firstAttribute="trailing" secondItem="Ojw-f4-0qw" secondAttribute="trailing" id="cfu-Y9-Yz0"/>
                             <constraint firstItem="Ojw-f4-0qw" firstAttribute="top" secondItem="M8n-XL-cHt" secondAttribute="top" constant="161" id="eVB-3B-rQr"/>
+                            <constraint firstItem="9LN-4o-hf8" firstAttribute="trailing" secondItem="M8n-XL-cHt" secondAttribute="trailing" constant="-40" id="eud-QX-lOo"/>
+                            <constraint firstItem="9LN-4o-hf8" firstAttribute="leading" secondItem="M8n-XL-cHt" secondAttribute="leading" constant="40" id="pOB-gS-eFb"/>
                             <constraint firstItem="loA-aS-0m9" firstAttribute="leading" secondItem="Ojw-f4-0qw" secondAttribute="leading" id="qiG-GS-1iI"/>
                             <constraint firstItem="ET5-wi-AgF" firstAttribute="top" secondItem="loA-aS-0m9" secondAttribute="bottom" constant="72" id="t2o-YN-tGf"/>
                             <constraint firstItem="JNm-Ag-i2X" firstAttribute="centerY" secondItem="I9v-5C-NII" secondAttribute="centerY" id="wyP-BN-Km3"/>
@@ -113,8 +128,9 @@
                     <navigationItem key="navigationItem" id="eCL-ff-d0n"/>
                     <connections>
                         <outlet property="activityIndicator" destination="JNm-Ag-i2X" id="nyW-iu-1tj"/>
+                        <outlet property="continueButton" destination="KKY-py-O37" id="tjr-2g-Nkh"/>
                         <outlet property="errorContainer" destination="Csn-XN-RlS" id="yPY-mq-89v"/>
-                        <outlet property="errorContainerBottomConstraint" destination="bsF-e9-4gh" id="f4W-HV-mVc"/>
+                        <outlet property="errorContainerBottomConstraint" destination="Xs9-6i-RO2" id="hoV-Ot-X1c"/>
                         <outlet property="errorLabel" destination="Kkd-06-sxS" id="u3Z-b6-eDH"/>
                         <outlet property="hintLabel" destination="loA-aS-0m9" id="cbH-rC-3lL"/>
                         <outlet property="phoneCodeLabel" destination="ET5-wi-AgF" id="Mdo-8S-9eH"/>
@@ -148,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-pN-beE" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="40"/>
+                                <rect key="frame" x="40" y="205" width="334" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,13 +176,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 (000) 000-00-00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-XE-qZS" userLabel="phoneLabel">
-                                <rect key="frame" x="40" y="290" width="137.5" height="19"/>
+                                <rect key="frame" x="40" y="290.5" width="156.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark900"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-lY-Qwu" userLabel="changeNumberButton">
-                                <rect key="frame" x="186.5" y="284" width="74" height="31"/>
+                                <rect key="frame" x="205.5" y="284.5" width="76" height="31"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <state key="normal" title="Изменить">
                                     <color key="titleColor" name="PrimaryMain"/>
@@ -176,7 +192,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="•   •   •   •" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qN-DnQ" userLabel="codeEnterField">
-                                <rect key="frame" x="40" y="355" width="105.5" height="33"/>
+                                <rect key="frame" x="40" y="355.5" width="93.5" height="33.5"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartDashesType="no" textContentType="one-time-code"/>
@@ -185,7 +201,7 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-3P-WwB" userLabel="indicatorStack">
-                                <rect key="frame" x="155.5" y="361.5" width="36" height="20"/>
+                                <rect key="frame" x="143.5" y="362.5" width="36" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-8k-OX1" userLabel="errorIcon">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
@@ -197,22 +213,22 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный код, попробуйте еще раз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gh-NaM" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="411.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="412.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-fG-gDi" userLabel="retryComponentStack">
-                                <rect key="frame" x="40" y="769.5" width="334" height="68.5"/>
+                                <rect key="frame" x="40" y="769" width="334" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Повторно запросить код можно через 28 секунд" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Kl-NWT" userLabel="retryCountdownLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="38"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <color key="textColor" name="Dark700"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-AK-bwI" userLabel="resendCodeButton">
-                                        <rect key="frame" x="0.0" y="37.5" width="148" height="31"/>
+                                        <rect key="frame" x="0.0" y="38" width="149" height="31"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <state key="normal" title="Выслать новый код">
                                             <color key="titleColor" name="PrimaryMain"/>
@@ -289,32 +305,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давайте познакомимся!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-lo-WE6" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="79.5"/>
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вас зовут?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-5U-tLw" userLabel="hintLabel">
-                                <rect key="frame" x="40" y="308.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37E-2Y-3H7" userLabel="nameField">
-                                <rect key="frame" x="40" y="357.5" width="53" height="33"/>
+                                <rect key="frame" x="40" y="359" width="53" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="OVb-Wi-mbc" userLabel="errorIcon">
-                                <rect key="frame" x="97" y="366" width="16" height="16"/>
+                                <rect key="frame" x="97" y="367.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="15Y-bq-U30"/>
                                     <constraint firstAttribute="width" secondItem="OVb-Wi-mbc" secondAttribute="height" multiplier="1:1" id="kEh-zv-e7h"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Такое имя не подойдет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6En-Ov-Qce" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="420.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="422" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>
@@ -381,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-fK-0hr" userLabel="titleLabel">
-                                <rect key="frame" x="40" y="205" width="334" height="79.5"/>
+                                <rect key="frame" x="40" y="205" width="334" height="81"/>
                                 <string key="text">Отлично,
 username</string>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
@@ -389,26 +405,26 @@ username</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осталось ввести email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exd-97-f71" userLabel="infoLabel">
-                                <rect key="frame" x="40" y="308.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="310" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czF-Dd-MHt" userLabel="emailField">
-                                <rect key="frame" x="40" y="357.5" width="314" height="33"/>
+                                <rect key="frame" x="40" y="359" width="314" height="33"/>
                                 <color key="textColor" name="Dark900"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconError" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-w3-7qG" userLabel="errorIcon">
-                                <rect key="frame" x="358" y="366" width="16" height="16"/>
+                                <rect key="frame" x="358" y="367.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="VLG-Ly-gzA"/>
                                     <constraint firstAttribute="width" secondItem="wPB-w3-7qG" secondAttribute="height" multiplier="1:1" id="wa6-cC-MPn"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Такой email не подойдет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-f3-QMh" userLabel="errorLabel">
-                                <rect key="frame" x="40" y="420.5" width="334" height="19"/>
+                                <rect key="frame" x="40" y="422" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="StatusRed"/>
                                 <nil key="highlightedColor"/>

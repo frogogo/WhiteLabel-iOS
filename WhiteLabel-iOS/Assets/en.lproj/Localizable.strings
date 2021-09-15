@@ -1,6 +1,7 @@
 // Auth screens
 "auth.phone_enter_screen.title" = "Enter";
 "auth.phone_enter_screen.hint" = "Enter your phone number";
+"auth.phone_enter_screen.continue_button.title" = "Continue";
 "auth.phone_enter_screen.retry_button.title" = "Retry";
 "auth.phone_enter_screen.error.incorrect_phone_number" = "Check entered phone number.";
 
@@ -25,6 +26,7 @@
 // Home screens
 "home.home_empty_screen.instruction_section_header.title" = "Remember 2 simple rules";
 "home.home_empty_screen.product_section_header.title" = "Promotional products";
+"home.home_empty_screen.scan_button.title" = "Scan the receipt";
 
 "home.home_screen.product_section_header.title" = "Promotional products";
 "home.home_screen.coupon_section_header.title" = "Coupons";

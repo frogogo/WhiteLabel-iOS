@@ -48,8 +48,6 @@ extension HomeInitialScreenController: HomeInitialScreenViewModelDelegate {
 // MARK: - Home empty state screen delegate methods
 extension HomeInitialScreenController: HomeEmptyScreenControllerDelegate {
   func didFinishFirstQRCodeScan(_ controller: HomeEmptyScreenController) {
-    controller.dismiss(animated: false) { [weak self] in
-      self?.performSegue(withIdentifier: "HomeInitialToHomeScreenSegue", sender: nil)
-    }
+    showHomeScreen()
   }
 }

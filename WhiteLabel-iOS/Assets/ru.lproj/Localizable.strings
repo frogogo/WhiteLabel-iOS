@@ -1,6 +1,7 @@
 // Auth screens
 "auth.phone_enter_screen.title" = "Вход";
 "auth.phone_enter_screen.hint" = "Введите номер телефона";
+"auth.phone_enter_screen.continue_button.title" = "Продолжить";
 "auth.phone_enter_screen.retry_button.title" = "Повторить";
 "auth.phone_enter_screen.error.incorrect_phone_number" = "Проверьте номер телефона.";
 
@@ -25,6 +26,7 @@
 // Home screens
 "home.home_empty_screen.instruction_section_header.title" = "Правила акции";
 "home.home_empty_screen.product_section_header.title" = "Товары участвующие в акции";
+"home.home_empty_screen.scan_button.title" = "Сканировать чек";
 
 "home.home_screen.product_section_header.title" = "Товары участвующие в акции";
 "home.home_screen.coupon_section_header.title" = "Купоны";
