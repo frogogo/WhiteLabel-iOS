@@ -25,7 +25,16 @@ class NameEnterScreenViewModel: BaseViewModel {
 
   // MARK: - Internal/public custom methods
   func setEnteredName(_ enteredNameString: String) {
+    if isNameValid(enteredNameString) {
       enteredName = enteredNameString
       delegate?.didSendEnteredName()
+    } else {
+      errorToShow.value = LocalizedString(forKey: "auth.name_enter_screen.error.name_is_empty_or_contain_spaces")
+    }
+  }
+
+  // MARK: - Private custom methods
+  private func isNameValid(_ nameString: String) -> Bool {
+    return nameString != "" && !nameString.contains(" ")
   }
 }
