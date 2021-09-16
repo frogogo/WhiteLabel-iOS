@@ -170,7 +170,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код отправлен на номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-PH-BJE" userLabel="hintLabel">
-                                <rect key="frame" x="40" y="269" width="334" height="19"/>
+                                <rect key="frame" x="40" y="269.5" width="334" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
@@ -457,13 +457,13 @@ username</string>
                             <constraint firstItem="wPB-w3-7qG" firstAttribute="leading" secondItem="czF-Dd-MHt" secondAttribute="trailing" constant="4" id="SIH-8u-rSJ"/>
                             <constraint firstItem="mRQ-f3-QMh" firstAttribute="top" secondItem="czF-Dd-MHt" secondAttribute="bottom" constant="30" id="SVk-XM-5AE"/>
                             <constraint firstItem="exd-97-f71" firstAttribute="trailing" secondItem="m2i-fK-0hr" secondAttribute="trailing" id="Yu9-yZ-vdK"/>
+                            <constraint firstItem="czF-Dd-MHt" firstAttribute="centerY" secondItem="OnS-it-48P" secondAttribute="centerY" constant="-72.5" id="ebd-On-1zS"/>
                             <constraint firstItem="IYr-aT-0BU" firstAttribute="bottom" secondItem="gz6-Vc-fLb" secondAttribute="bottom" constant="-40" id="gCC-Cg-NWb"/>
                             <constraint firstItem="wPB-w3-7qG" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="jM5-4x-p21"/>
                             <constraint firstItem="exd-97-f71" firstAttribute="top" secondItem="m2i-fK-0hr" secondAttribute="bottom" constant="24" id="k8J-dB-knD"/>
                             <constraint firstItem="mRQ-f3-QMh" firstAttribute="leading" secondItem="m2i-fK-0hr" secondAttribute="leading" id="qVc-GF-QcM"/>
                             <constraint firstItem="IYr-aT-0BU" firstAttribute="trailing" secondItem="gz6-Vc-fLb" secondAttribute="trailing" constant="-40" id="rP2-l7-OLB"/>
                             <constraint firstItem="IYr-aT-0BU" firstAttribute="leading" secondItem="gz6-Vc-fLb" secondAttribute="leading" constant="40" id="sSB-4f-Xg0"/>
-                            <constraint firstItem="m2i-fK-0hr" firstAttribute="top" secondItem="gz6-Vc-fLb" secondAttribute="top" constant="161" id="zaV-RN-xLf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sfm-PM-28a"/>
@@ -509,7 +509,7 @@ username</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ex-pY-eX7"/>
+        <segue reference="Ijp-kO-Tdl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="buttonBackPrimaryColorFilled" width="19.5" height="19.5"/>
@@ -521,7 +521,7 @@ username</string>
             <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.66274509803921566" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="StatusRed">
             <color red="0.94117647058823528" green="0.30588235294117649" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
