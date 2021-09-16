@@ -85,8 +85,7 @@ class NameEnterScreenController: BaseViewController {
 
   // MARK: - Handlers
   @IBAction func handleContinueButtonTap() {
-    guard let enteredName = nameField.text else { return }
-    viewModel.setEnteredName(enteredName)
+    viewModel.setEnteredName(nameField.text)
   }
 
   @objc func handleNotifKeyboardShow(notification: Notification) {

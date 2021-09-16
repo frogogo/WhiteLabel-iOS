@@ -24,17 +24,20 @@ class NameEnterScreenViewModel: BaseViewModel {
   private (set) var enteredName = ""
 
   // MARK: - Internal/public custom methods
-  func setEnteredName(_ enteredNameString: String) {
-    if isNameValid(enteredNameString) {
-      enteredName = enteredNameString
-      delegate?.didSendEnteredName()
-    } else {
+  func setEnteredName(_ enteredNameString: String?) {
+    if !isNameValid(enteredNameString) {
       errorToShow.value = LocalizedString(forKey: "auth.name_enter_screen.error.name_is_empty_or_contain_spaces")
+    } else {
+      enteredName = enteredNameString!
+      delegate?.didSendEnteredName()
     }
   }
 
   // MARK: - Private custom methods
-  private func isNameValid(_ nameString: String) -> Bool {
-    return nameString != "" && !nameString.contains(" ")
+  private func isNameValid(_ nameStringForCheck: String?) -> Bool {
+    guard let nameString = nameStringForCheck else {
+      return false
+    }
+    return nameString != ""
   }
 }
