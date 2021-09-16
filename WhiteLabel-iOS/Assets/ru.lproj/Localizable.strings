@@ -15,7 +15,6 @@
 "auth.name_enter_screen.hint" = "Как вас зовут?";
 "auth.name_enter_screen.name_enter_field.placeholder" = "Имя";
 "auth.name_enter_screen.сontinue_button.title" = "Продолжить";
-"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Имя не должно быть пустым и содержать пробелы";
 
 "auth.email_enter_screen.greetings" = "Отлично,";
 "auth.email_enter_screen.hint" = "Осталось ввести email";

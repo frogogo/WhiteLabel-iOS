@@ -15,7 +15,6 @@
 "auth.name_enter_screen.hint" = "What is your name?";
 "auth.name_enter_screen.name_enter_field.placeholder" = "Your name";
 "auth.name_enter_screen.сontinue_button.title" = "Сontinue";
-"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Name must not be empty or contain spaces";
 
 "auth.email_enter_screen.greetings" = "Fine,";
 "auth.email_enter_screen.hint" = "It remains to enter your email";
