@@ -18,8 +18,8 @@
 		6706BBEB263933A400CE4328 /* EmailEnterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */; };
 		6706BBEE26393DFB00CE4328 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6706BBED26393DFB00CE4328 /* Home.storyboard */; };
 		6706BBEF26393DFB00CE4328 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6706BBED26393DFB00CE4328 /* Home.storyboard */; };
-		6706BBF12639425500CE4328 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
-		6706BBF22639425500CE4328 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
+		6706BBF12639425500CE4328 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* UserManager.swift */; };
+		6706BBF22639425500CE4328 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* UserManager.swift */; };
 		6706BBF4263C1AC300CE4328 /* HomeEmptyScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF3263C1AC300CE4328 /* HomeEmptyScreenController.swift */; };
 		6706BBF5263C1AC300CE4328 /* HomeEmptyScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF3263C1AC300CE4328 /* HomeEmptyScreenController.swift */; };
 		6706BBF9263C1AE800CE4328 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF8263C1AE800CE4328 /* HomeScreenController.swift */; };
@@ -188,7 +188,7 @@
 		67DD597B26E746DF00F2F237 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE382A2625594900750368 /* SceneDelegate.swift */; };
 		67DD597C26E746DF00F2F237 /* PhoneEnterScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675634E4262E3AE4009C4CAE /* PhoneEnterScreenController.swift */; };
 		67DD597D26E746DF00F2F237 /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243ED2264D116500139AC6 /* BaseDataModel.swift */; };
-		67DD597E26E746DF00F2F237 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* ProfileManager.swift */; };
+		67DD597E26E746DF00F2F237 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706BBF02639425500CE4328 /* UserManager.swift */; };
 		67DD597F26E746DF00F2F237 /* CameraAccessChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790129B265289D400C4A4D5 /* CameraAccessChecker.swift */; };
 		67DD598026E746DF00F2F237 /* QRCodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67243F2D265251CB00139AC6 /* QRCodeScannerController.swift */; };
 		67DD598126E746DF00F2F237 /* HomeEmptyScreenInstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DBB405264432A300BBCEB4 /* HomeEmptyScreenInstructionStepCell.swift */; };
@@ -326,7 +326,7 @@
 		6706BBE62639339700CE4328 /* EmailEnterScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEnterScreenController.swift; sourceTree = "<group>"; };
 		6706BBE9263933A400CE4328 /* EmailEnterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEnterScreenViewModel.swift; sourceTree = "<group>"; };
 		6706BBED26393DFB00CE4328 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		6706BBF02639425500CE4328 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		6706BBF02639425500CE4328 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6706BBF3263C1AC300CE4328 /* HomeEmptyScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyScreenController.swift; sourceTree = "<group>"; };
 		6706BBF8263C1AE800CE4328 /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		6706BBFC263C1B3E00CE4328 /* HomeInitialScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInitialScreenController.swift; sourceTree = "<group>"; };
@@ -903,8 +903,8 @@
 				67F14B402631943900FF36E3 /* AccountManager.swift */,
 				67243ECF264C2C7300139AC6 /* HomeManager.swift */,
 				67FDD1172696D64900420DE3 /* ProductManager.swift */,
-				6706BBF02639425500CE4328 /* ProfileManager.swift */,
 				6790129E265293A200C4A4D5 /* ReceiptManager.swift */,
+				6706BBF02639425500CE4328 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1299,7 +1299,7 @@
 				67DD597B26E746DF00F2F237 /* SceneDelegate.swift in Sources */,
 				67DD597C26E746DF00F2F237 /* PhoneEnterScreenController.swift in Sources */,
 				67DD597D26E746DF00F2F237 /* BaseDataModel.swift in Sources */,
-				67DD597E26E746DF00F2F237 /* ProfileManager.swift in Sources */,
+				67DD597E26E746DF00F2F237 /* UserManager.swift in Sources */,
 				67DD597F26E746DF00F2F237 /* CameraAccessChecker.swift in Sources */,
 				67DD59E126E7615B00F2F237 /* Configuration.swift in Sources */,
 				67DD598026E746DF00F2F237 /* QRCodeScannerController.swift in Sources */,
@@ -1383,7 +1383,7 @@
 				67FE382B2625594900750368 /* SceneDelegate.swift in Sources */,
 				675634E5262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
 				67243ED3264D116500139AC6 /* BaseDataModel.swift in Sources */,
-				6706BBF12639425500CE4328 /* ProfileManager.swift in Sources */,
+				6706BBF12639425500CE4328 /* UserManager.swift in Sources */,
 				6790129C265289D400C4A4D5 /* CameraAccessChecker.swift in Sources */,
 				67243F2E265251CB00139AC6 /* QRCodeScannerController.swift in Sources */,
 				67DD59DD26E75F9D00F2F237 /* Configuration.swift in Sources */,
@@ -1468,7 +1468,7 @@
 				675634E6262E3AE4009C4CAE /* PhoneEnterScreenController.swift in Sources */,
 				675634F7262E3BFE009C4CAE /* BaseViewModel.swift in Sources */,
 				67243ED4264D116500139AC6 /* BaseDataModel.swift in Sources */,
-				6706BBF22639425500CE4328 /* ProfileManager.swift in Sources */,
+				6706BBF22639425500CE4328 /* UserManager.swift in Sources */,
 				6790129D265289D400C4A4D5 /* CameraAccessChecker.swift in Sources */,
 				67243F2F265251CC00139AC6 /* QRCodeScannerController.swift in Sources */,
 				67DD59DF26E7615000F2F237 /* Configuration.swift in Sources */,

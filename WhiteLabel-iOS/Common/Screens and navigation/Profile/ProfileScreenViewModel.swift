@@ -25,7 +25,7 @@ class ProfileScreenViewModel: BaseViewModel {
   override func refreshData() {
     super.refreshData()
 
-    ProfileManager.shared.loadCurrentUser { [weak self] loadedUser in
+    UserManager.shared.loadCurrentUser { [weak self] loadedUser in
       guard let self = self else { return }
       self.nameString.value = loadedUser.name
       self.phoneString.value = loadedUser.phoneNumber
