@@ -39,6 +39,7 @@ class RootController: UIViewController {
       child.view.removeFromSuperview()
       child.removeFromParent()
     }
+
     addChild(controllerToShow)
     view.addSubview(controllerToShow.view)
   }
@@ -49,9 +50,7 @@ class RootController: UIViewController {
   }
 
   private func showOnboarding() {
-    if onboardingController == nil {
-      onboardingController = initialController(withStoryboardName: "Onboarding")
-    }
+    onboardingController = initialController(withStoryboardName: "Onboarding")
 
     // this check prevents crash for targets, which may have no onboarding storyboard
     if onboardingController != nil {
@@ -62,16 +61,12 @@ class RootController: UIViewController {
   }
 
   private func showAuth() {
-    if authController == nil {
-      authController = initialController(withStoryboardName: "Auth")
-    }
+    authController = initialController(withStoryboardName: "Auth")
     showScreenWithController(authController!)
   }
 
   private func showMainUI() {
-    if mainUIController == nil {
-      mainUIController = initialController(withStoryboardName: "Home")
-    }
+    mainUIController = initialController(withStoryboardName: "Home")
     showScreenWithController(mainUIController!)
   }
 

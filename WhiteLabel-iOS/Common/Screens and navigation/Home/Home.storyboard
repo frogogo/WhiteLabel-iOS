@@ -79,6 +79,9 @@
                                     <constraint firstAttribute="width" constant="44" id="Ovg-mf-qVU"/>
                                 </constraints>
                                 <state key="normal" image="iconProfile"/>
+                                <connections>
+                                    <action selector="handleProfileButtonTap" destination="7Gk-mn-wjS" eventType="touchUpInside" id="N6d-ft-W7N"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-bi-4Wx" userLabel="table">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
@@ -428,6 +431,7 @@
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
                         <segue destination="Piu-uk-zgO" kind="show" identifier="HomeScreenToReceiptListScreenSegue" id="B65-3o-Knl"/>
                         <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeScreenToProductSegue" id="KIy-er-6Lq"/>
+                        <segue destination="N6M-Xr-3xq" kind="presentation" identifier="HomeScreenToProfileScreenSegue" modalPresentationStyle="fullScreen" id="yuy-qp-e62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -469,6 +473,9 @@
                                     <constraint firstAttribute="width" secondItem="CzZ-XS-dsu" secondAttribute="height" multiplier="1:1" id="tkw-ff-aS1"/>
                                 </constraints>
                                 <state key="normal" image="iconProfile"/>
+                                <connections>
+                                    <action selector="handleProfileButtonTap" destination="P8n-zY-7eE" eventType="touchUpInside" id="9tS-iI-BKL"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp0-4c-UmM" userLabel="table">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
@@ -586,6 +593,7 @@
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeEmptyScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="D8K-nu-gbR"/>
                         <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeEmptyScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="UKG-2k-hxj"/>
                         <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeEmptyScreenToProductSegue" id="eDv-k3-OEL"/>
+                        <segue destination="N6M-Xr-3xq" kind="presentation" identifier="HomeEmptyScreenToProfileScreenSegue" modalPresentationStyle="fullScreen" id="U19-1m-kff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrM-O0-qSx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -600,7 +608,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Q1-XN-VPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="-23"/>
+            <point key="canvasLocation" x="2196" y="-17"/>
         </scene>
         <!--QRCodeScanner-->
         <scene sceneID="2Al-Q4-Dsg">
@@ -610,7 +618,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuG-Iw-Deb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1453" y="-23"/>
+            <point key="canvasLocation" x="1840" y="-17"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="8aW-o9-M9B">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="N6M-Xr-3xq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nn8-DB-lmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-17"/>
         </scene>
         <!--CameraAccessAlert-->
         <scene sceneID="z1g-Qh-NK1">
@@ -618,11 +634,12 @@
                 <viewControllerPlaceholder storyboardName="CameraAccessAlert" id="VSz-jx-sbQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDV-oL-hGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-23"/>
+            <point key="canvasLocation" x="1457" y="-17"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MRb-6F-9He"/>
+        <segue reference="U19-1m-kff"/>
         <segue reference="uwz-wV-5O7"/>
         <segue reference="KIy-er-6Lq"/>
     </inferredMetricsTieBreakers>

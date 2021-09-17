@@ -87,6 +87,10 @@ class HomeEmptyScreenController: BaseViewController {
   }
 
   // MARK: - Handlers
+  @IBAction func handleProfileButtonTap() {
+    performSegue(withIdentifier: "HomeEmptyScreenToProfileScreenSegue", sender: nil)
+  }
+
   @IBAction func handleScanButtonTap() {
     CameraAccessChecker.checkCameraAccess { [weak self] in
       self?.performSegue(withIdentifier: "HomeEmptyScreenToQRScannerSegue", sender: nil)
