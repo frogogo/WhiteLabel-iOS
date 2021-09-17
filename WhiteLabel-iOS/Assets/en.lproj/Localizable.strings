@@ -67,6 +67,10 @@
 "receipt_screen.status.processing.description" = "This usually takes a few minutes, but it is very rare when it takes more of time.";
 "receipt_screen.status.rejected.title" = "Your receipt has not been verified!";
 
+// Profile screen
+"profile_screen.version_prefix" = "Version";
+"profile_screen.logout_button.title" = "Sign out";
+
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Coupon";
 

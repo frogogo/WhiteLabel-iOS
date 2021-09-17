@@ -11,9 +11,28 @@ class ProfileScreenController: BaseViewController {
   // MARK: - Properties
   let viewModel = ProfileScreenViewModel()
 
+  @IBOutlet private var logoutButton: UIButton!
+  @IBOutlet private var nameLabel: UILabel!
+  @IBOutlet private var phoneLabel: UILabel!
+  @IBOutlet private var emailLabel: UILabel!
+  @IBOutlet private var versionLabel: UILabel!
+
   // MARK: - Overridden methods
   override func createViewModel() {
     commonTypeViewModel = viewModel
+  }
+
+  override func addBindings() {
+    super.addBindings()
+
+    viewModel.versionString.bind { [weak self] versionString in
+      self?.versionLabel.text = versionString
+    }
+  }
+
+  override func setupStaticContentForDisplay() {
+    super.setupStaticContentForDisplay()
+    logoutButton.setTitle(viewModel.logoutButtonTitle, for: .normal)
   }
 
   // MARK: - Handlers
@@ -22,7 +41,6 @@ class ProfileScreenController: BaseViewController {
   }
 
   @IBAction func handleLogoutButtonTap() {
-    print("Need to logout user")
     viewModel.logout()
   }
 }

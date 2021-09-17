@@ -4,10 +4,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile Screen Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -25,8 +34,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-H1-UIa" userLabel="logoutButton">
-                                <rect key="frame" x="341" y="65" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
+                                <rect key="frame" x="329" y="68" width="69" height="36"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" name="StatusRed"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -36,24 +48,59 @@
                                     <action selector="handleLogoutButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y8W-yO-sZs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGo-dO-vfO">
-                                <rect key="frame" x="154.5" y="437.5" width="105" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3u-8i-fmV" userLabel="nameLabel">
+                                <rect key="frame" x="40" y="342.5" width="334" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                <color key="textColor" name="Dark900"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+79000000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6N-NG-tIF" userLabel="phoneLabel">
+                                <rect key="frame" x="40" y="407" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdK-DP-axy" userLabel="versionLabel">
+                                <rect key="frame" x="40" y="813" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="example@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFb-6P-AqE" userLabel="emailLabel">
+                                <rect key="frame" x="40" y="434" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <color key="textColor" name="Dark700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZGo-dO-vfO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9S6-A8-q2w"/>
+                            <constraint firstItem="NFb-6P-AqE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="3nL-sv-Eio"/>
+                            <constraint firstItem="M6N-NG-tIF" firstAttribute="bottom" secondItem="NFb-6P-AqE" secondAttribute="top" constant="-8" id="6iZ-Df-6tp"/>
+                            <constraint firstItem="P3u-8i-fmV" firstAttribute="leading" secondItem="NFb-6P-AqE" secondAttribute="leading" id="847-dJ-o43"/>
+                            <constraint firstItem="P3u-8i-fmV" firstAttribute="bottom" secondItem="M6N-NG-tIF" secondAttribute="top" constant="-24" id="Gyc-aA-rBy"/>
                             <constraint firstItem="Fsj-fD-RER" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="NMK-Wy-Zos"/>
-                            <constraint firstItem="0HZ-H1-UIa" firstAttribute="centerY" secondItem="Fsj-fD-RER" secondAttribute="centerY" id="Wib-pH-jgD"/>
-                            <constraint firstItem="ZGo-dO-vfO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Wuz-HZ-VMx"/>
+                            <constraint firstItem="0HZ-H1-UIa" firstAttribute="top" secondItem="Fsj-fD-RER" secondAttribute="top" id="Wib-pH-jgD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LdK-DP-axy" secondAttribute="bottom" constant="30" id="Zw5-HG-u0i"/>
                             <constraint firstItem="Fsj-fD-RER" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="bag-r7-Xfa"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0HZ-H1-UIa" secondAttribute="trailing" constant="16" id="c2t-LL-wbA"/>
+                            <constraint firstItem="0HZ-H1-UIa" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="c2t-LL-wbA"/>
+                            <constraint firstItem="P3u-8i-fmV" firstAttribute="trailing" secondItem="NFb-6P-AqE" secondAttribute="trailing" id="jlY-za-LgT"/>
+                            <constraint firstItem="LdK-DP-axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="lnT-iN-32i"/>
+                            <constraint firstItem="M6N-NG-tIF" firstAttribute="trailing" secondItem="NFb-6P-AqE" secondAttribute="trailing" id="mbf-xf-5AU"/>
+                            <constraint firstItem="M6N-NG-tIF" firstAttribute="leading" secondItem="NFb-6P-AqE" secondAttribute="leading" id="mt6-lD-WCy"/>
+                            <constraint firstItem="NFb-6P-AqE" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="oQ7-63-MGd"/>
+                            <constraint firstItem="NFb-6P-AqE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-40" id="roj-MJ-CfF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LdK-DP-axy" secondAttribute="trailing" constant="40" id="wHB-Rx-eXm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="NFb-6P-AqE" id="KPR-4h-Lxs"/>
+                        <outlet property="logoutButton" destination="0HZ-H1-UIa" id="Y0q-R8-hFJ"/>
+                        <outlet property="nameLabel" destination="P3u-8i-fmV" id="B4X-aH-ByV"/>
+                        <outlet property="phoneLabel" destination="M6N-NG-tIF" id="62B-9L-Vlg"/>
+                        <outlet property="versionLabel" destination="LdK-DP-axy" id="OZe-Uf-pr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,6 +109,15 @@
     </scenes>
     <resources>
         <image name="buttonClose" width="24" height="24"/>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StatusRed">
+            <color red="0.94117647058823528" green="0.30588235294117649" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -67,6 +67,10 @@
 "receipt_screen.status.processing.description" = "Обычно это занимает несколько минут, но очень редко на это уходит много времени.\nКогда ваш чек пройдет проверку, вы сможете отсканировать новый.";
 "receipt_screen.status.rejected.title" = "Ваш чек не прошел проверку!";
 
+// Profile screen
+"profile_screen.version_prefix" = "Версия";
+"profile_screen.logout_button.title" = "Выход";
+
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Купон";
 
