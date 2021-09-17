@@ -7,20 +7,34 @@
 
 import Foundation
 
+protocol ProfileScreenViewModelDelegate: AnyObject {
+  func occuredError(withText errorText: String)
+}
+
 class ProfileScreenViewModel: BaseViewModel {
   // MARK: - Properties
+  weak var delegate: ProfileScreenViewModelDelegate?
+
   let logoutButtonTitle = LocalizedString(forKey: "profile_screen.logout_button.title")
-  let versionString = Box(value: "")
   let nameString = Box(value: "")
   let phoneString = Box(value: "")
   let emailString = Box(value: "")
+  let versionString = Box(value: "")
 
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
-    print("Надо отправить запрос на получение данных юзера")
 
-    versionString.value = appVersionToDisplay()
+    ProfileManager.shared.loadCurrentUser { [weak self] loadedUser in
+      guard let self = self else { return }
+      self.nameString.value = loadedUser.name
+      self.phoneString.value = loadedUser.phoneNumber
+      self.emailString.value = loadedUser.email
+      self.versionString.value = self.appVersionToDisplay()
+
+    } onFailure: { [weak self] error in
+      self?.delegate?.occuredError(withText: error)
+    }
   }
 
   // MARK: - Private custom methods

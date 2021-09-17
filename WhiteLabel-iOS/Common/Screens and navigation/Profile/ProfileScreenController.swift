@@ -25,6 +25,15 @@ class ProfileScreenController: BaseViewController {
   override func addBindings() {
     super.addBindings()
 
+    viewModel.nameString.bind { [weak self] nameString in
+      self?.nameLabel.text = nameString
+    }
+    viewModel.phoneString.bind { [weak self] phoneString in
+      self?.phoneLabel.text = phoneString
+    }
+    viewModel.emailString.bind { [weak self] emailString in
+      self?.emailLabel.text = emailString
+    }
     viewModel.versionString.bind { [weak self] versionString in
       self?.versionLabel.text = versionString
     }
