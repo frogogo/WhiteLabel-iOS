@@ -33,11 +33,11 @@ class ReceiptListScreenController: BaseViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ReceiptListScreenToReceiptScreenSegue" {
-     guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
-     guard selectedReceiptIndex != nil else { return }
-     let receiptToShow = viewModel.receiptModel(forIndex: selectedReceiptIndex!)
-     receiptVC.viewModel.setReceiptModel(receiptToShow)
-   }
+      guard let receiptVC = segue.destination as? ReceiptScreenController else { return }
+      guard selectedReceiptIndex != nil else { return }
+      let receiptToShow = viewModel.receiptModel(forIndex: selectedReceiptIndex!)
+      receiptVC.viewModel.setReceiptModel(receiptToShow)
+    }
   }
 }
 
