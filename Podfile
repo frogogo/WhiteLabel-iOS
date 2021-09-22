@@ -17,3 +17,7 @@ end
 target 'S-Boom' do
   common_pods
 end
+
+target 'ZBoom' do
+  common_pods
+end
