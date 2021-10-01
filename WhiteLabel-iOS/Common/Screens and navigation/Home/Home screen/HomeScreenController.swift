@@ -129,6 +129,10 @@ class HomeScreenController: BaseViewController {
     viewModel.refreshData()
   }
 
+  @IBAction func handleProfileButtonTap() {
+    performSegue(withIdentifier: "HomeScreenToProfileScreenSegue", sender: nil)
+  }
+
   @IBAction func handleScanButtonTap() {
     CameraAccessChecker.checkCameraAccess { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToQRScannerSegue", sender: nil)

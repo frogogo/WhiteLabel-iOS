@@ -59,6 +59,8 @@ class ReceiptScreenController: BaseViewController {
 
   // MARK: - Handlers
   @IBAction func handleCloseButtonTap() {
-    onDismiss()
+    self.presentingViewController?.dismiss(animated: true, completion: { [weak self] in
+      self?.onDismiss()
+    })
   }
 }
