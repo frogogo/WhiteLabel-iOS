@@ -13,6 +13,9 @@ private struct Host {
 }
 
 struct Configuration {
+  // MARK: Localization settings
+  static let targetSpecificStringsFileName = "Localizable-Generic"
+
   // MARK: API connection settings
   static let activeHost = Host.production
 
