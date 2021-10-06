@@ -20,7 +20,7 @@ class ReceiptModel: BaseDataModel {
   var identifier = ""
   var number = ""
   var state = ReceiptState.unknown
-  var sum = 0
+  var sum = 0.0
   var timestamp: Date?
   var rejectReason = ""
 
@@ -30,7 +30,7 @@ class ReceiptModel: BaseDataModel {
 
     identifier = jsonData["id"].stringValue
     number = jsonData["number"].stringValue
-    sum = jsonData["sum"].intValue
+    sum = jsonData["sum"].doubleValue
     rejectReason = jsonData["reject_reason"]["reason_text"].stringValue
 
     let stateRawValue = jsonData["state"].stringValue

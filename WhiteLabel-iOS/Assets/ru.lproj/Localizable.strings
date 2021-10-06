@@ -15,7 +15,7 @@
 "auth.name_enter_screen.hint" = "Как вас зовут?";
 "auth.name_enter_screen.name_enter_field.placeholder" = "Имя";
 "auth.name_enter_screen.сontinue_button.title" = "Продолжить";
-"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Имя не должно быть пустым и содержать пробелы";
+"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Имя не должно быть пустым";
 
 "auth.email_enter_screen.greetings" = "Отлично,";
 "auth.email_enter_screen.hint" = "Осталось ввести email";
@@ -62,7 +62,6 @@
 
 // Receipt screen
 "receipt_screen.status.approved.title" = "Поздравляем, чек принят!";
-"receipt_screen.status.approved.description" = "Когда общая сумма чеков будет равна 3 300, вы получите купон на покупку электрического чайника Lion Sabatier International за 1 рубль";
 "receipt_screen.status.processing.title" = "Ваш чек находится на проверке";
 "receipt_screen.status.processing.description" = "Обычно это занимает несколько минут, но очень редко на это уходит много времени.\nКогда ваш чек пройдет проверку, вы сможете отсканировать новый.";
 "receipt_screen.status.rejected.title" = "Ваш чек не прошел проверку!";

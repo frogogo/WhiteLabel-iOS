@@ -15,7 +15,7 @@
 "auth.name_enter_screen.hint" = "What is your name?";
 "auth.name_enter_screen.name_enter_field.placeholder" = "Your name";
 "auth.name_enter_screen.сontinue_button.title" = "Сontinue";
-"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Name must not be empty or contain spaces";
+"auth.name_enter_screen.error.name_is_empty_or_contain_spaces" = "Name must not be empty";
 
 "auth.email_enter_screen.greetings" = "Fine,";
 "auth.email_enter_screen.hint" = "It remains to enter your email";
@@ -62,7 +62,6 @@
 
 // Receipt screen
 "receipt_screen.status.approved.title" = "Great, the receipt has been accepted!";
-"receipt_screen.status.approved.description" = "As soon as the total amount of receipts is equal to 3,300, you will receive a coupon for the purchase of an electric kettle Lion Sabatier International for 1 ruble";
 "receipt_screen.status.processing.title" = "Your receipt is being checked";
 "receipt_screen.status.processing.description" = "This usually takes a few minutes, but it is very rare when it takes more of time.";
 "receipt_screen.status.rejected.title" = "Your receipt has not been verified!";

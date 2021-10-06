@@ -15,8 +15,8 @@ class ProductModel: BaseDataModel {
   var name = ""
   var description = ""
   var specs = ""
-  var price = 0
-  var discountedPrice = 0
+  var price = 0.0
+  var discountedPrice = 0.0
 
   // MARK: - Overridden methods
   override func update(with jsonData: JSON) {
@@ -27,7 +27,7 @@ class ProductModel: BaseDataModel {
     name = jsonData["name"].stringValue
     description = jsonData["description"].stringValue
     specs = jsonData["specs"].stringValue
-    price = jsonData["price"].intValue
-    discountedPrice = jsonData["discounted_price"].intValue
+    price = jsonData["price"].doubleValue
+    discountedPrice = jsonData["discounted_price"].doubleValue
   }
 }

@@ -44,9 +44,9 @@ class ReceiptScreenViewModel: BaseViewModel {
   private func statusInfo(forReceipt receiptModel: ReceiptModel) -> ReceiptStatusInfo {
     switch receiptModel.state {
     case .approved:
-      // TODO: need to add partner specific text for description below
       return ReceiptStatusInfo(title: LocalizedString(forKey: "receipt_screen.status.approved.title"),
-                               description: LocalizedString(forKey: "receipt_screen.status.approved.description"),
+                               description: LocalizedString(forKey: "receipt_screen.status.approved.description",
+                                                            targetSpecific: true),
                                iconName: "iconReceiptStatusApproved",
                                colorName: "StatusGreen")
     case .processing:
