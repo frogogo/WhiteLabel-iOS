@@ -7,10 +7,17 @@
 
 import Foundation
 
-func LocalizedString(forKey key: String) -> String {
-  return NSLocalizedString(key, comment: "")
+func LocalizedString(forKey key: String,
+                     targetSpecific useTargetSpecificStringFile: Bool = false) -> String {
+  if useTargetSpecificStringFile {
+    return NSLocalizedString(key, tableName: Configuration.targetSpecificStringsFileName, comment: "")
+  } else {
+    return NSLocalizedString(key, comment: "")
+  }
 }
 
-func LocalizedString(forKey key: String, _ arguments: CVarArg...) -> String {
-  return String(format: LocalizedString(forKey: key), arguments: arguments)
+func LocalizedString(forKey key: String,
+                     targetSpecific useTargetSpecificStringFile: Bool = false,
+                     _ arguments: CVarArg...) -> String {
+  return String(format: LocalizedString(forKey: key, targetSpecific: useTargetSpecificStringFile), arguments: arguments)
 }

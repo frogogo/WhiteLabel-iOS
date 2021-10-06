@@ -10,14 +10,14 @@ import SwiftyJSON
 
 class CouponProgressModel: BaseDataModel {
   // MARK: - Properties
-  var currentSum = 0
-  var targetSum = 0
+  var currentSum = 0.0
+  var targetSum = 0.0
 
   // MARK: - Overridden methods
   override func update(with jsonData: JSON) {
     super.update(with: jsonData)
 
-    currentSum = jsonData["current"].intValue
-    targetSum = jsonData["target"].intValue
+    currentSum = jsonData["current"].doubleValue
+    targetSum = jsonData["target"].doubleValue
   }
 }

@@ -32,8 +32,8 @@ class DependencyContainer {
   private static func setupDataManagers() {
     AccountManager.shared.apiConnector = apiConnector
     HomeManager.shared.apiConnector = apiConnector
-    ProfileManager.shared.apiConnector = apiConnector
-    ReceiptManager.shared.apiConnector = apiConnector
     ProductManager.shared.apiConnector = apiConnector
+    ReceiptManager.shared.apiConnector = apiConnector
+    UserManager.shared.apiConnector = apiConnector
   }
 }

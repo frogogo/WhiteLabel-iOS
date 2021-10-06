@@ -104,7 +104,7 @@ class AccountManager: BaseDataManager {
   func logout() {
     deleteTokens()
     deleteOnboardingSeenMark()
-    postNotification(withName: .logout)
+    postNotification(withName: .authorizationRequired)
   }
 
   // MARK: - Private custom methods

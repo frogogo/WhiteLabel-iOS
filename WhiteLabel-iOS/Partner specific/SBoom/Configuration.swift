@@ -13,6 +13,17 @@ private struct Host {
 }
 
 struct Configuration {
+  // MARK: Localization settings
+  static let targetSpecificStringsFileName = "Localizable-SBoom"
+
+  // MARK: API connection settings
   static let activeHost = Host.production
+
+  // MARK: Auth settings
   static let phoneNumberPrefix = "+7"
+
+  // MARK: Price display settings
+  static let currencySymbol = "₽"
+  // price precision is number of digits after floating point
+  static let pricePrecision = 0
 }

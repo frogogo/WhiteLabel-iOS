@@ -3,7 +3,7 @@ platform :ios, '13.6'
 def common_pods
   # Networking
   pod 'Alamofire', '~> 5.4'
-  pod 'Kingfisher', '~> 6.3'
+  pod 'Kingfisher', '~> 7.0'
   # Utilities
   pod 'InputMask', '~> 6.0'
   pod 'SwiftyJSON', '~> 5.0'
@@ -15,5 +15,9 @@ target 'Generic' do
 end
 
 target 'S-Boom' do
+  common_pods
+end
+
+target 'ZBoom' do
   common_pods
 end
