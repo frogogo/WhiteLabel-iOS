@@ -106,8 +106,14 @@ class HomeScreenViewModel: BaseViewModel {
   }
 
   private func makeProgressHintText() -> String {
-    // TODO: тут надо правильно отобразить информацию о прогрессе
-    return "Тут будет отображаться подсказка о прогрессе с купонами\nсразу на несколько строк, очень длинная может быть"
+    if receiptInProcess.value {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.searching_for_products")
+    } else if couponProgress.currentSum <= 0 {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.no_promo_products_found")
+    } else {
+      let leftToScan = CurrencyHelper.readableSumInRubles(withAmount: couponProgress.targetSum - couponProgress.currentSum)
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.scan_more", leftToScan)
+    }
   }
 }
 
