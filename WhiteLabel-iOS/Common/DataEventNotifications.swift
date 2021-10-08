@@ -11,4 +11,7 @@ extension Notification.Name {
   // MARK: Auth related notifications
   static let autoLoginOK = Notification.Name("autoLoginOK")
   static let authorizationRequired = Notification.Name("authorizationRequired")
+
+  // MARK: Data event notifications
+  static let newCouponOccured = Notification.Name("newCouponOccured")
 }

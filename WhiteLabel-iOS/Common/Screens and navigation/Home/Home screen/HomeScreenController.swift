@@ -91,6 +91,14 @@ class HomeScreenController: BaseViewController {
   }
 
   // MARK: - Private custom methods
+  private func subscribeForNotifications() {
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(self,
+                                   selector: #selector(handleNotifNewCouponOccured),
+                                   name: .newCouponOccured,
+                                   object: nil)
+  }
+
   private func registerCells() {
     let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
     mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)
@@ -140,6 +148,11 @@ class HomeScreenController: BaseViewController {
     } onDenied: { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)
     }
+  }
+
+  @objc func handleNotifNewCouponOccured() {
+    // TODO: need to show correct alert
+    showStandardErrorAlert(withMessage: "Новый купон", onDismiss: nil)
   }
 }
 
