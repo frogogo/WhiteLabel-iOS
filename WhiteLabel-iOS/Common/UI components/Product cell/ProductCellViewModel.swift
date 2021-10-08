@@ -33,10 +33,10 @@ class ProductCellViewModel: BaseViewModel {
   }
 
   func productPrice(forSlot slotIndex: Int) -> String {
-    return CurrencyHelper.readableSumInRubles(withAmount: products[slotIndex].price)
+    return CurrencyHelper.readableSum(withAmount: products[slotIndex].price)
   }
 
   func productDiscountedPrice(forSlot slotIndex: Int) -> String {
-    return CurrencyHelper.readableSumInRubles(withAmount: products[slotIndex].discountedPrice)
+    return CurrencyHelper.readableSum(withAmount: products[slotIndex].discountedPrice)
   }
 }

@@ -27,7 +27,7 @@ class ReceiptScreenViewModel: BaseViewModel {
   // MARK: - Internal/public custom methods
   func setReceiptModel(_ receiptModel: ReceiptModel) {
     numberText.value = "№ \(receiptModel.number)"
-    sumText.value = CurrencyHelper.readableSumInRubles(withAmount: receiptModel.sum)
+    sumText.value = CurrencyHelper.readableSum(withAmount: receiptModel.sum)
 
     if let receiptDate = receiptModel.timestamp {
       dateText.value = receiptDate.readableDateWithTime()

@@ -25,7 +25,7 @@ class ReceiptListReceiptViewModel: BaseViewModel {
   // MARK: - Internal/public custom methods
   func update(with receiptModel: ReceiptModel) {
     numberString.value = "№ \(receiptModel.number)"
-    sumText.value = CurrencyHelper.readableSumInRubles(withAmount: receiptModel.sum)
+    sumText.value = CurrencyHelper.readableSum(withAmount: receiptModel.sum)
     statusIconName.value = stateIconName(forReceiptState: receiptModel.state)
     statusTitleText.value = stateTitleText(forReceiptState: receiptModel.state)
     statusColorName.value = stateColorName(forReceiptState: receiptModel.state)

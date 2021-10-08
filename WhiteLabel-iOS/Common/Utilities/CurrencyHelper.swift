@@ -8,7 +8,7 @@
 import Foundation
 
 class CurrencyHelper {
-  static func readableSumInRubles(withAmount sum: Double) -> String {
+  static func readableSum(withAmount sum: Double) -> String {
     let currencySymbol = Configuration.currencySymbol
     let pricePrecision = Configuration.pricePrecision
     let formattedPrice = String(format: "%.\(pricePrecision)f", sum)
