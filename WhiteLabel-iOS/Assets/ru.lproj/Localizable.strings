@@ -76,5 +76,8 @@
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Купон";
 
+// Standard error alert
+"error_alert.title" = "Ошибка";
+
 // Common errors
 "error.unknown" = "Что-то пошло не так!";
