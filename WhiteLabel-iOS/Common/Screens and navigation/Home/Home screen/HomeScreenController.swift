@@ -113,6 +113,7 @@ class HomeScreenController: BaseViewController {
     cell.currentValueLabel.text = viewModel.currentSumText
     cell.targetValueLabel.text = viewModel.targetSumText
     cell.progressBar.progress = viewModel.progressRatio
+    cell.progressHintLabel.text = viewModel.progressHintText
   }
 
   private func preparedCouponSectionHeader() -> SectionHeader {

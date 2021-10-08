@@ -24,6 +24,9 @@ class HomeScreenViewModel: BaseViewModel {
   var progressRatio: Float {
     return Float(couponProgress.currentSum) / Float(couponProgress.targetSum)
   }
+  var progressHintText: String {
+    return makeProgressHintText()
+  }
 
   var couponCount: Int {
     return couponViewModels.count
@@ -100,6 +103,11 @@ class HomeScreenViewModel: BaseViewModel {
       couponViewModel.pictureURL.value = promotion.photo.thumbPhotoURL
       couponViewModels.append(couponViewModel)
     }
+  }
+
+  private func makeProgressHintText() -> String {
+    // TODO: тут надо правильно отобразить информацию о прогрессе
+    return "Тут будет отображаться подсказка о прогрессе с купонами\nсразу на несколько строк, очень длинная может быть"
   }
 }
 
