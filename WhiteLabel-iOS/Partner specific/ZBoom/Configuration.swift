@@ -20,7 +20,7 @@ struct Configuration {
   static let activeHost = Host.staging
 
   // MARK: Auth settings
-  static let phoneNumberPrefix = ""
+  static let phoneNumberPrefix = "+"
 
   // MARK: Price display settings
   static let currencySymbol = "€"
