@@ -415,6 +415,7 @@
                         <segue destination="Piu-uk-zgO" kind="show" identifier="HomeScreenToReceiptListScreenSegue" id="B65-3o-Knl"/>
                         <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeScreenToProductSegue" id="KIy-er-6Lq"/>
                         <segue destination="N6M-Xr-3xq" kind="presentation" identifier="HomeScreenToProfileScreenSegue" modalPresentationStyle="fullScreen" id="yuy-qp-e62"/>
+                        <segue destination="svw-FD-vjd" kind="presentation" identifier="HomeScreenToNewCouponPopupSegue" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="cUa-uH-Fgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -618,6 +619,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDV-oL-hGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1457" y="-17"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="RA4-Gg-KAA">
+            <objects>
+                <viewControllerPlaceholder id="svw-FD-vjd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vk2-r6-ZHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2566" y="-17"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

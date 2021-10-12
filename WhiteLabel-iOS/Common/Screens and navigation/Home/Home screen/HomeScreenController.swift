@@ -33,6 +33,12 @@ class HomeScreenController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.isNavigationBarHidden = true
+    subscribeForNotifications()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    unsubsribeFromNotifications()
   }
 
   // MARK: - Overridden methods
@@ -85,6 +91,10 @@ class HomeScreenController: BaseViewController {
     case "HomeScreenToQRScannerSegue":
       guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
       scannerVC.delegate = self
+
+    case "HomeScreenToNewCouponPopupSegue":
+      guard let popupVC = segue.destination as? PopupController else { return }
+      print("Тут надо настроить отображаемый текст для попапа")
     default:
       break
     }
@@ -97,6 +107,10 @@ class HomeScreenController: BaseViewController {
                                    selector: #selector(handleNotifNewCouponOccured),
                                    name: .newCouponOccured,
                                    object: nil)
+  }
+
+  private func unsubsribeFromNotifications() {
+    NotificationCenter.default.removeObserver(self)
   }
 
   private func registerCells() {
@@ -151,8 +165,7 @@ class HomeScreenController: BaseViewController {
   }
 
   @objc func handleNotifNewCouponOccured() {
-    // TODO: need to show correct alert
-    showStandardErrorAlert(withMessage: "Новый купон", onDismiss: nil)
+    performSegue(withIdentifier: "HomeScreenToNewCouponPopupSegue", sender: nil)
   }
 }
 
