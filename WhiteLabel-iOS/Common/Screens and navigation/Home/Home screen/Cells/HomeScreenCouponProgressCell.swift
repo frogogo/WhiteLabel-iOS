@@ -12,4 +12,6 @@ class HomeScreenCouponProgressCell: UITableViewCell {
   @IBOutlet var currentValueLabel: UILabel!
   @IBOutlet var targetValueLabel: UILabel!
   @IBOutlet var progressBar: UIProgressView!
+  @IBOutlet var progressHintContainer: UIView!
+  @IBOutlet var progressHintLabel: UILabel!
 }

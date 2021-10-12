@@ -16,13 +16,16 @@ class HomeScreenViewModel: BaseViewModel {
   weak var delegate: HomeScreenViewModelDelegate?
 
   var currentSumText: String {
-    return CurrencyHelper.readableSumInRubles(withAmount: couponProgress.currentSum)
+    return CurrencyHelper.readableSum(withAmount: couponProgress.currentSum)
   }
   var targetSumText: String {
-    return CurrencyHelper.readableSumInRubles(withAmount: couponProgress.targetSum)
+    return CurrencyHelper.readableSum(withAmount: couponProgress.targetSum)
   }
   var progressRatio: Float {
     return Float(couponProgress.currentSum) / Float(couponProgress.targetSum)
+  }
+  var progressHintText: String {
+    return makeProgressHintText()
   }
 
   var couponCount: Int {
@@ -99,6 +102,17 @@ class HomeScreenViewModel: BaseViewModel {
       couponViewModel.titleText.value = promotion.name
       couponViewModel.pictureURL.value = promotion.photo.thumbPhotoURL
       couponViewModels.append(couponViewModel)
+    }
+  }
+
+  private func makeProgressHintText() -> String {
+    if receiptInProcess.value {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.searching_for_products")
+    } else if couponProgress.currentSum <= 0 {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.no_promo_products_found")
+    } else {
+      let sumLeft = CurrencyHelper.readableSum(withAmount: couponProgress.targetSum - couponProgress.currentSum)
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.scan_more", sumLeft)
     }
   }
 }

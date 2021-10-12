@@ -34,6 +34,9 @@
 "home.home_screen.see_receipt_list_button.title" = "Мои чеки";
 "home.home_screen.scan_warning_cell.hint_text" = "Когда ваш чек пройдет проверку, вы сможете отсканировать новый чек";
 "home.home_screen.scan_button.title" = "Сканировать чек";
+"home.home_screen.progress_hint_text.searching_for_products" = "Ищем товары в вашем чеке";
+"home.home_screen.progress_hint_text.no_promo_products_found" = "В ваших чеках не было акционных товаров";
+"home.home_screen.progress_hint_text.scan_more" = "Отсканируйте еще на %@, чтобы получить купон";
 
 // Coupon screen
 "coupon.coupon_detail_screen.coupon_number" = "Купон №";
