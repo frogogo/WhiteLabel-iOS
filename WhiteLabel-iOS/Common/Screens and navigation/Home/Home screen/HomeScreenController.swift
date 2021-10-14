@@ -88,7 +88,17 @@ class HomeScreenController: BaseViewController {
 
     case "HomeScreenToNewCouponPopupSegue":
       guard let popupVC = segue.destination as? PopupController else { return }
-      print("Тут надо настроить отображаемый текст для попапа")
+      popupVC.titleText = LocalizedString(forKey: "new_coupon_popup.title")
+      popupVC.descriptionText = LocalizedString(forKey: "new_coupon_popup.description", targetSpecific: true)
+      popupVC.okButtonTitleText = LocalizedString(forKey: "new_coupon_popup.ok_button.title")
+      popupVC.onDismiss = { [weak self] in
+        guard let self = self else { return }
+        if self.viewModel.couponCount > 0 {
+          self.selectedCouponIndex = 0
+          self.performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
+        }
+      }
+
     default:
       break
     }
@@ -144,10 +154,6 @@ class HomeScreenController: BaseViewController {
     } onDenied: { [weak self] in
       self?.performSegue(withIdentifier: "HomeScreenToCameraAccessSegue", sender: nil)
     }
-  }
-
-  @objc func handleNotifNewCouponOccured() {
-    performSegue(withIdentifier: "HomeScreenToNewCouponPopupSegue", sender: nil)
   }
 }
 
@@ -235,6 +241,10 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
 extension HomeScreenController: HomeScreenViewModelDelegate {
   func viewModelUpdated() {
     mainTable.reloadData()
+  }
+
+  func showNewCouponPopup() {
+    performSegue(withIdentifier: "HomeScreenToNewCouponPopupSegue", sender: nil)
   }
 }
 

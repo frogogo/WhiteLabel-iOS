@@ -1,2 +1,5 @@
 // Receipt screen
 "receipt_screen.status.approved.description" = "As soon as the total amount of receipts is equal to 3,300, you will receive a coupon for the purchase of an electric kettle Lion Sabatier International for 1 ruble";
+
+// New coupon popup
+"new_coupon_popup.description" = "Congratulations, you got the coupon for Lion Sabatier International!";

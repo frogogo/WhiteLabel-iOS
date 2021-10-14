@@ -73,6 +73,10 @@
 "profile_screen.version_prefix" = "Версия";
 "profile_screen.logout_button.title" = "Выход";
 
+// Popup
+"new_coupon_popup.title" = "Вы получили купон!";
+"new_coupon_popup.ok_button.title" = "Посмотреть";
+
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Купон";
 

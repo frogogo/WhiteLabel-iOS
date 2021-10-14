@@ -411,11 +411,11 @@
                         <outlet property="scanReceiptButton" destination="BRM-YC-Wzq" id="hev-u1-dC2"/>
                         <segue destination="iNF-Df-4r4" kind="presentation" identifier="HomeToCouponDetailsSegue" id="Inl-nd-ral"/>
                         <segue destination="crR-tv-VOA" kind="presentation" identifier="HomeScreenToQRScannerSegue" modalPresentationStyle="fullScreen" id="uwz-wV-5O7"/>
-                        <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" animates="NO" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
+                        <segue destination="VSz-jx-sbQ" kind="presentation" identifier="HomeScreenToCameraAccessSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="MRb-6F-9He"/>
                         <segue destination="Piu-uk-zgO" kind="show" identifier="HomeScreenToReceiptListScreenSegue" id="B65-3o-Knl"/>
                         <segue destination="8OW-kJ-iEY" kind="presentation" identifier="HomeScreenToProductSegue" id="KIy-er-6Lq"/>
                         <segue destination="N6M-Xr-3xq" kind="presentation" identifier="HomeScreenToProfileScreenSegue" modalPresentationStyle="fullScreen" id="yuy-qp-e62"/>
-                        <segue destination="svw-FD-vjd" kind="presentation" identifier="HomeScreenToNewCouponPopupSegue" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="cUa-uH-Fgf"/>
+                        <segue destination="svw-FD-vjd" kind="presentation" identifier="HomeScreenToNewCouponPopupSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="cUa-uH-Fgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg5-in-i88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -620,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="1457" y="-17"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Popup-->
         <scene sceneID="RA4-Gg-KAA">
             <objects>
-                <viewControllerPlaceholder id="svw-FD-vjd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Popup" id="svw-FD-vjd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vk2-r6-ZHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2566" y="-17"/>
@@ -656,7 +656,7 @@
             <color red="0.95686274509803926" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryMain">
-            <color red="0.47843137254901963" green="0.75686274509803919" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.66274509803921566" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

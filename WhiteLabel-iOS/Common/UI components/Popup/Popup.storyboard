@@ -81,12 +81,19 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="70G-Dh-B7Z" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="DBt-jm-KkU"/>
                             <constraint firstItem="70G-Dh-B7Z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Tds-UE-b6v"/>
                             <constraint firstItem="70G-Dh-B7Z" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nu1-to-UtY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="bMv-gN-FFx" id="A8y-Tp-JFD"/>
+                        <outlet property="icon" destination="LQT-MT-g5Q" id="feO-vF-klN"/>
+                        <outlet property="okButton" destination="d5b-dA-VxP" id="5JM-Ze-ZVh"/>
+                        <outlet property="titleLabel" destination="2Ty-XF-Fpn" id="ZIA-im-Ghd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
