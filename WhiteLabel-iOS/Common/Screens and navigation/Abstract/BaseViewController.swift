@@ -46,7 +46,7 @@ class BaseViewController: UIViewController {
   }
 
   func showStandardErrorAlert(withMessage message: String, onDismiss: (() -> Void)? = nil) {
-    let alert = UIAlertController(title: "Ошибка",
+    let alert = UIAlertController(title: LocalizedString(forKey: "error_alert.title"),
                                   message: message,
                                   preferredStyle: .actionSheet)
 

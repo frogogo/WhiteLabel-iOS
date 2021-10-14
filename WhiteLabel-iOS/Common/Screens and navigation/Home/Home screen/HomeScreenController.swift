@@ -85,6 +85,20 @@ class HomeScreenController: BaseViewController {
     case "HomeScreenToQRScannerSegue":
       guard let scannerVC = segue.destination as? QRCodeScannerController else { return }
       scannerVC.delegate = self
+
+    case "HomeScreenToNewCouponPopupSegue":
+      guard let popupVC = segue.destination as? PopupController else { return }
+      popupVC.titleText = LocalizedString(forKey: "new_coupon_popup.title")
+      popupVC.descriptionText = LocalizedString(forKey: "new_coupon_popup.description", targetSpecific: true)
+      popupVC.okButtonTitleText = LocalizedString(forKey: "new_coupon_popup.ok_button.title")
+      popupVC.onDismiss = { [weak self] in
+        guard let self = self else { return }
+        if self.viewModel.couponCount > 0 {
+          self.selectedCouponIndex = 0
+          self.performSegue(withIdentifier: "HomeToCouponDetailsSegue", sender: nil)
+        }
+      }
+
     default:
       break
     }
@@ -227,6 +241,10 @@ extension HomeScreenController: UITableViewDataSource, UITableViewDelegate {
 extension HomeScreenController: HomeScreenViewModelDelegate {
   func viewModelUpdated() {
     mainTable.reloadData()
+  }
+
+  func showNewCouponPopup() {
+    performSegue(withIdentifier: "HomeScreenToNewCouponPopupSegue", sender: nil)
   }
 }
 

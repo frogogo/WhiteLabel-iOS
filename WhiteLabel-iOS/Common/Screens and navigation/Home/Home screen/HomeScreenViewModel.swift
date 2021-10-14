@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeScreenViewModelDelegate: AnyObject {
   func viewModelUpdated()
+  func showNewCouponPopup()
 }
 
 class HomeScreenViewModel: BaseViewModel {
@@ -40,8 +41,8 @@ class HomeScreenViewModel: BaseViewModel {
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
   private let productSectionViewModel = ProductListScreenViewModel()
+  private var couponCountBeforeDataRefresh = 0
 
-  // MARK: - Lifecycle methods
   // MARK: - Lifecycle methods
   override init() {
     super.init()
@@ -51,8 +52,9 @@ class HomeScreenViewModel: BaseViewModel {
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
-
+    
     dataRefreshInProcess.value = true
+    couponCountBeforeDataRefresh = HomeManager.shared.savedCouponCount
 
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
@@ -61,6 +63,7 @@ class HomeScreenViewModel: BaseViewModel {
       self.createCouponViewModels(forModels: HomeManager.shared.coupons)
       self.dataRefreshInProcess.value = false
       self.delegate?.viewModelUpdated()
+      self.checkForNewCoupons()
 
     } onFailure: { [weak self] error in
       self?.dataRefreshInProcess.value = false
@@ -90,6 +93,12 @@ class HomeScreenViewModel: BaseViewModel {
       if receiptModel.state == .processing {
         receiptInProcess.value = true
       }
+    }
+  }
+
+  private func checkForNewCoupons() {
+    if couponCount > couponCountBeforeDataRefresh {
+      delegate?.showNewCouponPopup()
     }
   }
 

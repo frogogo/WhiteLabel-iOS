@@ -52,13 +52,13 @@ class ReceiptListReceiptViewModel: BaseViewModel {
     // TODO: add localization below!
     switch receiptState {
     case .approved:
-      return "Принят"
+      return LocalizedString(forKey: "receipt_list_screen.receipt_cell.status.approved")
     case .processing:
-      return "Проверяется"
+      return LocalizedString(forKey: "receipt_list_screen.receipt_cell.status.processing")
     case .rejected:
-      return "Отклонен"
+      return LocalizedString(forKey: "receipt_list_screen.receipt_cell.status.rejected")
     default:
-      return "Неизвестно"
+      return LocalizedString(forKey: "receipt_list_screen.receipt_cell.status.unknown")
     }
   }
 

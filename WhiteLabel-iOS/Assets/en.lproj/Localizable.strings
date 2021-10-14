@@ -73,8 +73,15 @@
 "profile_screen.version_prefix" = "Version";
 "profile_screen.logout_button.title" = "Sign out";
 
+// Popup
+"new_coupon_popup.title" = "You got the coupon!";
+"new_coupon_popup.ok_button.title" = "Open";
+
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Coupon";
+
+// Standard error alert
+"error_alert.title" = "Error";
 
 // Common errors
 "error.unknown" = "Something went wrong!";

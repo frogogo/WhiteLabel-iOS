@@ -16,6 +16,12 @@ class HomeManager: BaseDataManager {
   let couponProgress = CouponProgressModel()
   var receipts: [ReceiptModel] = []
   var coupons: [CouponModel] = []
+
+  var savedCouponCount: Int {
+    return UserDefaults.standard.integer(forKey: couponCounterKey)
+  }
+
+  private let couponCounterKey = "couponCounterKey"
   
   // MARK: - Internal/public custom methods
   func checkHomeData(onSuccess: @escaping (Bool) -> Void,
@@ -50,6 +56,7 @@ class HomeManager: BaseDataManager {
         self.couponProgress.update(with: response["progress"])
         self.receipts = ReceiptModel.array(withJSONDataArray: response["receipts"].arrayValue)
         self.coupons = CouponModel.array(withJSONDataArray: response["coupons"].arrayValue)
+        self.updateCouponCounter()
         onSuccess()
 
       } else {
@@ -58,5 +65,11 @@ class HomeManager: BaseDataManager {
         onFailure(errorText)
       }
     }
+  }
+
+  private func updateCouponCounter() {
+    let updatedCouponCount = coupons.count
+    UserDefaults.standard.setValue(updatedCouponCount, forKey: couponCounterKey)
+    UserDefaults.standard.synchronize()
   }
 }
