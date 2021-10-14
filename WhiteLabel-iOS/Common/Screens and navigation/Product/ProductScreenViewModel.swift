@@ -41,8 +41,8 @@ class ProductScreenViewModel: BaseViewModel {
   private func updateInfoForDisplay() {
     guard let productToDisplay = productModel else { return }
     pictureURL.value = productToDisplay.photoURL
-    discountedPrice.value = CurrencyHelper.readableSumInRubles(withAmount: productToDisplay.discountedPrice)
-    price.value = CurrencyHelper.readableSumInRubles(withAmount: productToDisplay.price)
+    discountedPrice.value = CurrencyHelper.readableSum(withAmount: productToDisplay.discountedPrice)
+    price.value = CurrencyHelper.readableSum(withAmount: productToDisplay.price)
     productName.value = productToDisplay.name
     specs.value = productToDisplay.specs
     description.value = productToDisplay.description

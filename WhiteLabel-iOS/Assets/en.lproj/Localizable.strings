@@ -34,6 +34,9 @@
 "home.home_screen.see_receipt_list_button.title" = "My receipts";
 "home.home_screen.scan_warning_cell.hint_text" = "When your receipt passes verification, you will be able to scan a new receipt";
 "home.home_screen.scan_button.title" = "Scan the receipt";
+"home.home_screen.progress_hint_text.searching_for_products" = "We're looking for promotion products in your receipt";
+"home.home_screen.progress_hint_text.no_promo_products_found" = "No promotion products found in your receipts";
+"home.home_screen.progress_hint_text.scan_more" = "Scan receipts with promotion products\nfor %@ to get a coupon";
 
 // Coupon screen
 "coupon.coupon_detail_screen.coupon_number" = "Coupon №";
@@ -70,8 +73,15 @@
 "profile_screen.version_prefix" = "Version";
 "profile_screen.logout_button.title" = "Sign out";
 
+// Popup
+"new_coupon_popup.title" = "You got the coupon!";
+"new_coupon_popup.ok_button.title" = "Open";
+
 // Promotion item cell
 "common.promotion_item_cell.coupon_hint" = "Coupon";
+
+// Standard error alert
+"error_alert.title" = "Error";
 
 // Common errors
 "error.unknown" = "Something went wrong!";

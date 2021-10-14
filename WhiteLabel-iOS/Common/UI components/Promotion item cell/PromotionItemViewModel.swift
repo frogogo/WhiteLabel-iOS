@@ -31,7 +31,7 @@ class PromotionItemViewModel: BaseViewModel {
     
     pictureURL.value = promotionModel.photo.largePhotoURL
     nameString.value = promotionModel.name
-    discountedPriceString.value = CurrencyHelper.readableSumInRubles(withAmount: promotionModel.discountedPrice)
-    priceString.value = CurrencyHelper.readableSumInRubles(withAmount: promotionModel.price)
+    discountedPriceString.value = CurrencyHelper.readableSum(withAmount: promotionModel.discountedPrice)
+    priceString.value = CurrencyHelper.readableSum(withAmount: promotionModel.price)
   }
 }

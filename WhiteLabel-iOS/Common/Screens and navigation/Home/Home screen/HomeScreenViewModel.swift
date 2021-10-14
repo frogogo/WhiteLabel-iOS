@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeScreenViewModelDelegate: AnyObject {
   func viewModelUpdated()
+  func showNewCouponPopup()
 }
 
 class HomeScreenViewModel: BaseViewModel {
@@ -16,13 +17,16 @@ class HomeScreenViewModel: BaseViewModel {
   weak var delegate: HomeScreenViewModelDelegate?
 
   var currentSumText: String {
-    return CurrencyHelper.readableSumInRubles(withAmount: couponProgress.currentSum)
+    return CurrencyHelper.readableSum(withAmount: couponProgress.currentSum)
   }
   var targetSumText: String {
-    return CurrencyHelper.readableSumInRubles(withAmount: couponProgress.targetSum)
+    return CurrencyHelper.readableSum(withAmount: couponProgress.targetSum)
   }
   var progressRatio: Float {
     return Float(couponProgress.currentSum) / Float(couponProgress.targetSum)
+  }
+  var progressHintText: String {
+    return makeProgressHintText()
   }
 
   var couponCount: Int {
@@ -37,8 +41,8 @@ class HomeScreenViewModel: BaseViewModel {
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
   private let productSectionViewModel = ProductListScreenViewModel()
+  private var couponCountBeforeDataRefresh = 0
 
-  // MARK: - Lifecycle methods
   // MARK: - Lifecycle methods
   override init() {
     super.init()
@@ -48,8 +52,9 @@ class HomeScreenViewModel: BaseViewModel {
   // MARK: - Overridden methods
   override func refreshData() {
     super.refreshData()
-
+    
     dataRefreshInProcess.value = true
+    couponCountBeforeDataRefresh = HomeManager.shared.savedCouponCount
 
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
@@ -58,6 +63,7 @@ class HomeScreenViewModel: BaseViewModel {
       self.createCouponViewModels(forModels: HomeManager.shared.coupons)
       self.dataRefreshInProcess.value = false
       self.delegate?.viewModelUpdated()
+      self.checkForNewCoupons()
 
     } onFailure: { [weak self] error in
       self?.dataRefreshInProcess.value = false
@@ -90,6 +96,12 @@ class HomeScreenViewModel: BaseViewModel {
     }
   }
 
+  private func checkForNewCoupons() {
+    if couponCount > couponCountBeforeDataRefresh {
+      delegate?.showNewCouponPopup()
+    }
+  }
+
   private func createCouponViewModels(forModels couponModels: [CouponModel]) {
     let promotion = HomeManager.shared.promotion
 
@@ -99,6 +111,17 @@ class HomeScreenViewModel: BaseViewModel {
       couponViewModel.titleText.value = promotion.name
       couponViewModel.pictureURL.value = promotion.photo.thumbPhotoURL
       couponViewModels.append(couponViewModel)
+    }
+  }
+
+  private func makeProgressHintText() -> String {
+    if receiptInProcess.value {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.searching_for_products")
+    } else if couponProgress.currentSum <= 0 {
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.no_promo_products_found")
+    } else {
+      let sumLeft = CurrencyHelper.readableSum(withAmount: couponProgress.targetSum - couponProgress.currentSum)
+      return LocalizedString(forKey: "home.home_screen.progress_hint_text.scan_more", sumLeft)
     }
   }
 }

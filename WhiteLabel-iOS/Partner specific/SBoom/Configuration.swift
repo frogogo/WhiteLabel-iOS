@@ -24,6 +24,7 @@ struct Configuration {
 
   // MARK: Price display settings
   static let currencySymbol = "₽"
+  static let priceFormat = PriceDisplayFormat.sumSpaceSymbol
   // price precision is number of digits after floating point
   static let pricePrecision = 0
 }

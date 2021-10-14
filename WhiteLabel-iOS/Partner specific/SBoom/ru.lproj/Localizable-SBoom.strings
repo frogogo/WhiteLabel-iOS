@@ -1,2 +1,5 @@
 // Receipt screen
 "receipt_screen.status.approved.description" = "Когда общая сумма чеков будет равна 3 300, вы получите купон на покупку электрического чайника Lion Sabatier International за 1 рубль";
+
+// New coupon popup
+"new_coupon_popup.description" = "Поздравляем, вы получили купон на электрический чайник Lion Sabatier International!";

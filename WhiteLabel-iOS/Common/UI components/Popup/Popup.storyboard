@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Popup Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PopupController" customModule="Generic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70G-Dh-B7Z">
+                                <rect key="frame" x="16" y="305" width="382" height="286"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNewCouponOccured" translatesAutoresizingMaskIntoConstraints="NO" id="LQT-MT-g5Q" userLabel="icon">
+                                        <rect key="frame" x="155" y="24" width="72" height="72"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы получили купон!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-XF-Fpn" userLabel="titleLabel">
+                                        <rect key="frame" x="16" y="112" width="350" height="24"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                        <color key="textColor" name="Dark900"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поздравляем! Вы получили купон на приобретение чайника" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-gN-FFx" userLabel="descriptionLabel">
+                                        <rect key="frame" x="16" y="152" width="350" height="38"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" name="Dark700"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-dA-VxP" userLabel="okButton">
+                                        <rect key="frame" x="131" y="222" width="120" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="EHm-j5-FfH"/>
+                                            <constraint firstAttribute="width" constant="120" id="bte-H9-Crz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                        <state key="normal" title="OK" backgroundImage="buttonBackPrimaryColorFilled">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleOKButtonTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RT8-q0-noX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="d5b-dA-VxP" firstAttribute="bottom" secondItem="70G-Dh-B7Z" secondAttribute="bottom" constant="-16" id="3FX-zl-hLI"/>
+                                    <constraint firstItem="d5b-dA-VxP" firstAttribute="centerX" secondItem="70G-Dh-B7Z" secondAttribute="centerX" id="6nz-HV-SEa"/>
+                                    <constraint firstItem="d5b-dA-VxP" firstAttribute="top" secondItem="bMv-gN-FFx" secondAttribute="bottom" constant="32" id="7P4-6Q-y2b"/>
+                                    <constraint firstItem="2Ty-XF-Fpn" firstAttribute="trailing" secondItem="70G-Dh-B7Z" secondAttribute="trailing" constant="-16" id="7S4-ht-jDT"/>
+                                    <constraint firstItem="bMv-gN-FFx" firstAttribute="leading" secondItem="70G-Dh-B7Z" secondAttribute="leading" constant="16" id="X4B-ZX-Aut"/>
+                                    <constraint firstItem="bMv-gN-FFx" firstAttribute="trailing" secondItem="70G-Dh-B7Z" secondAttribute="trailing" constant="-16" id="ZUf-Ks-01F"/>
+                                    <constraint firstItem="LQT-MT-g5Q" firstAttribute="top" secondItem="70G-Dh-B7Z" secondAttribute="top" constant="24" id="g3I-jh-ubN"/>
+                                    <constraint firstItem="2Ty-XF-Fpn" firstAttribute="leading" secondItem="70G-Dh-B7Z" secondAttribute="leading" constant="16" id="il0-KR-tfu"/>
+                                    <constraint firstItem="LQT-MT-g5Q" firstAttribute="centerX" secondItem="70G-Dh-B7Z" secondAttribute="centerX" id="n1l-Rl-G4a"/>
+                                    <constraint firstItem="2Ty-XF-Fpn" firstAttribute="top" secondItem="LQT-MT-g5Q" secondAttribute="bottom" constant="16" id="tbe-dG-spE"/>
+                                    <constraint firstItem="bMv-gN-FFx" firstAttribute="top" secondItem="2Ty-XF-Fpn" secondAttribute="bottom" constant="16" id="u5w-8M-d0L"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="70G-Dh-B7Z" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="DBt-jm-KkU"/>
+                            <constraint firstItem="70G-Dh-B7Z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Tds-UE-b6v"/>
+                            <constraint firstItem="70G-Dh-B7Z" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nu1-to-UtY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="bMv-gN-FFx" id="A8y-Tp-JFD"/>
+                        <outlet property="icon" destination="LQT-MT-g5Q" id="feO-vF-klN"/>
+                        <outlet property="okButton" destination="d5b-dA-VxP" id="5JM-Ze-ZVh"/>
+                        <outlet property="titleLabel" destination="2Ty-XF-Fpn" id="ZIA-im-Ghd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buttonBackPrimaryColorFilled" width="19.5" height="19.5"/>
+        <image name="iconNewCouponOccured" width="72" height="72"/>
+        <namedColor name="Dark700">
+            <color red="0.45882352941176469" green="0.54509803921568623" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark900">
+            <color red="0.14509803921568629" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
