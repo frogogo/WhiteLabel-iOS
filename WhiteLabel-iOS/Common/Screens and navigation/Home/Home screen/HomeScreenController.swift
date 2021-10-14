@@ -33,12 +33,6 @@ class HomeScreenController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.isNavigationBarHidden = true
-    subscribeForNotifications()
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    unsubsribeFromNotifications()
   }
 
   // MARK: - Overridden methods
@@ -101,18 +95,6 @@ class HomeScreenController: BaseViewController {
   }
 
   // MARK: - Private custom methods
-  private func subscribeForNotifications() {
-    let notificationCenter = NotificationCenter.default
-    notificationCenter.addObserver(self,
-                                   selector: #selector(handleNotifNewCouponOccured),
-                                   name: .newCouponOccured,
-                                   object: nil)
-  }
-
-  private func unsubsribeFromNotifications() {
-    NotificationCenter.default.removeObserver(self)
-  }
-
   private func registerCells() {
     let xibForProductCell = UINib(nibName: ProductCell.xibName, bundle: .main)
     mainTable.register(xibForProductCell, forCellReuseIdentifier: ProductCell.reuseID)

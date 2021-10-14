@@ -17,6 +17,10 @@ class HomeManager: BaseDataManager {
   var receipts: [ReceiptModel] = []
   var coupons: [CouponModel] = []
 
+  var savedCouponCount: Int {
+    return UserDefaults.standard.integer(forKey: couponCounterKey)
+  }
+
   private let couponCounterKey = "couponCounterKey"
   
   // MARK: - Internal/public custom methods
@@ -52,7 +56,7 @@ class HomeManager: BaseDataManager {
         self.couponProgress.update(with: response["progress"])
         self.receipts = ReceiptModel.array(withJSONDataArray: response["receipts"].arrayValue)
         self.coupons = CouponModel.array(withJSONDataArray: response["coupons"].arrayValue)
-        self.checkCouponCounter()
+        self.updateCouponCounter()
         onSuccess()
 
       } else {
@@ -63,14 +67,9 @@ class HomeManager: BaseDataManager {
     }
   }
 
-  private func checkCouponCounter() {
+  private func updateCouponCounter() {
     let updatedCouponCount = coupons.count
-    let savedCouponCount = UserDefaults.standard.integer(forKey: couponCounterKey)
-
-    if updatedCouponCount > savedCouponCount {
-      UserDefaults.standard.setValue(updatedCouponCount, forKey: couponCounterKey)
-      UserDefaults.standard.synchronize()
-      postNotification(withName: .newCouponOccured)
-    }
+    UserDefaults.standard.setValue(updatedCouponCount, forKey: couponCounterKey)
+    UserDefaults.standard.synchronize()
   }
 }
