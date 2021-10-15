@@ -17,11 +17,12 @@ class HomeManager: BaseDataManager {
   var receipts: [ReceiptModel] = []
   var coupons: [CouponModel] = []
 
-  var savedCouponCount: Int {
-    return UserDefaults.standard.integer(forKey: couponCounterKey)
+  var hasNewUnseenCoupon: Bool {
+    return UserDefaults.standard.bool(forKey: hasNewUnseenCouponKey)
   }
 
-  private let couponCounterKey = "couponCounterKey"
+  private let couponCountBeforeLastRefreshKey = "couponCounterKey"
+  private let hasNewUnseenCouponKey = "hasNewUnseenCouponKey"
   
   // MARK: - Internal/public custom methods
   func checkHomeData(onSuccess: @escaping (Bool) -> Void,
@@ -43,6 +44,11 @@ class HomeManager: BaseDataManager {
     } onFailure: { error in
       onFailure(error)
     }
+  }
+
+  func markAllCouponsAsSeen() {
+    UserDefaults.standard.setValue(false, forKey: hasNewUnseenCouponKey)
+    UserDefaults.standard.synchronize()
   }
 
   // MARK: - Private custom methods
@@ -68,8 +74,13 @@ class HomeManager: BaseDataManager {
   }
 
   private func updateCouponCounter() {
+    let savedCouponCount = UserDefaults.standard.integer(forKey: couponCountBeforeLastRefreshKey)
     let updatedCouponCount = coupons.count
-    UserDefaults.standard.setValue(updatedCouponCount, forKey: couponCounterKey)
+
+    if savedCouponCount < updatedCouponCount {
+      UserDefaults.standard.setValue(true, forKey: hasNewUnseenCouponKey)
+    }
+    UserDefaults.standard.setValue(updatedCouponCount, forKey: couponCountBeforeLastRefreshKey)
     UserDefaults.standard.synchronize()
   }
 }
