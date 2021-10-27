@@ -41,7 +41,6 @@ class HomeScreenViewModel: BaseViewModel {
   private var couponProgress = CouponProgressModel()
   private var couponViewModels: [HomeScreenCouponViewModel] = []
   private let productSectionViewModel = ProductListScreenViewModel()
-  private var couponCountBeforeDataRefresh = 0
 
   // MARK: - Lifecycle methods
   override init() {
@@ -54,7 +53,6 @@ class HomeScreenViewModel: BaseViewModel {
     super.refreshData()
     
     dataRefreshInProcess.value = true
-    couponCountBeforeDataRefresh = HomeManager.shared.savedCouponCount
 
     HomeManager.shared.refreshHomeData { [weak self] in
       guard let self = self else { return }
@@ -97,8 +95,9 @@ class HomeScreenViewModel: BaseViewModel {
   }
 
   private func checkForNewCoupons() {
-    if couponCount > couponCountBeforeDataRefresh {
+    if HomeManager.shared.hasNewUnseenCoupon {
       delegate?.showNewCouponPopup()
+      HomeManager.shared.markAllCouponsAsSeen()
     }
   }
 
